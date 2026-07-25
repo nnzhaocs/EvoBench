@@ -1,0 +1,12 @@
+=== gin step2.5 ===
+
+
+========================================================
+衔接: gin
+========================================================
+  units 434 | updates 1802 | queries 223 | GT 222
+  自检 ✅ 通过 -> c:\Users\26240\.trae-cn\work\6a3fed402a509e65ad8f7d98\v4_rerun\bench_final\gin
+  下游可直接：python 负载体检.py --units c:\Users\26240\.trae-cn\work\6a3fed402a509e65ad8f7d98\v4_rerun\bench_final\gin/units.jsonl --updates c:\Users\26240\.trae-cn\work\6a3fed402a509e65ad8f7d98\v4_rerun\bench_final\gin/updates.jsonl --queries c:\Users\26240\.trae-cn\work\6a3fed402a509e65ad8f7d98\v4_rerun\bench_final\gin/queries.txt --repo-name gin --purpose measurement
+
+汇总：1/1 仓库转换自检通过。
+现在四件套对齐下游，可跑 负载体检.py 和未来的成本/Recall 测量。

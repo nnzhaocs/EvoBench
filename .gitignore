@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Model caches (large, not for repo)
+*.bin
+*.safetensors
+cache/
+semview_cache/
+freshstack_cache/
+hf_cache/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Note: logs/ directory contains important experimental logs, do NOT ignore *.log

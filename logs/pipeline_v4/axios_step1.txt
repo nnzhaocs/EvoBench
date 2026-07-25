@@ -1,0 +1,21 @@
+[workdir] 真实克隆目录: c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_raw\axios_clone
+
+============================================================
+仓库: https://github.com/axios/axios.git
+语言: js | 许可: unknown | 
+============================================================
+Traceback (most recent call last):
+  File "c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\build_step1_extract_evolution.py", line 257, in <module>
+    main()
+  File "c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\build_step1_extract_evolution.py", line 240, in main
+    metas.append(process_repo(args.repo, args.lang, args.license, "",
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\build_step1_extract_evolution.py", line 124, in process_repo
+    repo = git.Repo(clone_path)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\site-packages\git\repo\base.py", line 310, in __init__
+    raise InvalidGitRepositoryError(epath)
+git.exc.InvalidGitRepositoryError: c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_raw\axios_clone\axios
+
+[耗时] 0.6s
+[退出码] 1

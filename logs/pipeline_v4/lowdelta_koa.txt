@@ -1,0 +1,58 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784528712.972687   33116 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784528719.081302   33116 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+============================================================
+koa: δ最低的 50 对更新，客观规则分类
+============================================================
+  A_纯形式: 0 对 (0%)
+  B_仅变量名: 6 对 (12%)
+  C2_疑似换实现: 2 对 (4%)
+  C1_结构改动: 42 对 (84%)
+
+★ 漏检率(下界) = C1结构改动 84%
+★ 漏检率(更真实) = C1 + C2疑似换实现 = 88%
+  C1=结构token变了(增删运算符/控制流); C2=只动标识符但换了被调函数(如[]byte→StringToBytes)
+  论文用'至少X%'——因为C2的实现替换是否真变语义,规则也不能100%确定。
+
+=== C1(结构改动)例子 ===
+  δ=-0.000 koa::lib/application.js::respond
+     +
+     +  if (body instanceof Blob) return Stream.Readable.from(body.stream()).pipe(res)
+     +  if (body instanceof ReadableStream) return Stream.Readable.from(body).pipe(res)
+  δ=-0.000 koa::lib/application.js::respond
+     -  if (body instanceof Response) return Stream.Readable.from(body?.body).pipe(res)
+     +  if (body instanceof Response) return Stream.Readable.from(body?.body || '').pipe(res)
+  δ=-0.000 koa::lib/application.js::respond
+     -  if (body instanceof Stream) return body.pipe(res)
+     +  if (isStream(body)) return body.pipe(res)
+  δ=-0.000 koa::lib/application.js::respond
+     -  if (body instanceof Blob) return Stream.Readable.from(body.stream()).pipe(res)
+     -  if (body instanceof ReadableStream) return Stream.Readable.from(body).pipe(res)
+     -  if (body instanceof Response) return Stream.Readable.from(body?.body || '').pipe(res)
+  δ=-0.000 koa::lib/application.js::respond
+     -  if (body instanceof Blob) { return Stream.Readable.from(body.stream()).pipe(res) }
+     -  if (body instanceof ReadableStream) { return Stream.Readable.from(body).pipe(res) }
+     -  if (body instanceof Response) { return Stream.Readable.from(body?.body || '').pipe(res) }
+
+=== C2(疑似换实现,B类里挑出来的)例子——这些最容易被漏 ===
+  δ=0.000 koa::lib/application.js::respond
+     -    
+     +
+     -      body.on('error', this.error.bind(this));
+  δ=0.057 koa::lib/application.js::done
+     -      if (err) ctx.error(err);
+     +      if (err) ctx.onerror(err);
+
+============================================================
+怎么用这个数：
+  漏检率 = C类占比。这是客观定义(结构token变了)，不靠肉眼判。
+  三个语言(gin/flask/express)都跑一遍，比较C类占比：
+  - Python若明显低于Go → Go的高C类多是大小写重命名(会被A类吸收)
+  - 论文里写：省算判据对δ<0.02的更新中约X%的结构改动敏感度不足，
+    故报告的省算比例为保守下界。
+
+[耗时] 51.7s
+[退出码] 0

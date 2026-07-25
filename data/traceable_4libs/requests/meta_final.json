@@ -1,0 +1,11 @@
+{
+  "repo": "requests",
+  "units": 43,
+  "updates": 69,
+  "queries": 18,
+  "gt_queries": 18,
+  "dangling_gt": 0,
+  "selfcheck_pass": true,
+  "synthetic_data": false,
+  "note": "格式转换 only；未新增/编造任何查询或 GT"
+}

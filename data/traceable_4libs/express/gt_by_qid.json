@@ -1,0 +1,182 @@
+{
+ "express#issue-5414": [
+  "express::examples/cookie-sessions/index.js::count"
+ ],
+ "express#issue-5130": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "express#issue-5113": [
+  "express::examples/error/index.js::error"
+ ],
+ "express#issue-4860": [
+  "express::lib/router/index.js::getProtohost",
+  "express::lib/view.js::View"
+ ],
+ "express#issue-4843": [
+  "express::lib/response.js::sendfile"
+ ],
+ "express#issue-4744": [
+  "express::lib/response.js::stringify"
+ ],
+ "express#issue-3540": [
+  "express::examples/auth/index.js::authenticate",
+  "express::examples/route-middleware/index.js::andRestrictToSelf"
+ ],
+ "express#issue-3268": [
+  "express::lib/response.js::stringify"
+ ],
+ "express#issue-3269": [
+  "express::lib/response.js::stringify"
+ ],
+ "express#issue-3313": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "express#issue-3314": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "express#issue-3403": [
+  "express::lib/view.js::View"
+ ],
+ "express#issue-3228": [
+  "express::lib/router/index.js::restore"
+ ],
+ "express#issue-3158": [
+  "express::lib/view.js::View"
+ ],
+ "express#issue-3207": [
+  "express::examples/auth/index.js::authenticate"
+ ],
+ "express#issue-2900": [
+  "express::lib/response.js::stringify"
+ ],
+ "express#issue-2722": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "express#issue-2652": [
+  "express::lib/router/layer.js::decode_param"
+ ],
+ "express#issue-2571": [
+  "express::lib/response.js::sendfile"
+ ],
+ "express#issue-2561": [
+  "express::lib/express.js::createApplication"
+ ],
+ "express#issue-2489": [
+  "express::lib/response.js::onaborted"
+ ],
+ "express#issue-2481": [
+  "express::lib/response.js::onfile",
+  "express::lib/response.js::onstream"
+ ],
+ "express#issue-2305": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "express#issue-2300": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "express#issue-2189": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "express#issue-2303": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "express#issue-2266": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onstream"
+ ],
+ "express#issue-1906": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onstream"
+ ],
+ "express#issue-2206": [
+  "express::lib/router/route.js::Route"
+ ],
+ "express#issue-2153": [
+  "express::lib/router/index.js::mergeParams"
+ ],
+ "express#issue-2203": [
+  "express::lib/router/index.js::mergeParams"
+ ],
+ "express#issue-2163": [
+  "express::lib/router/index.js::restore",
+  "express::lib/router/index.js::wrap"
+ ],
+ "express#issue-2016": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::wrap"
+ ],
+ "express#issue-2065": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "express#issue-2008": [
+  "express::examples/auth/app.js::authenticate",
+  "express::examples/content-negotiation/index.js::format"
+ ],
+ "express#issue-2004": [
+  "express::lib/router/layer.js::Layer"
+ ],
+ "express#issue-1964": [
+  "express::lib/router/layer.js::Layer"
+ ],
+ "express#issue-1935": [
+  "express::lib/router/index.js::trim_prefix",
+  "express::lib/router/layer.js::Layer",
+  "express::lib/router/route.js::Route",
+  "express::lib/utils.js::acceptParams"
+ ],
+ "express#issue-1835": [
+  "express::lib/router/route.js::Route"
+ ],
+ "express#issue-1853": [
+  "express::lib/express.js::createApplication"
+ ],
+ "express#issue-1729": [
+  "express::examples/content-negotiation/index.js::format"
+ ],
+ "express#issue-1625": [
+  "express::lib/view.js::View"
+ ],
+ "express#issue-1578": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "express#issue-1466": [
+  "express::lib/view.js::View"
+ ],
+ "express#issue-951": [
+  "express::lib/router/index.js::Router"
+ ],
+ "express#issue-941": [
+  "express::lib/router/index.js::Router"
+ ],
+ "express#issue-878": [
+  "express::lib/view.js::View"
+ ],
+ "express#issue-801": [
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::paramCallback"
+ ],
+ "express#issue-639": [
+  "express::lib/router/index.js::Router",
+  "express::lib/router/route.js::Route"
+ ]
+}

@@ -1,0 +1,30 @@
+[workdir] 真实克隆目录: /root/EvoBench_v4/work/axios_clone
+
+============================================================
+仓库: https://github.com/axios/axios.git
+语言: js | 许可: unknown | 
+============================================================
+[clone] 真实克隆 https://github.com/axios/axios.git ...（这是真仓库，非仿真）
+Traceback (most recent call last):
+  File "/root/EvoBench_v4/1_pipeline/build_step1_extract_evolution.py", line 257, in <module>
+    main()
+  File "/root/EvoBench_v4/1_pipeline/build_step1_extract_evolution.py", line 240, in main
+    metas.append(process_repo(args.repo, args.lang, args.license, "",
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/EvoBench_v4/1_pipeline/build_step1_extract_evolution.py", line 123, in process_repo
+    git.Repo.clone_from(url, clone_path)  # 真实克隆
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/git/repo/base.py", line 1620, in clone_from
+    return cls._clone(
+           ^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/git/repo/base.py", line 1491, in _clone
+    finalize_process(proc, stderr=stderr)
+  File "/root/miniconda3/lib/python3.12/site-packages/git/util.py", line 515, in finalize_process
+    proc.wait(**kwargs)
+  File "/root/miniconda3/lib/python3.12/site-packages/git/cmd.py", line 423, in wait
+    raise GitCommandError(remove_password_if_present(self.args), status, errstr)
+git.exc.GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- https://github.com/axios/axios.git /root/EvoBench_v4/work/axios_clone/axios
+  stderr: 'Cloning into '/root/EvoBench_v4/work/axios_clone/axios'...
+fatal: unable to access 'https://github.com/axios/axios.git/': Failed to connect to github.com port 443 after 130018 ms: Connection timed out
+'

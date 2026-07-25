@@ -1,0 +1,431 @@
+{
+  "reports": [
+    {
+      "repo": "aiohttp",
+      "queries_raw": 94,
+      "queries_dedup": 93,
+      "duplicates_removed": 1,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 93,
+      "gt_final": 93
+    },
+    {
+      "repo": "click",
+      "queries_raw": 84,
+      "queries_dedup": 84,
+      "duplicates_removed": 0,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 84,
+      "gt_final": 84
+    },
+    {
+      "repo": "cobra",
+      "queries_raw": 335,
+      "queries_dedup": 335,
+      "duplicates_removed": 0,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 335,
+      "gt_final": 335
+    },
+    {
+      "repo": "echo",
+      "queries_raw": 474,
+      "queries_dedup": 474,
+      "duplicates_removed": 0,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 474,
+      "gt_final": 474
+    },
+    {
+      "repo": "express",
+      "queries_raw": 74,
+      "queries_dedup": 74,
+      "duplicates_removed": 0,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 74,
+      "gt_final": 74
+    },
+    {
+      "repo": "flask",
+      "queries_raw": 129,
+      "queries_dedup": 128,
+      "duplicates_removed": 1,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 128,
+      "gt_final": 128
+    },
+    {
+      "repo": "gin",
+      "queries_raw": 553,
+      "queries_dedup": 552,
+      "duplicates_removed": 1,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 552,
+      "gt_final": 552
+    },
+    {
+      "repo": "lodash",
+      "queries_raw": 265,
+      "queries_dedup": 264,
+      "duplicates_removed": 1,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 264,
+      "gt_final": 264
+    },
+    {
+      "repo": "pylint",
+      "queries_raw": 223,
+      "queries_dedup": 223,
+      "duplicates_removed": 0,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 223,
+      "gt_final": 223
+    },
+    {
+      "repo": "requests",
+      "queries_raw": 151,
+      "queries_dedup": 151,
+      "duplicates_removed": 0,
+      "gt_outliers_removed": 0,
+      "outlier_sizes": [],
+      "queries_final": 151,
+      "gt_final": 151
+    }
+  ],
+  "gt_max": 10,
+  "total_final_queries": 2378,
+  "重要说明": {
+    "离群过滤≠噪声提纯": "本脚本剔除的是'一次改几十个函数的大commit'(离群)。它解决不了'一个commit改7个函数、但只有部分与issue真相关'的commit内噪声(如flask template_filter条混进is_prime)。GT精度问题需人工抽检下面的样本，别以为跑了清洗GT就100%干净。",
+    "去重口径": "精确文本匹配。标题高度相似但不完全相同不会去重。"
+  },
+  "audit_samples": [
+    {
+      "repo": "aiohttp",
+      "query": "[3.9] Upgrade mypy to 0.930",
+      "issue_number": 6454,
+      "issue_url": "https://github.com/aiohttp/issues/6454",
+      "gt_units": [
+        "aiohttp::aiohttp/helpers.py::set_exception"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "aiohttp::aiohttp/helpers.py::set_exception": "63157f503cd7"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "aiohttp",
+      "query": "Extract AccessLog into a separate module To avoid circular refs",
+      "issue_number": 3336,
+      "issue_url": "https://github.com/aiohttp/issues/3336",
+      "gt_units": [
+        "aiohttp::aiohttp/helpers.py::__init__",
+        "aiohttp::aiohttp/web_log.py::_format_a",
+        "aiohttp::aiohttp/web_log.py::_format_r"
+      ],
+      "gt_count": 3,
+      "gt_unit_commits": {
+        "aiohttp::aiohttp/helpers.py::__init__": "63157f503cd7",
+        "aiohttp::aiohttp/web_log.py::_format_a": "985f27d032c1",
+        "aiohttp::aiohttp/web_log.py::_format_r": "985f27d032c1"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "aiohttp",
+      "query": "Annotate client Work on #1749",
+      "issue_number": 3092,
+      "issue_url": "https://github.com/aiohttp/issues/3092",
+      "gt_units": [
+        "aiohttp::aiohttp/client_reqrep.py::headers",
+        "aiohttp::aiohttp/client_reqrep.py::history",
+        "aiohttp::aiohttp/client_reqrep.py::host",
+        "aiohttp::aiohttp/client_reqrep.py::links",
+        "aiohttp::aiohttp/client_reqrep.py::request_info"
+      ],
+      "gt_count": 5,
+      "gt_unit_commits": {
+        "aiohttp::aiohttp/client_reqrep.py::headers": "db5c238e05f7",
+        "aiohttp::aiohttp/client_reqrep.py::history": "db5c238e05f7",
+        "aiohttp::aiohttp/client_reqrep.py::host": "db5c238e05f7"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "aiohttp",
+      "query": "Drop deprecated client API",
+      "issue_number": 3935,
+      "issue_url": "https://github.com/aiohttp/issues/3935",
+      "gt_units": [
+        "aiohttp::aiohttp/client.py::requote_redirect_url"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "aiohttp::aiohttp/client.py::requote_redirect_url": "ee53d6558083"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "aiohttp",
+      "query": "Minor fix, Repeat of of",
+      "issue_number": 3848,
+      "issue_url": "https://github.com/aiohttp/issues/3848",
+      "gt_units": [
+        "aiohttp::aiohttp/client_reqrep.py::history"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "aiohttp::aiohttp/client_reqrep.py::history": "db5c238e05f7"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "click",
+      "query": "Merge `stable` into `main` after `CHANGES` rST to Markdown conversion <!-- Befor",
+      "issue_number": 3563,
+      "issue_url": "https://github.com/click/issues/3563",
+      "gt_units": [
+        "click::src/click/_termui_impl.py::__init__",
+        "click::src/click/_termui_impl.py::get_pager_file",
+        "click::src/click/core.py::augment_usage_errors",
+        "click::src/click/core.py::scope",
+        "click::src/click/types.py::__init__"
+      ],
+      "gt_count": 8,
+      "gt_unit_commits": {
+        "click::src/click/_termui_impl.py::__init__": "4ffa1ef3b6d2",
+        "click::src/click/_termui_impl.py::get_pager_file": "051bb0f30b54",
+        "click::src/click/core.py::augment_usage_errors": "b5464b7e065b"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "click",
+      "query": "expand patterns in Windows args On Windows, if a command is called from the comm",
+      "issue_number": 1830,
+      "issue_url": "https://github.com/click/issues/1830",
+      "gt_units": [
+        "click::src/click/core.py::main"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "click::src/click/core.py::main": "b5464b7e065b"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "click",
+      "query": "Add file-like pager: `click.get_pager_file()` In koordinates/kart we're in need ",
+      "issue_number": 1572,
+      "issue_url": "https://github.com/click/issues/1572",
+      "gt_units": [
+        "click::src/click/_termui_impl.py::__init__",
+        "click::src/click/_termui_impl.py::get_pager_file"
+      ],
+      "gt_count": 2,
+      "gt_unit_commits": {
+        "click::src/click/_termui_impl.py::__init__": "4ffa1ef3b6d2",
+        "click::src/click/_termui_impl.py::get_pager_file": "051bb0f30b54"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "click",
+      "query": "Introduce Parameter.deprecated + Command.deprecated message customization Implem",
+      "issue_number": 2271,
+      "issue_url": "https://github.com/click/issues/2271",
+      "gt_units": [
+        "click::src/click/core.py::invoke"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "click::src/click/core.py::invoke": "b5464b7e065b"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "click",
+      "query": "fix(types): decorator typing fails <!-- Before opening a PR, open a ticket descr",
+      "issue_number": 2233,
+      "issue_url": "https://github.com/click/issues/2233",
+      "gt_units": [
+        "click::src/click/decorators.py::command",
+        "click::src/click/decorators.py::group"
+      ],
+      "gt_count": 2,
+      "gt_unit_commits": {
+        "click::src/click/decorators.py::command": "0b7a9acc63da",
+        "click::src/click/decorators.py::group": "0b7a9acc63da"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "cobra",
+      "query": "Completions modify os.Args I'm trying to workaround https://github.com/spf13/cob",
+      "issue_number": 2257,
+      "issue_url": "https://github.com/cobra/issues/2257",
+      "gt_units": [
+        "cobra::completions.go::getCompletions"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "cobra::completions.go::getCompletions": "746ef0715872"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "cobra",
+      "query": "Added documentation for ArgsLenAtDash Fixes #166",
+      "issue_number": 167,
+      "issue_url": "https://github.com/cobra/issues/167",
+      "gt_units": [
+        "cobra::command.go::Root"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "cobra::command.go::Root": "6202b5942b8f"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "cobra",
+      "query": "Fix redundant error for unknown root commands When an unknown command is called ",
+      "issue_number": 83,
+      "issue_url": "https://github.com/cobra/issues/83",
+      "gt_units": [
+        "cobra::command.go::Execute",
+        "cobra::command.go::Find"
+      ],
+      "gt_count": 2,
+      "gt_unit_commits": {
+        "cobra::command.go::Execute": "3f605993a916",
+        "cobra::command.go::Find": "6b0bd3076cfa"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "cobra",
+      "query": "README: Make RootCmd private",
+      "issue_number": 556,
+      "issue_url": "https://github.com/cobra/issues/556",
+      "gt_units": [
+        "cobra::cobra/cmd/add.go::init",
+        "cobra::cobra/cmd/init.go::Execute",
+        "cobra::cobra/cmd/init.go::createRootCmdFile",
+        "cobra::cobra/cmd/init.go::init"
+      ],
+      "gt_count": 4,
+      "gt_unit_commits": {
+        "cobra::cobra/cmd/add.go::init": "652c755d3751",
+        "cobra::cobra/cmd/init.go::Execute": "1be1d2841c77",
+        "cobra::cobra/cmd/init.go::createRootCmdFile": "1be1d2841c77"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "cobra",
+      "query": "Please make Mousetrap hook optional Re this file: https://github.com/spf13/cobra",
+      "issue_number": 486,
+      "issue_url": "https://github.com/cobra/issues/486",
+      "gt_units": [
+        "cobra::command_win.go::preExecHook"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "cobra::command_win.go::preExecHook": "67fc4837d267"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "echo",
+      "query": "some problem about gzip writer not use sync pool in `middleware/compress.go` Loo",
+      "issue_number": 1643,
+      "issue_url": "https://github.com/echo/issues/1643",
+      "gt_units": [
+        "echo::middleware/compress.go::GzipWithConfig",
+        "echo::middleware/compress.go::gzipPool"
+      ],
+      "gt_count": 2,
+      "gt_unit_commits": {
+        "echo::middleware/compress.go::GzipWithConfig": "f071367e3c6d",
+        "echo::middleware/compress.go::gzipPool": "ac54e132e409"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "echo",
+      "query": "StripTrailingSlash results in a handler mismatching the root route. This is how ",
+      "issue_number": 218,
+      "issue_url": "https://github.com/echo/issues/218",
+      "gt_units": [
+        "echo::router.go::Find"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "echo::router.go::Find": "40e2e8faf952"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "echo",
+      "query": "Parameters mixed up between routes Looks like the parameters and getting mixed u",
+      "issue_number": 38,
+      "issue_url": "https://github.com/echo/issues/38",
+      "gt_units": [
+        "echo::context.go::P",
+        "echo::context.go::Param",
+        "echo::echo.go::Index",
+        "echo::echo.go::New",
+        "echo::echo.go::ServeHTTP"
+      ],
+      "gt_count": 7,
+      "gt_unit_commits": {
+        "echo::context.go::P": "15eb5b0aad47",
+        "echo::context.go::Param": "f071367e3c6d",
+        "echo::echo.go::Index": "e08b3f78e8c9"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "echo",
+      "query": "add a custom error handler to key-auth middleware link to https://github.com/lab",
+      "issue_number": 1847,
+      "issue_url": "https://github.com/echo/issues/1847",
+      "gt_units": [
+        "echo::middleware/key_auth.go::KeyAuthWithConfig"
+      ],
+      "gt_count": 1,
+      "gt_unit_commits": {
+        "echo::middleware/key_auth.go::KeyAuthWithConfig": "f071367e3c6d"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    },
+    {
+      "repo": "echo",
+      "query": "csrf logic is flawed Apologies for the structure of this issue. I am not a go de",
+      "issue_number": 597,
+      "issue_url": "https://github.com/echo/issues/597",
+      "gt_units": [
+        "echo::middleware/csrf.go::CSRFWithConfig",
+        "echo::middleware/csrf.go::generateCSRFToken",
+        "echo::middleware/csrf.go::validateCSRFToken"
+      ],
+      "gt_count": 3,
+      "gt_unit_commits": {
+        "echo::middleware/csrf.go::CSRFWithConfig": "f3fc61848f0d",
+        "echo::middleware/csrf.go::generateCSRFToken": "0dab439ea4b5",
+        "echo::middleware/csrf.go::validateCSRFToken": "0dab439ea4b5"
+      },
+      "如何核对": "打开 issue_url 看问题，再看 gt_units 里的函数是不是这个 issue 的修复真改的"
+    }
+  ]
+}

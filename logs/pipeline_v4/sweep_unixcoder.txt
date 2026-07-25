@@ -1,0 +1,75 @@
+【自检】模型=unixcoder（真实嵌入）
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784533059.821982   38816 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784533066.371897   38816 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+  ✅ 真实 unixcoder（microsoft/unixcoder-base, 768维, HF+mean-pool）
+  [版本对齐] 36/36 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== express（136 更新, 36 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.6190        136     0.0%
+  never-rebuild        0.6429          0   100.0%
+  audit(τ=0.02)        0.6310        105    22.8%
+  audit(τ=0.05)        0.6548        103    24.3%
+  audit(τ=0.1)         0.6786         85    37.5%
+  audit(τ=0.2)         0.6548         55    59.6%
+  [版本对齐] 131/131 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== flask（334 更新, 131 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.2980        334     0.0%
+  never-rebuild        0.3587          0   100.0%
+  audit(τ=0.02)        0.2892        275    17.7%
+  audit(τ=0.05)        0.2717        211    36.8%
+  audit(τ=0.1)         0.3082        137    59.0%
+  audit(τ=0.2)         0.3283         96    71.3%
+  [版本对齐] 434/434 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== gin（1802 更新, 434 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.3004       1802     0.0%
+  never-rebuild        0.2955          0   100.0%
+  audit(τ=0.02)        0.2992       1688     6.3%
+  audit(τ=0.05)        0.3035       1548    14.1%
+  audit(τ=0.1)         0.3007       1317    26.9%
+  audit(τ=0.2)         0.3017        950    47.3%
+  [版本对齐] 11/11 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== koa（53 更新, 11 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       1.0000         53     0.0%
+  never-rebuild        1.0000          0   100.0%
+  audit(τ=0.02)        1.0000         52     1.9%
+  audit(τ=0.05)        1.0000         48     9.4%
+  audit(τ=0.1)         1.0000         47    11.3%
+  audit(τ=0.2)         1.0000         13    75.5%
+  [版本对齐] 162/162 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== pylint（720 更新, 162 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       1.0000        720     0.0%
+  never-rebuild        1.0000          0   100.0%
+  audit(τ=0.02)        1.0000        374    48.1%
+  audit(τ=0.05)        1.0000        216    70.0%
+  audit(τ=0.1)         1.0000        125    82.6%
+  audit(τ=0.2)         1.0000         64    91.1%
+  [版本对齐] 43/43 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== requests（69 更新, 43 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.5882         69     0.0%
+  never-rebuild        0.5882          0   100.0%
+  audit(τ=0.02)        0.5882         30    56.5%
+  audit(τ=0.05)        0.5882         19    72.5%
+  audit(τ=0.1)         0.5882         14    79.7%
+  audit(τ=0.2)         0.5882          8    88.4%
+
+✅ 真实 sweep 存到 baseline_sweep_unixcoder.json
+这张表 = benchmark 论文的 Table 1（判别力证据）。
+解读：always recall 最高 cost 最高、never cost=0 recall 最低、
+      audit 随 τ 增大省算增多但 recall 缓降——若 audit 能在小 recall 损失下大幅省算，
+      则证明 benchmark 有判别力 + 你的方法有价值。
+
+[耗时] 368.2s
+[退出码] 0

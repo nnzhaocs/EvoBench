@@ -1,0 +1,63 @@
+{"line_no": 0, "query_id": "flask#issue-5812", "issue_number": 5812, "query": "merge app and request context (#5812)"}
+{"line_no": 1, "query_id": "flask#issue-5736", "issue_number": 5736, "query": "support call template_filter without parens (#5736)"}
+{"line_no": 2, "query_id": "flask#issue-5626", "issue_number": 5626, "query": "add config and docs for limits (#5626)"}
+{"line_no": 3, "query_id": "flask#issue-5620", "issue_number": 5620, "query": "fix pyright type errors (#5620)"}
+{"line_no": 4, "query_id": "flask#issue-5389", "issue_number": 5389, "query": "Fix jinja_loader typehint (#5389)"}
+{"line_no": 5, "query_id": "flask#issue-5383", "issue_number": 5383, "query": "address mypy strict findings (#5383)"}
+{"line_no": 6, "query_id": "flask#issue-5127", "issue_number": 5127, "query": "Split the App and Blueprint into Sansio and IO parts (#5127)"}
+{"line_no": 7, "query_id": "flask#issue-5223", "issue_number": 5223, "query": "remove deprecated code (#5223)"}
+{"line_no": 8, "query_id": "flask#issue-5071", "issue_number": 5071, "query": "Merge pull request #5071 from pallets/future-annotations"}
+{"line_no": 9, "query_id": "flask#issue-5063", "issue_number": 5063, "query": "Merge pull request #5063 from pallets/cli-routes-domain"}
+{"line_no": 10, "query_id": "flask#issue-5058", "issue_number": 5058, "query": "Merge pull request #5058 from pallets/require-blinker"}
+{"line_no": 11, "query_id": "flask#issue-4995", "issue_number": 4995, "query": "Merge pull request #4995 from pallets/remove-deprecated"}
+{"line_no": 12, "query_id": "flask#issue-4779", "issue_number": 4779, "query": "Merge pull request #4779 from greyli/add-debug-to-run"}
+{"line_no": 13, "query_id": "flask#issue-4749", "issue_number": 4749, "query": "Merge pull request #4749 from pallets/shell-env"}
+{"line_no": 14, "query_id": "flask#issue-4718", "issue_number": 4718, "query": "Merge pull request #4718 from pallets/remove-lazy-option"}
+{"line_no": 15, "query_id": "flask#issue-4692", "issue_number": 4692, "query": "Merge pull request #4692 from pallets/json-provider"}
+{"line_no": 16, "query_id": "flask#issue-4682", "issue_number": 4682, "query": "Merge pull request #4682 from pallets/refactor-context-stack"}
+{"line_no": 17, "query_id": "flask#issue-4676", "issue_number": 4676, "query": "Improve decorator typing (#4676)"}
+{"line_no": 18, "query_id": "flask#issue-4667", "issue_number": 4667, "query": "Merge pull request #4667 from pallets/remove-deprecated-code"}
+{"line_no": 19, "query_id": "flask#issue-4666", "issue_number": 4666, "query": "Merge pull request #4666 from pallets/debug-context"}
+{"line_no": 20, "query_id": "flask#issue-4624", "issue_number": 4624, "query": "Merge pull request #4624 from pallets/view-init-scope"}
+{"line_no": 21, "query_id": "flask#issue-4579", "issue_number": 4579, "query": "Merge pull request #4579 from lecovi/docs/#4574-test-typing"}
+{"line_no": 22, "query_id": "flask#issue-4574", "issue_number": 4574, "query": "Merge pull request #4579 from lecovi/docs/#4574-test-typing"}
+{"line_no": 23, "query_id": "flask#issue-4603", "issue_number": 4603, "query": "Merge pull request #4603 from f3ndot/use-correct-response-type-for-after-request-callable"}
+{"line_no": 24, "query_id": "flask#issue-4477", "issue_number": 4477, "query": "Merge pull request #4477 from tusharsadhwani/decorator-types"}
+{"line_no": 25, "query_id": "flask#issue-4189", "issue_number": 4189, "query": "Merge pull request #4189 from mgu/feat/use-exclude-patterns-reloader"}
+{"line_no": 26, "query_id": "flask#issue-4342", "issue_number": 4342, "query": "Merge pull request #4342 from pallets/deprecate-req-ctx-g"}
+{"line_no": 27, "query_id": "flask#issue-4152", "issue_number": 4152, "query": "Merge pull request #4152 from Yourun-proger/fix"}
+{"line_no": 28, "query_id": "flask#issue-4139", "issue_number": 4139, "query": "Merge pull request #4139 from awijaya22/issue4099"}
+{"line_no": 29, "query_id": "flask#issue-4074", "issue_number": 4074, "query": "Merge pull request #4074 from pgjones/bp"}
+{"line_no": 30, "query_id": "flask#issue-3989", "issue_number": 3989, "query": "Merge pull request #3989 from pgjones/async"}
+{"line_no": 31, "query_id": "flask#issue-3973", "issue_number": 3973, "query": "Merge pull request #3973 from pgjones/typing"}
+{"line_no": 32, "query_id": "flask#issue-3960", "issue_number": 3960, "query": "Merge pull request #3960 from pallets/shell-interactive-hook"}
+{"line_no": 33, "query_id": "flask#issue-3923", "issue_number": 3923, "query": "Merge pull request #3923 from pgjones/nested"}
+{"line_no": 34, "query_id": "flask#issue-3412", "issue_number": 3412, "query": "Merge pull request #3412 from pgjones/async"}
+{"line_no": 35, "query_id": "flask#issue-3933", "issue_number": 3933, "query": "Merge pull request #3933 from pallets/more-scaffold"}
+{"line_no": 36, "query_id": "flask#issue-3907", "issue_number": 3907, "query": "Merge pull request #3907 from pgjones/sugar"}
+{"line_no": 37, "query_id": "flask#issue-3828", "issue_number": 3828, "query": "Merge pull request #3828 from pallets/move-send-file"}
+{"line_no": 38, "query_id": "flask#issue-3744", "issue_number": 3744, "query": "fix typo in flask shell help (#3744)"}
+{"line_no": 39, "query_id": "flask#issue-3709", "issue_number": 3709, "query": "Merge pull request #3709 from MLH-Fellowship/3215-flask-blueprint"}
+{"line_no": 40, "query_id": "flask#issue-3554", "issue_number": 3554, "query": "Merge pull request #3554 from pallets/drop-python2"}
+{"line_no": 41, "query_id": "flask#issue-3247", "issue_number": 3247, "query": "Merge pull request #3247 from pallets/join-strings"}
+{"line_no": 42, "query_id": "flask#issue-3246", "issue_number": 3246, "query": "Merge pull request #3246 from pallets/reorder-imports"}
+{"line_no": 43, "query_id": "flask#issue-3241", "issue_number": 3241, "query": "Merge pull request #3241 from jon-stumpf/jss-updates"}
+{"line_no": 44, "query_id": "flask#issue-2897", "issue_number": 2897, "query": "Merge pull request #2898 from rochacbruno/2897-Add-Extra-Files-to-CLI"}
+{"line_no": 45, "query_id": "flask#issue-3183", "issue_number": 3183, "query": "Merge pull request #3183 from singingwolfboy/pre-commit"}
+{"line_no": 46, "query_id": "flask#issue-3011", "issue_number": 3011, "query": "Merge pull request #3011 from greyli/improve-cli-help-text"}
+{"line_no": 47, "query_id": "flask#issue-2752", "issue_number": 2752, "query": "Merge pull request #2752 from greyli/patch-9"}
+{"line_no": 48, "query_id": "flask#issue-2699", "issue_number": 2699, "query": "Merge pull request #2699 from pallets/javascript"}
+{"line_no": 49, "query_id": "flask#issue-2693", "issue_number": 2693, "query": "Merge pull request #2693 from davidism/max-cookie-size"}
+{"line_no": 50, "query_id": "flask#issue-2676", "issue_number": 2676, "query": "Merge pull request #2676 from davidism/tutorial"}
+{"line_no": 51, "query_id": "flask#issue-2570", "issue_number": 2570, "query": "Add Support for FLASK_ENV (#2570)"}
+{"line_no": 52, "query_id": "flask#issue-2502", "issue_number": 2502, "query": "Fix typo in cli.py (#2502)"}
+{"line_no": 53, "query_id": "flask#issue-1809", "issue_number": 1809, "query": "document `Flask.register_blueprint` arguments"}
+{"line_no": 54, "query_id": "flask#issue-2259", "issue_number": 2259, "query": "Merge pull request #2259 from davidism/routes-command"}
+{"line_no": 55, "query_id": "flask#issue-2249", "issue_number": 2249, "query": "Merge pull request #2249 from davidism/provide-automatic-options"}
+{"line_no": 56, "query_id": "flask#issue-2046", "issue_number": 2046, "query": "Remove `-a/--app` from Quickstart documentation (#2046)"}
+{"line_no": 57, "query_id": "flask#issue-2005", "issue_number": 2005, "query": "Don't passthrough_errors unless instructed. (#2006)"}
+{"line_no": 58, "query_id": "flask#issue-1996", "issue_number": 1996, "query": "Merge pull request #1996 from untitaker/propagate-exceptions-werkzeug"}
+{"line_no": 59, "query_id": "flask#issue-1928", "issue_number": 1928, "query": "re-add passthrough_errors to cli runner (#1928)"}
+{"line_no": 60, "query_id": "flask#issue-1679", "issue_number": 1679, "query": "Merge pull request #1679 from miguelgrinberg/passthrough-errors"}
+{"line_no": 61, "query_id": "flask#issue-1291", "issue_number": 1291, "query": "Merge pull request #1291 from flying-sheep/errorhandler-rework"}
+{"line_no": 62, "query_id": "flask#issue-736", "issue_number": 736, "query": "Merge pull request #736 from ThomasWaldmann/sprint-branch"}

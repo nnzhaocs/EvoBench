@@ -1,0 +1,1040 @@
+{
+ "Add `fromIndex` argument to _.indexOf and _.lastIndexOf The lack of [fromIndex](http://es5.github.com/#x15.4.4.14) support in `_.indexOf` and `_.lastIndexOf` has bothered me for a while. Currently `_.lastIndexOf` lacks support and `_.indexOf` has an [isSorted](https://github.com/documentcloud/underscore/commit/d2d6cfe6675d18b058e52785c438a3c1a7502208) boolean argument instead. I could work this into `_.indexOf` with some overloading to allow `_.indexOf(value, isSorted)` and `_.indexOf(value, fromIndex, isSorted)`. Thoughts?": [
+  "lodash::lodash.js::indexOf",
+  "lodash::lodash.js::lastIndexOf"
+ ],
+ "underscore-like behaviour of flatten I don't sure it is bug or a feature.": [
+  "lodash::lodash.js::compact",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::indexOf",
+  "lodash::lodash.js::initial",
+  "lodash::lodash.js::last",
+  "lodash::lodash.js::lastIndexOf",
+  "lodash::lodash.js::rest",
+  "lodash::lodash.js::shuffle"
+ ],
+ "Add fail-safe to \"Arrays\" category methods to allow falsy values for `array` argument As issue #23 points out, sometimes it's nice to have array methods not error when they receive a falsy value for the required `array` argument. The use case is something like ``` js // should handle when `String#match` returns `null` without erroring _.flatten(string.match(/regexp/)) ``` So I would like to know if you all (/cc @kitcambridge @mathiasbynens) think it's worthwhile.": [
+  "lodash::lodash.js::compact",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::indexOf",
+  "lodash::lodash.js::initial",
+  "lodash::lodash.js::last",
+  "lodash::lodash.js::lastIndexOf",
+  "lodash::lodash.js::rest",
+  "lodash::lodash.js::shuffle"
+ ],
+ "Use null when comparing null/undefined for non-strict equals. Saves 2 gzipped bytes.": [
+  "lodash::lodash.js::initial",
+  "lodash::lodash.js::last",
+  "lodash::lodash.js::rest"
+ ],
+ "Variable assignment within templates After updating to 0.4.0 I am no longer able to assign variables within templates. e.g. ``` <% var listItem = list[0]; %><%= listItem.library %> ``` In this example `listItem` is undefined when trying to access the library property. See jsfiddles: Using 0.3.2: http://jsfiddle.net/joshvermaire/gf84m Using 0.4.0: http://jsfiddle.net/joshvermaire/gf84m/1": [
+  "lodash::lodash.js::template"
+ ],
+ "difference between minified and uncompressed version We noticed a difference in behavior between the uncompressed version of lodash and the hybrid minified one. Basically templateSettings 'interpolate' and 'evaluate' behave differently when applied to object methods. I created a gist here: https://gist.github.com/3132425 interpolation of obj.join() works uncompressed, compressed gives ``` <e%= obj.join() %> ```": [
+  "lodash::lodash.js::template"
+ ],
+ "Are there plans to implement a guaranteed-stable sorting method? I have a case where I'm using _.sortBy to order an array of objects by an optional \"order\" property that is almost always undefined. ``` _.sortBy(objects, function(v) {return v.order || Number.POSITIVE_INFINITY}); ``` These objects are then rendered in a list visible to the user, so using an unstable sort algorithm (like in V8) confuses the user by causing items to jump up and down the list seemingly for no reason. I've solved my problem with my own stable sort function based on a modified implementation of _.sortBy. However, I'm wondering if you plan to add built-in support for \"forcing\" the sort to be stable, perhaps with an optional argument? ``` _.sortBy(collection, callback, thisArg, forceStable) ``` Thanks!": [
+  "lodash::lodash.js::isPlainObject"
+ ],
+ "Make `_.times` return an array of its callback's individual return values `_.times` doesn't return anything. If it instead returned its callback's individual return values those could be used. For example: ``` js var diceRolls = _.times(3, _.partial(_.random, 1, 6)); // [6, 4, 6] var password = _.times(32, pickRandomChar).join(''); // '...' ```": [
+  "lodash::lodash.js::flatten"
+ ],
+ "Custom sourceURL by passing an option to _.template When building a large application with a build script it was hard to tell which template was being compiled and where the error was. This allows the user to specify the url to be used. So we build our templates into one file with grunt and the filename becomes the key in the object. So by being able to specify the sourceURL it actually maps directly to the file name not just the N template compiled.": [
+  "lodash::lodash.js::template"
+ ],
+ "micro-optimization: isString, isNumber sorry for all the micro-optimizations. http://jsperf.com/isnumberwithtypeof isString, isNumber runs significantly faster if you checked for primitives first. something like: ``` javascript function isNumber(value) { return typeof value == 'number' || toString.call(value) == numberClass; } function isString(value) { return typeof value == 'string' || toString.call(value) == stringClass; } ```": [
+  "lodash::lodash.js::isNumber",
+  "lodash::lodash.js::isString"
+ ],
+ "add `_.deepClone` (alias for `_.clone(obj, true)` ) I caught a number of bugs in my code this morning that were the result of using shallow clone rather than deep clone. In fixing these, I made an alias called `_.deepClone` to improve code readability. Since the second parameter in `_.clone` is just a flag to determine this behavior, I wanted to get your thoughts on moving this behavior to a proper method to make code more self-documenting (and thus more maintainable).": [
+  "lodash::lodash.js::cloneDeep"
+ ],
+ "Configure additional arguments for templates Here is a feature request for another configuration setting for templates that lets you define bound arguments to templates, effectively bringing additional things into scope within the template. ``` js _.templateSettings.extras = { str: helpers.strings, img: helpers.images }; ``` You would then essentially do something like this: ``` js var extraKeys = _.keys(_.templateSettings.extras); source = 'function(' + extraKeys.concat(variable).join(',') + ') {\\n' ... var extraValues = _.map(extraKeys, function (key) { return _.templateSettings.extras[key]; }); result = Function('_', 'return ' + source + sourceURL)(lodash); result = _.partial.apply(null, [result].concat(extraValues)); ``` And now `str` and `img` would be within the scope of all templates. This is especially helpful when you are loading templates in an amd settings where it can be very difficult to `require` extra template helpers.": [
+  "lodash::lodash.js::template"
+ ],
+ "Add deep support to `_.defaults`. Hello! I have some object with multiple nested object. For example, using the Mongoose ODM (and his method [populate](http://mongoosejs.com/docs/populate.html)), the NodeJS can return me an object Photo, in which the User object is embedded. And I want to default Photo-object have a nested default User-object.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "dropWhile and takeWhile Can you add support for these functions? My needs are similar to the prelude-ls implementation: http://gkz.github.com/prelude-ls/#f-takeWhile `takeWhile` Callable -> List -> List Callable -> String -> String Takes the first items of the list or string which pass the test. `dropWhile` Callable -> List -> List Callable -> String -> String Drops the first items of the list or string which pass the test.": [
+  "lodash::lodash.js::initial",
+  "lodash::lodash.js::last",
+  "lodash::lodash.js::rest"
+ ],
+ "Template usage inconsistency when containing no evaluation blocks Hi bestiejs folk. Found an annoying issue that is partly my fault but and partly unexpected and unintuitive behavior in lodash. Omitting `with` depending on whether or not there are evaluation blocks in the template can cause some confusing cases where a seemingly trivial change in a template can cause it to fail if accessing properties outside the context scope (doable in a `with` block, broken otherwise) Relevant lines in lodash : https://github.com/bestiejs/lodash/blob/master/lodash.js#L4243-L4255 Given `window.foo = { val : \"Bar\" };`, the template ``` <% if (true) { %>Foo<% } %> <%= foo.val %> ``` Will output ``` Foo Bar ``` If you remove the the statement `<% if (true) { %>Foo<% } %>` the template breaks because it is no longer being compiled into a `with` block. The property `foo` is accessed off of the template variable (e.g. `obj.foo.val`) causing an error because `val` is being accessed off an undefined property. [jsfiddle example](http://jsfiddle.net/WKSkS/2/) Unders": [
+  "lodash::lodash.js::template"
+ ],
+ "_.first with callback broken, or documentation misleading Hey, I've been using lodash and loving it, apart from one thing. Either `_.first`called with a callback is broken or the documentation is misleading/wrong. Docs state: `If a callback function is passed, the first elements the callback returns truthy for are returned.`. That's not what happens though. Here's [a jsFiddle](http://jsfiddle.net/Af7eN/2/) showing the problem. It seems like `_.first` always shortcuts out on the first falsy result.": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Loss of chaining Running the command `lodash modern exports=\"amd\" include=\"each,reject,shuffle,toArray,flatten\" -o deps/lodash.js -d` for a custom build, results in me no longer being able to chain. Is this documented anywhere? If not, please document which function is needed to keep chaining. Thanks!": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Remove isJSC variable in mobile builds Fixes a problem with content security errors related to `Function()` use (Issue #54). Something controversial here would be the decision to remove the variable over say, set it to false. But since it's only used currently in the test for `isKeysFast` which is also removed, I thought it best to move it to it's own line and remove it.": [
+  "lodash::dist/lodash.js::runInContext"
+ ],
+ "checking for window.exports does not compensate for potential names and ids http://www.2ality.com/2012/08/ids-are-global.html I don't know if it's really something appropriate to fix in lodash, but this was a very hard to track down bug. We had an html element with this id and were very confused as to why lodash was simply failing to load. It would be really nice to warn people about this issue, even though it's more of a general problem for anything that tries to use CommonJS modules. ``` html <!doctype html> <html> <head> <meta charset=\"utf-8\"> </head> <body> <div id=exports></div> <script src=/static/js/lodash.min.js></script> <script>console.log(typeof _)</script> </body> </html> ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "predicate-taking overload of _.indexOf Currently, the function signature is `_.indexOf(array, value, [fromIndex=0])` How do you feel about also being able to take `_.indexOf(array, predicate, [fromIndex=0])` for example: ``` var preferences = [ {name: 'Jason', drink: 'americano'}, {name: 'Zack', drink: 'coffee'}, {name: 'Tarra', drink: 'something caramelly'} ] _.indexOf(perferences, function (x) { return x.name === 'Zack' }) // => 1 ``` This would be similar to the `_.find` method signature, but returning the index of the first element which makes the function return true, rather than the value of the element at that index.": [
+  "lodash::lodash.js::find",
+  "lodash::lodash.js::findIndex",
+  "lodash::lodash.js::findKey",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fixing some misspellings I just started using lodash and it's been great. I noticed a few typos in the docs so I went through and did a litte spell checking.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "flatten() with callback parameter If I have an array of objects that have array properties, I want to be able flatten the properties without creating an extra intermediary array. For example: ``` js var data = [ { name: \"a\", stuff: [...] }, { name: \"b\", stuff: [...] }, { name: \"c\", stuff: [...] } }; var allStuff = _(data).pluck('stuff').flatten(); ``` Calling `pluck()` (or `map()` for more-complex scenarios) creates an extra array of arrays that I don't want. Can you add a `flattenWith()` method (or just a `flatten(callback)`) method that does this all at once (and takes a callback or a property name)? This would let me write ``` js var allStuff = _.flattenWith(data, 'stuff'); ``` (this is equivalent to C#'s [`SelectMany()`](http://msdn.microsoft.com/en-us/library/system.linq.enumerable.selectmany.aspx))": [
+  "lodash::dist/lodash.js::flatten",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Error in Firefox, but not Chrome Hello I have this Error in firebug ``` TypeError: Function.prototype.bind called on incompatible undefined http://localhost:9000/static/drivenow/app/vendor/lodash-1.0.1.js Line 3887 ``` The corresponding function, it's the second to last line with the error. ``` javascript function bind(func, thisArg) { // use `Function#bind` if it exists and is fast // (in V8 `Function#bind` is slower except when partially applied) return isBindFast || (nativeBind && arguments.length > 2) ? nativeBind.call.apply(nativeBind, arguments) : createBound(func, thisArg, slice(arguments, 2)); } ``` It works fine in Chrome, no issues there. There is no stacktrace, so I can't really find the error in my code. I use bind for a Backbone project.": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "`this` value is lost when iterating via forOwn (Lodash.underscore) Since v1.1.0, it seems that Lodash created a bug when passing an iteration from `forEach` to `forOwn`. I only tested it with the Lodash.underscore so I can't say if it's limited to this build in particular. I've been able to fix the bug in the underscore build by changing [line 745](https://github.com/bestiejs/lodash/blob/master/dist/lodash.underscore.js#L745) by this one using `call` to keep the this value: ``` javascript if (callback.call(thisArg, iterable[index], index, collection) === indicatorObject) return result; ``` I'd send a pull request, but I'm not sure how this all work with the build and the system. I hope this helps a little.": [
+  "lodash::dist/lodash.js::runInContext"
+ ],
+ "The option for _.throttle to execute only on the trailing edge Sometimes one wants to have throttle only execute on the trailing edge of the period. I believe the patch to achieve this is trivial: ``` javascript function throttle(func, wait, trailingOnly) { var args, result, thisArg, timeoutId, lastCalled = trailingOnly ? new Date : 0; ``` Just a suggestion :thought_balloon: Cheers. :beers:": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add `_.unzip` as the inverse of `_.zip` Add `_.unzip` as the opposite of `_.zip`. See Underscore [#1038](https://github.com/documentcloud/underscore/pull/1038).": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Investigate potential `__proto__` issues. Investigate potential `__proto__` issues. //cc @webreflection": [
+  "lodash::lodash.js::memoize",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.merge callback not applied to nested properties. Consider: ``` var food = { fruits: { fruitList: ['apple', 'pear'] }, vegetables: ['beet'], }; var otherFood = { fruits: { fruitList: ['banana'] }, 'vegetables': ['carrot'] }; lodash.merge(food, otherFood, function(a, b) { return _.isArray(a) ? a.concat(b) : undefined; }); ``` The result is: ``` { fruits: { fruitList: ['apple', 'pear'] }, \"vegetables\": ['beet', 'carrot'] } ``` The top level array has been merged, but the nested fruitList has not.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.merge passes object instead of array to callback I've noticed that the callback to _.merge is passed an empty object instead of an array. Consider the following: ``` js _ = require('lodash'); _.merge({ foo: [1, 2] }, { foo: { bar: 'baz' } }, function(origProp, overrideProp) { console.log(origProp, overrideProp); }); /** * Expected output: [1, 2], 'baz' * Actual output: {}, 'baz' */ ``` This seems like counter-intuitive behavior.": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Minor typo (Obect -> Object) in _.template": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "debounce leading with trailing Hello, thanks for leading and trailing. But in your realization, if such function with {leading: true, trailing: true} called only once, than debounce will fire twice. In my project I'm using HistoryAPI. So, when user start very fast navigate throuth history (click browser backbutton), I want to fire route handler only on start and on end of this navigation, not to redraw view very often. `this.routeHandlerDebounce = _.debounce(this.routeHandler, 700, {leading: true, trailing: true});` But with this code routeHandler will fire twice even if user just navigate to link once If I use only `trailing: true`, than there is unwanted delay when user just click once some link. So, needed behavior of `{leading: true, trailing: true}` is fire on end only if debounced function called more then once. I think it is logical": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add a reference to the object passed into a lodash template I am doing subtemplating by passing a list of templates into lodash as an object. then calling `<%= tmpl.subtemplate(scope) %>` ``` js var tmpl = { template : _.template($(\"#usageList\").html()), subtemplate : _.template($(\"#subtemplate\").html()) } var scope = {items:items,tmpl:tmpl}; scope.scope = scope; $(\"#target\").html(tmpl.template(scope)); ``` Is there a reference available inside a template to the object passed to it without me having to pass scope into the template? If not could we add it as a property like `__scope`.": [
+  "lodash::lodash.js::lazyValue",
+  "lodash::lodash.js::runInContext"
+ ],
+ "NodeJS: _.isPlainObject(Object.create(null)) error Lo-Dash version 1.2.0 NodeJS version 0.10.4 OS: Windows XP ``` // index.js var _ = require(\"lodash\"); var obj = Object.create(null); _.isPlainObject(obj); ``` And then: ``` D:\\dev\\projects\\hotload\\test>node index.js D:\\dev\\projects\\hotload\\node_modules\\lodash\\dist\\lodash.js:548 f (isFunction(ctor) ? ctor instanceof ctor : (support.nodeClass || !isNode(val ^ ReferenceError: isNode is not defined at shimIsPlainObject (D:\\dev\\projects\\hotload\\node_modules\\lodash\\dist\\lodash.js:548:76) at Function.isPlainObject (D:\\dev\\projects\\hotload\\node_modules\\lodash\\dist\\lodash.js:1634:11) at Object.<anonymous> (D:\\dev\\projects\\hotload\\test\\index.js:3:3) at Module._compile (module.js:456:26) at Object.Module._extensions..js (module.js:474:10) at Module.load (module.js:356:32) at Function.Module._load (module.js:312:12) at Function.Module.runMain (module.js:497:10) at startup (node.js:119:16) ``": [
+  "lodash::dist/lodash.js::runInContext"
+ ],
+ "Fixed docs for _.parseInt(value, radix) and clarified default radix": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "debounce leading with trailing bug Hello! Thanks for new version! After first debounced call second will be timeouted even after wait-timer ending: http://jsfiddle.net/FBvMy/1/ So we must nullify `inited` and `timeoutId` after wait timeout anyway, independently of leading or trailing": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.defaults and _.extends (assign) with Arrays Hey, I'm using an Array with some extra properties to know some Metadata. For example, an array with values which have a metadata property with number of total pages. I've tried using both extends and defaults and neither of them copy properties from sources when they're arrays. They just copy elements (I've checked code, this is intentional as there's an `isArray`) I just wanted to know why, when it's an array you don't do both things. Copy properties + copy elements. I think it makes sense. Thanks!": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add an optional flag to _.random to return a floating number instead of an integer Hi. Currently the **_.random** function takes a min and max argument and returns an integer. Would it make sense to add a third optional boolean argument, false by default to keep the current behavior, to return a random floating number within a range?": [
+  "lodash::lodash.js::random",
+  "lodash::lodash.js::runInContext"
+ ],
+ "TTL for _.memoize Hello! On my page every incoming user see some aggregate statistics of portal (number of photos, registered user etc). I calculate it on server in NodeJS using MongoDB aggregation framework when user request it. It's calcs about 1000ms. Of course, here `memoize` is helping me. But statistic changes :) So, I want, for example, every 1 minute memoize cache \"become rotten\", were cleared, like TTL fields in mongo, for the next user request to recalculate statistics. Like this would be greate: `_.memoize(func [, resolver, timeout])`": [
+  "lodash::lodash.js::memoize",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add `_.chain` alias of `_` for better cross lib use. Third party libs are starting to be developed for Lo-Dash or Underscore compatibility. Adding a `_.chain` alias of `_` would help devs avoid code forks or forcing them to use the non-chaining syntax in some scenarios.": [
+  "lodash::dist/lodash.js::memoize",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Cloning test incorrect; shallow clone with lodash.map seems broken This test seems to be erroneous: [https://github.com/bestiejs/lodash/blob/master/test/test.js#L399](https://github.com/bestiejs/lodash/blob/master/test/test.js#L399) It seems that it ought to instead specify... `ok(actual != expected && actual[0].a == expected[0].a && actual[1].b == expected[1].b);` However, when the test is adjusted in that manner, it fails. Specifically `actual[1].b` is found not to be the same (array) object as `expected[1].b` (though object equality holds for `..[0].a`). I haven't tracked down the problem yet, else I would have put together a pull request to go along with this issue.": [
+  "lodash::lodash.js::clone",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Feature Request: Add array `remove` method. Would be useful to have a `_.remove()` method, which removes element(s) from an array by value (either using the identity operator `===`, or a callback which returns a truthy value), but without copying the entire array. `_.without()` makes a copy of the array you're working on. Seems inefficient to continually copy an entire (and possibly long) array if just removing one, or a few items from it.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "misleading example / inefficiency for _.uniq from your own example in the documentation: ``` js > lodash.uniq([1, 2, 1.5, 3, 2.5], function(num) { return Math.floor(num); }); [ 1, 2, 3 ] ``` looks good, seem to indicate that the result list is made up of whatever the function passed as argument returns, in this case the floor of the numbers. That would also be consistent with the pluck semantics. but a tiny change in the example, show that it is not the case ``` js lodash.uniq([1.45443243, 2, 1.5, 3, 2.5], function(num) { return Math.floor(num); }); [ 1.45443243, 2, 3 ] ``` So it looks like uniq construct the list out of random (first encountered?) elements as long as they pass the equality test. So 1) inconsistent with pluck semantics 2) misleading as an example 3) not very useful as inefficient as the user will probably will have to do another pass at the list to re-apply floor. Of course javascript has a weird behavior with decimal number vs. float vs. integer (lack tehereof), but the problem would be the with more co": [
+  "lodash::dist/lodash.js::flatten",
+  "lodash::dist/lodash.js::indexOf",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.isPlainObject in IE 6,7,8 returns false if object is empty (legacy|modern build) I noticed while debugging through my control in IE6, 7 or 8 that it wasn't regarding an empty object `{}` to be \"plain\". Is this the desired behaviour? In modern browsers or IE 9 `_.isPlainObject({})` returns `true`. I am using the modern (! IE or IE >= 9) and legacy build (IE < 9), served via conditional comments. Reproduce with: ``` alert(_.isPlainObject({})); ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add a max delay option to debounce I've often found myself wanting the ability to basically throttle a debounced function. For example, I have a function that I want to debounce for, say 100 ms. But, if it's really busy for a while and getting called almost constantly so the debounce could theoretically delay it for a long time, I want it to run at least once every 5 seconds. It would be nice if it was just added as an option to the current `debounce` function. You could add something like a `maxWait` or `maxDelay` option that ensures the debounced function runs after that wait time if it hasn't run yet.": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Inconsistent return values when using `max` in a chain I just came across a strange side effect when using `max` in a chain which only contains one element, which I believe to be a bug in lodash. ``` javascript > _.max([40, 23, 1]); 40 > _.max([40]); 40 ``` So far, so good. Here's where it all goes a bit pear-shaped: ``` javascript > _([40, 23, 1]).max().value(); 40 > _([40]).max().value(); [ 40 ] ``` ಠ_ಠ The same problem seems to affect `min`. Reproduceable with lodash 1.2.1 in node, 1.2.0-compat in Chrome 27. Btw, I <3 lodash!": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add forEachRight I need to iterate backwards over an array or object and exit early when finding a match.": [
+  "lodash::lodash.js::findLast",
+  "lodash::lodash.js::findLastIndex",
+  "lodash::lodash.js::findLastKey",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Update _.isNumber documentation about NaN Documentation of `_.isNumber` should have a mention that `NaN` is considered to be a number. I find it misleading that `_(NaN).isNumber()` is true. Basically that says \"not a number is a number\". E.g. `_(parseInt(\"foo\")).isNumber()` equals true.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add ability to _(obj).where({ foo: 'bar' }).first().result('prop') I have several cases where I am running a query against an array, often looking for a single result that I then need to select a property from, or go for undefined if the object is undefined (not found). At the moment, this is not possible using lodash because .result('prop') will only work on an object chain and _.where()/_.first() return arrays but _.first()/_.find() will break the chain and return the object. Am I missing something here? Could this be added?": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Enable _.range() to accept a 0 for step Enable `_.range()` to accept a `0` for `step`, for initializing arrays such as `[0, 0, 0, 0, 0]`, `[-1, -1, -1, -1, -1]`, useful in many use cases where you need an array which defaults to a basic value. I don't know how to write tests (bad... I know), but I have tested all of the function's behaviors and everything is still intact, including \"negative direction\" arrays. Cheers.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "additional argument for _.memoize to revert/refresh memoized values I use lodash together with angularjs. i have often the case the a filter condition is used to populate a filtered result set. it will be really useful to have an additional parameter \"condition\" (value or function returning the condition) which should be used by _memoize to evaluate if the current cached value is valid or if the cached value should be reverted & replaced by the result of a fresh call to the func argument. or is there already an option to to this using lodash ?": [
+  "lodash::dist/lodash.js::memoize",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::memoize",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Improve JSDoc to allow better IDE integration To comply with JSDoc and IDE integration: - `{Mixed}` should be `{*}` - var_args should be `{...Type} [name]` instead of `{Type} [name, name, ...]` Additionally, to avoid warnings (but this is not essential as the two above) : - Parameter names cannot be things like `[name|other_name]` - All primitive types should be lowercase, e.g. `{Number}` be `{number}` Thank you :)": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "each can not work with data which contains length key example coffee code: coffee> _.forEach {a:1, length:1}, (v, k) -> console.log k, v 0 undefined { a: 1, length: 1 }": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Flattening a very large nested array fails (_.flatten) Using version: `2.0.0` This seems to fail in V8 (Chrome, Node etc.): ``` js _.flatten([ Array(150000) ]) // throws: // \"Maximum call stack size exceeded\" ``` This is due to the [following line](https://github.com/lodash/lodash/blob/c7d6dbbdca3ddcf6e2061190bfe629631840fc6a/lodash.js#L1135): ``` js push.apply(result, isShallow ? value : baseFlatten(value, isShallow, isArgArrays)); ``` I.e. Using `Function#apply()` to pass a larger amount of arguments than are supported by the JS engine. --- Curiously, it may work perfectly fine under other JS engines because each one seems to impose a different max-arg-length. So, while `150,000` is fine in Firefox, `550,000` fails: ``` js _.flatten([ Array(550000) ]) // FF throws // \"RangeError: arguments array passed to Function.prototype.apply is too large\" ``` Some rudimentary testing reveals the following _very rough_ argument max lengths: (Exact numbers seem to depend on system resources at the time of testing. Test your browser here: ht": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "New type checking in _.compose causes compose to fail when with called with no arguments In https://github.com/lodash/lodash/blob/master/lodash.js#L5293 _.compose checks that all the arguments supplied are functions using `isFunction`. However, if _.compose is called with no arguments, it will fail For example, this will fail: ``` javascript _.compose(); // Throws TypeError, but succeeds in lodash v1.3.0 and underscore v1.4.4 ``` **(Updated, sorry the issue is actually simpler than I originally explained)**": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.where example not working Can't seem to make the first example presented here work: http://lodash.com/docs#where My test: http://jsfiddle.net/cPPz7/2/ Probably the filter is using === instead of == ?": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.random force float Some examples of the current _.random ``` javascript _.random(10) // ints [0, 10] _.random(10.1) // floats [0, 10.1] _.random(10.0) // ints [0, 10] ``` Sometimes you want floats between 0 and 10, but that's currently impossible, other than doing these, which are close (they exclude 0 and 10 respectively): ``` javascript _.random(Number.MIN_VALUE, 10) // closest positive number to zero, through 10 // or this where I had to do trial and error to find the // closest value to 10 that didn't round to 10 _.random(0, 9.999999999999998) ``` That doesn't work, if you want to get a float between 1 and 2, for example. So, I propose a forceFloat (or similar name) as a third argument to random. Changes required - add the argument - shift the arguments `if (max == null || max === false) { forceFloat = max; [...] }` - change the float/int decision: `return (min % 1 || max % 1 || forceFloat) ?` I estimate it'll add about 10 characters to the compiled JS (0.01kb before gzip). If you're willin": [
+  "lodash::dist/lodash.js::random",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::random",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fixes #353 Doc typo": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Enhance `_.clone` and `_.cloneDeep` Let's enhance `_.clone` and `_.coneDeep`. Currently `Date`s are not cloned by `_.clone` but they are cloned by `_.cloneDeep`. `Date` doesn't seem like a deep object and should probably be cloned by just a standard `_.clone` Also, when using `_.cloneDeep` on a `RegExp`, the `lastIndex` property isn't copied.": [
+  "lodash::dist/lodash.js::baseClone",
+  "lodash::dist/lodash.js::random",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::runInContext"
+ ],
+ "findIndex with a string parameter The [documentation for findIndex](http://lodash.com/docs#findIndex) is a bit vague about how the string parameter should work. I would expect it to work as follows: ``` javascript // expecting this to return 1 _.findIndex(['apple', 'banana', 'beet'], 'banana'); // returns -1 ``` The code seems to be expecting a callback as the second parameter, not a string. Could you please clarify? I'd be happy to update the docs.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "__bindData__ can be overwritten when _.bind is called on a bound function When createBound is called with an already-bound function that has __bindData__, that property's object can be changed, thus altering the future callbacks for the life of the originally-bound function. The property is defined with writeable false, but that will only stop the property from being overwritten, the object that its referencing can still be changed. Reproduce steps: ``` JS var func = function(){console.log(arguments);}; var b = _.bind(func, window); b.__bindData__ //[function (){console.log(arguments);}, 1, null, null, Window] var c = _.bind(b, window, 'test'); c(); //[\"test\"] //but now let's look back at __bindData__ of b b.__bindData__ //[function (){console.log(arguments);}, 17, [\"test\"], null, Window] ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "max() returning -Infinty when used with map() (This issue originates from a StackOverflow question: http://stackoverflow.com/q/19656432/603003) Consider this code: ``` var a = [ [1,2,3], [4,5,6], [7,8,9] ]; _.map( a, _.max ); // gives [3, -Infinity, -Infinity] ``` I've written a detailed [answer on StackOverflow](http://stackoverflow.com/a/19656752/603003) why that issue occurs. Basically, `_.max()` does only check whether the second argument is truthy or not. If it is truthy, it is treated as a callback function. That is the problem because `_.map()` passes the index as the second argument, so all iterations except the first one (because 0 != truthy) result in `-Infinity`. Fix: check whether the callback argument is really a function. ``` if (!callback && isArray(collection)) { // should be if ( (!callback || typeof callback !== \"function\") && isArray(collection)) { ```": [
+  "lodash::dist/lodash.js::flatten",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Please consider adding _.noop method == empty function Hello, Please consider adding noop function to the Lodash: ``` _.noop = function() {}; ``` It would be identical to http://api.jquery.com/jQuery.noop/ with the same use cases. The reason for this change is semantic one. I would like lodash to be truly my utility belt and leave all functional things to it leaving jQuery to work with the DOM only (and making AJAX requests :)). Thank you.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Enforce _.isArguments for legacy environments In the browsers that do not support the `[object Arguments]` class : ``` javascript _.isArguments({length:0,callee:1}) // true ``` To ensure that this is a real arguments object, adding a test on `!Object.prototype.propertyIsEnumerable.call(value, \"callee\")` would prevent it as most (if not all) of these environment do not have a `Object.defineProperty`.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Adding syntactic sugar to reduce This PR enables the following two syntaxes: ``` js var concatted = _.reduce([['foo', 'bar'], ['baz'], ['batz']], 'concat'); // => ['foo', 'bar', 'baz', 'batz'] ``` and ``` js var product = _.reduce([2, 4, 8], '*'); // => 64 ``` If you like them, I'll also add them to `reduceRight`. Tests and documentation are included. I can break these out into two separate PRs if you prefer. I tried to follow the existing style conventions but let me know if I can make anything look nicer. I wasn't quite sure where the utility methods should live, so I opted for \"as close as possible to where they are used\".": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::dist/lodash.js::transform",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::transform"
+ ],
+ "Fixed memory leak with debounce/throttle arguments and context Noticed that both underscore and lodash hold onto the arguments and context of the last execution of a debounced/throttled function. This leak can be serious (as is was in my app, retaining a giant DOM tree) underscore just merged my PR for this https://github.com/jashkenas/underscore/pull/1329 lodash's implementation is quite a bit more complex so let me know if I missed a case. As discussed in the underscore PR, there isn't really a way to test this. (Unless you want me to resort to _.debounce.toString().replace + eval trickery to inject some local scoped tests?)": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Error in example for contains ``` * _.contains('pebbles', 'ur'); * // => true ``` Shouldn't that be `false`, tested in the console and it returns `false`": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.size('pebbles'); is 5 is wrong in documentation https://github.com/lodash/lodash/blob/ee7852db1105658ca46c55c2e93224419841492c/lodash.js#L4197 ``` js _.size('pebbles'); // => 5 ``` Are you sure about that? :wink:": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "The docs page layout seems to be broken I'm using mac. And I have test http://lodash.com/docs page under: chrome/safari and firefox, the content block dropped down. The layout is broken. NOT the same as before.": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Broken use with Require.js shim (No longer exposing root._ in AMD) I see that commit ee7852d removed attaching to '_' on the global object, this seems to break using Lo-Dash as a replacement for Underscore in Backbone projects when using the 'shim' config in the RequireJS loader. At least my project stopped working after minifying with r.js after this. Relevant part of Require.js configuration: shim: { 'lib/jquery': { exports: '$' }, 'lib/backbone': { deps: [ 'lib/underscore', 'lib/jquery' ], exports: 'Backbone' } } With Lo-Dash mapped to 'lib/underscore', and using the default (non-AMD) Backbone.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Added options for controlling wrap behavior when using _.mixin I'd guess this won't be the final solution, but this worked out for my needs to control the wrapping behavior of mixed in functions.": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "All Function depending on internal function \"createWrapper\" does not work how i would expect Here's an example: ``` JavaScript var greet = function(greeting, name) { return greeting + ' ' + name; }; var hi = _.partial(greet, 'hi'); var hiFred = _.partial(hi, 'Fred'); var hiNuff = _.partial(hi, 'Nuff'); hi('fred') + ' ' + hiFred() + ' ' + hiNuff(); ``` **Result is:** hi Fred hi Fred hi Fred But i **expect the result:** hi Fred hi Fred hi Nuff": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash.isEqual reports false in case where underscore.isEqual reports true I have the following unit test that passes using underscore 1.5.2 and fails in lodash 2.4.0. The difference between objects A and B is that in A, bar and foo share an array and in B bar and foo contain equivalent arrays. test(\"lodash\", function () { var objectA = { foo: [\"one\", \"two\"] }; objectA.bar = objectA.foo; ``` var objectB = { foo: [\"one\", \"two\"] }; objectB.bar = [\"one\", \"two\"]; ok(_.isEqual(objectA, objectB)); ``` });": [
+  "lodash::dist/lodash.js::baseIsEqual",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Simplify `args` in `baseBind`": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.zip.apply(null,[[1]]) In version 1.2.1, this line _.zip.apply(null,[[1]]) returns [[1]] whereas in 2.4.1 it returns [] I believe the former is the correct behavior, what do you guys think?": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "oneToMany support in _.invert A tiny feature request to support inverting objects that may have multiple keys with the same value. By adding an optional `oneToMany` parameter to `_.invert()`. ``` javascript _.invert({ 'first': 'fred', 'second': 'barney', 'third': 'fred' }, true); // => { 'fred': ['first', 'third'], 'barney': ['second'] } ``` Thanks. Beautiful library.": [
+  "lodash::dist/lodash.js::baseIsEqual",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add string methods For 3.0 I think it's time we adopt a few string methods. I think we should start with `capitalize`, `startsWith`, `endsWith`, `repeat`, `trim`, `trimLeft`, `trimRight`, & `truncate` Are there any others you all think should make the cut for 3.0?": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::endsWith",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::startsWith",
+  "lodash::lodash.js::template",
+  "lodash::lodash.js::truncate"
+ ],
+ "Tweak documentation for `{un,}escape` [ci skip]": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Make `_.isElement` more robust. E.g. ``` js _.isElement({ 'nodeType': 1 }); // → true ``` This seems like a more robust approach: http://stackoverflow.com/a/20527420/96656": [
+  "lodash::dist/lodash.js::isElement",
+  "lodash::dist/lodash.js::isNative",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::isElement",
+  "lodash::lodash.js::isNative",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Improve links formatting for docs Improve links formatting for docs": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fix _.template docs typo Also, the docs for _.template seems to include all the options.`x` as paremeters, not sure if that's an issue with docdown or something else.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Weirdness with _.bind and Superagent callbacks I was trying to wrap my head around this one today, and I finally settled on the conclusion that it feels like a bug (or undocumented edge case). I'm creating a `_.bind`'d copy of a callback function that follows the standard `(err, res)` pattern. But using this function inside of a [Superagent](https://github.com/visionmedia/superagent) `end()` method, the null `err` value is shifted off and `res` shifts into `err`'s place, leaving `res` undefined. I created a [gist](https://gist.github.com/smitelli/8324403) that demonstrates the behavior. I'm running node 0.10.24, lodash 2.4.1, and superagent 0.16.0. Replacing lodash with underscore fixes the problem, and so does replacing `lodash.bind(function () {})` with `(function () {}).bind()`. https://gist.github.com/smitelli/8324403": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Added default value to _.result object = {'pasta': 'linguini'}; _.result(object, 'pizza', 'spaghetti'); // => 'spaghetti'": [
+  "lodash::lodash.js::result",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Update documentation for _.result _.result now supports a default value.": [
+  "lodash::lodash.js::result",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Lodash find/findIndex will not respect undefined while traversing Lodash will respect undefined properties in find/findIndex if the object's level is only one: ``` javascript _.find([{a:1}, {a:1, b:1}], {a:1, b:undefined}) //{ a: 1 } _.findIndex([{a:1}, {a:1, b:1}], {a:1, b:undefined}) //0 ``` However when giving a multi-level object to search for, it doesn't respect undefined properties in the search string: ``` javascript _.find([{t:{a:1}}, {t:{a:1, b:1}}], {t:{a:1, b:undefined}}) //undefined _.findIndex([{t:{a:1}}, {t:{a:1, b:1}}], {t:{a:1, b:undefined}}) //-1 ```": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Don't use array iteration for small function composition http://jsperf.com/compose-each/4 I have been playing with compose and looking at its performance across browsers and I have noticed that it is dramatically slower than hand composing functions. So I realized that compose could look at the length of arguments and return a optimized version for specific argument lengths. When you do this you can match the speed hand composed functions. Take a look the the jsperf. Would you be willing to consider a pull request that returned a 1arg, 2arg, 3arg, 4arg, 5arg falling back to the current behavior after that. 5 is arbitrary can be any number you feel good about. An alternative slightly smaller but still significant speed improvement is only use .apply on the first function passing in arguments and in the loop use .call. Unless I am misunderstanding something you only need apply for the first function call because of variable arguments on entry but all future function calls use the return of the previous call so you can use call with no sid": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "use .apply for initial function call in compose then use .call in loop As discussed in issue #463 and http://jsperf.com/compose-each/4 (simple compose impl) a big performance win can be had by using .apply only on the first function call and using .call in the loop. This maintains the current behavior of passing all the arguments into the first function call but passing the returned values into subsequent functions. Additionally, there isn't a reason to do any of this logic if a single function is passed in so just return that function if length === 1.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add `_.groupsOf` Hello, What do you think about the following addition? _.grouped(collection, size) with the following behavior: ``` var letters = ['a', 'b', 'c', 'd', 'e,' 'f', 'g', 'h', 'i', 'j', 'k']; var grouped = _.grouped(letters, 3); // [['a', 'b', 'c'], ['d', 'e,' 'f'], ['g', 'h', 'i'], ['j', 'k']] ``` I find myself needing this quite often. Cheers": [
+  "lodash::lodash.js::chunk",
+  "lodash::lodash.js::runInContext"
+ ],
+ "[Request]: Update the documentation for _.template As it stands right now, the overall quality of lodash's documentation is more clearer and unambiguous from that of underscore's, except that of `_.template`. There is virtually nothing to describe to newer users what is meant by `The \"interpolate\" delimiter` or `The \"escape\" delimiter`. They'd have to go hunting on google, or indeed, go to underscore's API docs to know about these features or how templating works in general.": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "` _ is not defined` when using template in nodejs ``` _.VERSION \"2.4.1\" ``` Code is pretty simple. Expecting `s` to equal `hello mustache` (straight from the docs). ``` ld = require('lodash') ld.templateSettings = interpolate: /{{([\\s\\S]+?)}}/g s = \"\" s = ld.template('hello {{ name }}!', { 'name': 'mustache' }) ``` Result: ``` ReferenceError: _ is not defined at eval (<anonymous>:4:26) at Function.template (/[dir]/node_modules/lodash/dist/lodash.js:6311:16) ``` Do I have to pass _ in in the options object? That seems really strange. Looks like this has come up before: https://github.com/lodash/lodash/issues/183 The failing code looks like: `var __t, __p = '', __e = _.escape; // _ is undefined` I managed to get it working by changing ``` var sourceURL = '\\n/*\\n//# sourceURL=' + (options.sourceURL || '/lodash/template/source[' + (templateCounter++) + ']') + '\\n*/'; try { var result = Function(importsKeys, 'return ' + source + sourceURL).apply(undefined, importsValues); ``` to: ``` var sourc": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::dist/lodash.js::template",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::template"
+ ],
+ "Docs improvements": [
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::isObject",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Simplify `_.chain`": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fix typos [ci skip]": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add a 'toJSON()' for unwrapping the chained result Hello, Does it make sense to add a 'toJSON' method that returns the chained wrapped value (same as 'value()' method)? This is useful in nodejs use of lodash. Invoking 'value()' everytime an object needs to be exposed for serialization pollutes the code. Cheers": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.where fails on null elements ``` js _.where([null], { id: '1' }) // => TypeError: Cannot read property 'id' of null ``` Is this right? Why?": [
+  "lodash::lodash.js::matches",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Slight inaccuracy in _.isPlainObject docs. The documentation for `_.isPlainObject` states: > Checks if value is an object created by the Object constructor. However, that doesn't appear to be entirely accurate as shown here: ``` javascript _.isPlainObject(Object.create(null)); // => true ``` This result makes intuitive sense to me, but is not what the documentation seems to imply.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Strange _.where() behavior with array of objects each with property that is also array of objects Example here: http://jsbin.com/pozoz/2/edit?html,output With an array like: ``` var matrix = [ { number: 100, attributes: [ { key: 'color', value: 'black' }, { key: 'size', value: 'small' } ] }, { number: 101, attributes: [ { key: 'color', value: 'black' }, { key: 'size', value: 'large' } ] }, { number: 102, attributes: [ { key: 'color', value: 'red' }, { key: 'size', value: 'small' } ] }, { number: 103, attributes: [ { key: 'color', value: 'red' }, { key: '": [
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "unexpected behaviour of _.merge with _.defaults callback In some issues, and also in code, there's are references to solving a defaultsDeep via `_.merge` with a `_.defaults` callbacks: `_.defaultsDeep = _.partialRight(_.merge, _.defaults)` But the result is quite unexpected: ``` javascript _.defaultsDeep = _.partialRight(_.merge, _.defaults); _.defaultsDeep(obj1 = {a:{b:{c:1}}}, obj2 = {a:{b:{d:2}}}); // EXPECTED: {a:{b:{c:1, d:2}}} // REAL: {a:{b:{c:1}}} ``` since merge will use the \"non-undefined\" result of the callback and stop going deeper i.e. it will compare obj1.a with obj2.a, _.defaults will answer \"keep obj1.a\", and merge stops For the expected to take place, one would need: ``` javascript _.defaultsDeep = function(a,b) { return _.isObject(a) ? _.merge(a, b, _.defaultsDeep) : _.defaults(a, b); } ``` This \"unexpected\" behaviour seems to be accounted for in a test \"should defer to `callback` when it returns a value other than `undefined`\", and I can guess the rationale, but maybe _.merge can benefit from another `goDeep` argum": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fix old `pullAt` example Small correction.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "First example for _.times() is incorrect. In the documentation, the first example for `_.times()` is: ``` javascript var diceRolls = _.times(3, _.partial(_.random, 1, 6)); // → [3, 6, 4] ``` However, because `_.times()` passes `index` to the callback, it actually returns something like: ``` javascript [4, 3.8181065060198307, 3.105474406853318] ``` The example should probably be changed to: ``` javascript var diceRolls = _.times(3, _.partial(_.random, 1, 6, false)); // → [3, 6, 4] ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Cancelling a debounced call It would be great if there were a way to cancel a debounced call. Say the debounced method is called, it waits 1second before it gets executed, however before it gets executed the object on which the original method exists has to be destroyed getting you into problems with destroying the object and even keeping the GC from cleaning it up. To get around this it would be good if we could cancel a potentially running debounced call by internally clearing the timeout id.": [
+  "lodash::lodash.js::cancel",
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::debounced",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.merge merges undefined values Is it correct that `#merge` merges undefined values? So I expected that `_.merge { }, { a: undefined, b: 1 }` will return `{ b:1 }` object, but I got `{ a: undefined, b: 1 }`. Actually I'm looking for a way to get rid of all undefined values ( even nested ) from object.": [
+  "lodash::lodash.js::baseMerge",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Added support array list keys in _.has": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.where with array of values has unclear behavior Given this example: ``` var characters = [ { 'name': 'barney', 'age': 36, 'pets': ['hoppy'] }, { 'name': 'fred', 'age': 40, 'pets': ['baby puss', 'dino'] } ]; _.where(characters, { 'pets': ['dino', 'hoppy'] }); ``` I would expect one of the following 2 scenarios: 1. It would return characters that have a pets array that includes BOTH (i.e. && op) dino and hoppy - since none exist, it would return an empty array -OR- 2. It would return characters that have a pets array that includes EITHER dino OR hoppy (i.e. || op), and would therefore return both. The actual result? It only looks at the first item in the array, so it returns any character that has a pet 'dino'. In other words: ``` _.where(characters, { 'pets': ['dino', 'hoppy', 'sadasdadasdsa', 'asdasdasd'] }) === _.where(characters, { 'pets': ['dino'] }) ``` Finally, `_.where` actually performs an && comparison for everything else, i.e.: ``` js var characters = [ { 'name': 'barney', 'married': true, 'age': 36, 'pets'": [
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Initial implementation of _.chunk - close #465 Basic implementation of chunk as per issue #465.": [
+  "lodash::lodash.js::chunk",
+  "lodash::lodash.js::runInContext"
+ ],
+ "partialRight documentation example unclear While the narrative description of `partialRight` seems fine, the example is, ... to put it nicely, odd. The example requires you to understand the intricacies of `merge`, which is unrelated and -- to my mind -- a bit obscure. Moreover, it doesn't even seem to work in my tests! But more importantly it really doesn't serve to showcase the function the way a simpler example would. I would suggest this, in parallel with the example from `partial`: ``` var greet = function(greeting, name) { return greeting + ' ' + name; }; var greetFran = _.partialRight(greet, \"fran\"); greetFran(\"hi\") // → \"hi fran\" ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Updated forEach object example to include the keys The forEach object example is a little ambiguous where it says \"logs each number\", since both the key and value of the object are technically numbers. I've read it a few times now (skipping over the function description of course) and wanted it to be a little more obvious.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fix shuffle for small collections": [
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::shuffle"
+ ],
+ "Issue with `_.clone{,Deep}` ![untitled](https://cloud.githubusercontent.com/assets/813865/3568059/f7747be0-0b28-11e4-8983-4fd8acdf67db.png) Notice the difference between lengths of the original array and cloned array. I've got a PR upcoming, albeit without tests (my test-writing skills are non-existent).": [
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::cloneBuffer",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Mixin mixes Lodash object when source is empty Is it the intended behaviour or is it a bug? It seems that Lodash mixin is currently not safe enough to implement APIs like Backbone's extend() The following Codepen demonstrates the issue: http://codepen.io/anon/pen/CAqGb?editors=001": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add `pipe` equivalent Current `compose` function is nice and corresponds to mathematical composition of functions ``` _.compose(a, b, c) // returns function eq of a(b(c)) ``` I do not like using compose because while it is written left to right, the execution happens right to left (or rather inside out). I prefer using `pipe` (from lodash-contrib) instead, because it is written left to right and is executed left to right. ``` _.pipe(a, b, c)(data) // same as c(b(a(data))) ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.isEqual doesn't work with chained arrays ``` _({}).isEqual({}); // returns true _([]).isEqual([]); // returns false instead of true ``` The same with ``` _.isEqual(_({}), {}); // true _.isEqual(_([]), []); // false ``` This is because `isEqual` compare types _before_ checking for `__wrapped__` property. (Type of `_(...)` is `[object Object]`, while array is `[object Array]`).": [
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add minimal support for lazy evaluation to chaining syntax #274 These are methods that currently support lazy evaluation: `map`, `filter`, `reverse`, `drop`, `dropWhile`, `dropRight`, `dropRightWhile`, `take`, `takeWhile`, `takeRight`, `takeRightWhile`, `first`, `last`, `initial`, `rest`, `value`.": [
+  "lodash::lodash.js::lazyValue",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Document property order issue with `pluck` This is similar to #671, I think. It probably is not an issue that can be fixed, but should probably be documented with some caveat about property order access not being guaranteed in `pluck`. ``` var flintstonesA = { A: {name: 'fred', age: 40}, B: {name: 'wilma', age: 36}, C: {name: 'pebbles', age: 2} }; var flintstonesB = { B: {name: 'wilma', age: 36}, A: {name: 'fred', age: 40}, C: {name: 'pebbles', age: 2} }; _.pluck(flintstonesA, 'age'); //=> [40, 36, 2] _.pluck(flintstonesB, 'age'); //=> [36, 40, 2] ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.before docs are unclear Here are the current docs for _.before: ``` js /** * Creates a function that invokes `func`, with the `this` binding and * arguments of the created function, until it is called `n` times. * * @static * @memberOf _ * @category Function * @param {number} n The number of times `func` may be called. * @param {Function} func The function to restrict. * @returns {Function} Returns the new restricted function. * @example * * jQuery('#add').on('click', _.before(5, addContactToList)); * // => allows adding up to 5 contacts to the list */ ``` Currently it seems like calling `_.before(5, func)` would allow `func` to be called 5 times but in reality it can only be called 4 times. The example as well as the docs can be updated to make this clearer, although I’m not too sure how to phrase this myself.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Source URLs not working in templates Using both chrome canary and chrome beta, my source URLs from `_.template` are no longer working. Sample expression: ``` _.template('<b>Foo</b>', null, {sourceURL: '/template/foo'}); ``` Expected result: - The `/template/foo` script shows up in the list of scripts in Chrome dev tools Actual result: - The `/template/foo` script does not show up in the list of scripts in Chrome dev tools I've tracked this down to the definition of sourceURL in lodash.js. Currently, the `sourceURL` line is wrapped in a multi-line comment, like this: ``` /* //# sourceURL=/template/foo */ ``` If I remove the multi-line comment, the source urls work again, and the templates show up as scripts in the dev tools: ``` //# sourceURL=/template/foo ```": [
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::template"
+ ],
+ "Use _.identity as default wrapper function for _.wrap I often have the need to wrap a value in a function especially when working with angular's resolve mechanism. This change shouldn't break anything and would be a useful default.": [
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::wrap"
+ ],
+ "Implement lazy `_().pluck` and `_().where` `_(arr).pluck(key)` shall be lazy": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "fix non-lazy calls not executed before `first` & `last` Same bug as before, but with `first` & `last` scenario: ``` _([1, 2, 3]).map().xor([4]).last(); // returns '3', while it should '4' ```": [
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fix broken lazy reverse Lazy `reverse` was never called. E.g. here: `_(arr).map().reverse()` normal `reverse` was called, breaking a lazy chain.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Mapping objects in chains doesn't works as expected This works as expected: ``` javascript _({ one: 1, two: 2, three: 3} ) .map(function(item, key) { return key; }) .value(); // → [ \"one\", \"two\", \"three\" ] ``` But if the wrapped value isn't an object from the start, something goes wrong with the call to `map()`: ``` javascript _([ 1, 2, 3 ]).groupBy(_.identity).value() // → { 1: [1], 2: [2], 3: [3] } _([ 1, 2, 3 ]) .groupBy(_.identity) .map(_.identity) .value(); // → [] ``` Am I wrong in assuming the last statement should return `[1, 2, 3]`? It appears as though `map()` isn't called.": [
+  "lodash::lodash.js::lazyValue",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Arity of curried function not taken into account when multiple values provided The following example shows a bug where setting the arity of the curried function does not prevent the function from using more then that number of arguments. Here I create a curried function of arity two which allows me to have a set of things and then keep checking if an item is in it. This is needed since `_.contains` provides a third argument of a starting index which I need to avoid if I want my function to work as part of a `_.filter` or other such method which provides more then a single argument to the callback **bug** Example ``` javascript _.curry(_.contains, 2)([1,3,5])(1) // -> true _.curry(_.contains, 2)([1,3,5])(1, 2) // -> false ``` **usage** Example ``` javascript _.filter(some_items, _.curry(_.contains, 2)(allowed_items)); ``` I tried using `_.partial` but this also has the third argument issue and there it makes more sense, IMO.": [
+  "lodash::lodash.js::ary",
+  "lodash::lodash.js::mergeData",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.assign doc seems wrong The signature for [`_.assign()`](https://lodash.com/docs#assign) is: > `_.assign(object, [source], [callback], [thisArg])` The doc says: > Assigns own enumerable properties of source object(s) to the destination object. The doc example shows: ``` javascript var object = { 'name': 'barney' }; defaults(object, { 'name': 'fred', 'employer': 'slate' }); // → { 'name': 'barney', 'employer': 'slate' } ``` Problems: 1. The doc speaks of \"destination\", the signature only has \"object\". It is not clear enough for an API doc. (And this is the case for many other methods) 2. If I am right in thinking that \"object\" is the \"destination\", then: assigning from source to destination means that properties of \"destination\" should be overwritten by properties of \"source\". But in the example it shows the opposite: the returned object has `name:\"barney\"` which has not been overwritten by the source object. 3. TODO: check what happens if there are more than 1 source: the doc says that \"Subsequent sourc": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.omit copies enumerable properties from prototype chain as well I'm not sure whether this is expected behavior, but if so it would be nice to have this behavior documented. `_.clone` only copies enumerable own properties, while `_.pick` and `_.omit` copy enumerable properties from the prototype as well. This is rather inconsistent IMO, and should at least be documented.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fixed documentation for debounce This PR fixes two syntax errors in the documentation. - Added missing parenthesis - Since `on` has no boolean param after the handler and the 4th param of `debounce` defaults to `false` this looks like some relict of the previous `addEventListener` version.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Docs highlighting messed up for _.some https://lodash.com/docs#some ![screenshot 2015-02-15 13 26 19](https://cloud.githubusercontent.com/assets/2192970/6204584/526a55d2-b516-11e4-8ea1-95d254416b00.png)": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Merging a string with an array doesn't work as expected. ``` var defaults = {propA: 'someString'}; var userOptions = {propA: ['value1', 'value2']}; var options = _.merge({}, defaults, userOptions); ``` The options are now: ``` {propA: ['value1', 'value2', 'm', 'e', 'S', 't', 'r', 'i', 'n', 'g']} ``` This is not what should be expected. The string should be gone and only the array should be kept.": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Issue when merging an array of typed objects I think there is a problem with the `_.merge` method. When I try to merge an array with objects, where the one of the arrays is an array of typed objects, and the other array contains plain javascript objects, the result is not correct. When I try to do the same with 2 objects (first object is a typed object, the second object is a plain javascript object), not wrapped in an array, I don't have this problem. Example ``` javascript var o1 = new MyObject({ name: 'object name', description: 'object description' }); var o2 = { name: 'object name 2', color: 'blue' }; _.merge(o1, o2); // -> {name: 'object name 2', color: 'blue', description: 'object description'} _.merge([o1], [o2]); // -> [{name: 'object name 2', color: 'blue'}] ``` As you can see, the result when merging 2 arrays is not correct. Currently I fixed this by using the map method to merge each object seperately: ``` javascript var merged = _.map(array1, function(old, index) { return _.merge(old, arra": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Node 4 Buffer merge problem I'm seeing a new behavior in lodash.merge@3.3.2 in Node 4. Previously, Buffers were preserved, but now they seem to be being converted into Arrays. To reproduce: ``` javascript var merge = require('lodash.merge'); var target = {} merge(target, { buffer: new Buffer([0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80]) }); console.log(target); ``` Under Node 0.12 ``` javascript // outputs: { buffer: <Buffer 01 02 04 08 10 20 40 80> } ``` Under Node 4 ``` javascript // outputs: { buffer: [1, 2, 4, 8, 16, 32, 64, 128] } ```": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "String functions do not work as expected when subject includes astral symbols or ANSI escape codes `padRight` does not pad the string that has ANSI escape codes, e.g. ``` js _.padRight(\"\\u001b[31mfoo\\u001b[39m\\u001b[34mbar\\u001b[39mbaz\", 10, 'X'); ``` The same issue applies to all string functions. The reason this is happening is primarily because the `length` property of the value is affected by ANSI escape codes. `padRight` should only be concerned with visible characters. Consider using [`string-length`](https://github.com/sindresorhus/string-length) by @sindresorhus.": [
+  "lodash::lodash.js::createPadding",
+  "lodash::lodash.js::endsWith",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::size",
+  "lodash::lodash.js::startsWith",
+  "lodash::lodash.js::stringSize",
+  "lodash::lodash.js::toArray"
+ ],
+ "Passing 3 or more lists to _.zipWith doesn't make any sense It looks like the iteratee function is being invoked for each pair(?) of elements: ``` _.zipWith([10,20,30],[40,50,60],[70,80,90], function() { console.log(Array.prototype.slice.call(arguments)); return -1; }) [ 10, 40, 1, [ 10, 40, 70 ] ] [ -1, 70, 2, [ 10, 40, 70 ] ] [ 20, 50, 1, [ 20, 50, 80 ] ] [ -1, 80, 2, [ 20, 50, 80 ] ] [ 30, 60, 1, [ 30, 60, 90 ] ] [ -1, 90, 2, [ 30, 60, 90 ] ] [ -1, -1, -1 ] ``` According to the documentation the callback should be invoked with \"(accumulator, value, index, group)\", but you can see the accumulator only comes back on every other invocation. And the index bounces between 1 and 2, which seems wrong. My expectation is that the `zipWith` iteratee function would be invoked with one argument from each list, and nothing more. (You can make a case to maybe add an index at the end). So I'd expect to see something more like: ``` _.zipWith([10,20,30],[40,50,60],[70,80,90], function() { console.log(Array.prototype.slice.call(arguments)); return -1;": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Different versions of V8 give different string tags for generator functions: _.isFunction I am getting different results for generator function using `_.isFunction` with different versions of V8. For example ``` function* test() { yield* [1, 2, 3]; } console.log(_.isFunction(test)); ``` On v4.5.103.33 I get a result of `false`, but on v4.5.103.34 I get a result of `true`. If I `typeof test` on both versions they return `function`, but with `Object.prototype.toString.call(test)` I get `[object GeneratorFunction]` and `[object Function]` respectively. In your source code I see you use `toString` to avoid issues with `typeof` on older browsers, but this now causes problems on newer browsers. I don't know what to suggest, haven't thought about it much yet, but I thougt you should be aware of the issue.": [
+  "lodash::lodash.js::isFunction",
+  "lodash::lodash.js::runInContext"
+ ],
+ "defaultsDeep() try to mix string characters into array In lodash 3.10.1, the following test failed: ``` expect(_.defaultsDeep({ src: ['src'] }, { src: 'src' })).to.deep.equal({ src: ['src'] }); ``` with the message: ``` AssertionError: expected { src: [ 'src', 'r', 'c' ] } to deeply equal { src: [ 'src' ] } ```": [
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Enhancement: custom Error object creator. Was going through a little more of my stuff and got to the Error section. I think custom Error object creator would be a nice addition. It's something that I have used fairly often. One particular use case was when creating a standards `assert` which requires that you throw `AssertionError`, if you are to follow the specification. I have also used it numerous other times in my personal projects. Anyway, here are the basics converted to lodash 3.10.1 for consideration and all the cross environment bits that I have come across, though I'm sure you'd be able squash it down some more. ;) I also have a set of tests that go with it (well, the original). ``` js var operaMessage = 'opera:config#UserPrefs|Exceptions Have Stacktrace', reNewLine = /\\r\\n|\\n/, isOkToUseOtherErrors; /** * Tests to see if the argument is one of the seven standard Error type * constructors. * * @private * @param {*} value The object to be tested. * @return {boolean} True if object is an Error constructor.": [
+  "lodash::lodash.js::isFunction",
+  "lodash::lodash.js::isObject",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Lazy optimization for `at` When using `at` to pull specific indexes from an array mapped using lazy evaluation (and maybe other operations too), it seems like we're missing the potential for more optimizations ``` var testFixture = []; Object.defineProperty(testFixture, '0', { get() { console.log('Get', 0); return 0; }}) Object.defineProperty(testFixture, '1', { get() { console.log('Get', 1); return 1; }}) Object.defineProperty(testFixture, '2', { get() { console.log('Get', 2); return 2; }}) _(testFixture).map(item => item + 1).at(1).value(); ``` In that example, it seems like it should be possible to optimize the chain such that only the mapping function for the indexes provided in `at` are executed. Currently, it looks like the mapping function is executed for all indexes": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.flattenDeep errors on arrays with circular references. ``` js var arr = [1, 2, 3]; arr.push(arr); _.flatten(arr); // => Uncaught RangeError: Maximum call stack size exceeded(…)flatten ``` Result could be: ``` js [1, 2, 3, 1, 2, 3] ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Error in _.range doc ``` If end is less than start a zero-length range is created unless a negative step is specified. ``` looks not to be true. `_.range(0, -5)` gives `[0, -1, -2, -3, -4]`": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Since v4.0.0, _.isEqual is not consistent over object properties ordering Hello, Since I have upgraded to Lodash v4.0.0, _.isEqual fails depending on object properties ordering. See the following example: ``` var object1 = {a: \"A\", b: null}; var object2 = {b: null, a: \"A\"}; var object3 = {a: \"A\", b: null}; console.log(_.isEqual(object1, object2)); => false console.log(_.isEqual(object1, object3)); => true ``` Thanks": [
+  "lodash::lodash.js::equalObjects",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.defaultsDeep is converting 1st level function values to objects In 4.0.0 ``` js _.defaultsDeep({}, { fn: function () {} }); ``` results in: ``` js { fn: {} } ``` which in 3.10.1 resulted in ``` js { fn: function () } ``` It didn't say anything about this change in the docs/changelog, so i want to make sure that it's supposed to work like that. For what it's worth: ``` js _.defaultsDeep({}, { obj: { fn: function () {} } }); ``` results in ``` js { obj: { fn: function () } } ``` and ``` js _.defaults({}, { fn: function () {} }); ``` results in ``` js { fn: function () } ``` as well.": [
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Core build doesn't work with Backbone.js / matches missing It seems `matches` is missing in `core` build, while it still is said to be compatible with Backbone.js here: https://github.com/lodash/lodash/wiki/Build-Differences": [
+  "lodash::dist/lodash.core.js::baseMatches",
+  "lodash::dist/lodash.core.js::equalObjects"
+ ],
+ "The formatting of the docs for _ is broken The commas are marked as code rather than the method names.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.slice and default arguments Documentation says this: ``` javascript _.slice(array, [start=0], [end=array.length]) ``` But the reality is this: ``` javascript _.slice([1, 2, 3]) // [] I expect that to be [1, 2, 3] .slice([1, 2, 3], 0) // [] I expect that to be [1, 2, 3] _.slice([1, 2, 3], 0, 1) // [1] as expected _.slice([1, 2, 3], 0, 3) // [1, 2, 3] as expected _.slice([1, 2, 3], 0, 4) // [1, 2, 3] as expected _.slice([1, 2, 3], 1) // [] I expect that to be [2, 3] ```": [
+  "lodash::dist/lodash.core.js::slice"
+ ],
+ "_.fromPairs treats pair keys as an object path The docs say (emphasis mine): > The inverse of _.toPairs; this method returns an object composed from **key**-value pairs. It's not acting as the inverse when keys contain `.`, as it's splitting keys on `.` and creating nested objects: ``` $ node > var ld = require('lodash'); undefined > ld.VERSION '4.0.0' > var pairs = ld.toPairs({'foo.bar': {b: 123}, b: 9}) undefined > pairs [ [ 'foo.bar', { b: 123 } ], [ 'b', 9 ] ] > ld.fromPairs(pairs) { foo: { bar: { b: 123 } }, b: 9 } ``` 3.10.1 behaviour: ``` $ node > var ld = require('lodash') undefined > ld.VERSION '3.10.1' > var pairs = ld.pairs({'foo.bar': {b: 123}, b: 9}) undefined > pairs [ [ 'foo.bar', { b: 123 } ], [ 'b', 9 ] ] > ld.object(pairs) { 'foo.bar': { b: 123 }, b: 9 } ```": [
+  "lodash::lodash.js::fromPairs",
+  "lodash::lodash.js::runInContext"
+ ],
+ "`_.merge`: unexpected behavior when merging nested functions and objects I recently upgraded to v4 of lodash.merge, and some of the behavior seems to have changed: ``` javascript var merge = require('lodash.merge'); var fn = function fn() {}; var obj = { obj: true }; var result = merge({}, { prop: fn }, { prop: obj }); console.log(result); ``` in v3, this outputs: `{ prop: { obj: true } }` in v4, this outputs: `{ prop: { [Function: fn] obj: true } }` (i.e. the original `fn` function, which now has an added `obj` key) To me, the v4 result is surprising: I would expect it just to replace `fn` with `obj` in the output, but instead it attempts to merge the function and the object together. It appears to do this by defining an extra property on the `fn` function itself, and returning the function. Is this the intended behavior?": [
+  "lodash::lodash.js::baseMerge",
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::createAssigner",
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.merge modifies source objects I just upgraded to lodash 4.0.0, and encountered a bizarre error in my program which I finally tracked down to a bug in _.merge. Here's a minimal example I put in a file named `temp.js`: ``` JavaScript var _ = require('lodash'); var a = {predicates: [{a: 1}]}; var b = {predicates: [{b: 2}]}; var c = _.merge({}, a, b); console.log(\"a.predicates: \"+JSON.stringify(a.predicates)); console.log(\"b.predicates: \"+JSON.stringify(b.predicates)); console.log(\"c.predicates: \"+JSON.stringify(c.predicates)); ``` Running `node temp.js` produces the following output: ``` a.predicates: [{\"a\":1,\"b\":2}] b.predicates: [{\"b\":2}] c.predicates: [{\"a\":1,\"b\":2}] ``` I would instead expect the value of `a.predicates` to be unchanged. What do you think?": [
+  "lodash::lodash.js::baseMerge",
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::createAssigner",
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.sampleSize() limited to max length of sample and uses Fisher-Yates shuffle? It seems to me that using `_.sampleSize(collection, [n=0])` is limited to return at most the total number of the samples in the collection and they are non-repeating random (using [Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher-Yates_shuffle))? This is not clearly explained in the docs: https://lodash.com/docs#sampleSize ``` javascript var test = _.sampleSize([1,2,3], 5); console.log('sampleSize()',test); ``` Returns `sampleSize() [3, 1, 2]` I expected it to be more like a shorthand for: ``` javascript var arr = []; var ii; for (ii = 0; ii < 5; ++ii) { arr.push(_.sample([1,2,3])); } console.log('arr',arr) ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Error in _.wrapperFlatMap doc Not sure, but shouldn't it be `_.prototype.flatMap` instead of `_.wrapperFlatMap`?": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.concat(undefined, undefined); Somewhat unexpected result. ``` n_ > _.concat(); [ {} ] ``` Why there is an object? Should it return `[]` instead?": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "v4 _.mergeWith(... customerizerFunc) changed behaviour compared to v3 _.merge(.., customizerfunc) The following v4 _.mergeWith ``` _.mergeWith({}, { foo: { bar: { x: \"lala\" } } }, { foo: { bar: { nested: { arr: [\"should not duplicate\"] } } } }, function (dest, src) { return _.isArray(dest) ? dest.concat(src) : undefined; }) ``` duplicates the 'should not duplicate' string. The equivalent code in v3 does not do this: ``` _.merge({}, { foo: { bar: { x: \"lala\" } } }, { foo: { bar: { nested: { arr: [\"should not duplicate\"] } } } }, function (dest, src) { return _.isArray(dest) ? dest.concat(src) : undefined; }) ``` Bug?": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.sumBy should return 0 if the source is empty Example: ``` js _.sumBy([], 'foo') // -> undefined ``` Expected behavior would be to return `0`. I expect it cause of the mathematical convention of the [Empty Sum](https://en.wikipedia.org/wiki/Empty_sum).": [
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::sumBy"
+ ],
+ "Make `isEmpty` method faster on objects Here is the benchmark: http://jsperf.com/fastest-check-if-object-is-empty/2.": [
+  "lodash::lodash.js::isEmpty",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Unexpected _.merge issue with Buffer as object value in Node v4 Lodash 4.2.1 Node v4.2.4 ``` javascript var _ = require('lodash'); var a = new Buffer([0, 1]); var r = _.merge({}, { a: a }); console.log(r); ``` Expected: ``` { a: <Buffer 00 01> } ``` Real: ``` { a: <Buffer 27 75 73 65 20 73 74 72 69 63 74 27 3b 0a 0a 76 61 72 20 5f 20 3d 20 72 65 71 75 69 72 65 28 27 6c 6f 64 61 73 68 27 29 3b 0a 0a 76 61 72 20 61 20 3d ... > } ```": [
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::cloneBuffer",
+  "lodash::lodash.js::initCloneByTag",
+  "lodash::lodash.js::runInContext"
+ ],
+ "[4.3.0] Debounce/Throttle inconsistent I've noticed that when updating to 4.3.0 my debounce and throttle functions were out of whack. The first time they are called, they work properly. Any times after that, the function is invoked at the leading **and** trailing. Even if only called once. I reverted back to 4.2.1 and everything is working properly.": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::debounced",
+  "lodash::lodash.js::runInContext"
+ ],
+ "(lodash/fp) findKey predicate receives key instead of object ``` javascript import {findKey} from 'lodash/fp' findKey(k => {console.log(k)}, {k1: 'v1', k2: 'v2'}) // logs 'k1', 'k2' ``` In the regular docs the example is ``` javascript var users = { 'barney': { 'age': 36, 'active': true }, 'fred': { 'age': 40, 'active': false }, 'pebbles': { 'age': 1, 'active': true } }; _.findKey(users, function(o) { return o.age < 40; }); ``` where the predicate gets the value.": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "JSDoc @type annotation [JSDoc documentation](http://usejsdoc.org/tags-type.html) indicates that `@type` annotation's contents should be wrapped in curly braces. Lodash's JSDoc `@type` annotations are currently without the braces, e.g. for [`isArray`](https://github.com/lodash/lodash/blob/4.3.0/lodash.js#L9452): ``` javascript /** * Checks if `value` is classified as an `Array` object. * * @static * @memberOf _ * @type Function ... */ ``` I found this in association to a [TypeScript compiler issue](https://github.com/Microsoft/TypeScript/issues/7002).": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.merge modifies source objects Similar to https://github.com/lodash/lodash/issues/1801. ``` js var a = {predicates: [{a: 1}]}; var b = {predicates: [{b: 2}]}; var c = _.merge({}, a); var d = [b].reduce(function(config, addon) { return _.merge(config, addon); }, c); console.log(\"a.predicates: \"+JSON.stringify(a.predicates)); console.log(\"c.predicates: \"+JSON.stringify(b.predicates)); console.log(\"c.predicates: \"+JSON.stringify(c.predicates)); console.log(\"d.predicates: \"+JSON.stringify(d.predicates)); ``` 3.10.1 (https://jsbin.com/miricimeyi/1/edit?html,js,output) ``` js a.predicates: [{\"a\":1}] b.predicates: [{\"b\":2}] c.predicates: [{\"a\":1,\"b\":2}] d.predicates: [{\"a\":1,\"b\":2}] ``` 4.3.0 (https://jsbin.com/naqewafefi/1/edit?html,js,output) ``` js a.predicates: [{\"a\":1,\"b\":2}] b.predicates: [{\"b\":2}] c.predicates: [{\"a\":1,\"b\":2}] d.predicates: [{\"a\":1,\"b\":2}] ``` I would instead expect the value of a.predicates to be unchanged. What do you think?": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.isError gives unexpected response I have an interesting edge case for you: ``` var localStorageTest = _.attempt(function() { localStorage.setItem('localStorageTest', true); localStorage.removeItem('localStorageTest'); }); return _.isError(localStorageTest); ``` In Safari Private Browsing, using lodash 4.1.0, this returns `true`. But in Safari Private Browsing, using lodash 4.2.0, this returns `false`. I think it should return true because `localStorageTest` will return an error in Safari Private Browsing: `Error: Error: QuotaExceededError: DOM Exception 22`": [
+  "lodash::lodash.js::isError",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.valuesIn({...}) is returning an empty array **Lodash v4.3.0** `_.valuesIn({ x: 'y' }) === Array []` **Tested against the following browsers on OS X (El Capitan):** - Firefox 43.0.4 - Chrome 48.0.2564.109 - Safari 9.1 The function works as expected in **Lodash v3.10.0**.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "FP-style functions don't accept non-functions as iteratees (Error: func is not a function). Regression? ``` js const arr = [{score: 1}, {score: 2}]; // This works: _.map(arr, 'score'); // => [1, 2] // This doesn't: _mapFP('score')(arr); // => Error: func is not a function // Works, but is ugly: _mapFP(item => item.score)(arr); // => [1, 2] ``` This is a huge regression for me. Using strings/objects for iteratees has been one of the most important lodash features for me. Now I'm trying to import lodash methods individually in order to minimize distro size. That forces me to replace chaining with `flow`, and `flow` needs FP-style lodash functions. Compared to chaining, `flow` is a huge hit on readability by itself, and the inability to use objects/strings for iteratees makes it even worse! :sob: The longer the `flow` chain, the harder it is to read all those callbacks. Please let FP-style lodash functions accept non-functions as iteratees. If this is planned, please add it to the [roadmap](https://github.com/lodash/lodash/wiki/Roadmap), mentioning the target version number. :bow:": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "When merging modified primitive type objects, added properties get dropped Bug when using v4.4.0 We use a pattern where we add properties to a string object. When we try to merge that string property into another object, all the properties originally added are dropped. I'm not sure if this is specifically an issue with merge, or if other functions are affected. ``` javascript > var testStr = new String('testStr'); > testStr.prop1 = 'testStr.prop1' > testStr { [String: 'testStr'] prop1: 'testStr.prop1' } // It seems to work 1 level deep. > _.merge({}, { testStr: testStr }) { testStr: { [String: 'testStr'] prop1: 'testStr.prop1' } } // but any deeper and it doesn't work as expected. > _.merge({}, { testStr: { testStr: testStr } }) { testStr: { testStr: [String: 'testStr'] } } ```": [
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Unnecessary copy in fp/set? I was trying out the set function and was surprised by some behavior. It looks like unchanged objects are copied: ``` var set = require('lodash/fp/set'); var test = { firstObj: { prop: 1 }, secondObj: { otherProp: 1 } }; var test2 = set(['firstObj', 'prop'], 3, test); console.log(test.secondObj === test2.secondObj); //this prints false ``` If fp/set is meant to treat data as immutable, there's no need to copy secondObj, since it wasn't changed. Other libraries related to immutability in JS work this way (e.g. seamless-immutable's setIn function) and I was hoping that lodash/fp (which is really awesome overall) would, too. One of the nice benefits of immutability is that you can detect changes by doing a === compare, but using set doesn't give you that. Thanks!": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "Merge sometimes loses the prototype on nested objects Seen on 4.5.0 Repro at http://jsbin.com/fuwagareme/1/edit?html,js,console I expected the `offset` function to be exist in the merged moment instance. It seems to only happen when an existing sub-object is added to. Showing this with Moment because that's what tickled the problem for us. Surfaced in https://github.com/Automattic/wp-calypso/pull/3288": [
+  "lodash::lodash.js::isPlainObject",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::transform"
+ ],
+ "In v4.5.0 _.create does not create properties from objects with value 1 Using `_.create` to create objects out of a constructor and another object does not create properties with have a value 1 but creates every other property. Below is a script to reproduce the issue. ``` js var _ = require('lodash'); // v4.5.0 function User() { this.name = null; this.canPushNotify = 1; this.isSearchable = 1; this.isActive = 1; } var input = { canPushNotify: 1, isSearchable : 1, isActive : 0, name : 'Test' }; var created = _.create(new User(), input); console.log(created); ```": [
+  "lodash::lodash.js::assignValue",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.toString() definition throws in IE11 In IE11 there is `Symbol` defined with `__proto__` but no `Symbol.prototype`. So the following code in `_toString` fails when assigning symbolToString because the check condition is wrong. ``` var symbolProto = Symbol ? Symbol.prototype : undefined, symbolToString = Symbol ? symbolProto.toString : undefined; ``` Shouldn't it be: `symbolToString = symbolProto ? symbolProto.toString : undefined;`": [
+  "lodash::lodash.js::equalByTag",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_(value) docs missing entries for chainable/non-chainable https://lodash.com/docs#_ At least `_.first` is not specified as either chainable or non-chainable (but `_.last` is).": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add failing test for mergeWith with multi-ref source object This seems pretty straightfoward to me. I've got a source object I want to merge which has two keys, only one of which exists in the object I want to merge into. Both keys in the source object point to the same object, an array. What I expect to come out of the merge is an object where the key that existed before has been modified to contain the values of the array too, and the key that didn't exist just got added with the values of the array _only_. What actually happens is the two keys in the final object are exactly the same, a strict equals comparison is true. This is unexpected. We can take this problem a little further and start with an initial object with both keys from the source object defined and set to different things: ``` js var food = { vegetables: ['carrot'], greens: ['cabbage'] }; ``` The result of `mergeWith` will actually end up destroying data because `actual.greens` will no longer contain the element `cabbage`. This initial state also produces an ordering p": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.has returns true for inherited nested properties `var a = _.create({b: {c:true}}); _.has(a, 'b.c'); // true` [https://jsfiddle.net/q2mhc5mb/3/](https://jsfiddle.net/q2mhc5mb/3/)": [
+  "lodash::lodash.js::hasPath",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.omit removes Symbol properties Documentation (4.6.1) states that `_.omit`: > creates an object composed of the own and inherited enumerable properties of object that are not omitted Which is only true for `string` properties. `Symbols` - even though they are `enumerable` are omitted as well. ``` js const symb = Symbol('symbol declared as global variable'); const obj = { foo: 1, bar: 2, [symb]: 3, }; ``` ``` js Object.getOwnPropertyDescriptor(obj, symb) // Object {value: 3, writable: true, enumerable: true, configurable: true} ``` ``` js const afterOmit = _.omit(obj, ['foo']); 'foo' in afterOmit // false 'bar' in afterOmit // true symb in afterOmit // Expected: // true // As is (4.6.1) // false ```": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "isPlainObject false positive with unusual prototypes Cf. https://github.com/jquery/jquery/issues/2968 When the prototype of an object has no `constructor` property of its own (e.g., `Object.create({ foo: \"bar\" })`), `_.isPlainObject` can find an inherited Object constructor and falsely conclude that the object is plain. This can be remedied by verifying that `constructor` is an own property of the object's prototype: http://jsbin.com/hezeqilega/edit?js,output P.S. What is the purpose of the `Ctor instanceof Ctor` [check](https://github.com/lodash/lodash/blob/cf74ebeb71028590e12d49d14a888bbef3c3169f/lodash.js#L10546)? The following Function#toString verification seems strictly stronger... is there a performance advantage to the former?": [
+  "lodash::lodash.js::isPlainObject",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.mergeWith mutates first source when customizer returns undefined and objects are at least 3 levels deep ``` var a = { a1: { a2: { a3: true } } }; var b = { a1: { a2: { b3: true } } }; _.mergeWith({}, a, b, _.noop); ``` Will result in `a` being: ``` { a1: { a2: { a3: true, b3: true } } } ``` If no customizer is provided then `a` will be untouched.": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "docs: missing `|Array` for predicate types Thanks for Lodash! just one thing made me double take a couple of times reading the docs.. https://lodash.com/docs#filter https://github.com/lodash/lodash/blob/4.6.1/lodash.js#L7674 E.g. should.. ``` * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration. ``` be ``` * @param {Function|Object|Array|string} [predicate=_.identity] The function invoked per iteration. ``` and presumably its a problem for all the predicate types": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.isEmpty returns incorrect result with Sets ``` js var s = new Set(); _.isEmpty(s) // => true (as expected) s.add('value'); _.isEmpty(s) // => true, even though the set is no longer empty ``` Even though a Set's keys aren't enumerable, the behavior is somewhat unintuitive because an \"empty set\" is typically defined as \"a set with no elements\".": [
+  "lodash::lodash.js::isEmpty",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.attempt docs. Arguments description In docs `_.attempt` has a header ``` _.attempt(func) ``` While it's also except additional arguments (as mentioned in description), so it probably should be ``` _.attempt(func, [args]) ``` `Arguments` section should contained second item and maybe example may contain usage of additional parameters I could make a PR if you like": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash 4.7.0 _.has returns true for null nested object values In lodash 4.7 the following returns true ``` javascript _.has({a:null}, 'a.b.c'); ``` Whereas in 4.6.1, it'll return false as expected. It looks like the null object exits out of the hasPath function successfully: https://github.com/lodash/lodash/blob/master/lodash.js#L5356 ``` javascript while (object != null && ++index < length) { var key = path[index]; if (!(result = hasFunc(object, key))) { break; } object = object[key]; } ``` Adding this after the while loop could catch the case in which the null sub-object falls through the cracks: ``` result = result && (object || index == length); ```": [
+  "lodash::lodash.js::hasPath",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.overEvery and _.overSome may accept _.matchesProperty shortcut (and probably others) Consider the following: ``` js _(collection) .filter(['some_id', someObj.id]) .filter(['some_token', anotherObj.token]) .filter(somePredicateFunction) .value(); ``` might as well be written as: ``` js _(collection) .filter(_.overEvery( _.partial(_.matchesProperty, _, ['some_id', someObj.id]), _.partial(_.matchesProperty, _, ['some_token', anotherObj.token]), somePredicateFunction ) .value(); ``` or for readability as: ``` js _(collection) .filter(_.overEvery( ['some_id', someObj.id], ['some_token', anotherObj.token], somePredicateFunction ) .value(); ```": [
+  "lodash::lodash.js::createOver",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Documentation to mention if groupBy algorithm is stable or not. Could it be also mentioned in documentation that groupBy will produce stable result where relative order of elements in each group is the same that original array had? http://stackoverflow.com/questions/28860526/lodash-sortby-then-groupby-is-order-maintained Would be great to have this as an official feature and not just by undefined behavior.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Debounce with maxWait misses some calls I noticed there's an issue with debounce and maxWait. On subsequent calls right after the maxWait, the debounced function is not getting called. Check this jsfiddle with an open console: https://jsfiddle.net/9fjt512m/ My output (Chrome on Max OSX) looks like this: calling debounce calling debounce debounced run calling debounce calling debounce I would expect another \"debounced run\" at the end, but none is happening. Might be related to the #2093 that was merged a month ago.": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::debounced",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Possible problem on _.pullAt When using `_.pullAt` on arrays with length greater than 11, the mutation fails: `var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12];` `var evens = _.pullAt(arr, 1, 3, 5, 7, 9, 11);` `console.log(evens)` `//[2, 4, 6, 8, 10, 12]` `console.log(arr)` `//[1, 3, 5, 7, 9, 11, 12]` It works fine when the array length is 11 or less. As seen in the [documentation](https://github.com/lodash/lodash/blob/4.11.1/lodash.js#L6839) : `var arr = [1, 2 , 3, 4];` `var evens = _.pullAt(arr, 1, 3);` `console.log(evens)` `//[2, 4]` `console.log(arr)` `//[1, 3]` Lodash version tested: `v4.11.1`": [
+  "lodash::lodash.js::basePullAt",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Surprising results when _.find'ing properties with array values Very sorry if this has been addressed already. I ran into this behavior that surprised me, when trying to find an element within an array using the `matches` shorthand. ``` const sprites = [ { pos: [4,2] }, { pos: [5,4] }, { pos: [1,1] }, { pos: [1,2] }, { pos: [2,1] }, ]; _.find(sprites, { pos: [2,2] }); // expected undefined but returns { pos: [4,2] } _.find(sprites, { pos: [2,1] }); // expected { pos: [2,1] } but returns { pos: [1,2] } ``` While perusing the code I found that `baseIsEqual` is called with `PARTIAL_COMPARE_FLAG` (explains first find) and `UNORDERED_COMPARE_FLAG` (explains second find). I'm quite sure there's a good reason for applying those flags, but I wanted to mention it since it surprised me and I couldn't find any prior questions about it. <3 lodash": [
+  "lodash::lodash.js::equalArrays",
+  "lodash::lodash.js::runInContext"
+ ],
+ "FP _.update Converts to Object ### Input ``` js const { update } = require('lodash/fp'); update('a', x => x, { a: 'b' }); typeof update('a', x => x, { a: 'b' }).a; ``` ### Expected ``` js { a: \"b\" } \"string\" ``` ### Actual ``` js { a: String(\"b\") } \"object\" ``` https://tonicdev.com/56fe744dce160013001143c1/jacob This is working as intended in regular Lodash.": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::fp/_baseConvert.js::cloneByPath"
+ ],
+ "FP forEach function not capped Docs say it should be capped, https://tonicdev.com/jacobp100/foreach": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Merging with an object that is extended onto a function Currently in v4: `_.merge({}, {a: 'test'}, _.extend(function(){}, {a: 'Yay'})).a` // test However this should yield 'Yay'": [
+  "lodash::lodash.js::createAssigner",
+  "lodash::lodash.js::runInContext"
+ ],
+ "nth documentation misleading So I understand I'm the only one who was confused by this enough to write an issue and that this is minute, but here goes: > Gets the nth element of array. If n is negative, the nth element from the end is returned. When reading \"nth\" element where the function takes an integer, I naturally replace n with the integer. 4th, 5th, etc. (i.e. 1 based, not 0) When really what this method is doing is grabbing index n. Thus I propose changing the documentation to: > Gets the element at index n of array. If n is negative, the nth element from the end is returned. Which begs the question why the function is called 'nth' - seems like a silly reason to cause an api change though.": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Documentation error Shouldn't... `[['a', 1], ['b', 2], ['c', 1]]` ...in line [13007](https://github.com/lodash/lodash/blob/master/lodash.js#L13007) be... `[['a', 1], ['b', 2], ['c', 3]]`?": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.throttle does not throttle when system clock is at 0 I've come across an issue when unit testing with `_.throttle` when using `_.runInContext(global).throttle` in unit tests. I'm using sinon's `useFakeTimers()` which, by default, sets the clock to `0`. This appears to break `_.debounce()`'s `shouldInvoke()` when lastCallTime is `0` as `0` is `false`-y. Offending line: https://github.com/lodash/lodash/blob/e156459176c1f35964fc443b39f04c4cb0a96763/lodash.js#L9648": [
+  "lodash::lodash.js::cancel",
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::shouldInvoke"
+ ],
+ "Little doc correction for _.endsWith().": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "pullAll fails for same array Seems like the current implementation of `pullAll` fails when you pass the same array in ``` js var x = [{ name: 'A' }, { name: 'B' }]; _.pullAll(x, x); assert.equal(x, []) // Fails // x === [{ name: 'B' }] ```": [
+  "lodash::lodash.js::basePullAll",
+  "lodash::lodash.js::runInContext"
+ ],
+ "The key is wrong during _.find _.find({a:20,b:30}, (v,k) => console.log(k)); expected: a, b result: 0, 1": [
+  "lodash::lodash.js::createFind",
+  "lodash::lodash.js::find",
+  "lodash::lodash.js::findLast",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Documentation of _.difference Hey guys, the docs of _.difference says: Creates an array of **unique** array values... I tried the following: `_.difference([1, 1, 2, 3], [2, 3])` And it returns: `[1, 1]`. Is this an error in _.difference or am I misinterpreting the docs?": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "Added _.defaultTo Added method `_.defaultTo` discussed in #2375 and some tests in both `test.js` and `test-fp.js`. In vanilla lodash it works like this ``` javascript _.defaultTo(undefined, 0) // => 0 _.defaultTo(10, 0) // => 10 ``` Does **NOT** support chaining `_([1,2,3]).find(n => n > 5).defaultTo(0)` since `find` returns `undefined` (and tbh I don't know how to invoke `defaultTo` in this case) In FP, it has the parameters inverted, there's also a curried version and can be used inside `fp.flow` ``` javascript fp.defaultTo(0, undefined) // => 0 fp.defaultTo(0)(undefined) // => 10 fp.flow([ fp.find(n => n > 5), fp.defaultTo(0) ])([1, 2, 3]) // => 0 ```": [
+  "lodash::lodash.js::defaultTo",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.multiply with no arguments should return 1 To ensure consistency with _.add _.multiply with no args should return 1 so: - _.multiply() === 1 - _.multiply(value) === value - _.multiply(value1, value2) === value1*value2": [
+  "lodash::lodash.js::createMathOperation",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Manipulated argument order of getOr is not reflected in subsequent functions within currying sequence Hi there, I've been using `lodash/fp` for the past week and love it already. However, I've come across an issue where the currying sequence of `getOr` doesn't seem to be updated after reordering it's arguments via `rearg`. ``` js const map = { test: 'hello' }; rearg([0, 2, 1], getOr)(null, map, 'test') //$ // $> 'hello' rearg([0, 2, 1], getOr)(null)(map)('test') //$ // $> null ``` I'd expect the second invocation to be no different than the first, and therefore return `hello`. Please let me know if I'm doing something wrong and there's an easy workaround. Cheers James": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "sortBy behaviour 4.10.0 vs. 4.11.0 Hi guys, I experience a different sorting behaviour between version 4.10.0 and 4.11.0 I made a Codepen with version 4.10.0... http://codepen.io/hoody/pen/oLxeQb ...and version 4.11.0... http://codepen.io/hoody/pen/ZOWJVP Expected behaviour: Items are ordered by _labelPosition_ Did I miss a syntax change of this function? Do you have a hint for me? Greetings, Stefan": [
+  "lodash::lodash.js::createOver",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fixed display of transforms param in overArgs docs. There is currently a small bug in the documentation for `_.overArgs` that prevents the information about the `transforms` parameters from being displayed. <img width=\"666\" alt=\"screen shot 2016-06-15 at 8 56 34 pm\" src=\"https://cloud.githubusercontent.com/assets/7499938/16100817/a2118b9c-333b-11e6-8084-8cac94b57656.png\"> This PR should fix that.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.assignWith unexpected result when customizer returns undefined. According to the documentation \"This method is like _.assign except that it accepts customizer which is invoked to produce the assigned values. **If customizer returns undefined, assignment is handled by the method instead**. The customizer is invoked with five arguments: (objValue, srcValue, key, object, source).\" So I would have assumed that if you don't return anything on the customizer it should do what assign does, although that doesn't seem to be the case. Is the documentation wrong? Code to reproduce: ``` javascript var dest = {}; var src = { a: '1', b: '2' }; _.assignWith(dest, src, function(srcValue, destValue, key) { if(key === 'a') { return destValue + 'mod'; } }); console.log(dest); ``` Expected result: `{a: '1mod', b: '2' }` Actual result: `{a: '1mod', b: undefined }` Fiddle demonstrating issue: https://jsfiddle.net/bz5Lswqs/": [
+  "lodash::lodash.js::copyObject",
+  "lodash::lodash.js::runInContext"
+ ],
+ "first() not working with lazy evaluation, head() does. I wanted to verify that lazy evaluation works with \"first()\", and set up this test: `let zz = _(_.range(240)).filter(x => { console.log(x); return x == 3 }).first()` This did not work as expected, as all items were enumerated. Then I tried this: `let zz = _(_.range(240)).filter(x => { console.log(x); return x == 3 }).head()` This works, only items up to the target is evaluated. Seems first and head behaves differently in this respect? Version (in package.json): ^4.13.1 People coming from LINQ will perhaps be tempted to use first(), missing the lazy performance boost.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Add build script for doc site HTML files. To run, use the npm script like such: ``` npm run doc:sitehtml ``` The script will generate a file at `doc/v4.XX.YY.html` which can be copied and added to the doc site.": [
+  "lodash::lib/main/build-site.js::build"
+ ],
+ "Ensure proper tags are generated.": [
+  "lodash::lib/main/build-site.js::build"
+ ],
+ "Links to creation equivalents for in-place modification functions. See issue #2467. Basically, I just searched for every instance of \"unlike\", and added the opposite version. If there are any other equivalent functions that were not previously documented in any way, they still aren't.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Feature suggestion: function to remove diacritics I suggest there should be a function that does a bit more than `_.deburr` - it should replace all non latin1 characters with their latin1 counterparts (ą -> a) and remove those that have no counterpart at all. There are characters in latin1 other than supplementary characters which _.deburr handles, what may be required to be removed in certain use cases. My use case: latin1 extended, diacritic characters in Polish language. I wish to reliably compare names on credit cards, which have no diacritics, and names defined by users, which may have diacritics. I mean something between `_.deburr` as it is now and [FGRibreau/node-unidecode](https://github.com/FGRibreau/node-unidecode) which is an overkill, especially for front-end use cases. #1430 may be related.": [
+  "lodash::lodash.js::deburr",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Fix missing semicolon I started on a documentation change but `npm run validate` after my initial pull revealed this linting error: ``` > jscs lodash.js requireSemicolons: Missing semicolon after statement at lodash.js : 5864 | function isFlattenable(value) { 5865 | return isArray(value) || isArguments(value) || 5866 | !!(spreadableSymbol && value && value[spreadableSymbol]) -----------------------------------------------------------------------^ 5867 | } 5868 | ```": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::isFlattenable",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Document behavior of _.debounce when wait is 0 Clarify that when `leading` is false a debounced method with `wait=0` will not invoke immediately, but on the next tick (like `setTimeout`), but when `leading` is true the invocation will be immediate.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "prevent failing circular reference detection _.defaultsDeep is now also working again with complex circular references. Closes #2537": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Clarify empty source comparisons with _.matches, _.isMatch and _.matchesProperty. In the below code, that all the `falseMatches` are `false` is intuitive. However, it is much less intuitive that all the `trueMatches` are `true`. ``` var _ = require('lodash'); var assert = require('assert'); var objectToMatch = {a: {b: 2}}; var falseMatches = [ _.isMatch(objectToMatch, {a: {d: null}}), _.matchesProperty('a', null)(objectToMatch), _.matchesProperty('a', [])(objectToMatch), _.matches({b: null})(objectToMatch) ]; assert.deepEqual(falseMatches, [false, false, false, false]); var trueMatches = [ _.isMatch(objectToMatch, {a: {}}), _.matchesProperty('a', {})(objectToMatch), _.matches(undefined)(objectToMatch), _.matches({})(objectToMatch) ]; assert.deepEqual(trueMatches, [true, true, true, true]); ``` A good explanation for the `trueMatches` was made here: https://github.com/lodash/lodash/issues/999#issuecomment-76028607. This PR attempts to make this behavior obvious when reading the documentation.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Docs: invalid signature of baseDelay return Documentation of [baseDelay](https://github.com/lodash/lodash/blob/4.14.1/lodash.js#L2482) says about return value of type \"number\". The same issue apply to public `defer` and `delay` functions. But it directly uses return value of `setTimeout` that returns [timeout object](https://nodejs.org/dist/latest-v4.x/docs/api/timers.html#timers_settimeout_callback_delay_arg) in Node.js.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "_.set does not set nested property if primitive-like already exists at some level ``` javascript var obj = {foo: {}} _.set(obj, 'foo', 'string') // obj is {foo: 'string'} _.set(obj, 'foo.bar', 'new deeper nested branch prop') // expected: obj is {foo: {bar: 'new deeper nested branch prop'}} // obj remains {foo: 'string'} without warning that property could not be set. ``` Thanks!": [
+  "lodash::lodash.js::baseSet",
+  "lodash::lodash.js::runInContext"
+ ],
+ "String \"__proto__\" results in strange behaviour in _.groupBy Steps to reproduce: ``` javascript var q = lodash.groupBy([{id: '__proto__'}], 'id') q.__proto__; // [ { id: '__proto__' } ] q instanceof Array; // true ``` I think it isn't expected behaviour, especially for user input.": [
+  "lodash::lodash.js::assignValue",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "docs: minor fix for `mergeWith`": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "Strange \"has\" behavior with sparse arrays. I am seeing behavior I do not expect when using \"has\" with an object containing a sparse array. ``` Javascript const _ = require('lodash') const path = 'foo[2].a.b.c' console.log(_.has({ foo: []}, path)) console.log(_.has({ foo: [0,1,]}, path)) console.log(_.has({ foo: [0,1,,]}, path)) ``` outputs: ``` false false true ``` Seems odd to get that `true`. Installed lodash@4.15.0 from npm, used node v6.2.0 to test, have seen the same in the browser.": [
+  "lodash::lodash.js::hasPath",
+  "lodash::lodash.js::runInContext"
+ ],
+ "May I rely on uniqBy following array's order? The [docs](https://lodash.com/docs#uniqBy) don't state it, but I've looked through the [source code](https://github.com/lodash/lodash/blob/d47123779ed1f78a4c32abdde85f816160ba13dd/lodash.js#L4165) and `uniqBy` indeed processes arrays from start to end. Could we add this \"feature\" of `uniqBy` to the docs? Otherwise, could we have a new alias? (e.g. `orderedUniqBy`). Thank you so much. Lodash/fp is AWESOME. :balloon:": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "defaultsDeep with different results for undefined properties Using `defaultsDeep`, `undefined` properties get filtered out when they're in the root level of the object, but not when they're nested. If `defaultsDeep` is meant to act recursively, shouldn't its rules be the same regardless of the nesting level? To reproduce this issue: ``` js > _.defaultsDeep({}, { foo: undefined }) {} > _.defaultsDeep({}, { bar: { foo: undefined } }) { bar: { foo: undefined } } // by the same rules, shouldn't it be `{ bar: {} }` ? ```": [
+  "lodash::lodash.js::assignMergeValue",
+  "lodash::lodash.js::baseMergeDeep"
+ ],
+ "On Safari 10, isFunction fails for window.Proxy This is due to the fact that isFunction is defined the following way `function isFunction(value) { // The use of `Object#toString` avoids issues with the `typeof` operator // in Safari 8-9 which returns 'object' for typed array and other constructors. var tag = isObject(value) ? objectToString.call(value) : ''; return tag == funcTag || tag == genTag; }` But on Safari 10, when you do `Object.prototype.toString.call(window.Proxy)` you get `\"[object Proxy]\"`, which is not equals to `funcTag`, nor `genTag` Note that typeOf seems to work fine on Safari 10 BUT i have not tried on all type of objects": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::isFunction"
+ ],
+ "4.16.3 Node 4 merge regression There has been a regression in the `merge` function in lodash version 4.16.3 when using Node 4. In 4.16.2, running the following code with a file `file.txt` with the contents \"hello world\" ``` var _ = require('lodash') var fs = require('fs') var fileBuffer = fs.readFileSync('file.txt') var obj = { fileBuffer: fileBuffer } var mergedObj = {} _.merge(mergedObj, obj) console.log(\"obj: \") console.log(obj) console.log(\"\\n======================\\nobj.fileBuffer\") console.log(obj.fileBuffer) console.log(\"\\n======================\\nString(obj.fileBuffer):\") console.log(String(obj.fileBuffer)) console.log(\"\\n======================\\nmergedObj:\") console.log(mergedObj) console.log(\"\\n======================\\nmergedObj.fileBuffer\") console.log(mergedObj.fileBuffer) console.log(\"\\n======================\\nString(mergedObj.fileBuffer)\") console.log(String(mergedObj.fileBuffer)) ``` will yield the output: ``` obj: { fileBuffer: <Buffer 68 65 6c 6c 6f 20 77 6f 72 6c 64 0a> } ============": [
+  "lodash::lodash.js::baseMergeDeep"
+ ],
+ "Lodash/fp convert on fp specific `all` methods like `extendAll` doesn't work The issue seems to be [here](https://github.com/lodash/lodash/blob/master/fp/_baseConvert.js#L357). It seems like it's looking for the method name on `pristine`, which I think is non-fp lodash. This line should consider falling back to the actual function that's passed in or perhaps change something with the `isLib` check. Here's a failing test: ``` js var _ = require('lodash/fp'); describe('lodash/fp', function() { it('should convert', function() { var extendAll = _.extendAll.convert({ immutable: false }); // Explosion in baseConvert }) }) ```": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::fp/_baseConvert.js::createConverter",
+  "lodash::fp/_baseConvert.js::wrap"
+ ],
+ "Cleanup `getRawTag` object mutation Fixes gh-2754": [
+  "lodash::lodash.js::getRawTag"
+ ],
+ "Make _.xor() work with n arrays ``` js // expected _.xor([1, 2], [1, 2]); // [] // actual _.xor([1, 2], [1, 2]); // [] // expected _.xor([1, 2], [1, 2], [1, 2]); // [] // actual _.xor([1, 2], [1, 2], [1, 2]); // [1, 2] ``` `_.difference()` I can not use because I need to compare every-with-every array. Any idea?": [
+  "lodash::lodash.js::baseXor"
+ ],
+ "Possible regression in xor in 4.16.5 I've not yet been able to reproduce the error outside our own codebase, but with 4.16.5, xoring identical arrays will sometimes return `[undefined]`. Rolling back to 4.16.4 fixes the issue. I have no idea what the exact combination of factors is. I'm still working on reproducing the issue. Will update this post once I know more.": [
+  "lodash::lodash.js::baseXor"
+ ],
+ "fp.mergeAllWith ignores customizer when sources array has length > 2 ```javascript var other = [{ 'a': 3, 'b': 4 }, {'a': 5 }]; fp.mergeAllWith(console.log.bind(console), other); // logs to the console other = [{ 'a': 3, 'b': 4 }, {'a': 5, 'b': 2}, {'a':7, 'b': 12}]; fp.mergeAllWith(console.log.bind(console), other); // doesn't log to the console ``` It seems to be running the normal fp.mergeAll for the second case. Am I doing this wrong or is this a bug?": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::spread"
+ ],
+ "WIP - Deep functionality for omit and pick This is WIP for issue #723 Added tests for both pick and omit. Implemented for _.pick at the moment. Would like some guidance / ideas on how to implement it for _.omit. the 'cloneDeepWith' suggestion on issue #723 will not work because it miss the prototype's properties.": [
+  "lodash::lodash.js::basePick",
+  "lodash::lodash.js::basePickBy"
+ ],
+ "Wrong result with `_.pickBy` in 4.17.0 In 4.17.0, `_.pickBy` returns unexpected results: ``` const _ = require('lodash'); const obj = { 'ab.c': 'foo', abc: 'bar' }; const result = _.pickBy(obj, (value, key) => key.endsWith('c')); console.log(result); ``` This will print out: ``` { ab: { c: 'foo' }, abc: 'bar' } ``` It seems the change in https://github.com/lodash/lodash/commit/c6ff776147b56c80c69d7b44e81d0241cf225a14 now splits it by dot, which I suspect is not intended.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::pickBy"
+ ],
+ "Lodash 4.17.0 _.pick breaks when there are dots in keys With lodash 4.16.6: ``` > _.pick({'foo.txt': 'foo', 'bar.txt': 'bar', 'baz.txt': 'baz'}, ['foo.txt', 'baz.txt']) { 'foo.txt': 'foo', 'baz.txt': 'baz' } ``` With lodash 4.17.0: ``` > _.pick({'foo.txt': 'foo', 'bar.txt': 'bar', 'baz.txt': 'baz'}, ['foo.txt', 'baz.txt']) { foo: { txt: 'foo' }, baz: { txt: 'baz' } } ```": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "forEach + spread behaviour changed in 4.17 If you try this simple program with Lodash 4.16.6 and 4.17.1 you'll get two very different results: var _ = require('lodash'); var test = _.spread(function(a, b, c, d) { console.log(a, b, c, d); }); _.forEach([ ['X', 'Y'], ['Z'] ], test); With Lodash 4.16.6 X Y undefined undefined Z undefined undefined undefined With Lodash 4.17.1 X Y 0 [ [ 'X', 'Y' ], [ 'Z' ] ] Z 1 [ [ 'X', 'Y' ], [ 'Z' ] ] undefined": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "pick behaviour changed in 4.17 If you try this simple program with Lodash 4.16.6 and 4.17.1 you'll get two very different results: ``` var _ = require('lodash'); _.pick({ 'abc:1.0': true }, 'abc:1.0'); ``` With lodash 4.16.6 `{ 'abc:1.0': true }` With lodash 4.17.1 `{ 'abc:1': [ true ] }`": [
+  "lodash::lodash.js::basePickBy"
+ ],
+ "isEqual seems to ignore symbol key properties ```js _.isEqual({[Symbol()]: undefined}, {}) // true ``` Hints: - https://bugzilla.mozilla.org/show_bug.cgi?id=1318933 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols": [
+  "lodash::lodash.js::baseIsEqualDeep",
+  "lodash::lodash.js::equalObjects"
+ ],
+ "make the documentation about _.isEqual clearer Fixes #2848": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "feature: force lazy evaluation of chain I have an expensive `map` function but my array size is only about 36 elements. I want to be able to return implicitly chained lodash wrappers for my array so that I can shortcut the evaluation when using `.first()` but still be able to iterate the whole lodash wrapper when necessary. I.e., I’d like to be able to get behavior similar to .net’s `IEnumerable` so that I can put expensive transformations into a chain without worrying about things because I know `.first()` will only pull the first value that matches filters through. Currently, the only way I can figure out how to do this somewhat safely is quite ugly, so it seems to me like there should just be an API to request lazy evaluation: ``` var getLodashForceLazyUndefinedArray = _.memoize(function () { for (var i = 2; ; i *= 2) { var candidate = _.times(i, _.constant()); var sawFirst = false; _(candidate).map(function (x) { if (sawFirst) {": [
+  "lodash::lodash.js::createFlow",
+  "lodash::lodash.js::lazyValue"
+ ],
+ "_.omit is deleting keys in deep omit Hi, Between the 4.17.2 and the 4.17.3 versions, I noticed that the _.omit function is deteriorating the object when this is in deep level. For example : ```js const object1 = { a: { b: 'c' } }; const object2 = _.omit(object1, 'a.b'); console.log(object1); // { a: {} } ```": [
+  "lodash::lodash.js::customOmitClone"
+ ],
+ "Optimize _.defaults so that it doesn't access property values it doesn't need to Suppose I have some config object that must be initialized. Well, at least some of the properties must be initialized -- some do not. ```javascript const initializableConfig = { initialize(data) { this.data = data; }, get a() { return this.data.a; }, get b() { return this.data.b; } c: \"I don't need to be initialized\" }; ``` I would like to be able to use the `initializableConfig` as a default at all times (even before it's initialized). I should be fine to do so as long as I override the properties that must be initialized. ```javascript const config = { a: 'apple', b: 'banana' }; const finalConfig = _.defaults({}, config, initializableConfig); // Error! Cannot read property 'a' of undefined ``` Since `config` defines `a` and `b`, I see no reason why those properties need to be accessed on the `initializableConfig`. Currently they are and an error is being thrown. Couldn't `_.defaults` be optimized to avoid this error?": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "cloneDeep throws RangeError for Sets with circular references If you have an Object containing a Set with a reference to the Object and you `_.cloneDeep` it, you get `RangeError: Maximum call stack size exceeded`. In the same situation, but with an Array instead of a Set, there's no problem. Here's how you can reproduce it: ```js var objSet = { x: new Set() }; objSet.x.add(objSet); _.cloneDeep(objSet); // RangeError: Maximum call stack size exceeded var objArr = { x: [] }; objArr.x.push(objArr); _.cloneDeep(objArr); // Properly deep-cloned object ``` Seems like circular dependencies aren't properly handled when they're in Sets? From #2137 I saw that support for deep-cloning Sets, Maps, and Symbols was added at 24cef1a. Is this behavior expected? If not, I'd be happy to attempt a fix. Seems like I would need to patch the `baseClone` function?": [
+  "lodash::lodash.js::addMapEntry",
+  "lodash::lodash.js::addSetEntry",
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::cloneMap",
+  "lodash::lodash.js::cloneSet",
+  "lodash::lodash.js::initCloneByTag"
+ ],
+ "_.set does not work when Symbol is in path array Code to reproduce on lodash v4.17.4. ``` var symbol = Symbol('secret'); var path = ['path', 'to', symbol]; var obj = {}; _.set(obj, path, ['array', 'of', 'secret', 'values']); ``` Throws exception `TypeError: Cannot convert a Symbol value to a string` in regexp in `isIndex` function. It uses regexp to check if index is number as string, but unfortunately this value is not a string. From my brief analysis `baseSet` function checks if new value is Object, if not it assumes next path piece is either string or number and pass it to `isIndex` function to determine if new value should be array or sub object. I think it should have third check if path is symbol.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::isIndex"
+ ],
+ "fp/update - updater is called with an empty object when path refers to a function ``` javascript import { update, identity } from 'lodash/fp' const original = { f: () => 1 } const updated = update('f', identity, original) ``` ```updated.f``` is an empty object instead of ```f```": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::fp/_baseConvert.js::cloneByPath"
+ ],
+ "stringToPath: avoid shadowing variable - remove the shadowing done using `string` variable declared in upper scope": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "_.invert() throws an error on a specific JSON object **JSFiddle:** https://jsfiddle.net/mem9e9r9/ **Error:** TypeError: Cannot convert object to primitive value **Description:** It seems like `invert()` function is triggering an error when converting json object with `builtin -> toString` property present. I tried with standard JSON files and it does work properly. It fails to run `_.invert()` on this JSON object: ```json { \"builtin\": { \"toString\": false } } ```": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "avoid shadowing result related https://github.com/lodash/lodash/commit/e908519fc321829d6e43a1a40a791ce62e2fbc8c": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::remainingWait"
+ ],
+ "Replacing a regex with a quick character check * Checking the 0th position of the string should be quicker than a regular expression": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "Placeholder doesn't work for converted functions unless explicitly recurried When using `convert` on functions from lodash fp, they seem to lose their support for using `_` as a placeholder. If I explicitly call `curry` on the result, they regain their placeholder support. Here's a full test case showing a failing test: ```js import _ from 'lodash/fp' describe('lodash test', () => { it('placeholder for converted functions', () => { let mutableUnset = _.unset.convert({ immutable: false }) let x = { a: 1, b: 1 } console.log(mutableUnset.placeholder) // <-- Seems to be lodash console.log(mutableUnset.placeholder == _) // <-- false let unsetInX = mutableUnset(_, x) unsetInX('a') // <--- throws `TypeError: unsetInX is not a function` console.log(x) }) it('placeholder for explicitly curried converted functions', () => { let mutableUnset = _.curryN(2, _.unset.convert({ immutable: false })) let x = { a: 1, b: 1 } console.log(mutableUnset.placeholder) // <-- Seems t": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::fp/_baseConvert.js::wrap"
+ ],
+ "when cloneDeep with Map, value is empty problem： when cloneDeep with Map, value is empty test demo: [see this code](http://jsbin.com/vitukujija/edit?html,js,console) version： ^4.17.10": [
+  "lodash::lodash.js::baseClone"
+ ],
+ "pick select only the key with dot if exists if ``` object = { 'a.b': 1, a: { b: 1, } }; ``` `pick(object, ['a.b'])` will return `{ 'a.b': 1}` instead of `{ 'a.b': 1, a: { b: 1 }}` test demo: [code]( http://jsbin.com/yimewigoqo/edit?html,js,console)": [
+  "lodash::lodash.js::basePick"
+ ],
+ "cancel old timer for issue 4138 Issue: #4138": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::debounced",
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "Simplifies toNumber and add tests Using `+value` to convert binary/octal/hexadecimal string and add some tests. Issue https://github.com/lodash/lodash/issues/4228": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::toNumber"
+ ],
+ "mergeWith: stack passed to customizer should always be defined Summary: If the first values encountered in the `object` in mergeWith are not objects, `stack` is undefined when passed to the `customizer`. Once the first object-ish value is encountered, `stack` gets initialized, and all further calls to `customizer` include a defined `stack`. This PR makes `stack` always defined, even before the first object-ish value is encountered.": [
+  "lodash::lodash.js::baseMerge"
+ ],
+ "Round Infinity with a precision argument returns Infinity This fixes https://github.com/lodash/lodash/issues/4266 Tested with Infinity, -Infinity, _.round(), _.floor() and _.ceil(). This is a second PR for the same issue. I'm closing the previous PR because I messed up somehow and there were other commits (not mine) in there. This was branched off of 4.17.12-pre. Happy to updates with any improvements needed.": [
+  "lodash::lodash.js::createRound"
+ ],
+ "lodash.isEqual returns different result when order of arguments is switched As found out by @benjamn here: https://github.com/apollographql/apollo-client/pull/4924#issuecomment-499280139 here is how it runs in a console on lodash.com: ![image](https://user-images.githubusercontent.com/1305378/59087335-aacdcf80-8904-11e9-8cd2-267affbda1b0.png)": [
+  "lodash::lodash.js::equalArrays",
+  "lodash::lodash.js::equalObjects"
+ ],
+ "fix: prototype pollution in _.defaultsDeep The PR is fixing a Prototype Pollution vulnerability in `_.defaultsDeep`. You can see details about similar vulnerability here: https://snyk.io/vuln/SNYK-JS-LODASH-73638": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::safeGet"
+ ],
+ "Prevent prototype pollution chaining to code execution via _.template Prototype pollution is a common problem for Javascript applications. [This paper (PDF-link)](https://github.com/HoLyVieR/prototype-pollution-nsec18/blob/master/paper/JavaScript_prototype_pollution_attack_in_NodeJS.pdf) is a reasonably comprehensive resource on the subject. It demonstrates that the problem is quite ubiquitous, and how it can turn into an unauthenticated RCE in Ghost, where the attack chain starts with a prototype pollution vulnerability in lodash.merge. Handlebars is used as the code execution gadget, but as Ghost also uses _.template it could have targeted that as well. Lodash has had multiple prototype pollution vulnerabilities, [including recently](https://github.com/lodash/lodash/commit/1f8ea07746963a535385a5befc19fa687a627d2b). If `_.template` is ever invoked after the prototype has been polluted, an attacker can execute any Javascript, as `sourceURL` and `variable` are looked up via an `options` object and injected into the Javascript that gets executed.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::template"
+ ],
+ "_.orderBy does not accept iteratee path arrays I don't know if this is intended behavior, but `_.orderBy` does not work with path arrays. An example I created using the REPL in the docs: ```javascript var users = [ { id: '4', address: { zipCode: 4, streetName: 'Beta' } }, { id: '3', address: { zipCode: 3, streetName: 'Alpha' } }, { id: '1', address: { zipCode: 1, streetName: 'Alpha' } }, { id: '2', address: { zipCode: 2, streetName: 'Alpha' } }, { id: '5', address: { zipCode: 4, streetName: 'Alpha' } }, ]; // Sort by `address.zipCode` in ascending order // and by `address.streetName` in descending order. // This works _.orderBy( users, ['address.zipCode', 'address.streetName'], ['asc', 'desc'] ); // This doesn't _.orderBy( users, [['address','zipCode'], ['address.streetName']], ['asc', 'desc'] ); // => objects for [ // ['1', [1, 'Alpha']], // ['2', [2, 'Alpha']], // ['3', [3, 'Alpha']], // ['4', [4, 'Beta']], // ['5', [4, 'Alpha']] // ] ``` REP": [
+  "lodash::lodash.js::baseOrderBy"
+ ],
+ "change documentation, show clearly how sortBy work with two iteratees this pull request related to this issue https://github.com/lodash/lodash/issues/4376 (Changing documentation for sortBy, so it clearly shows order when sorting by several attributes)": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "(4.17) Short circuit sortedIndexBy methods for empty arrays Backport of https://github.com/lodash/lodash/pull/4496 to 4.17": [
+  "lodash::lodash.js::baseSortedIndexBy"
+ ],
+ "Document that over* methods accept matches* shortcuts I was pleasantly surprised that `filter` and others can use multiple matchers thanks to `over*` functions: ```javascript _.filter(input, _.overSome([ _.matches({'a': 1}), _.matches({'a': 2}), ])) ``` Thanks to #2193 this becomes even better: ```javascript _.filter(input, _.overSome([ {'a': 1}, {'a': 2}, ])) ``` However that last improvement seems to be undocumented. Could you please document this possibility for `over*` functions? Referring to them in the `matches` documentation could be the cherry on top.": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "Ensure `orderBy` will accept iteratee path arrays #4438 While backporting https://github.com/lodash/lodash/pull/4453 for #4438 I noticed it just don't work, we didn't catch it because tests for `orderBy` were disabled. This contains necessary fixes (I will forward port it to master later on).": [
+  "lodash::lodash.js::baseOrderBy"
+ ],
+ "Document matches* shorthands for over* methods (#4510) In this commit I documented the shorthands added in #2193. Additionally I updated documentation of `_.matches` and `_.matchesProperty` with hints on how to combine predicates. Also I have hinted on combining the predicates in the documentation of `_.filter`, arguably the most used iterator. Open questions: 1. Is it really possible to combine different types of shorthands? 1. How exactly should the JSDoc `@param` be updated for `over*` methods? 1. Are you happy with the placement of hints in the documentation?": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "Fix lodash.isEqual for circular references #4320 `lodash.isEqual` for circular reference in objects/arrays returned different results based on order of arguments. More detail can be found here: #4320 ![image](https://user-images.githubusercontent.com/7350476/66698168-941bf880-eca9-11e9-8bfa-9b7c6e3aa1f5.png)": [
+  "lodash::lodash.js::equalArrays",
+  "lodash::lodash.js::equalObjects"
+ ],
+ "Sanitize sourceURL so it cannot affect evaled code Wherever it comes from, `sourceURL` should not be allowed to contain code that gets eval()-ed. `/\\s/` should cover all the bases as far as I know, including the various unicode-y ways of encoding newlines. ``` > sourceURL = '\\u2028\\u2029\\nconsole.log(\"o hai\")' ' \\nconsole.log(\"o hai\")' > eval('//# sourceURL=' + sourceURL) o hai undefined > eval('//# sourceURL=' + sourceURL.replace(/\\s/g, ' ')) undefined ```": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::template"
+ ],
+ "zipObjectDeep: fix prototype pollution Following PR https://github.com/lodash/lodash/pull/4745 and this comment https://github.com/lodash/lodash/issues/4744#issuecomment-625020477. Here is the patch for prototype pollution in `zipObjectDeep`.": [
+  "lodash::lodash.js::baseSet"
+ ],
+ "perf: improve performance of `toNumber`, `trim` and `trimEnd` on large input strings This PR address perf of end trimming based on `/\\s+$/` regex on large strings (~ 50kB).": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::toNumber",
+  "lodash::lodash.js::trim",
+  "lodash::lodash.js::trimEnd"
+ ],
+ "Prevent command injection through the variable option This fixes the issue disclosed at https://app.snyk.io/vuln/SNYK-JS-LODASH-1040724 For now, I used a regexp allowing any ES5 identifier for the variable name. The advantage of that is that it avoids BC breaks if some code uses weird variable names. The drawback is that the regexp is big. If reducing the range of allowed variable names is OK, a smaller regex could be used.": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::template"
+ ],
+ "Add CI pipeline for Node ### Main Changes This PR solve linting issues (c07419e) and introduce a new pipeline for running (`npm run validate`) against Node versions from 4 to 24 ### Assumptions - If this PR lands before Node@25 is available I will create a separate PR to include it in the Matrix, otherwise I will push that change once the version is ready. - The default npm version included in Node@5 has some weird conflicts with the lockfile, so I opted to define an specific npm version in that scenario. - I only included ubuntu considering that most of Lodash requirements are related to v8 and not Node.js API. So the CI take less to run and also the pipeline is cleaner. ### Context - Related https://github.com/lodash/lodash/issues/6019 - The linting commit (c07419e) is also included in #6023 otherwise that PR will fail.": [
+  "lodash::dist/lodash.js::baseOrderBy",
+  "lodash::lodash.js::baseOrderBy"
+ ],
+ "doc: fix autoLink function, dont autolink from headers This PR is for the tooling historically used to generate the HTML for the doc site ## Problem The weirdness we saw in https://github.com/lodash/lodash.com/pull/300#discussion_r2582005308 was related to bugs in the preprocess and postprocess step in this repo when generating the doc site html. We saw some md links to the source code not being converted into html, and double links in the h3s for some methods (the anchor link, then the h3 content itself wrapped in a link). ## Solution Change 1: the issue was that the preprocess step was only converting the md links that had both a source and an npm package link. The regexp just was too strict, and didnt match on the API surfaces that had a source link but no npm link (bc there is no npm package for things like `_.VERSION`) Change 2: exclude headers from the autolinking behavior. The selector there was matching anything in `.doc-container code` that looked like a reference to a lodash method. But that also caught several": [
+  "lodash::lib/main/build-site.js::autoLink",
+  "lodash::lib/main/build-site.js::build"
+ ],
+ "Docs: Add -0 and BigInt zeros to _.compact falsey values list ## Summary Updates `_.compact` documentation to include `-0` and `0n` in the list of falsey values. Closes #5779 ## Changes - Updated `_.compact` documentation to include `-0` and `0n` as falsey values ## Background JavaScript has additional falsey values that were not previously documented: - `-0` (negative zero) - `Boolean(-0)` returns `false` - `0n` (BigInt zero) - `Boolean(0n)` returns `false` The `_.compact` function already filters these values correctly since it uses truthiness checks internally, but the documentation did not reflect this behavior.": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "doc: fix quotes in _.compact jsdoc the jsdoc was updated in https://github.com/lodash/lodash/pull/6062, but it used some straight quotes where backticks were desired": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "docs: add security notice for `_.template` in threat model and API docs": [
+  "lodash::dist/lodash.js::insertWrapDetails",
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "`_.random` document lower > upper value swap Closes #6113 tldr; `_.random(lower, upper)` takes positional lower and upper args, but it is undocumented that it will shuffle the args into lower and upper despite position. > If `lower` is greater than `upper`, the values are swapped.": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "ci: add dist sync validation workflow The `dist/` files are committed to the repo but there's no CI check ensuring they stay in sync with source. This means a release could ship stale dist files if someone forgets to rebuild before merging. This workflow catches that drift automatically. ### Usage As expected, this fails when we are out of sync ([ref](https://github.com/lodash/lodash/actions/runs/22901148581/job/66447697042?pr=6137)): ``` Run if git diff --exit-code dist/; then diff --git a/dist/lodash.js b/dist/lodash.js index 9d760d9..b7a2d23 100644 --- a/dist/lodash.js +++ b/dist/lodash.js @@ -6965,7 +6965,7 @@ /** * Creates an array with all falsey values removed. The values `false`, `null`, - * `0`, `\"\"`, `undefined`, and `NaN` are falsey. + * `0`, `-0`, `0n`, `\"\"`, `undefined`, and `NaN` are falsy. * * @static * @memberOf _ @@ -14164,6 +14164,8 @@ * **Note:** JavaScript follows the IEEE-754 standard for resolving * floating-point values wh": [
+  "lodash::dist/lodash.js::insertWrapDetails"
+ ],
+ "refactor(fromPairs): use baseAssignValue for consistent assignment use baseAssignValue for consistent assignment Instead of doing the direct assignment here,, lets be consistent w/ the approach we use for assigning properties": [
+  "lodash::dist/lodash.js::fromPairs",
+  "lodash::dist/lodash.js::insertWrapDetails",
+  "lodash::lodash.js::fromPairs",
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "docs: fix some minor docs inconsistencies Ran all the examples from the JSDocs, 2 were slightly off, 1 jsdoc had typo'd repeated wording": [
+  "lodash::dist/lodash.js::insertWrapDetails",
+  "lodash::lodash.js::insertWrapDetails"
+ ]
+}

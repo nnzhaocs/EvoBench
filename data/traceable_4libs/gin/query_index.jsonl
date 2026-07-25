@@ -1,0 +1,499 @@
+{"line_no": 0, "query_id": "gin#issue-4717", "issue_number": 4717, "query": "docs: fix `BindXML` comment referencing nonexistent `binding.BindXML` (#4717)"}
+{"line_no": 1, "query_id": "gin#issue-4622", "issue_number": 4622, "query": "fix(context): skip chmod on pre-existing dirs in SaveUploadedFile (#4702)"}
+{"line_no": 2, "query_id": "gin#issue-4698", "issue_number": 4698, "query": "fix(recovery): record recovered panics in c.Errors (#4698)"}
+{"line_no": 3, "query_id": "gin#issue-4695", "issue_number": 4695, "query": "fix(context): Copy() copies Errors and Accepted fields (#4695)"}
+{"line_no": 4, "query_id": "gin#issue-4638", "issue_number": 4638, "query": "fix(response): panic on Hijack/CloseNotify when wrapper unsupported (#4645)"}
+{"line_no": 5, "query_id": "gin#issue-4675", "issue_number": 4675, "query": "docs(context): align inline comments in GetPostForm example (#4675)"}
+{"line_no": 6, "query_id": "gin#issue-4685", "issue_number": 4685, "query": "refactor: optimize error message concatenation in default_validator (#4685)"}
+{"line_no": 7, "query_id": "gin#issue-4489", "issue_number": 4489, "query": "test(context): use http.StatusContinue constant instead of magic number 100 (#4542)"}
+{"line_no": 8, "query_id": "gin#issue-4547", "issue_number": 4547, "query": "chore(logger): allow skipping query string output (#4547)"}
+{"line_no": 9, "query_id": "gin#issue-4511", "issue_number": 4511, "query": "fix: Correct typos, improve documentation clarity, and remove dead code (#4511)"}
+{"line_no": 10, "query_id": "gin#issue-4145", "issue_number": 4145, "query": "feat(render): add bson protocol (#4145)"}
+{"line_no": 11, "query_id": "gin#issue-4392", "issue_number": 4392, "query": "refactor: for loop can be modernized using range over int (#4392)"}
+{"line_no": 12, "query_id": "gin#issue-4203", "issue_number": 4203, "query": "feat(binding): add support for encoding.UnmarshalText in uri/query binding (#4203)"}
+{"line_no": 13, "query_id": "gin#issue-3359", "issue_number": 3359, "query": "chore(context): always trust xff headers from unix socket (#3359)"}
+{"line_no": 14, "query_id": "gin#issue-4142", "issue_number": 4142, "query": "refactor(recovery): smart error comparison (#4142)"}
+{"line_no": 15, "query_id": "gin#issue-4472", "issue_number": 4472, "query": "fix(context): ClientIP handling for multiple X-Forwarded-For header values (#4472)"}
+{"line_no": 16, "query_id": "gin#issue-4479", "issue_number": 4479, "query": "chore(response): prevent Flush() panic when `http.Flusher` (#4479)"}
+{"line_no": 17, "query_id": "gin#issue-4466", "issue_number": 4466, "query": "perf(recovery): optimize line reading in stack function (#4466)"}
+{"line_no": 18, "query_id": "gin#issue-2169", "issue_number": 2169, "query": "fix(binding): empty value error (#2169)"}
+{"line_no": 19, "query_id": "gin#issue-4336", "issue_number": 4336, "query": "fix(recover): suppress http.ErrAbortHandler in recover (#4336)"}
+{"line_no": 20, "query_id": "gin#issue-4420", "issue_number": 4420, "query": "feat(gin): add option to use escaped path (#4420)"}
+{"line_no": 21, "query_id": "gin#issue-4415", "issue_number": 4415, "query": "fix(gin): literal colon routes not working with engine.Handler() (#4415)"}
+{"line_no": 22, "query_id": "gin#issue-4437", "issue_number": 4437, "query": "ci(sec): improve type safety and server organization in HTTP middleware (#4437)"}
+{"line_no": 23, "query_id": "gin#issue-4428", "issue_number": 4428, "query": "docs(context): add example comments for ShouldBind* methods (#4428)"}
+{"line_no": 24, "query_id": "gin#issue-4422", "issue_number": 4422, "query": "fix(gin): close os.File in RunFd to prevent resource leak (#4422)"}
+{"line_no": 25, "query_id": "gin#issue-4423", "issue_number": 4423, "query": "feat(context): add Protocol Buffers support to content negotiation (#4423)"}
+{"line_no": 26, "query_id": "gin#issue-4395", "issue_number": 4395, "query": "refactor(context): omit the return value names (#4395)"}
+{"line_no": 27, "query_id": "gin#issue-4396", "issue_number": 4396, "query": "docs(context): fix some comments (#4396)"}
+{"line_no": 28, "query_id": "gin#issue-4380", "issue_number": 4380, "query": "fix(binding): improve empty slice/array handling in form binding (#4380)"}
+{"line_no": 29, "query_id": "gin#issue-4352", "issue_number": 4352, "query": "refactor(binding): use maps.Copy for cleaner map handling (#4352)"}
+{"line_no": 30, "query_id": "gin#issue-4373", "issue_number": 4373, "query": "fix(response): refine hijack behavior for response lifecycle (#4373)"}
+{"line_no": 31, "query_id": "gin#issue-4333", "issue_number": 4333, "query": "refactor(context): using maps.Clone (#4333)"}
+{"line_no": 32, "query_id": "gin#issue-4314", "issue_number": 4314, "query": "refactor(ginS): use sync.OnceValue to simplify engine function (#4314)"}
+{"line_no": 33, "query_id": "gin#issue-4353", "issue_number": 4353, "query": "refactor(render): remove headers parameter from writeHeader (#4353)"}
+{"line_no": 34, "query_id": "gin#issue-4354", "issue_number": 4354, "query": "refactor(tree): replace string(/) with \"/\" in node.insertChild (#4354)"}
+{"line_no": 35, "query_id": "gin#issue-4339", "issue_number": 4339, "query": "perf(context): optimize getMapFromFormData performance (#4339)"}
+{"line_no": 36, "query_id": "gin#issue-4295", "issue_number": 4295, "query": "chore(response): prevention of Hijack() runtime panics (#4295)"}
+{"line_no": 37, "query_id": "gin#issue-4310", "issue_number": 4310, "query": "docs(context): fix AbortWithStatusPureJSON comment typo (#4310)"}
+{"line_no": 38, "query_id": "gin#issue-4304", "issue_number": 4304, "query": "refactor(context): remove unused Context dependency in get method (#4304)"}
+{"line_no": 39, "query_id": "gin#issue-4303", "issue_number": 4303, "query": "chore(mode): remove impossible case (empty value for mode) (#4303)"}
+{"line_no": 40, "query_id": "gin#issue-4301", "issue_number": 4301, "query": "docs: correct article usage in comments (#4301)"}
+{"line_no": 41, "query_id": "gin#issue-3391", "issue_number": 3391, "query": "feat: support custom json codec at runtime (#3391)"}
+{"line_no": 42, "query_id": "gin#issue-4261", "issue_number": 4261, "query": "docs: small changes (#4261)"}
+{"line_no": 43, "query_id": "gin#issue-4252", "issue_number": 4252, "query": "perf(recover): replace bytes with strings in function for better performance (#4252)"}
+{"line_no": 44, "query_id": "gin#issue-3963", "issue_number": 3963, "query": "refactor(context): refactor `Keys` type to `map[any]any` (#3963)"}
+{"line_no": 45, "query_id": "gin#issue-4249", "issue_number": 4249, "query": "refactor: replace interface{} with any in type declarations (#4249)"}
+{"line_no": 46, "query_id": "gin#issue-4227", "issue_number": 4227, "query": "chore(bind): return 413 status code when error is `http.MaxBytesError` (#4227)"}
+{"line_no": 47, "query_id": "gin#issue-4247", "issue_number": 4247, "query": "ci(golangci-lint): update configuration and fix lint issues (#4247)"}
+{"line_no": 48, "query_id": "gin#issue-4245", "issue_number": 4245, "query": "Revert \"fix(time): binding time with empty value (#4103)\" (#4245)"}
+{"line_no": 49, "query_id": "gin#issue-4103", "issue_number": 4103, "query": "Revert \"fix(time): binding time with empty value (#4103)\" (#4245)"}
+{"line_no": 50, "query_id": "gin#issue-4239", "issue_number": 4239, "query": "perf(all): use strings.Cut to replace strings.SplitN (#4239)"}
+{"line_no": 51, "query_id": "gin#issue-4232", "issue_number": 4232, "query": "fix(errors): change Unwrap method receiver to value type (#4232)"}
+{"line_no": 52, "query_id": "gin#issue-4224", "issue_number": 4224, "query": "refactor: replace magic number 128 with unicode.MaxASCII in AsciiJSON Render (#4224)"}
+{"line_no": 53, "query_id": "gin#issue-4053", "issue_number": 4053, "query": "feat(fs): Implement loading HTML from http.FileSystem (#4053)"}
+{"line_no": 54, "query_id": "gin#issue-4175", "issue_number": 4175, "query": "perf: optimize AsciiJSON.Render method by using fmt.Appendf and reusing temp buffer (#4175)"}
+{"line_no": 55, "query_id": "gin#issue-4205", "issue_number": 4205, "query": "docs: fix comment (#4205)"}
+{"line_no": 56, "query_id": "gin#issue-3987", "issue_number": 3987, "query": "fix: prevent middleware re-entry issue in HandleContext (#3987)"}
+{"line_no": 57, "query_id": "gin#issue-4193", "issue_number": 4193, "query": "fix(binding): prevent duplicate decoding and add validation in decodeToml (#4193)"}
+{"line_no": 58, "query_id": "gin#issue-4190", "issue_number": 4190, "query": "feat(binding): add support for unixMilli and unixMicro (#4190)"}
+{"line_no": 59, "query_id": "gin#issue-4181", "issue_number": 4181, "query": "refactor(context):Avoid using filepath.Dir twice in SaveUploadedFile (#4181)"}
+{"line_no": 60, "query_id": "gin#issue-4088", "issue_number": 4088, "query": "refactor(context): add an optional permission parameter to the SaveUploadedFile method (#4068) (#4088)"}
+{"line_no": 61, "query_id": "gin#issue-4068", "issue_number": 4068, "query": "refactor(context): add an optional permission parameter to the SaveUploadedFile method (#4068) (#4088)"}
+{"line_no": 62, "query_id": "gin#issue-4080", "issue_number": 4080, "query": "refactor(context): simplify \"GetType()\" functions (#4080)"}
+{"line_no": 63, "query_id": "gin#issue-4077", "issue_number": 4077, "query": "fix(tree): Keep panic infos consistent when wildcard type build faild (#4077)"}
+{"line_no": 64, "query_id": "gin#issue-4064", "issue_number": 4064, "query": "docs(gin): Replace broken link to documentation with valid (#4064)"}
+{"line_no": 65, "query_id": "gin#issue-4048", "issue_number": 4048, "query": "feat(form): Support default values for collections in form binding (#4048)"}
+{"line_no": 66, "query_id": "gin#issue-3633", "issue_number": 3633, "query": "feat(context): GetXxx added support for more go native types (#3633)"}
+{"line_no": 67, "query_id": "gin#issue-4047", "issue_number": 4047, "query": "fix(form): Set default value for form fields (#4047)"}
+{"line_no": 68, "query_id": "gin#issue-3986", "issue_number": 3986, "query": "feat(form): add array collection format in form binding (#3986)"}
+{"line_no": 69, "query_id": "gin#issue-4003", "issue_number": 4003, "query": "fix(gin): Do not panic when handling method not allowed on empty tree (#4003)"}
+{"line_no": 70, "query_id": "gin#issue-3970", "issue_number": 3970, "query": "feat(form): add custom string slice for form tag unmarshal (#3970) (#3971)"}
+{"line_no": 71, "query_id": "gin#issue-3971", "issue_number": 3971, "query": "feat(form): add custom string slice for form tag unmarshal (#3970) (#3971)"}
+{"line_no": 72, "query_id": "gin#issue-3969", "issue_number": 3969, "query": "fix(context): verify URL is Non-nil in initQueryCache() (#3969)"}
+{"line_no": 73, "query_id": "gin#issue-3966", "issue_number": 3966, "query": "fix(context): YAML judgment logic in Negotiate (#3966)"}
+{"line_no": 74, "query_id": "gin#issue-3904", "issue_number": 3904, "query": "feat(binding): add BindPlain (#3904)"}
+{"line_no": 75, "query_id": "gin#issue-3210", "issue_number": 3210, "query": "feat(gin): support http3 using quic-go/quic-go (#3210)"}
+{"line_no": 76, "query_id": "gin#issue-3939", "issue_number": 3939, "query": "feat(fs): Export, test and document OnlyFilesFS (#3939)"}
+{"line_no": 77, "query_id": "gin#issue-1580", "issue_number": 1580, "query": "fix(gin): data race warning for gin mode (#1580)"}
+{"line_no": 78, "query_id": "gin#issue-3945", "issue_number": 3945, "query": "docs(gin): update link to dont-trust-all-proxies section (#3938) (#3945)"}
+{"line_no": 79, "query_id": "gin#issue-3938", "issue_number": 3938, "query": "docs(gin): update link to dont-trust-all-proxies section (#3938) (#3945)"}
+{"line_no": 80, "query_id": "gin#issue-3522", "issue_number": 3522, "query": "refactor(binding): use strings.Cut to replace strings.Index (#3522)"}
+{"line_no": 81, "query_id": "gin#issue-3955", "issue_number": 3955, "query": "docs(engine): fix comments for the `With` (#3955)"}
+{"line_no": 82, "query_id": "gin#issue-3911", "issue_number": 3911, "query": "chore(optimize): the ShouldBindUri method of the Context struct (#3911)"}
+{"line_no": 83, "query_id": "gin#issue-3899", "issue_number": 3899, "query": "Revert \"fix(uri): query binding bug (#3236)\" (#3899)"}
+{"line_no": 84, "query_id": "gin#issue-3236", "issue_number": 3236, "query": "Revert \"fix(uri): query binding bug (#3236)\" (#3899)"}
+{"line_no": 85, "query_id": "gin#issue-3897", "issue_number": 3897, "query": "fix(context): make context Value method adhere to Go standards (#3897)"}
+{"line_no": 86, "query_id": "gin#issue-3887", "issue_number": 3887, "query": "docs: Add document to constant `AuthProxyUserKey` and `BasicAuthForProxy`. (#3887)"}
+{"line_no": 87, "query_id": "gin#issue-3881", "issue_number": 3881, "query": "docs(middleware): comments to function `BasicAuthForProxy` (#3881)"}
+{"line_no": 88, "query_id": "gin#issue-2337", "issue_number": 2337, "query": "chore(debug): add ability to override the debugPrint statement (#2337)"}
+{"line_no": 89, "query_id": "gin#issue-3572", "issue_number": 3572, "query": "feat(engine): Added `OptionFunc` and `With` (#3572)"}
+{"line_no": 90, "query_id": "gin#issue-3872", "issue_number": 3872, "query": "docs: fix typo in function documentation (#3872)"}
+{"line_no": 91, "query_id": "gin#issue-3873", "issue_number": 3873, "query": "fix: protect Context.Keys map when call Copy method (#3873)"}
+{"line_no": 92, "query_id": "gin#issue-3784", "issue_number": 3784, "query": "fix(route): Add fullPath in context copy (#3784)"}
+{"line_no": 93, "query_id": "gin#issue-3851", "issue_number": 3851, "query": "chore(header): Add support for RFC 9512: application/yaml (#3851)"}
+{"line_no": 94, "query_id": "gin#issue-3859", "issue_number": 3859, "query": "chore(perf): Optimize the Copy method of the Context struct (#3859)"}
+{"line_no": 95, "query_id": "gin#issue-3199", "issue_number": 3199, "query": "fix(binding): dereference pointer to struct (#3199)"}
+{"line_no": 96, "query_id": "gin#issue-3759", "issue_number": 3759, "query": "fix(header): Allow header according to RFC 7231 (HTTP 405) (#3759)"}
+{"line_no": 97, "query_id": "gin#issue-3819", "issue_number": 3819, "query": "fix(binding): binding error while not upload file (#3819) (#3820)"}
+{"line_no": 98, "query_id": "gin#issue-3820", "issue_number": 3820, "query": "fix(binding): binding error while not upload file (#3819) (#3820)"}
+{"line_no": 99, "query_id": "gin#issue-3812", "issue_number": 3812, "query": "fix(router): catch-all conflicting wildcard (#3812)"}
+{"line_no": 100, "query_id": "gin#issue-3593", "issue_number": 3593, "query": "feat(logger): ability to skip logs based on user-defined logic (#3593)"}
+{"line_no": 101, "query_id": "gin#issue-3666", "issue_number": 3666, "query": "fix: Add pointer support for url query params (#3659) (#3666)"}
+{"line_no": 102, "query_id": "gin#issue-3659", "issue_number": 3659, "query": "fix: Add pointer support for url query params (#3659) (#3666)"}
+{"line_no": 103, "query_id": "gin#issue-3765", "issue_number": 3765, "query": "docs: remove redundant comments (#3765)"}
+{"line_no": 104, "query_id": "gin#issue-3741", "issue_number": 3741, "query": "chore(http): use white color for HTTP 1XX (#3741)"}
+{"line_no": 105, "query_id": "gin#issue-3583", "issue_number": 3583, "query": "chore: improve linting, testing, and GitHub Actions setup (#3583)"}
+{"line_no": 106, "query_id": "gin#issue-3575", "issue_number": 3575, "query": "docs: changed documentation link for trusted proxies (#3575)"}
+{"line_no": 107, "query_id": "gin#issue-3455", "issue_number": 3455, "query": "refactor: use bytes.ReplaceAll directly (#3455)"}
+{"line_no": 108, "query_id": "gin#issue-3511", "issue_number": 3511, "query": "chore: support min go version 1.18 (#3511)"}
+{"line_no": 109, "query_id": "gin#issue-3500", "issue_number": 3500, "query": "Fix #3500 Add escape logic for header (#3503)"}
+{"line_no": 110, "query_id": "gin#issue-2150", "issue_number": 2150, "query": "Stop useless panicking in context and render (#2150)"}
+{"line_no": 111, "query_id": "gin#issue-3385", "issue_number": 3385, "query": "Adjust the position of some functions (#3385)"}
+{"line_no": 112, "query_id": "gin#issue-3397", "issue_number": 3397, "query": "fix(context): panic on NegotiateFormat - index out of range (#3397)"}
+{"line_no": 113, "query_id": "gin#issue-3429", "issue_number": 3429, "query": "update context.go Get/Set method use defer (#3429)"}
+{"line_no": 114, "query_id": "gin#issue-3453", "issue_number": 3453, "query": "console logger HTTP status bug fixed and the corresponding unit test added (#3453)"}
+{"line_no": 115, "query_id": "gin#issue-3433", "issue_number": 3433, "query": "refactor: avoid calling strings.ToLower twice (#3433)"}
+{"line_no": 116, "query_id": "gin#issue-3369", "issue_number": 3369, "query": "docs(context): #3369 modify the annotation about Context.Param() (#3414)"}
+{"line_no": 117, "query_id": "gin#issue-3414", "issue_number": 3414, "query": "docs(context): #3369 modify the annotation about Context.Param() (#3414)"}
+{"line_no": 118, "query_id": "gin#issue-3395", "issue_number": 3395, "query": "remove deprecated of package io/ioutil (#3395)"}
+{"line_no": 119, "query_id": "gin#issue-3371", "issue_number": 3371, "query": "fix: fix typo in comment (#3371)"}
+{"line_no": 120, "query_id": "gin#issue-2778", "issue_number": 2778, "query": "fix(engine): missing route params for CreateTestContext (#2778) (#2803)"}
+{"line_no": 121, "query_id": "gin#issue-2803", "issue_number": 2803, "query": "fix(engine): missing route params for CreateTestContext (#2778) (#2803)"}
+{"line_no": 122, "query_id": "gin#issue-3227", "issue_number": 3227, "query": "fix(route): redirectSlash bug (#3227)"}
+{"line_no": 123, "query_id": "gin#issue-3327", "issue_number": 3327, "query": "fix: modify interface check way (#3327)"}
+{"line_no": 124, "query_id": "gin#issue-3316", "issue_number": 3316, "query": "chore(file): Creates a directory named path (#3316)"}
+{"line_no": 125, "query_id": "gin#issue-3324", "issue_number": 3324, "query": "FIX TYPO: Gin by default useR -> ... useS (#3324)"}
+{"line_no": 126, "query_id": "gin#issue-3302", "issue_number": 3302, "query": "Fix typos in RouterGroup method docs (#3302)"}
+{"line_no": 127, "query_id": "gin#issue-3278", "issue_number": 3278, "query": "chore: upgrade golangci-lint and fix golangci-lint error (#3278)"}
+{"line_no": 128, "query_id": "gin#issue-3180", "issue_number": 3180, "query": "Small doc fix on Context's ClientIP() method. (#3180)"}
+{"line_no": 129, "query_id": "gin#issue-3172", "issue_number": 3172, "query": "feat(context): add ContextWithFallback feature flag (#3166) (#3172)"}
+{"line_no": 130, "query_id": "gin#issue-3166", "issue_number": 3166, "query": "feat(context): add ContextWithFallback feature flag (#3166) (#3172)"}
+{"line_no": 131, "query_id": "gin#issue-3081", "issue_number": 3081, "query": "[GIN-001] - Add TOML bining for gin (#3081)"}
+{"line_no": 132, "query_id": "gin#issue-3033", "issue_number": 3033, "query": "fix: the trusted proxies should support ipv6 address by default (#3033)"}
+{"line_no": 133, "query_id": "gin#issue-3139", "issue_number": 3139, "query": "feat: automatically SetMode to TestMode when run go test. (#3139)"}
+{"line_no": 134, "query_id": "gin#issue-2825", "issue_number": 2825, "query": "feat(context): return GIN Context from Value method (#2825)"}
+{"line_no": 135, "query_id": "gin#issue-2798", "issue_number": 2798, "query": "use StringToBytes func (#2798)"}
+{"line_no": 136, "query_id": "gin#issue-3123", "issue_number": 3123, "query": "Fix: missing `sameSite` when do context.reset() (#3123)"}
+{"line_no": 137, "query_id": "gin#issue-3090", "issue_number": 3090, "query": "Update some comments, add function name prefix to comment (#3090)"}
+{"line_no": 138, "query_id": "gin#issue-2990", "issue_number": 2990, "query": "test support go1.18 (#2990)"}
+{"line_no": 139, "query_id": "gin#issue-3088", "issue_number": 3088, "query": "Annotation fix (#3088)"}
+{"line_no": 140, "query_id": "gin#issue-3071", "issue_number": 3071, "query": "feat attachment filename support utf8 (#3071)"}
+{"line_no": 141, "query_id": "gin#issue-3044", "issue_number": 3044, "query": "fix typo (#3044)"}
+{"line_no": 142, "query_id": "gin#issue-3028", "issue_number": 3028, "query": "Remove incorrect comments about context.Bind() and improve docs (#3028)"}
+{"line_no": 143, "query_id": "gin#issue-3023", "issue_number": 3023, "query": "Fix typo (#3023)"}
+{"line_no": 144, "query_id": "gin#issue-2977", "issue_number": 2977, "query": "fix: typo (#2977)"}
+{"line_no": 145, "query_id": "gin#issue-2975", "issue_number": 2975, "query": "fix:typo (#2975)"}
+{"line_no": 146, "query_id": "gin#issue-2967", "issue_number": 2967, "query": "TrustedProxies: Add default IPv6 support and refactor (#2967)"}
+{"line_no": 147, "query_id": "gin#issue-2973", "issue_number": 2973, "query": "fix: typo (#2973)"}
+{"line_no": 148, "query_id": "gin#issue-2968", "issue_number": 2968, "query": "fix: description error (#2968)"}
+{"line_no": 149, "query_id": "gin#issue-2934", "issue_number": 2934, "query": "prettify error message for catch-all conflict with existing path segment (#2934)"}
+{"line_no": 150, "query_id": "gin#issue-2958", "issue_number": 2958, "query": "fix: typo (#2958)"}
+{"line_no": 151, "query_id": "gin#issue-2777", "issue_number": 2777, "query": "Export struct sliceValidateError to allow error casting and rename it as (#2777)"}
+{"line_no": 152, "query_id": "gin#issue-2933", "issue_number": 2933, "query": "Fix grammar (#2933)"}
+{"line_no": 153, "query_id": "gin#issue-2926", "issue_number": 2926, "query": "Fix typo (#2926)"}
+{"line_no": 154, "query_id": "gin#issue-2701", "issue_number": 2701, "query": "adjust the routergroup Any method (#2701)"}
+{"line_no": 155, "query_id": "gin#issue-2906", "issue_number": 2906, "query": "Provide custom options of TrustedPlatform for another CDN services (#2906)"}
+{"line_no": 156, "query_id": "gin#issue-2897", "issue_number": 2897, "query": "Update the code logic for latestNode in tree.go (#2897)"}
+{"line_no": 157, "query_id": "gin#issue-2844", "issue_number": 2844, "query": "ClientIP: check every proxy for trustiness (#2844)"}
+{"line_no": 158, "query_id": "gin#issue-2887", "issue_number": 2887, "query": "Tidy: Complete TrustedProxies feature (#2887)"}
+{"line_no": 159, "query_id": "gin#issue-2886", "issue_number": 2886, "query": "setted typo fix: There’s no such word as `setted`, `set` is set, set, setting (#2886)"}
+{"line_no": 160, "query_id": "gin#issue-2832", "issue_number": 2832, "query": "Quick Fix c.ClientIP() mistakely parsing to 127.0.0.1 for who not using r.Run() to run http server (#2832)"}
+{"line_no": 161, "query_id": "gin#issue-2883", "issue_number": 2883, "query": "Fix grammatical and spelling errors in context.go (#2883)"}
+{"line_no": 162, "query_id": "gin#issue-2872", "issue_number": 2872, "query": "turn on HandleMethodNotAllowed when using NoMethod #2871 (#2872)"}
+{"line_no": 163, "query_id": "gin#issue-2871", "issue_number": 2871, "query": "turn on HandleMethodNotAllowed when using NoMethod #2871 (#2872)"}
+{"line_no": 164, "query_id": "gin#issue-2870", "issue_number": 2870, "query": "golangci(lint) : more linters (#2870)"}
+{"line_no": 165, "query_id": "gin#issue-2851", "issue_number": 2851, "query": "fix: check obj type in protobufBinding (#2851)"}
+{"line_no": 166, "query_id": "gin#issue-2788", "issue_number": 2788, "query": "minor tweaks,optimize code (#2788)"}
+{"line_no": 167, "query_id": "gin#issue-2837", "issue_number": 2837, "query": "Add short func with named return (#2837)"}
+{"line_no": 168, "query_id": "gin#issue-2834", "issue_number": 2834, "query": "Delete unused arg (#2834)"}
+{"line_no": 169, "query_id": "gin#issue-2830", "issue_number": 2830, "query": "Delete unused static const (#2830)"}
+{"line_no": 170, "query_id": "gin#issue-2827", "issue_number": 2827, "query": "chore(ci): update dependencies (#2827)"}
+{"line_no": 171, "query_id": "gin#issue-2769", "issue_number": 2769, "query": "fallback Context.Deadline() Context.Done() Context.Err() to Context.Request.Context() (#2769)"}
+{"line_no": 172, "query_id": "gin#issue-2783", "issue_number": 2783, "query": "use assert1 func (#2783)"}
+{"line_no": 173, "query_id": "gin#issue-2782", "issue_number": 2782, "query": "use std http method constant instead of raw string (#2782)"}
+{"line_no": 174, "query_id": "gin#issue-2772", "issue_number": 2772, "query": "Fix typo (#2772)"}
+{"line_no": 175, "query_id": "gin#issue-2720", "issue_number": 2720, "query": "feat(binding): support custom struct tag (#2720)"}
+{"line_no": 176, "query_id": "gin#issue-2751", "issue_number": 2751, "query": "gin.Context with fallback value from gin.Context.Request.Context() (#2751)"}
+{"line_no": 177, "query_id": "gin#issue-2761", "issue_number": 2761, "query": "skip unnecessary variable assignment in timeFormat (#2761)"}
+{"line_no": 178, "query_id": "gin#issue-2760", "issue_number": 2760, "query": "fix typo and add comments (#2760)"}
+{"line_no": 179, "query_id": "gin#issue-2739", "issue_number": 2739, "query": "Setting trusted platform using an enum-like (#2739)"}
+{"line_no": 180, "query_id": "gin#issue-2737", "issue_number": 2737, "query": "optimize code and reduce code cyclomatic complexity (#2737)"}
+{"line_no": 181, "query_id": "gin#issue-2700", "issue_number": 2700, "query": "Optimize code adjust (#2700)"}
+{"line_no": 182, "query_id": "gin#issue-2723", "issue_number": 2723, "query": "Get client IP when using Cloudflare (#2723)"}
+{"line_no": 183, "query_id": "gin#issue-2738", "issue_number": 2738, "query": "Update default validator's docs link (#2738)"}
+{"line_no": 184, "query_id": "gin#issue-2692", "issue_number": 2692, "query": "set engine.TrustedProxies For items that don't use gin.RUN (#2692)"}
+{"line_no": 185, "query_id": "gin#issue-2707", "issue_number": 2707, "query": "use errors.New to replace fmt.Errorf will much better (#2707)"}
+{"line_no": 186, "query_id": "gin#issue-2685", "issue_number": 2685, "query": "RouterGroup.Handle regular match optimization of http method (#2685)"}
+{"line_no": 187, "query_id": "gin#issue-2674", "issue_number": 2674, "query": "fix: data race with trustedCIDRs (#2674) (#2675)"}
+{"line_no": 188, "query_id": "gin#issue-2675", "issue_number": 2675, "query": "fix: data race with trustedCIDRs (#2674) (#2675)"}
+{"line_no": 189, "query_id": "gin#issue-2632", "issue_number": 2632, "query": "feat(engine): add trustedproxies and remoteIP (#2632)"}
+{"line_no": 190, "query_id": "gin#issue-2620", "issue_number": 2620, "query": "Remove the tedious named return value (#2620)"}
+{"line_no": 191, "query_id": "gin#issue-2609", "issue_number": 2609, "query": "basic auth: fix timing oracle (#2609)"}
+{"line_no": 192, "query_id": "gin#issue-2567", "issue_number": 2567, "query": "gin mode unknown: show available mode (#2567)"}
+{"line_no": 193, "query_id": "gin#issue-2302", "issue_number": 2302, "query": "Support binding for slice/array obj [Rewrite] (#2302)"}
+{"line_no": 194, "query_id": "gin#issue-2371", "issue_number": 2371, "query": "chore: update tree (#2371)"}
+{"line_no": 195, "query_id": "gin#issue-2551", "issue_number": 2551, "query": "Fix typos in context.go (#2551)"}
+{"line_no": 196, "query_id": "gin#issue-2484", "issue_number": 2484, "query": "Allow bind with a map[string]string (#2484)"}
+{"line_no": 197, "query_id": "gin#issue-2525", "issue_number": 2525, "query": "implement \".Unwrap() error\" on Error type (#2525) (#2526)"}
+{"line_no": 198, "query_id": "gin#issue-2526", "issue_number": 2526, "query": "implement \".Unwrap() error\" on Error type (#2525) (#2526)"}
+{"line_no": 199, "query_id": "gin#issue-2508", "issue_number": 2508, "query": "reduce allocs and improve the render `WriteString` (#2508)"}
+{"line_no": 200, "query_id": "gin#issue-2528", "issue_number": 2528, "query": "fix: print headers without Authorization header on broken pipe (#2528)"}
+{"line_no": 201, "query_id": "gin#issue-2500", "issue_number": 2500, "query": "use IndexByte replace Split to improve performance (#2500)"}
+{"line_no": 202, "query_id": "gin#issue-2498", "issue_number": 2498, "query": "Fix spelling (#2498)"}
+{"line_no": 203, "query_id": "gin#issue-2487", "issue_number": 2487, "query": "Add GetUint and GetUint64 method on gin.context (#2487)"}
+{"line_no": 204, "query_id": "gin#issue-2412", "issue_number": 2412, "query": "Prevent panic in Context.GetQuery() when there is no Request (#2412)"}
+{"line_no": 205, "query_id": "gin#issue-2450", "issue_number": 2450, "query": "binding: avoid 2038 problem on 32-bit architectures (#2450)"}
+{"line_no": 206, "query_id": "gin#issue-2322", "issue_number": 2322, "query": "Add CustomRecovery builtin middleware (#2322)"}
+{"line_no": 207, "query_id": "gin#issue-2393", "issue_number": 2393, "query": "Rename some variables (#2393)"}
+{"line_no": 208, "query_id": "gin#issue-2375", "issue_number": 2375, "query": "chore: rename getQueryCache/getFormCache to initQueryCache/initFormCache (#2375)"}
+{"line_no": 209, "query_id": "gin#issue-2368", "issue_number": 2368, "query": "Sync route tree to httprouter latest code (#2368)"}
+{"line_no": 210, "query_id": "gin#issue-2365", "issue_number": 2365, "query": "chore: improve render string performance (#2365)"}
+{"line_no": 211, "query_id": "gin#issue-2356", "issue_number": 2356, "query": "chore: update some code style (#2356)"}
+{"line_no": 212, "query_id": "gin#issue-2354", "issue_number": 2354, "query": "chore: update the result of CR (#2354)"}
+{"line_no": 213, "query_id": "gin#issue-2351", "issue_number": 2351, "query": "chore(performance): Change *sync.RWMutex to sync.RWMutex (#2351)"}
+{"line_no": 214, "query_id": "gin#issue-2321", "issue_number": 2321, "query": "update:SetMode function (#2321)"}
+{"line_no": 215, "query_id": "gin#issue-2305", "issue_number": 2305, "query": "fix missing initial sync.RWMutex (#2305)"}
+{"line_no": 216, "query_id": "gin#issue-2306", "issue_number": 2306, "query": "Add set samesite in cookie. (#2306)"}
+{"line_no": 217, "query_id": "gin#issue-2216", "issue_number": 2216, "query": "Revert \"fix accept incoming network connections (#2216)\" (#2294)"}
+{"line_no": 218, "query_id": "gin#issue-2294", "issue_number": 2294, "query": "Revert \"fix accept incoming network connections (#2216)\" (#2294)"}
+{"line_no": 219, "query_id": "gin#issue-1391", "issue_number": 1391, "query": "Add mutex for protect Context.Keys map (#1391)"}
+{"line_no": 220, "query_id": "gin#issue-2280", "issue_number": 2280, "query": "Unix Socket Handling (#2280)"}
+{"line_no": 221, "query_id": "gin#issue-2209", "issue_number": 2209, "query": "Use json marshall in context json to fix breaking new line issue. Fixes #2209 (#2228)"}
+{"line_no": 222, "query_id": "gin#issue-2220", "issue_number": 2220, "query": "add yaml negotitation (#2220)"}
+{"line_no": 223, "query_id": "gin#issue-2223", "issue_number": 2223, "query": "docs(path): improve comments (#2223)"}
+{"line_no": 224, "query_id": "gin#issue-1615", "issue_number": 1615, "query": "Added support for SameSite cookie flag (#1615)"}
+{"line_no": 225, "query_id": "gin#issue-2206", "issue_number": 2206, "query": "Use zero-copy approach to convert types between string and byte… (#2206)"}
+{"line_no": 226, "query_id": "gin#issue-2196", "issue_number": 2196, "query": "Update docs on Context.Done(), Context.Deadline() and Context.Err() (#2196)"}
+{"line_no": 227, "query_id": "gin#issue-2179", "issue_number": 2179, "query": "Reuse bytes when cleaning the URL paths (#2179)"}
+{"line_no": 228, "query_id": "gin#issue-1852", "issue_number": 1852, "query": "Add build tag nomsgpack (#1852)"}
+{"line_no": 229, "query_id": "gin#issue-2202", "issue_number": 2202, "query": "Fix spelling (#2202)"}
+{"line_no": 230, "query_id": "gin#issue-2177", "issue_number": 2177, "query": "tree: remove one else statement (#2177)"}
+{"line_no": 231, "query_id": "gin#issue-2173", "issue_number": 2173, "query": "tree: sync httprouter update (#2173)"}
+{"line_no": 232, "query_id": "gin#issue-2172", "issue_number": 2172, "query": "tree: sync httprouter update (#2172)"}
+{"line_no": 233, "query_id": "gin#issue-2171", "issue_number": 2171, "query": "tree: sync httprouter update (#2171)"}
+{"line_no": 234, "query_id": "gin#issue-2166", "issue_number": 2166, "query": "fix maxParams bug (#2166)"}
+{"line_no": 235, "query_id": "gin#issue-2163", "issue_number": 2163, "query": "tree: sync part httprouter codes and reduce if/else (#2163)"}
+{"line_no": 236, "query_id": "gin#issue-2155", "issue_number": 2155, "query": "use http method constant (#2155)"}
+{"line_no": 237, "query_id": "gin#issue-2159", "issue_number": 2159, "query": "chore(performance): Improve performance for adding RemoveExtraS… (#2159)"}
+{"line_no": 238, "query_id": "gin#issue-1970", "issue_number": 1970, "query": "Refactor redirect request in gin.go (#1970)"}
+{"line_no": 239, "query_id": "gin#issue-1942", "issue_number": 1942, "query": "fix ignore walking on form mapping (#1942) (#1943)"}
+{"line_no": 240, "query_id": "gin#issue-1943", "issue_number": 1943, "query": "fix ignore walking on form mapping (#1942) (#1943)"}
+{"line_no": 241, "query_id": "gin#issue-2114", "issue_number": 2114, "query": "[FIX] c.Request.FormFile maybe file, need close (#2114)"}
+{"line_no": 242, "query_id": "gin#issue-2118", "issue_number": 2118, "query": "Close files opened in static file handler (#2118)"}
+{"line_no": 243, "query_id": "gin#issue-2093", "issue_number": 2093, "query": "Fix 'errcheck' linter warnings (#2093)"}
+{"line_no": 244, "query_id": "gin#issue-1606", "issue_number": 1606, "query": "Use Writer in Context.Status (#1606)"}
+{"line_no": 245, "query_id": "gin#issue-2023", "issue_number": 2023, "query": "support run HTTP server with specific net.Listener (#2023)"}
+{"line_no": 246, "query_id": "gin#issue-2063", "issue_number": 2063, "query": "use url.URL.Query instead of parsing query (#2063)"}
+{"line_no": 247, "query_id": "gin#issue-2051", "issue_number": 2051, "query": "fix GetPostFormMap (#2051)"}
+{"line_no": 248, "query_id": "gin#issue-2028", "issue_number": 2028, "query": "feat(binding): add DisallowUnknownFields() in gin.Context.BindJSON() (#2028)"}
+{"line_no": 249, "query_id": "gin#issue-1015", "issue_number": 1015, "query": "upgrade validator version to v9 (#1015)"}
+{"line_no": 250, "query_id": "gin#issue-2007", "issue_number": 2007, "query": "Fixed JSONP format (added semicolon) (#2007)"}
+{"line_no": 251, "query_id": "gin#issue-2013", "issue_number": 2013, "query": "Remove unused code (#2013)"}
+{"line_no": 252, "query_id": "gin#issue-2004", "issue_number": 2004, "query": "Simplify code (#2004)"}
+{"line_no": 253, "query_id": "gin#issue-1980", "issue_number": 1980, "query": "binding: support unix time (#1980)"}
+{"line_no": 254, "query_id": "gin#issue-1971", "issue_number": 1971, "query": "Typo (#1971)"}
+{"line_no": 255, "query_id": "gin#issue-1939", "issue_number": 1939, "query": "Gin1.5 bytes.Buffer to strings.Builder (#1939)"}
+{"line_no": 256, "query_id": "gin#issue-1919", "issue_number": 1919, "query": "Bugfix for the FullPath feature (#1919)"}
+{"line_no": 257, "query_id": "gin#issue-1956", "issue_number": 1956, "query": "support bind http header param #1956 (#1957)"}
+{"line_no": 258, "query_id": "gin#issue-1957", "issue_number": 1957, "query": "support bind http header param #1956 (#1957)"}
+{"line_no": 259, "query_id": "gin#issue-1949", "issue_number": 1949, "query": "binding: add support of multipart multi files (#1878) (#1949)"}
+{"line_no": 260, "query_id": "gin#issue-1878", "issue_number": 1878, "query": "binding: add support of multipart multi files (#1878) (#1949)"}
+{"line_no": 261, "query_id": "gin#issue-1931", "issue_number": 1931, "query": "Attempt to fix PostForm cache bug (#1931)"}
+{"line_no": 262, "query_id": "gin#issue-1918", "issue_number": 1918, "query": "chore: improve GetQueryMap performance. (#1918)"}
+{"line_no": 263, "query_id": "gin#issue-1450", "issue_number": 1450, "query": "add context param query cache (#1450)"}
+{"line_no": 264, "query_id": "gin#issue-1841", "issue_number": 1841, "query": "Fix context.Params race condition on Copy() (#1841)"}
+{"line_no": 265, "query_id": "gin#issue-1826", "issue_number": 1826, "query": "Hold matched route full path in the Context (#1826)"}
+{"line_no": 266, "query_id": "gin#issue-1546", "issue_number": 1546, "query": "use encode replace json marshal increase json encoder speed (#1546)"}
+{"line_no": 267, "query_id": "gin#issue-1909", "issue_number": 1909, "query": "Some code improvements (#1909)"}
+{"line_no": 268, "query_id": "gin#issue-1893", "issue_number": 1893, "query": "Now you can parse the inline lowercase start structure (#1893)"}
+{"line_no": 269, "query_id": "gin#issue-1891", "issue_number": 1891, "query": "Use DefaultWriter and DefaultErrorWriter for debug messages (#1891)"}
+{"line_no": 270, "query_id": "gin#issue-1644", "issue_number": 1644, "query": "Clean the Request Path early (#1817)"}
+{"line_no": 271, "query_id": "gin#issue-1851", "issue_number": 1851, "query": "v1.4.0 + #1631 (remove go1.6/go1,7 support) (#1851)"}
+{"line_no": 272, "query_id": "gin#issue-1631", "issue_number": 1631, "query": "v1.4.0 + #1631 (remove go1.6/go1,7 support) (#1851)"}
+{"line_no": 273, "query_id": "gin#issue-1861", "issue_number": 1861, "query": "Fix spelling. (#1861)"}
+{"line_no": 274, "query_id": "gin#issue-1836", "issue_number": 1836, "query": "Remove contents of the Authorization header while dumping requests (#1836)"}
+{"line_no": 275, "query_id": "gin#issue-1829", "issue_number": 1829, "query": "refactor(form_mapping.go): mapping multipart request (#1829)"}
+{"line_no": 276, "query_id": "gin#issue-1264", "issue_number": 1264, "query": "update for supporting file binding (#1264)"}
+{"line_no": 277, "query_id": "gin#issue-1797", "issue_number": 1797, "query": "add support arrays on mapping (#1797)"}
+{"line_no": 278, "query_id": "gin#issue-1804", "issue_number": 1804, "query": "fix #1804 which is caused by calling middleware twice. (#1805)"}
+{"line_no": 279, "query_id": "gin#issue-1779", "issue_number": 1779, "query": "make context.Keys available as LogFormatterParams (#1779)"}
+{"line_no": 280, "query_id": "gin#issue-1796", "issue_number": 1796, "query": "spell check (#1796)"}
+{"line_no": 281, "query_id": "gin#issue-1794", "issue_number": 1794, "query": "add support time.Duration on mapping (#1794)"}
+{"line_no": 282, "query_id": "gin#issue-1672", "issue_number": 1672, "query": "refactor(form_mapping.go): mapping ptr, struct and map (#1749)"}
+{"line_no": 283, "query_id": "gin#issue-610", "issue_number": 610, "query": "refactor(form_mapping.go): mapping ptr, struct and map (#1749)"}
+{"line_no": 284, "query_id": "gin#issue-1252", "issue_number": 1252, "query": "Added stream flag indicates if client disconnected in middle of streaming (#1252)"}
+{"line_no": 285, "query_id": "gin#issue-1260", "issue_number": 1260, "query": "Extend context.File to allow for the content-dispositon attachments via a new method context.Attachment (#1260)"}
+{"line_no": 286, "query_id": "gin#issue-391", "issue_number": 391, "query": "Support negotiation wildcards, fix #391 (#1112)"}
+{"line_no": 287, "query_id": "gin#issue-1238", "issue_number": 1238, "query": "add prefix from X-Forwarded-Prefix in redirectTrailingSlash (#1238)"}
+{"line_no": 288, "query_id": "gin#issue-1020", "issue_number": 1020, "query": "Fix context.Copy() race condition (#1020)"}
+{"line_no": 289, "query_id": "gin#issue-1729", "issue_number": 1729, "query": "Add context.HandlerNames() (#1729)"}
+{"line_no": 290, "query_id": "gin#issue-1771", "issue_number": 1771, "query": "Change color methods in using defaultLogger function to public (#1771)"}
+{"line_no": 291, "query_id": "gin#issue-1752", "issue_number": 1752, "query": "Add response size to LogFormatterParams (#1752)"}
+{"line_no": 292, "query_id": "gin#issue-1733", "issue_number": 1733, "query": "allow ignoring field on form mapping (#1733)"}
+{"line_no": 293, "query_id": "gin#issue-1134", "issue_number": 1134, "query": "Set socket to recieve writes (#1134)"}
+{"line_no": 294, "query_id": "gin#issue-1724", "issue_number": 1724, "query": "Add a function to force color in console output (#1724)"}
+{"line_no": 295, "query_id": "gin#issue-1530", "issue_number": 1530, "query": "Update: examples/graceful-shutdown/server.go (#1530)"}
+{"line_no": 296, "query_id": "gin#issue-1740", "issue_number": 1740, "query": "add notify accept signal (#1740)"}
+{"line_no": 297, "query_id": "gin#issue-1760", "issue_number": 1760, "query": "fix many redirects (#1760) (#1764)"}
+{"line_no": 298, "query_id": "gin#issue-1764", "issue_number": 1764, "query": "fix many redirects (#1760) (#1764)"}
+{"line_no": 299, "query_id": "gin#issue-1747", "issue_number": 1747, "query": "Fix not to pass formatted string to Fprintf's format specifier parameter (#1747)"}
+{"line_no": 300, "query_id": "gin#issue-1739", "issue_number": 1739, "query": "fix errcheck warnings (#1739)"}
+{"line_no": 301, "query_id": "gin#issue-1736", "issue_number": 1736, "query": "Revert \"context: inherits context cancelation and deadline from http.Request context for Go>=1.7 (#1690)\" (#1736)"}
+{"line_no": 302, "query_id": "gin#issue-1690", "issue_number": 1690, "query": "Revert \"context: inherits context cancelation and deadline from http.Request context for Go>=1.7 (#1690)\" (#1736)"}
+{"line_no": 303, "query_id": "gin#issue-1726", "issue_number": 1726, "query": "Fix case of GitHub (#1726)"}
+{"line_no": 304, "query_id": "gin#issue-1718", "issue_number": 1718, "query": "fix mapping inner structs with correct tag (#1718)"}
+{"line_no": 305, "query_id": "gin#issue-1706", "issue_number": 1706, "query": "Plural is \"Paths\", not \"Pathes\" (#1706)"}
+{"line_no": 306, "query_id": "gin#issue-1693", "issue_number": 1693, "query": "Fix #1693: file.Filename should not be trusted (#1699)"}
+{"line_no": 307, "query_id": "gin#issue-1694", "issue_number": 1694, "query": "Add BindUri (#1694)"}
+{"line_no": 308, "query_id": "gin#issue-1677", "issue_number": 1677, "query": "Add LoggerWithFormatter method (#1677)"}
+{"line_no": 309, "query_id": "gin#issue-1682", "issue_number": 1682, "query": "fix bug (#1682)"}
+{"line_no": 310, "query_id": "gin#issue-1220", "issue_number": 1220, "query": "Router: Route StaticFS() not found to Router's NoRoute() (#1663)"}
+{"line_no": 311, "query_id": "gin#issue-1638", "issue_number": 1638, "query": "handle nil body for JSON binding (#1638)"}
+{"line_no": 312, "query_id": "gin#issue-1612", "issue_number": 1612, "query": "support bind uri param (#1612)"}
+{"line_no": 313, "query_id": "gin#issue-1640", "issue_number": 1640, "query": "recovery: fix issue about syscall import on google app engine (#1640)"}
+{"line_no": 314, "query_id": "gin#issue-1650", "issue_number": 1650, "query": "Make sure the debug log contains line breaks (#1650)"}
+{"line_no": 315, "query_id": "gin#issue-1089", "issue_number": 1089, "query": "Fix panic stack trace being printed during recovery of broken pipe (#1089) (#1259)"}
+{"line_no": 316, "query_id": "gin#issue-1259", "issue_number": 1259, "query": "Fix panic stack trace being printed during recovery of broken pipe (#1089) (#1259)"}
+{"line_no": 317, "query_id": "gin#issue-1609", "issue_number": 1609, "query": "feat(server): Implements RunFd method (#1609)"}
+{"line_no": 318, "query_id": "gin#issue-1618", "issue_number": 1618, "query": "Yaml binding (#1618)"}
+{"line_no": 319, "query_id": "gin#issue-1626", "issue_number": 1626, "query": "Fix typos (#1626)"}
+{"line_no": 320, "query_id": "gin#issue-1625", "issue_number": 1625, "query": "Fix typos (#1625)"}
+{"line_no": 321, "query_id": "gin#issue-1619", "issue_number": 1619, "query": "Added some comments to avoid having golint warnings (#1619)"}
+{"line_no": 322, "query_id": "gin#issue-1272", "issue_number": 1272, "query": "Expose HandlerFunc in RouteInfos (#1272)"}
+{"line_no": 323, "query_id": "gin#issue-1600", "issue_number": 1600, "query": "Pass MaxMultipartMemory when FormFile is called (#1600)"}
+{"line_no": 324, "query_id": "gin#issue-1565", "issue_number": 1565, "query": "removed use of sync.pool from HandleContext and added test coverage (#1565)"}
+{"line_no": 325, "query_id": "gin#issue-1560", "issue_number": 1560, "query": "fix: fmt output log to os.Stderr (#1571)"}
+{"line_no": 326, "query_id": "gin#issue-1331", "issue_number": 1331, "query": "Don't log requests (#1370)"}
+{"line_no": 327, "query_id": "gin#issue-1529", "issue_number": 1529, "query": "improve panic information when a catch-all wildcard conflict occurs (#1529)"}
+{"line_no": 328, "query_id": "gin#issue-1562", "issue_number": 1562, "query": "chore: fix typo and add a little anotation (#1562)"}
+{"line_no": 329, "query_id": "gin#issue-1553", "issue_number": 1553, "query": "Let's user define how he wants to log his routes (eg. JSON, key value, or something else) (#1553) (#1555)"}
+{"line_no": 330, "query_id": "gin#issue-1555", "issue_number": 1555, "query": "Let's user define how he wants to log his routes (eg. JSON, key value, or something else) (#1553) (#1555)"}
+{"line_no": 331, "query_id": "gin#issue-1075", "issue_number": 1075, "query": "chore: add some annotations (#1550)"}
+{"line_no": 332, "query_id": "gin#issue-1544", "issue_number": 1544, "query": "chore: add some annotations (#1544)"}
+{"line_no": 333, "query_id": "gin#issue-1502", "issue_number": 1502, "query": "chore: remove else instead of return/continue (#1502)"}
+{"line_no": 334, "query_id": "gin#issue-1497", "issue_number": 1497, "query": "chore: add missing copyright and update if/else (#1497)"}
+{"line_no": 335, "query_id": "gin#issue-1496", "issue_number": 1496, "query": "not use protobuf on context but use it on render (#1496)"}
+{"line_no": 336, "query_id": "gin#issue-1479", "issue_number": 1479, "query": "Add support for Protobuf format response and unit test (#1479)"}
+{"line_no": 337, "query_id": "gin#issue-1484", "issue_number": 1484, "query": "Add BindXML AND ShouldBindXML #1484 (#1485)"}
+{"line_no": 338, "query_id": "gin#issue-1485", "issue_number": 1485, "query": "Add BindXML AND ShouldBindXML #1484 (#1485)"}
+{"line_no": 339, "query_id": "gin#issue-1482", "issue_number": 1482, "query": "chore: use http.Status* instead of hard code (#1482)"}
+{"line_no": 340, "query_id": "gin#issue-1417", "issue_number": 1417, "query": "unify test data (#1417)"}
+{"line_no": 341, "query_id": "gin#issue-1470", "issue_number": 1470, "query": "chore: add return or remove else for reduce indent (#1470)"}
+{"line_no": 342, "query_id": "gin#issue-1469", "issue_number": 1469, "query": "small enhance for cleanPath (#1469)"}
+{"line_no": 343, "query_id": "gin#issue-1460", "issue_number": 1460, "query": "flush operation will overwrite the origin status code (#1460)"}
+{"line_no": 344, "query_id": "gin#issue-1383", "issue_number": 1383, "query": "Support map as query string or post form parameters (#1383)"}
+{"line_no": 345, "query_id": "gin#issue-1431", "issue_number": 1431, "query": "Simplify context error (#1431)"}
+{"line_no": 346, "query_id": "gin#issue-1438", "issue_number": 1438, "query": "return json if jsonp has not callback (#1438)"}
+{"line_no": 347, "query_id": "gin#issue-1358", "issue_number": 1358, "query": "add json ASCII string render (#1358)"}
+{"line_no": 348, "query_id": "gin#issue-1418", "issue_number": 1418, "query": "chore: remove duplicate code (#1418)"}
+{"line_no": 349, "query_id": "gin#issue-1413", "issue_number": 1413, "query": "add comment for context (#1413)"}
+{"line_no": 350, "query_id": "gin#issue-1394", "issue_number": 1394, "query": "add go version prerequisite and debug warning (#1394)"}
+{"line_no": 351, "query_id": "gin#issue-1411", "issue_number": 1411, "query": "remove hardcode instead of http status value (#1411)"}
+{"line_no": 352, "query_id": "gin#issue-1407", "issue_number": 1407, "query": "add an edge case from httprouter (#1407)"}
+{"line_no": 353, "query_id": "gin#issue-1406", "issue_number": 1406, "query": "use strings.Split instead of strings.IndexByte (#1406)"}
+{"line_no": 354, "query_id": "gin#issue-1403", "issue_number": 1403, "query": "example: fix typo for grpc (#1405)"}
+{"line_no": 355, "query_id": "gin#issue-1401", "issue_number": 1401, "query": "add grpc example (#1401)"}
+{"line_no": 356, "query_id": "gin#issue-1400", "issue_number": 1400, "query": "utils: use strings.Split instead of strings.IndexByte (#1400)"}
+{"line_no": 357, "query_id": "gin#issue-1360", "issue_number": 1360, "query": "minor typo in routergroup.go (#1360)"}
+{"line_no": 358, "query_id": "gin#issue-1371", "issue_number": 1371, "query": "Add and fix the explanation of `HandleContext` (#1371)"}
+{"line_no": 359, "query_id": "gin#issue-1304", "issue_number": 1304, "query": "Serve easily dynamic files with `DataFromReader` context method (#1304)"}
+{"line_no": 360, "query_id": "gin#issue-1350", "issue_number": 1350, "query": "fix bug, return err when failed binding bool (#1350)"}
+{"line_no": 361, "query_id": "gin#issue-216", "issue_number": 216, "query": "Fix #216: Enable to call binding multiple times in some formats (#1341)"}
+{"line_no": 362, "query_id": "gin#issue-1352", "issue_number": 1352, "query": "Fix typo in panic() message (extra single quote) (#1352)"}
+{"line_no": 363, "query_id": "gin#issue-1342", "issue_number": 1342, "query": "support struct pointer (#1342)"}
+{"line_no": 364, "query_id": "gin#issue-1336", "issue_number": 1336, "query": "Add support of pointers in form binding (#1336)"}
+{"line_no": 365, "query_id": "gin#issue-1333", "issue_number": 1333, "query": "Add Jsonp Support to Context (#1333)"}
+{"line_no": 366, "query_id": "gin#issue-1138", "issue_number": 1138, "query": "support default value for form (#1138)"}
+{"line_no": 367, "query_id": "gin#issue-1277", "issue_number": 1277, "query": "fix(binding): Expose validator engine used by the default Validator (#1277)"}
+{"line_no": 368, "query_id": "gin#issue-1270", "issue_number": 1270, "query": "add gin panic time log (#1270)"}
+{"line_no": 369, "query_id": "gin#issue-1287", "issue_number": 1287, "query": "doc(graceful-shutdown): failure to ListenAndServe should be a reason to exit (#1287)"}
+{"line_no": 370, "query_id": "gin#issue-1250", "issue_number": 1250, "query": "Make \"\" mode being the same as debug mode (#1250)"}
+{"line_no": 371, "query_id": "gin#issue-1215", "issue_number": 1215, "query": "Fix some golint warnings in gin.go (#1215)"}
+{"line_no": 372, "query_id": "gin#issue-1209", "issue_number": 1209, "query": "Fix golint warnings in utils.go (#1209)"}
+{"line_no": 373, "query_id": "gin#issue-1204", "issue_number": 1204, "query": "Doc: Fix typo in documentation of Bind (#1204)"}
+{"line_no": 374, "query_id": "gin#issue-1185", "issue_number": 1185, "query": "use lower if the struct is private (#1185)"}
+{"line_no": 375, "query_id": "gin#issue-1184", "issue_number": 1184, "query": "Linting and optimizing struct memory signature. (#1184)"}
+{"line_no": 376, "query_id": "gin#issue-1156", "issue_number": 1156, "query": "Added simple testing documentation and examples (#1156)"}
+{"line_no": 377, "query_id": "gin#issue-1165", "issue_number": 1165, "query": "format some codes style (#1165)"}
+{"line_no": 378, "query_id": "gin#issue-1047", "issue_number": 1047, "query": "feat(context): ShouldBind counterparts for Bind methods (#1047)"}
+{"line_no": 379, "query_id": "gin#issue-1121", "issue_number": 1121, "query": "Print warning log when user create one engine using gin.Default in debug mode (#1121)"}
+{"line_no": 380, "query_id": "gin#issue-1101", "issue_number": 1101, "query": "Empty string check (#1101)"}
+{"line_no": 381, "query_id": "gin#issue-1108", "issue_number": 1108, "query": "combine var and use tmp var (#1108)"}
+{"line_no": 382, "query_id": "gin#issue-1117", "issue_number": 1117, "query": "Support time location on form binding (#1117)"}
+{"line_no": 383, "query_id": "gin#issue-1104", "issue_number": 1104, "query": "Fixed README.md typo (#1104)"}
+{"line_no": 384, "query_id": "gin#issue-1100", "issue_number": 1100, "query": "Moved const 'defaultMemory' to attrib. Engine.MaxMultipartMemory instead. (#1100)"}
+{"line_no": 385, "query_id": "gin#issue-1097", "issue_number": 1097, "query": "doc(recovery): add RecoveryWithWriter doc (#1097)"}
+{"line_no": 386, "query_id": "gin#issue-1094", "issue_number": 1094, "query": "32 << 10 != 32 Mb (#1094)"}
+{"line_no": 387, "query_id": "gin#issue-1092", "issue_number": 1092, "query": "correct spelling mistake (#1092)"}
+{"line_no": 388, "query_id": "gin#issue-1088", "issue_number": 1088, "query": "doc(context): add cookie doc (#1088)"}
+{"line_no": 389, "query_id": "gin#issue-1087", "issue_number": 1087, "query": "fix(ginS): fix undefined ref (#1087)"}
+{"line_no": 390, "query_id": "gin#issue-1068", "issue_number": 1068, "query": "feat(binding): add support for custom validator / validation tags (#1068)"}
+{"line_no": 391, "query_id": "gin#issue-1083", "issue_number": 1083, "query": "refactor: using requestHeader internal func (#1083)"}
+{"line_no": 392, "query_id": "gin#issue-1081", "issue_number": 1081, "query": "Use standard library for retrieving header (#1081)"}
+{"line_no": 393, "query_id": "gin#issue-1077", "issue_number": 1077, "query": "not use dot when import package (#1077)"}
+{"line_no": 394, "query_id": "gin#issue-1076", "issue_number": 1076, "query": "reduce go cyclo (#1076)"}
+{"line_no": 395, "query_id": "gin#issue-1072", "issue_number": 1072, "query": "not display color when set disableColor (#1072)"}
+{"line_no": 396, "query_id": "gin#issue-1057", "issue_number": 1057, "query": "update comment (#1057)"}
+{"line_no": 397, "query_id": "gin#issue-1067", "issue_number": 1067, "query": "fix 200 to http.Status (#1067)"}
+{"line_no": 398, "query_id": "gin#issue-1060", "issue_number": 1060, "query": "log format (#1060)"}
+{"line_no": 399, "query_id": "gin#issue-1059", "issue_number": 1059, "query": "merge args if it have same type (#1059)"}
+{"line_no": 400, "query_id": "gin#issue-1050", "issue_number": 1050, "query": "fix composite literal uses unkeyed fields warnings, #1050 (#1051)"}
+{"line_no": 401, "query_id": "gin#issue-1051", "issue_number": 1051, "query": "fix composite literal uses unkeyed fields warnings, #1050 (#1051)"}
+{"line_no": 402, "query_id": "gin#issue-1049", "issue_number": 1049, "query": "doc(context): more clearer bind doc when input is not valid (#1049)"}
+{"line_no": 403, "query_id": "gin#issue-1042", "issue_number": 1042, "query": "doc(context): add status func comment. (#1042)"}
+{"line_no": 404, "query_id": "gin#issue-1038", "issue_number": 1038, "query": "update template example (#1038)"}
+{"line_no": 405, "query_id": "gin#issue-1036", "issue_number": 1036, "query": "style: remove optional return (#1036)"}
+{"line_no": 406, "query_id": "gin#issue-1029", "issue_number": 1029, "query": "feat(context): add BindQuery func (#1029)"}
+{"line_no": 407, "query_id": "gin#issue-1032", "issue_number": 1032, "query": "not use tmp var (#1032)"}
+{"line_no": 408, "query_id": "gin#issue-1031", "issue_number": 1031, "query": "refactor(gin): use return not use else for reducing indent (#1031)"}
+{"line_no": 409, "query_id": "gin#issue-1028", "issue_number": 1028, "query": "use return not use else (#1028)"}
+{"line_no": 410, "query_id": "gin#issue-1022", "issue_number": 1022, "query": "feat(context): add SaveUploadedFile func. (#1022)"}
+{"line_no": 411, "query_id": "gin#issue-1006", "issue_number": 1006, "query": "refactor(doc): use space not tab (#1006)"}
+{"line_no": 412, "query_id": "gin#issue-1000", "issue_number": 1000, "query": "[docs] add http2 example (#1000)"}
+{"line_no": 413, "query_id": "gin#issue-1001", "issue_number": 1001, "query": "add favicon example (#1001)"}
+{"line_no": 414, "query_id": "gin#issue-988", "issue_number": 988, "query": "feat(logger): show query string in logger. (#999) close #988"}
+{"line_no": 415, "query_id": "gin#issue-368", "issue_number": 368, "query": "feat(binding): add UseNumber() in gin.Context.BindJSON() (#997) close #368"}
+{"line_no": 416, "query_id": "gin#issue-987", "issue_number": 987, "query": "Merge pull request #987 from easonlin404/secure-json"}
+{"line_no": 417, "query_id": "gin#issue-985", "issue_number": 985, "query": "Use single line (#985)"}
+{"line_no": 418, "query_id": "gin#issue-984", "issue_number": 984, "query": "use comma ok and use single line (#984)"}
+{"line_no": 419, "query_id": "gin#issue-981", "issue_number": 981, "query": "update func comment (#981)"}
+{"line_no": 420, "query_id": "gin#issue-979", "issue_number": 979, "query": "Merge pull request #979 from easonlin404/fix-comment"}
+{"line_no": 421, "query_id": "gin#issue-910", "issue_number": 910, "query": "Merge pull request #910 from ammario/develop"}
+{"line_no": 422, "query_id": "gin#issue-977", "issue_number": 977, "query": "update comment method (#977)"}
+{"line_no": 423, "query_id": "gin#issue-975", "issue_number": 975, "query": "separate type define (#975)"}
+{"line_no": 424, "query_id": "gin#issue-974", "issue_number": 974, "query": "improved swap (#974)"}
+{"line_no": 425, "query_id": "gin#issue-972", "issue_number": 972, "query": "add error check. (#972)"}
+{"line_no": 426, "query_id": "gin#issue-965", "issue_number": 965, "query": "fix: update autotls example. (#965)"}
+{"line_no": 427, "query_id": "gin#issue-871", "issue_number": 871, "query": "Merge pull request #871 from gin-gonic/develop"}
+{"line_no": 428, "query_id": "gin#issue-962", "issue_number": 962, "query": "docs(changelog): add #962 template func maps"}
+{"line_no": 429, "query_id": "gin#issue-860", "issue_number": 860, "query": "docs(readme): add example on custom delims #860"}
+{"line_no": 430, "query_id": "gin#issue-855", "issue_number": 855, "query": "Merge pull request #855 from gin-gonic/feat/662"}
+{"line_no": 431, "query_id": "gin#issue-948", "issue_number": 948, "query": "delete else keyword (#948)"}
+{"line_no": 432, "query_id": "gin#issue-947", "issue_number": 947, "query": "Add Makefile to check the following thing (#947)"}
+{"line_no": 433, "query_id": "gin#issue-856", "issue_number": 856, "query": "feat(context): add cast helpers to c.Keys (#856)"}
+{"line_no": 434, "query_id": "gin#issue-900", "issue_number": 900, "query": "Fix minor type in context.go (#900)"}
+{"line_no": 435, "query_id": "gin#issue-904", "issue_number": 904, "query": "Fix time.Time binding (#904)"}
+{"line_no": 436, "query_id": "gin#issue-863", "issue_number": 863, "query": "Merge pull request #863 from appleboy/tls"}
+{"line_no": 437, "query_id": "gin#issue-857", "issue_number": 857, "query": "feat: add GetRawData func. (#857)"}
+{"line_no": 438, "query_id": "gin#issue-835", "issue_number": 835, "query": "docs: add graceful-shutdown example for go 1.8 (#835)"}
+{"line_no": 439, "query_id": "gin#issue-834", "issue_number": 834, "query": "feat: support cygwin for log writer. (#834)"}
+{"line_no": 440, "query_id": "gin#issue-810", "issue_number": 810, "query": "The url.RawPath used when engine.UseRawPath is set to true. (#810)"}
+{"line_no": 441, "query_id": "gin#issue-808", "issue_number": 808, "query": "Added support for MessagePack binding and rendering (#808)"}
+{"line_no": 442, "query_id": "gin#issue-801", "issue_number": 801, "query": "Support time.Time on form binding (#801)"}
+{"line_no": 443, "query_id": "gin#issue-800", "issue_number": 800, "query": "chore(errorHandler):new abortWithStatus method with Json body (#800)"}
+{"line_no": 444, "query_id": "gin#issue-709", "issue_number": 709, "query": "Added HandleContext to re-enter soft-rewritten Requests. (#709)"}
+{"line_no": 445, "query_id": "gin#issue-797", "issue_number": 797, "query": "Fixed typos in Context (#797)"}
+{"line_no": 446, "query_id": "gin#issue-198", "issue_number": 198, "query": "Fix #198 (#781)"}
+{"line_no": 447, "query_id": "gin#issue-623", "issue_number": 623, "query": "better display for log message (#623)"}
+{"line_no": 448, "query_id": "gin#issue-784", "issue_number": 784, "query": "Merge pull request #784 from gin-gonic/readme"}
+{"line_no": 449, "query_id": "gin#issue-783", "issue_number": 783, "query": "Merge pull request #783 from gin-gonic/ip"}
+{"line_no": 450, "query_id": "gin#issue-779", "issue_number": 779, "query": "Add convenience method to check if websockets required (#779)"}
+{"line_no": 451, "query_id": "gin#issue-775", "issue_number": 775, "query": "Merge pull request #775 from gin-gonic/upload"}
+{"line_no": 452, "query_id": "gin#issue-770", "issue_number": 770, "query": "Merge pull request #770 from gin-gonic/console"}
+{"line_no": 453, "query_id": "gin#issue-701", "issue_number": 701, "query": "Merge pull request #701 from maxatome/patch-1"}
+{"line_no": 454, "query_id": "gin#issue-723", "issue_number": 723, "query": "Merge pull request #755 from gin-gonic/755-app-engine-client-ip"}
+{"line_no": 455, "query_id": "gin#issue-630", "issue_number": 630, "query": "Fix for #630"}
+{"line_no": 456, "query_id": "gin#issue-627", "issue_number": 627, "query": "Merge pull request #627 from liudanking/develop"}
+{"line_no": 457, "query_id": "gin#issue-754", "issue_number": 754, "query": "Merge pull request #754 from gin-gonic/patch-13"}
+{"line_no": 458, "query_id": "gin#issue-744", "issue_number": 744, "query": "Revert \"Revert \"Merge pull request #744 from aviddiviner/logger-fix\"\""}
+{"line_no": 459, "query_id": "gin#issue-753", "issue_number": 753, "query": "Revert \"Merge pull request #753 from gin-gonic/bug\""}
+{"line_no": 460, "query_id": "gin#issue-752", "issue_number": 752, "query": "Merge pull request #753 from gin-gonic/bug"}
+{"line_no": 461, "query_id": "gin#issue-751", "issue_number": 751, "query": "v1.1 (#751)"}
+{"line_no": 462, "query_id": "gin#issue-570", "issue_number": 570, "query": "Merge pull request #570 from andreynering/array"}
+{"line_no": 463, "query_id": "gin#issue-585", "issue_number": 585, "query": "Merge pull request #587 from roylou/develop"}
+{"line_no": 464, "query_id": "gin#issue-514", "issue_number": 514, "query": "closes #514, code from bobbo@b4f0b50"}
+{"line_no": 465, "query_id": "gin#issue-576", "issue_number": 576, "query": "Merge pull request #576 from kamronbatman/patch-1"}
+{"line_no": 466, "query_id": "gin#issue-556", "issue_number": 556, "query": "Merge pull request #556 from mpuncel/mpuncel/fix-godoc-handlername"}
+{"line_no": 467, "query_id": "gin#issue-535", "issue_number": 535, "query": "Merge pull request #535 from appleboy/patch-1"}
+{"line_no": 468, "query_id": "gin#issue-494", "issue_number": 494, "query": "Merge pull request #494 from dolmen/fix/indent-route-debug"}
+{"line_no": 469, "query_id": "gin#issue-478", "issue_number": 478, "query": "Merge pull request #478 from kylescottmcgill/master"}
+{"line_no": 470, "query_id": "gin#issue-470", "issue_number": 470, "query": "Merge pull request #470 from bwiggs/master"}
+{"line_no": 471, "query_id": "gin#issue-1", "issue_number": 1, "query": "Merge pull request #1 from kylescottmcgill/docs-spelling"}
+{"line_no": 472, "query_id": "gin#issue-405", "issue_number": 405, "query": "router.Run() can be called without parameters. #405"}
+{"line_no": 473, "query_id": "gin#issue-252", "issue_number": 252, "query": "Merge pull request #362 from javierprovecho/fix-middlewares-typo"}
+{"line_no": 474, "query_id": "gin#issue-363", "issue_number": 363, "query": "Merge pull request #363 from error10/patch-1"}
+{"line_no": 475, "query_id": "gin#issue-348", "issue_number": 348, "query": "Merge pull request #348 from WnP/master"}
+{"line_no": 476, "query_id": "gin#issue-319", "issue_number": 319, "query": "Merge pull request #319 from bfosberry/fixing-example-bugs"}
+{"line_no": 477, "query_id": "gin#issue-269", "issue_number": 269, "query": "Merge pull request #269 from srid/patch-1"}
+{"line_no": 478, "query_id": "gin#issue-254", "issue_number": 254, "query": "Merge pull request #254 from bfosberry/fixing-static-bug"}
+{"line_no": 479, "query_id": "gin#issue-239", "issue_number": 239, "query": "Fixes #239 bug"}
+{"line_no": 480, "query_id": "gin#issue-243", "issue_number": 243, "query": "Merge pull request #243 from mattyw/patch-1"}
+{"line_no": 481, "query_id": "gin#issue-235", "issue_number": 235, "query": "Merge pull request #235 from donileo/NoMethod"}
+{"line_no": 482, "query_id": "gin#issue-197", "issue_number": 197, "query": "Add HTML no template string output support #197"}
+{"line_no": 483, "query_id": "gin#issue-109", "issue_number": 109, "query": "Added support multipart/form-data #109"}
+{"line_no": 484, "query_id": "gin#issue-231", "issue_number": 231, "query": "Merge pull request #231 from frankbille/patch-1"}
+{"line_no": 485, "query_id": "gin#issue-220", "issue_number": 220, "query": "Merge pull request #220 from ironiridis/patch-1"}
+{"line_no": 486, "query_id": "gin#issue-207", "issue_number": 207, "query": "Merge pull request #207 from achedeuzot/develop"}
+{"line_no": 487, "query_id": "gin#issue-164", "issue_number": 164, "query": "Solve #164"}
+{"line_no": 488, "query_id": "gin#issue-71", "issue_number": 71, "query": "Fix PR #71"}
+{"line_no": 489, "query_id": "gin#issue-80", "issue_number": 80, "query": "Merge pull request #80 from andredublin/community"}
+{"line_no": 490, "query_id": "gin#issue-182", "issue_number": 182, "query": "Merge pull request #182 from dutchcoders/forwarded-for-fix"}
+{"line_no": 491, "query_id": "gin#issue-120", "issue_number": 120, "query": "Merge pull request #120 from bredov/issue-119"}
+{"line_no": 492, "query_id": "gin#issue-119", "issue_number": 119, "query": "fix typo in PR for #119"}
+{"line_no": 493, "query_id": "gin#issue-2", "issue_number": 2, "query": "Merge pull request #2 from msoedov/tests"}
+{"line_no": 494, "query_id": "gin#issue-76", "issue_number": 76, "query": "Merge pull request #76 from mopemope/fix-plainrender"}
+{"line_no": 495, "query_id": "gin#issue-70", "issue_number": 70, "query": "Merge pull request #70 from fmd/develop-templates"}
+{"line_no": 496, "query_id": "gin#issue-33", "issue_number": 33, "query": "Merge pull request #33 from jasonrhansen/master"}
+{"line_no": 497, "query_id": "gin#issue-26", "issue_number": 26, "query": "Merge pull request #26 from javierprovecho/master"}
+{"line_no": 498, "query_id": "gin#issue-8", "issue_number": 8, "query": "Merge pull request #8 from r8k/master"}

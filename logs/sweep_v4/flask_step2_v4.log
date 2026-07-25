@@ -1,0 +1,5 @@
+=== flask step2 v4 (with token) ===
+repo-dir: c:\Users\26240\Desktop\SemView\benchmark\bench_raw\flask
+clone-dir: c:\Users\26240\.trae-cn\work\6a3fed402a509e65ad8f7d98\v4_rerun\bench_raw\flask_clone\flask
+url: https://github.com/pallets/flask.git
+

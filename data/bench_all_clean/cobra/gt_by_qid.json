@@ -1,0 +1,1470 @@
+{
+ "cobra#issue-1": [
+  "cobra::command.go::Find",
+  "cobra::command.go::Out",
+  "cobra::command.go::execute",
+  "cobra::commander.go::Execute"
+ ],
+ "cobra#issue-4": [
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-8": [
+  "cobra::cobra.go::rpad",
+  "cobra::cobra.go::tmpl",
+  "cobra::command.go::AddCommand",
+  "cobra::command.go::CommandPathPadding",
+  "cobra::command.go::HelpFunc",
+  "cobra::command.go::UsagePadding",
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#issue-20": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::HelpFunc",
+  "cobra::command.go::HelpTemplate"
+ ],
+ "cobra#issue-27": [
+  "cobra::command.go::DebugFlags",
+  "cobra::command.go::Flags",
+  "cobra::command.go::NonInheritedFlags",
+  "cobra::command.go::PersistentFlags",
+  "cobra::command.go::ResetFlags",
+  "cobra::command.go::errorMsgFromParse",
+  "cobra::command.go::mergePersistentFlags",
+  "cobra::command.go::preRun"
+ ],
+ "cobra#pr-32": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::ResetCommands",
+  "cobra::command.go::UsageTemplate",
+  "cobra::command.go::initHelp"
+ ],
+ "cobra#issue-37": [
+  "cobra::command.go::execute"
+ ],
+ "cobra#issue-67": [
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-70": [
+  "cobra::command.go::stripFlags"
+ ],
+ "cobra#pr-75": [
+  "cobra::command.go::mergePersistentFlags"
+ ],
+ "cobra#pr-77": [
+  "cobra::command.go::HasHelpSubCommands",
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-82": [
+  "cobra::command.go::Execute"
+ ],
+ "cobra#pr-83": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::Find"
+ ],
+ "cobra#pr-84": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::Find",
+  "cobra::command.go::Root",
+  "cobra::command.go::stripFlags"
+ ],
+ "cobra#pr-85": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-87": [
+  "cobra::md_docs.go::GenMarkdown",
+  "cobra::md_docs.go::GenMarkdownTree",
+  "cobra::md_docs.go::printOptions"
+ ],
+ "cobra#pr-88": [
+  "cobra::command.go::Find",
+  "cobra::command.go::Out",
+  "cobra::command.go::UsageTemplate",
+  "cobra::command.go::execute",
+  "cobra::commander.go::Execute"
+ ],
+ "cobra#pr-90": [
+  "cobra::bash_completions.go::gen",
+  "cobra::bash_completions.go::postscript",
+  "cobra::bash_completions.go::writeCommands",
+  "cobra::bash_completions.go::writeRequiredNoun",
+  "cobra::command.go::UsageTemplate",
+  "cobra::command.go::execute",
+  "cobra::md_docs.go::GenMarkdown"
+ ],
+ "cobra#pr-92": [
+  "cobra::bash_completions.go::writeRequiredFlag",
+  "cobra::bash_completions.go::writeRequiredNoun"
+ ],
+ "cobra#pr-95": [
+  "cobra::command.go::Find",
+  "cobra::command.go::argsMinusFirstX",
+  "cobra::command.go::stripFlags"
+ ],
+ "cobra#pr-96": [
+  "cobra::md_docs.go::printOptions"
+ ],
+ "cobra#pr-100": [
+  "cobra::command.go::AddCommand",
+  "cobra::command.go::execute",
+  "cobra::command.go::initHelp",
+  "cobra::command.go::mergePersistentFlags"
+ ],
+ "cobra#pr-102": [
+  "cobra::command.go::AddCommand",
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-104": [
+  "cobra::bash_completions.go::postscript",
+  "cobra::bash_completions.go::preamble"
+ ],
+ "cobra#pr-105": [
+  "cobra::bash_completions.go::preamble",
+  "cobra::bash_completions.go::writeFlagHandler"
+ ],
+ "cobra#issue-107": [
+  "cobra::zsh_completions.go::GenZshCompletion"
+ ],
+ "cobra#pr-108": [
+  "cobra::command.go::Find",
+  "cobra::command.go::argsMinusFirstX"
+ ],
+ "cobra#pr-109": [
+  "cobra::md_docs.go::GenMarkdown",
+  "cobra::md_docs.go::GenMarkdownCustom",
+  "cobra::md_docs.go::GenMarkdownTree",
+  "cobra::md_docs.go::GenMarkdownTreeCustom"
+ ],
+ "cobra#pr-110": [
+  "cobra::command.go::AddCommand",
+  "cobra::command.go::SetGlobalNormalizationFunc",
+  "cobra::command.go::SetHelpTemplate"
+ ],
+ "cobra#pr-112": [
+  "cobra::md_docs.go::GenMarkdownCustom",
+  "cobra::md_docs.go::GenMarkdownTree"
+ ],
+ "cobra#pr-116": [
+  "cobra::command.go::Find"
+ ],
+ "cobra#pr-118": [
+  "cobra::bash_completions.go::GenBashCompletionFile",
+  "cobra::bash_completions.go::MarkFlagRequired",
+  "cobra::bash_completions.go::writeFlagHandler"
+ ],
+ "cobra#pr-119": [
+  "cobra::command.go::Find"
+ ],
+ "cobra#pr-122": [
+  "cobra::command.go::HasHelpSubCommands",
+  "cobra::command.go::IsHelpCommand",
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-126": [
+  "cobra::bash_completions.go::preamble",
+  "cobra::bash_completions.go::writeFlagHandler"
+ ],
+ "cobra#pr-127": [
+  "cobra::command.go::LocalFlags",
+  "cobra::command.go::SetHelpTemplate"
+ ],
+ "cobra#pr-132": [
+  "cobra::man_docs.go::GenMan",
+  "cobra::man_docs.go::manPreamble"
+ ],
+ "cobra#pr-133": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::Flags",
+  "cobra::command.go::initHelp"
+ ],
+ "cobra#pr-134": [
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-135": [
+  "cobra::cobra.go::rpad",
+  "cobra::cobra.go::tmpl"
+ ],
+ "cobra#pr-136": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::execute",
+  "cobra::command.go::initHelp",
+  "cobra::command.go::initHelpCmd",
+  "cobra::command.go::initHelpFlag"
+ ],
+ "cobra#pr-137": [
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-138": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::HelpFunc",
+  "cobra::command.go::UsageFunc",
+  "cobra::command.go::initHelpCmd"
+ ],
+ "cobra#pr-139": [
+  "cobra::command.go::Runnable",
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-141": [
+  "cobra::bash_completions.go::postscript",
+  "cobra::bash_completions.go::preamble",
+  "cobra::bash_completions.go::writeRequiredFlag"
+ ],
+ "cobra#pr-143": [
+  "cobra::command.go::HasAvailableSubCommands",
+  "cobra::command.go::HasHelpSubCommands",
+  "cobra::command.go::IsAvailableCommand",
+  "cobra::command.go::IsHelpCommand",
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-145": [
+  "cobra::man_docs.go::GenMan",
+  "cobra::man_docs.go::GenManTree",
+  "cobra::man_docs.go::fillHeader",
+  "cobra::man_docs.go::genMarkdown",
+  "cobra::man_docs.go::manPreamble",
+  "cobra::md_docs.go::GenMarkdownCustom"
+ ],
+ "cobra#pr-148": [
+  "cobra::command.go::HelpTemplate",
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-149": [
+  "cobra::cobra.go::ld",
+  "cobra::cobra.go::tmpl",
+  "cobra::command.go::Find"
+ ],
+ "cobra#pr-150": [
+  "cobra::command.go::IsAvailableCommand"
+ ],
+ "cobra#pr-151": [
+  "cobra::command.go::HelpTemplate"
+ ],
+ "cobra#pr-152": [
+  "cobra::command.go::UsageFunc",
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-153": [
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-154": [
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-160": [
+  "cobra::command.go::Root"
+ ],
+ "cobra#pr-163": [
+  "cobra::command.go::Find",
+  "cobra::command.go::SuggestionsFor"
+ ],
+ "cobra#pr-164": [
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-167": [
+  "cobra::command.go::Root"
+ ],
+ "cobra#pr-169": [
+  "cobra::command.go::Execute"
+ ],
+ "cobra#issue-171": [
+  "cobra::command.go::Execute"
+ ],
+ "cobra#pr-174": [
+  "cobra::command.go::Execute"
+ ],
+ "cobra#issue-176": [
+  "cobra::cobra/cmd/add.go::createCmdFile",
+  "cobra::cobra/cmd/add.go::init",
+  "cobra::cobra/cmd/helpers.go::getSrcPath",
+  "cobra::cobra/cmd/helpers.go::guessImportPath",
+  "cobra::cobra/cmd/helpers.go::guessProjectPath"
+ ],
+ "cobra#pr-178": [
+  "cobra::bash_completions.go::postscript",
+  "cobra::bash_completions.go::preamble"
+ ],
+ "cobra#pr-179": [
+  "cobra::bash_completions.go::postscript"
+ ],
+ "cobra#pr-192": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::errorMsgFromParse"
+ ],
+ "cobra#issue-195": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command_win.go::preExecHook"
+ ],
+ "cobra#pr-197": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command_win.go::preExecHook"
+ ],
+ "cobra#pr-210": [
+  "cobra::bash_completions.go::gen",
+  "cobra::bash_completions.go::postscript",
+  "cobra::bash_completions.go::preamble"
+ ],
+ "cobra#pr-211": [
+  "cobra::command.go::AddCommand"
+ ],
+ "cobra#pr-218": [
+  "cobra::doc/man_docs.go::GenMan",
+  "cobra::doc/man_docs.go::GenManTree",
+  "cobra::doc/md_docs.go::GenMarkdown",
+  "cobra::doc/md_docs.go::GenMarkdownCustom",
+  "cobra::doc/md_docs.go::GenMarkdownTree",
+  "cobra::doc/md_docs.go::GenMarkdownTreeCustom",
+  "cobra::doc/md_docs.go::printOptions"
+ ],
+ "cobra#issue-226": [
+  "cobra::doc/man_docs.go::GenManTree",
+  "cobra::doc/md_docs.go::GenMarkdownTreeCustom"
+ ],
+ "cobra#pr-228": [
+  "cobra::doc/man_docs.go::GenManTree",
+  "cobra::doc/md_docs.go::GenMarkdownTreeCustom"
+ ],
+ "cobra#issue-229": [
+  "cobra::doc/man_docs.go::genMan"
+ ],
+ "cobra#pr-230": [
+  "cobra::doc/man_docs.go::genMan"
+ ],
+ "cobra#issue-240": [
+  "cobra::bash_completions.go::postscript"
+ ],
+ "cobra#pr-254": [
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-255": [
+  "cobra::bash_completions.go::MarkPersistentFlagFilename",
+  "cobra::bash_completions.go::postscript",
+  "cobra::bash_completions.go::preamble",
+  "cobra::bash_completions.go::writeFlagHandler"
+ ],
+ "cobra#pr-256": [
+  "cobra::bash_completions.go::preamble"
+ ],
+ "cobra#pr-257": [
+  "cobra::bash_completions.go::gen",
+  "cobra::bash_completions.go::preamble",
+  "cobra::bash_completions.go::writeArgAliases",
+  "cobra::bash_completions.go::writeRequiredFlag",
+  "cobra::bash_completions.go::writeRequiredNoun",
+  "cobra::bash_completions.go::writeRequiredNouns"
+ ],
+ "cobra#pr-264": [
+  "cobra::cobra/cmd/init.go::createRootCmdFile"
+ ],
+ "cobra#pr-265": [
+  "cobra::bash_completions.go::preamble"
+ ],
+ "cobra#issue-267": [
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#issue-269": [
+  "cobra::cobra/cmd/add.go::init",
+  "cobra::cobra/cmd/add.go::validateCmdName"
+ ],
+ "cobra#issue-277": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::Find",
+  "cobra::command.go::HasAlias",
+  "cobra::command.go::argsMinusFirstX",
+  "cobra::command.go::findNext",
+  "cobra::command.go::findSuggestions",
+  "cobra::command.go::hasNameOrAliasPrefix",
+  "cobra::command.go::isFlagArg"
+ ],
+ "cobra#pr-278": [
+  "cobra::command.go::AddCommand"
+ ],
+ "cobra#pr-283": [
+  "cobra::command.go::SetUsageTemplate",
+  "cobra::command.go::UsageString",
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-286": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::initHelpFlag"
+ ],
+ "cobra#pr-289": [
+  "cobra::command.go::ParseFlags",
+  "cobra::command.go::execute",
+  "cobra::command.go::persistentFlag"
+ ],
+ "cobra#pr-293": [
+  "cobra::command.go::AddCommand",
+  "cobra::command.go::Commands",
+  "cobra::command.go::ResetCommands"
+ ],
+ "cobra#pr-294": [
+  "cobra::doc/man_docs.go::GenMan",
+  "cobra::doc/man_docs.go::GenManTree",
+  "cobra::doc/man_docs.go::GenManTreeFromOpts",
+  "cobra::doc/man_docs.go::fillHeader",
+  "cobra::doc/man_docs.go::genMan",
+  "cobra::doc/man_docs.go::manPreamble",
+  "cobra::doc/man_docs.go::manPrintFlags",
+  "cobra::doc/man_docs.go::manPrintOptions"
+ ],
+ "cobra#pr-299": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::Find",
+  "cobra::command.go::HasAlias",
+  "cobra::command.go::argsMinusFirstX",
+  "cobra::command.go::findNext",
+  "cobra::command.go::findSuggestions",
+  "cobra::command.go::hasNameOrAliasPrefix",
+  "cobra::command.go::isFlagArg"
+ ],
+ "cobra#issue-302": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::initHelpCmd",
+  "cobra::command.go::initHelpFlag"
+ ],
+ "cobra#pr-305": [
+  "cobra::command.go::Help",
+  "cobra::command.go::HelpFunc",
+  "cobra::command.go::SetGlobalNormalizationFunc",
+  "cobra::command.go::Usage",
+  "cobra::command.go::UsageFunc",
+  "cobra::command.go::UsageString",
+  "cobra::command.go::initHelpCmd"
+ ],
+ "cobra#pr-308": [
+  "cobra::command.go::Help",
+  "cobra::command.go::HelpFunc",
+  "cobra::command.go::Usage",
+  "cobra::command.go::UsageFunc",
+  "cobra::command.go::UsageString",
+  "cobra::command.go::initHelpCmd"
+ ],
+ "cobra#pr-313": [
+  "cobra::bash_completions.go::GenBashCompletion",
+  "cobra::bash_completions.go::writeFlags",
+  "cobra::bash_completions.go::writeRequiredFlag"
+ ],
+ "cobra#pr-323": [
+  "cobra::cobra/cmd/license_apache_2.go::initApache2",
+  "cobra::cobra/cmd/license_bsd_clause_2.go::initBsdClause2",
+  "cobra::cobra/cmd/license_bsd_clause_3.go::initBsdClause3",
+  "cobra::cobra/cmd/license_gpl_2.go::initGpl2",
+  "cobra::cobra/cmd/license_mit.go::initMit",
+  "cobra::cobra/cmd/licenses.go::init"
+ ],
+ "cobra#pr-327": [
+  "cobra::command.go::IsHelpCommand"
+ ],
+ "cobra#pr-331": [
+  "cobra::doc/man_docs.go::GenManTreeFromOpts"
+ ],
+ "cobra#pr-337": [
+  "cobra::cobra/cmd/init.go::createRootCmdFile",
+  "cobra::cobra/cmd/init.go::initConfig",
+  "cobra::cobra/cmd/root.go::initConfig"
+ ],
+ "cobra#pr-353": [
+  "cobra::command.go::HelpFunc",
+  "cobra::command.go::Usage"
+ ],
+ "cobra#pr-359": [
+  "cobra::command.go::argsMinusFirstX"
+ ],
+ "cobra#issue-366": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::SetGlobalNormalizationFunc",
+  "cobra::command.go::SetUsageTemplate",
+  "cobra::command.go::UsageTemplate",
+  "cobra::command.go::initHelpCmd"
+ ],
+ "cobra#pr-380": [
+  "cobra::doc/util.go::forceMultiLine",
+  "cobra::doc/util.go::hasSeeAlso",
+  "cobra::doc/yaml_docs.go::GenYamlCustom",
+  "cobra::doc/yaml_docs.go::GenYamlTreeCustom",
+  "cobra::doc/yaml_docs.go::genFlagResult"
+ ],
+ "cobra#pr-383": [
+  "cobra::command_win.go::preExecHook"
+ ],
+ "cobra#pr-390": [
+  "cobra::command.go::Name"
+ ],
+ "cobra#pr-391": [
+  "cobra::command.go::hasNoOptDefVal",
+  "cobra::command.go::isBooleanShortFlag",
+  "cobra::command.go::shortHasNoOptDefVal",
+  "cobra::command.go::stripFlags"
+ ],
+ "cobra#pr-394": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::SetGlobalNormalizationFunc",
+  "cobra::command.go::SetUsageTemplate",
+  "cobra::command.go::UsageTemplate",
+  "cobra::command.go::initHelpCmd"
+ ],
+ "cobra#pr-399": [
+  "cobra::command.go::initHelpCmd"
+ ],
+ "cobra#issue-401": [
+  "cobra::doc/md_docs.go::GenMarkdownCustom",
+  "cobra::doc/md_docs.go::printOptions",
+  "cobra::doc/yaml_docs.go::GenYamlTreeCustom"
+ ],
+ "cobra#issue-409": [
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-410": [
+  "cobra::command.go::UsageTemplate"
+ ],
+ "cobra#pr-411": [
+  "cobra::bash_completions.go::preamble",
+  "cobra::command.go::SetOutput",
+  "cobra::command.go::getOut"
+ ],
+ "cobra#pr-415": [
+  "cobra::bash_completions.go::preamble"
+ ],
+ "cobra#pr-417": [
+  "cobra::command.go::DebugFlags",
+  "cobra::command.go::Flags",
+  "cobra::command.go::NonInheritedFlags",
+  "cobra::command.go::PersistentFlags",
+  "cobra::command.go::ResetFlags",
+  "cobra::command.go::errorMsgFromParse",
+  "cobra::command.go::mergePersistentFlags",
+  "cobra::command.go::preRun"
+ ],
+ "cobra#issue-430": [
+  "cobra::cobra/cmd/init.go::Execute",
+  "cobra::cobra/cmd/init.go::createRootCmdFile",
+  "cobra::cobra/cmd/init.go::init",
+  "cobra::cobra/cmd/init.go::initConfig",
+  "cobra::cobra/cmd/root.go::Execute",
+  "cobra::cobra/cmd/root.go::init",
+  "cobra::cobra/cmd/root.go::initViper"
+ ],
+ "cobra#pr-436": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::InitDefaultHelpCmd",
+  "cobra::command.go::InitDefaultHelpFlag",
+  "cobra::command.go::initHelpCmd"
+ ],
+ "cobra#pr-439": [
+  "cobra::cobra.go::OnInitialize",
+  "cobra::cobra.go::rpad",
+  "cobra::cobra.go::tmpl"
+ ],
+ "cobra#issue-443": [
+  "cobra::command.go::mergePersistentFlags"
+ ],
+ "cobra#pr-445": [
+  "cobra::command.go::stripFlags"
+ ],
+ "cobra#pr-446": [
+  "cobra::cobra/cmd/init.go::createRootCmdFile",
+  "cobra::cobra/cmd/init.go::initConfig"
+ ],
+ "cobra#issue-455": [
+  "cobra::cobra/cmd/add.go::init",
+  "cobra::cobra/cmd/root.go::init"
+ ],
+ "cobra#pr-459": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#issue-462": [
+  "cobra::cobra/cmd/init.go::Execute",
+  "cobra::cobra/cmd/init.go::createRootCmdFile",
+  "cobra::cobra/cmd/init.go::init"
+ ],
+ "cobra#issue-463": [
+  "cobra::command.go::ParseFlags",
+  "cobra::command.go::persistentFlag"
+ ],
+ "cobra#issue-467": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::Find",
+  "cobra::command.go::HasAlias",
+  "cobra::command.go::argsMinusFirstX",
+  "cobra::command.go::findNext",
+  "cobra::command.go::findSuggestions",
+  "cobra::command.go::hasNameOrAliasPrefix",
+  "cobra::command.go::isFlagArg"
+ ],
+ "cobra#issue-486": [
+  "cobra::command_win.go::preExecHook"
+ ],
+ "cobra#pr-502": [
+  "cobra::command.go::ValidateArgs",
+  "cobra::command.go::execute",
+  "cobra::command.go::validateRequiredFlags"
+ ],
+ "cobra#issue-503": [
+  "cobra::cobra/cmd/licenses.go::copyrightLine",
+  "cobra::cobra/cmd/licenses.go::getLicense"
+ ],
+ "cobra#issue-514": [
+  "cobra::cobra/cmd/add.go::init"
+ ],
+ "cobra#pr-520": [
+  "cobra::bash_completions.go::writeCommands",
+  "cobra::bash_completions.go::writeFlag",
+  "cobra::bash_completions.go::writeFlagHandler",
+  "cobra::bash_completions.go::writeFlags",
+  "cobra::bash_completions.go::writePostscript",
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::bash_completions.go::writeShortFlag"
+ ],
+ "cobra#issue-521": [
+  "cobra::command.go::InheritedFlags",
+  "cobra::command.go::LocalFlags",
+  "cobra::command.go::ResetCommands",
+  "cobra::command.go::ResetFlags",
+  "cobra::command.go::updateParentsPflags"
+ ],
+ "cobra#pr-522": [
+  "cobra::command.go::InheritedFlags",
+  "cobra::command.go::LocalFlags",
+  "cobra::command.go::ResetCommands",
+  "cobra::command.go::ResetFlags",
+  "cobra::command.go::updateParentsPflags"
+ ],
+ "cobra#pr-529": [
+  "cobra::zsh_completions.go::GenZshCompletionFile"
+ ],
+ "cobra#pr-530": [
+  "cobra::bash_completions.go::GenBashCompletion",
+  "cobra::bash_completions.go::GenBashCompletionFile",
+  "cobra::bash_completions.go::MarkFlagRequired",
+  "cobra::bash_completions.go::MarkPersistentFlagFilename",
+  "cobra::bash_completions.go::MarkPersistentFlagRequired",
+  "cobra::bash_completions.go::gen",
+  "cobra::zsh_completions.go::GenZshCompletion",
+  "cobra::zsh_completions.go::GenZshCompletionFile"
+ ],
+ "cobra#pr-532": [
+  "cobra::cobra/cmd/helpers.go::init"
+ ],
+ "cobra#pr-537": [
+  "cobra::doc/rest_docs.go::GenReSTCustom",
+  "cobra::doc/rest_docs.go::GenReSTTreeCustom",
+  "cobra::doc/rest_docs.go::printOptionsReST"
+ ],
+ "cobra#issue-540": [
+  "cobra::cobra/cmd/licenses.go::getLicense"
+ ],
+ "cobra#pr-547": [
+  "cobra::command.go::DebugFlags",
+  "cobra::command.go::Name"
+ ],
+ "cobra#pr-549": [
+  "cobra::command.go::ParseFlags"
+ ],
+ "cobra#pr-552": [
+  "cobra::command.go::UseLine"
+ ],
+ "cobra#issue-556": [
+  "cobra::cobra/cmd/add.go::init",
+  "cobra::cobra/cmd/init.go::Execute",
+  "cobra::cobra/cmd/init.go::createRootCmdFile",
+  "cobra::cobra/cmd/init.go::init"
+ ],
+ "cobra#pr-567": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::HasAlias",
+  "cobra::command.go::findNext",
+  "cobra::command.go::hasNameOrAliasPrefix"
+ ],
+ "cobra#pr-580": [
+  "cobra::command.go::validateRequiredFlags"
+ ],
+ "cobra#pr-584": [
+  "cobra::command.go::HelpTemplate",
+  "cobra::command.go::InitDefaultHelpFlag",
+  "cobra::command.go::InitDefaultVersionFlag",
+  "cobra::command.go::SetHelpTemplate",
+  "cobra::command.go::SetVersionTemplate",
+  "cobra::command.go::VersionTemplate",
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-591": [
+  "cobra::doc/md_docs.go::GenMarkdownCustom"
+ ],
+ "cobra#pr-592": [
+  "cobra::doc/md_docs.go::GenMarkdownCustom"
+ ],
+ "cobra#pr-595": [
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-606": [
+  "cobra::cobra/cmd/init.go::Execute",
+  "cobra::cobra/cmd/init.go::createRootCmdFile",
+  "cobra::cobra/cmd/init.go::init"
+ ],
+ "cobra#issue-612": [
+  "cobra::cobra/cmd/helpers.go::writeStringToFile",
+  "cobra::cobra/cmd/project.go::License",
+  "cobra::cobra/cmd/project.go::NewProject",
+  "cobra::cobra/cmd/project.go::NewProjectFromPath",
+  "cobra::cobra/cmd/project.go::findCmdDir",
+  "cobra::cobra/cmd/project.go::isCmdDir",
+  "cobra::cobra/cmd/project.go::trimSrcPath"
+ ],
+ "cobra#pr-625": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-627": [
+  "cobra::bash_completions.go::GenBashCompletionFile"
+ ],
+ "cobra#pr-628": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-638": [
+  "cobra::bash_completions.go::gen",
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-643": [
+  "cobra::bash_completions.go::writeFlagHandler"
+ ],
+ "cobra#pr-649": [
+  "cobra::command.go::stripFlags"
+ ],
+ "cobra#pr-662": [
+  "cobra::command.go::ParseFlags"
+ ],
+ "cobra#pr-669": [
+  "cobra::bash_completions.go::gen",
+  "cobra::bash_completions.go::writeCmdAliases",
+  "cobra::bash_completions.go::writeCommands",
+  "cobra::bash_completions.go::writePostscript",
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::bash_completions.go::writeRequiredNouns"
+ ],
+ "cobra#issue-685": [
+  "cobra::doc/man_docs.go::manPrintFlags",
+  "cobra::doc/man_docs.go::manPrintOptions",
+  "cobra::doc/md_docs.go::printOptions",
+  "cobra::doc/rest_docs.go::printOptionsReST"
+ ],
+ "cobra#pr-686": [
+  "cobra::doc/man_docs.go::manPrintFlags",
+  "cobra::doc/man_docs.go::manPrintOptions",
+  "cobra::doc/md_docs.go::printOptions",
+  "cobra::doc/rest_docs.go::printOptionsReST"
+ ],
+ "cobra#pr-730": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-735": [
+  "cobra::doc/man_docs.go::GenMan",
+  "cobra::doc/man_docs.go::fillHeader"
+ ],
+ "cobra#pr-765": [
+  "cobra::args.go::ExactValidArgs"
+ ],
+ "cobra#pr-794": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-807": [
+  "cobra::bash_completions.go::writeFlag",
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-809": [
+  "cobra::command_win.go::preExecHook"
+ ],
+ "cobra#pr-840": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::LocalFlags"
+ ],
+ "cobra#pr-853": [
+  "cobra::cobra/cmd/root.go::initConfig",
+  "cobra::cobra/tpl/main.go::RootTemplate",
+  "cobra::cobra/tpl/main.go::initConfig"
+ ],
+ "cobra#issue-879": [
+  "cobra::cobra/cmd/license_gpl_2.go::initGpl2"
+ ],
+ "cobra#pr-880": [
+  "cobra::cobra/cmd/license_gpl_2.go::initGpl2"
+ ],
+ "cobra#pr-889": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-894": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::HelpFunc",
+  "cobra::command.go::UsageFunc"
+ ],
+ "cobra#pr-922": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-948": [
+  "cobra::cobra/cmd/project.go::createLicenseFile"
+ ],
+ "cobra#pr-980": [
+  "cobra::cobra/tpl/main.go::Execute",
+  "cobra::cobra/tpl/main.go::MainTemplate",
+  "cobra::cobra/tpl/main.go::RootTemplate",
+  "cobra::cobra/tpl/main.go::init",
+  "cobra::cobra/tpl/main.go::initConfig"
+ ],
+ "cobra#pr-996": [
+  "cobra::command.go::InitDefaultVersionFlag"
+ ],
+ "cobra#issue-1000": [
+  "cobra::bash_completions.go::gen",
+  "cobra::bash_completions.go::writeArgAliases",
+  "cobra::bash_completions.go::writeCommands",
+  "cobra::command.go::InitDefaultHelpCmd",
+  "cobra::custom_completions.go::getCompletions"
+ ],
+ "cobra#pr-1001": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#issue-1002": [
+  "cobra::command.go::HelpFunc"
+ ],
+ "cobra#pr-1003": [
+  "cobra::command.go::AddCommand",
+  "cobra::command.go::InitDefaultHelpCmd",
+  "cobra::command.go::UsageTemplate",
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1004": [
+  "cobra::command.go::HelpFunc"
+ ],
+ "cobra#pr-1005": [
+  "cobra::command.go::findNext"
+ ],
+ "cobra#pr-1037": [
+  "cobra::doc/yaml_docs.go::GenYamlCustom"
+ ],
+ "cobra#pr-1048": [
+  "cobra::args.go::OnlyValidArgs",
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::bash_completions.go::writeRequiredNouns",
+  "cobra::custom_completions.go::getCompletions",
+  "cobra::custom_completions.go::getFlagNameCompletions",
+  "cobra::custom_completions.go::initCompleteCmd",
+  "cobra::custom_completions.go::string",
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1068": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-1082": [
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::custom_completions.go::RegisterFlagCompletionFunc",
+  "cobra::custom_completions.go::getCompletions",
+  "cobra::custom_completions.go::initCompleteCmd",
+  "cobra::custom_completions.go::string"
+ ],
+ "cobra#pr-1088": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-1095": [
+  "cobra::command.go::ValidateArgs",
+  "cobra::command.go::validateRequiredFlags"
+ ],
+ "cobra#pr-1104": [
+  "cobra::doc/man_docs.go::GenMan",
+  "cobra::doc/man_docs.go::fillHeader"
+ ],
+ "cobra#pr-1108": [
+  "cobra::cobra/cmd/init.go::init",
+  "cobra::cobra/cmd/init.go::initializeProject"
+ ],
+ "cobra#issue-1121": [
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1122": [
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1136": [
+  "cobra::bash_completions.go::gen",
+  "cobra::bash_completions.go::writeArgAliases",
+  "cobra::bash_completions.go::writeCommands",
+  "cobra::command.go::InitDefaultHelpCmd",
+  "cobra::custom_completions.go::getCompletions"
+ ],
+ "cobra#pr-1146": [
+  "cobra::bash_completionsV2.go::genBashComp",
+  "cobra::command.go::ExecuteC",
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1159": [
+  "cobra::cobra/cmd/license_apache_2.go::initApache2",
+  "cobra::cobra/cmd/license_bsd_clause_2.go::initBsdClause2",
+  "cobra::cobra/cmd/license_bsd_clause_3.go::initBsdClause3",
+  "cobra::cobra/cmd/license_gpl_2.go::initGpl2",
+  "cobra::cobra/cmd/license_lgpl.go::initLgpl",
+  "cobra::cobra/cmd/license_mit.go::initMit"
+ ],
+ "cobra#pr-1161": [
+  "cobra::bash_completions.go::writeFlags",
+  "cobra::bash_completions.go::writePostscript",
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-1162": [
+  "cobra::custom_completions.go::initCompleteCmd"
+ ],
+ "cobra#issue-1170": [
+  "cobra::bash_completions.go::writeFlag",
+  "cobra::bash_completions.go::writeFlags",
+  "cobra::bash_completions.go::writeLocalNonPersistentFlag",
+  "cobra::custom_completions.go::getCompletions"
+ ],
+ "cobra#pr-1171": [
+  "cobra::bash_completions.go::writeFlag",
+  "cobra::bash_completions.go::writeFlags",
+  "cobra::bash_completions.go::writeLocalNonPersistentFlag",
+  "cobra::custom_completions.go::getCompletions"
+ ],
+ "cobra#issue-1172": [
+  "cobra::bash_completions.go::writeFlag",
+  "cobra::bash_completions.go::writeFlags",
+  "cobra::bash_completions.go::writeLocalNonPersistentFlag",
+  "cobra::custom_completions.go::getCompletions"
+ ],
+ "cobra#pr-1192": [
+  "cobra::command.go::ExecuteC",
+  "cobra::completions.go::NoFileCompletions",
+  "cobra::completions.go::checkIfFlagCompletion",
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1207": [
+  "cobra::doc/md_docs.go::GenMarkdownCustom"
+ ],
+ "cobra#pr-1208": [
+  "cobra::powershell_completions.go::GenPowerShellCompletion",
+  "cobra::powershell_completions.go::GenPowerShellCompletionFile",
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#issue-1211": [
+  "cobra::completions.go::initCompleteCmd",
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#issue-1212": [
+  "cobra::completions.go::initCompleteCmd",
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1213": [
+  "cobra::completions.go::initCompleteCmd",
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1237": [
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1247": [
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1249": [
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1255": [
+  "cobra::doc/man_docs.go::manPreamble"
+ ],
+ "cobra#issue-1257": [
+  "cobra::completions.go::checkIfFlagCompletion"
+ ],
+ "cobra#pr-1258": [
+  "cobra::completions.go::checkIfFlagCompletion"
+ ],
+ "cobra#pr-1265": [
+  "cobra::command.go::Execute",
+  "cobra::command.go::preRun",
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-1270": [
+  "cobra::doc/md_docs.go::GenMarkdownCustom",
+  "cobra::doc/md_docs.go::GenMarkdownTree",
+  "cobra::doc/md_docs.go::GenMarkdownTreeCustom"
+ ],
+ "cobra#pr-1282": [
+  "cobra::cobra/cmd/root.go::initConfig",
+  "cobra::cobra/tpl/main.go::RootTemplate",
+  "cobra::cobra/tpl/main.go::initConfig"
+ ],
+ "cobra#pr-1284": [
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#issue-1303": [
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1308": [
+  "cobra::completions.go::checkIfFlagCompletion",
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-1317": [
+  "cobra::doc/md_docs.go::GenMarkdownCustom",
+  "cobra::doc/md_docs.go::GenMarkdownTree",
+  "cobra::doc/md_docs.go::GenMarkdownTreeCustom"
+ ],
+ "cobra#issue-1320": [
+  "cobra::bash_completions.go::prepareCustomAnnotationsForFlags",
+  "cobra::bash_completions.go::writeLocalNonPersistentFlag",
+  "cobra::completions.go::RegisterFlagCompletionFunc",
+  "cobra::completions.go::getCompletions",
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1321": [
+  "cobra::bash_completions.go::writeCmdAliases",
+  "cobra::bash_completions.go::writePostscript",
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-1342": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1349": [
+  "cobra::completions.go::getCompletions",
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1352": [
+  "cobra::bash_completions.go::writePostscript"
+ ],
+ "cobra#issue-1362": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1363": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#issue-1382": [
+  "cobra::command.go::HasAlias",
+  "cobra::command.go::Name",
+  "cobra::command.go::findNext",
+  "cobra::command.go::findSuggestions",
+  "cobra::command.go::updateParentsPflags"
+ ],
+ "cobra#pr-1417": [
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1423": [
+  "cobra::bash_completions.go::prepareCustomAnnotationsForFlags",
+  "cobra::bash_completions.go::writeLocalNonPersistentFlag",
+  "cobra::completions.go::RegisterFlagCompletionFunc",
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#issue-1437": [
+  "cobra::bash_completions.go::prepareCustomAnnotationsForFlags",
+  "cobra::bash_completions.go::writeLocalNonPersistentFlag",
+  "cobra::completions.go::RegisterFlagCompletionFunc",
+  "cobra::completions.go::getCompletions",
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1438": [
+  "cobra::bash_completions.go::prepareCustomAnnotationsForFlags",
+  "cobra::bash_completions.go::writeLocalNonPersistentFlag",
+  "cobra::completions.go::RegisterFlagCompletionFunc",
+  "cobra::completions.go::getCompletions",
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1444": [
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1455": [
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1459": [
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1463": [
+  "cobra::cobra/tpl/main.go::Execute",
+  "cobra::cobra/tpl/main.go::RootTemplate"
+ ],
+ "cobra#pr-1467": [
+  "cobra::command.go::ExecuteC",
+  "cobra::completions.go::InitDefaultCompletionCmd",
+  "cobra::completions.go::checkIfFlagCompletion",
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1473": [
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::powershell_completions.go::genPowerShellComp",
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1482": [
+  "cobra::active_help.go::AppendActiveHelp",
+  "cobra::active_help.go::activeHelpEnvVar",
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::bash_completionsV2.go::genBashComp",
+  "cobra::completions.go::initCompleteCmd",
+  "cobra::fish_completions.go::genFishComp",
+  "cobra::powershell_completions.go::genPowerShellComp",
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#issue-1507": [
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1509": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1510": [
+  "cobra::cobra/cmd/root.go::initConfig"
+ ],
+ "cobra#pr-1514": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1520": [
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1541": [
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1557": [
+  "cobra::cobra/tpl/main.go::RootTemplate"
+ ],
+ "cobra#pr-1559": [
+  "cobra::command.go::ExecuteC",
+  "cobra::completions.go::InitDefaultCompletionCmd",
+  "cobra::completions.go::checkIfFlagCompletion"
+ ],
+ "cobra#issue-1562": [
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-1563": [
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-1574": [
+  "cobra::completions.go::FixedCompletions",
+  "cobra::completions.go::NoFileCompletions"
+ ],
+ "cobra#pr-1608": [
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1612": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::ValidateArgs"
+ ],
+ "cobra#pr-1621": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1643": [
+  "cobra::args.go::ExactValidArgs",
+  "cobra::args.go::OnlyValidArgs"
+ ],
+ "cobra#pr-1654": [
+  "cobra::command.go::execute",
+  "cobra::flag_groups.go::MarkFlagsMutuallyExclusive",
+  "cobra::flag_groups.go::MarkFlagsRequiredTogether",
+  "cobra::flag_groups.go::processFlagForGroupAnnotation"
+ ],
+ "cobra#pr-1659": [
+  "cobra::completions.go::getCompletions",
+  "cobra::flag_groups.go::enforceFlagGroupsForCompletion"
+ ],
+ "cobra#pr-1665": [
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1681": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1682": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1683": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1684": [
+  "cobra::bash_completions.go::writePreamble"
+ ],
+ "cobra#pr-1686": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1689": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1690": [
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1691": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1692": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1700": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1702": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1707": [
+  "cobra::command.go::InitDefaultHelpCmd"
+ ],
+ "cobra#pr-1719": [
+  "cobra::completions.go::initDefaultCompletionCmd"
+ ],
+ "cobra#pr-1730": [
+  "cobra::command.go::ExecuteC"
+ ],
+ "cobra#issue-1734": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1735": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1743": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1760": [
+  "cobra::command.go::ValidateArgs",
+  "cobra::command.go::execute",
+  "cobra::command.go::validateRequiredFlags",
+  "cobra::flag_groups.go::MarkFlagsMutuallyExclusive",
+  "cobra::flag_groups.go::ValidateFlagGroups"
+ ],
+ "cobra#pr-1762": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-1771": [
+  "cobra::doc/yaml_docs.go::GenYamlCustom"
+ ],
+ "cobra#pr-1776": [
+  "cobra::command.go::LocalFlags"
+ ],
+ "cobra#pr-1781": [
+  "cobra::command.go::Find",
+  "cobra::command.go::argsMinusFirstX"
+ ],
+ "cobra#issue-1786": [
+  "cobra::command.go::InitDefaultHelpFlag",
+  "cobra::command.go::InitDefaultVersionFlag",
+  "cobra::completions.go::getCompletions",
+  "cobra::completions.go::helpOrVersionFlagPresent"
+ ],
+ "cobra#pr-1788": [
+  "cobra::cobra.go::OnInitialize",
+  "cobra::command.go::execute",
+  "cobra::command.go::preRun"
+ ],
+ "cobra#pr-1802": [
+  "cobra::command.go::HasAlias",
+  "cobra::command.go::Name",
+  "cobra::command.go::findNext",
+  "cobra::command.go::findSuggestions",
+  "cobra::command.go::updateParentsPflags"
+ ],
+ "cobra#pr-1813": [
+  "cobra::command.go::InitDefaultHelpFlag",
+  "cobra::command.go::InitDefaultVersionFlag",
+  "cobra::completions.go::getCompletions",
+  "cobra::completions.go::helpOrVersionFlagPresent"
+ ],
+ "cobra#issue-1816": [
+  "cobra::command.go::isFlagArg"
+ ],
+ "cobra#pr-1817": [
+  "cobra::command.go::isFlagArg"
+ ],
+ "cobra#issue-1831": [
+  "cobra::command.go::AddCommand",
+  "cobra::command.go::ExecuteC"
+ ],
+ "cobra#pr-1839": [
+  "cobra::command.go::AddCommand",
+  "cobra::command.go::ExecuteC"
+ ],
+ "cobra#issue-1847": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#issue-1849": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1850": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#issue-1853": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1879": [
+  "cobra::cobra.go::rpad"
+ ],
+ "cobra#pr-1885": [
+  "cobra::bash_completions.go::writeLocalNonPersistentFlag",
+  "cobra::completions.go::string",
+  "cobra::doc/rest_docs.go::GenReSTTreeCustom",
+  "cobra::doc/rest_docs.go::printOptionsReST"
+ ],
+ "cobra#pr-1903": [
+  "cobra::bash_completionsV2.go::genBashComp",
+  "cobra::completions.go::string",
+  "cobra::fish_completions.go::genFishComp",
+  "cobra::powershell_completions.go::genPowerShellComp",
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1916": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1917": [
+  "cobra::completions.go::InitDefaultCompletionCmd",
+  "cobra::zsh_completions.go::genZshComp"
+ ],
+ "cobra#pr-1938": [
+  "cobra::active_help.go::activeHelpEnvVar",
+  "cobra::completions.go::initCompleteCmd"
+ ],
+ "cobra#pr-1940": [
+  "cobra::active_help.go::AppendActiveHelp",
+  "cobra::active_help.go::activeHelpEnvVar"
+ ],
+ "cobra#pr-1943": [
+  "cobra::completions.go::RegisterFlagCompletionFunc"
+ ],
+ "cobra#pr-1945": [
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-1952": [
+  "cobra::flag_groups.go::MarkFlagsMutuallyExclusive",
+  "cobra::flag_groups.go::MarkFlagsOneRequired",
+  "cobra::flag_groups.go::MarkFlagsRequiredTogether",
+  "cobra::flag_groups.go::ValidateFlagGroups",
+  "cobra::flag_groups.go::enforceFlagGroupsForCompletion"
+ ],
+ "cobra#pr-1957": [
+  "cobra::args.go::OnlyValidArgs",
+  "cobra::bash_completions.go::writeRequiredNouns",
+  "cobra::cobra.go::ld",
+  "cobra::command.go::argsMinusFirstX",
+  "cobra::command.go::findSuggestions",
+  "cobra::completions.go::initCompleteCmd",
+  "cobra::flag_groups.go::enforceFlagGroupsForCompletion",
+  "cobra::flag_groups.go::processFlagForGroupAnnotation"
+ ],
+ "cobra#pr-1960": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-1978": [
+  "cobra::bash_completions.go::writePreamble",
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-2018": [
+  "cobra::command.go::CommandPath"
+ ],
+ "cobra#pr-2022": [
+  "cobra::command.go::findNext"
+ ],
+ "cobra#pr-2023": [
+  "cobra::command.go::ExecuteC",
+  "cobra::command.go::SetVersionTemplate",
+  "cobra::command.go::VersionTemplate"
+ ],
+ "cobra#pr-2044": [
+  "cobra::command.go::execute"
+ ],
+ "cobra#pr-2052": [
+  "cobra::command.go::UseLine",
+  "cobra::doc/md_docs.go::GenMarkdownCustom",
+  "cobra::doc/md_docs.go::GenMarkdownTreeCustom"
+ ],
+ "cobra#issue-2060": [
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-2061": [
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-2063": [
+  "cobra::completions.go::GetFlagCompletionFunc",
+  "cobra::completions.go::RegisterFlagCompletionFunc"
+ ],
+ "cobra#pr-2064": [
+  "cobra::command.go::Flags",
+  "cobra::command.go::InheritedFlags",
+  "cobra::command.go::LocalFlags",
+  "cobra::command.go::LocalNonPersistentFlags"
+ ],
+ "cobra#pr-2076": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-2122": [
+  "cobra::doc/md_docs.go::GenMarkdownTree"
+ ],
+ "cobra#pr-2140": [
+  "cobra::flag_groups.go::MarkFlagsMutuallyExclusive",
+  "cobra::flag_groups.go::MarkFlagsOneRequired",
+  "cobra::flag_groups.go::MarkFlagsRequiredTogether",
+  "cobra::flag_groups.go::ValidateFlagGroups",
+  "cobra::flag_groups.go::enforceFlagGroupsForCompletion"
+ ],
+ "cobra#pr-2148": [
+  "cobra::command.go::execute",
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-2152": [
+  "cobra::command.go::UseLine"
+ ],
+ "cobra#pr-2173": [
+  "cobra::command.go::ExecuteC"
+ ],
+ "cobra#pr-2174": [
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-2196": [
+  "cobra::powershell_completions.go::genPowerShellComp"
+ ],
+ "cobra#pr-2210": [
+  "cobra::completions.go::getCompletions",
+  "cobra::completions.go::initCompleteCmd"
+ ],
+ "cobra#pr-2220": [
+  "cobra::completions.go::FixedCompletions",
+  "cobra::completions.go::GetFlagCompletionFunc",
+  "cobra::completions.go::RegisterFlagCompletionFunc",
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-2228": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-2229": [
+  "cobra::command.go::SetHelpTemplate",
+  "cobra::command.go::SetUsageTemplate",
+  "cobra::command.go::SetVersionTemplate"
+ ],
+ "cobra#pr-2231": [
+  "cobra::active_help.go::AppendActiveHelp",
+  "cobra::command.go::InitDefaultHelpCmd",
+  "cobra::completions.go::FixedCompletions",
+  "cobra::completions.go::NoFileCompletions",
+  "cobra::completions.go::completeRequireFlags",
+  "cobra::completions.go::getCompletions",
+  "cobra::completions.go::getFlagNameCompletions",
+  "cobra::completions.go::helpOrVersionFlagPresent"
+ ],
+ "cobra#pr-2235": [
+  "cobra::command.go::ExecuteC"
+ ],
+ "cobra#pr-2238": [
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-2241": [
+  "cobra::command.go::InitDefaultHelpCmd"
+ ],
+ "cobra#issue-2257": [
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-2285": [
+  "cobra::fish_completions.go::genFishComp"
+ ],
+ "cobra#pr-2303": [
+  "cobra::command.go::ParseFlags"
+ ],
+ "cobra#pr-2328": [
+  "cobra::command.go::CommandPathPadding",
+  "cobra::command.go::UsagePadding"
+ ],
+ "cobra#pr-2333": [
+  "cobra::bash_completionsV2.go::genBashComp"
+ ],
+ "cobra#pr-2356": [
+  "cobra::completions.go::getCompletions"
+ ],
+ "cobra#pr-2390": [
+  "cobra::completions.go::CompDebug"
+ ],
+ "cobra#pr-2397": [
+  "cobra::args.go::OnlyValidArgs"
+ ]
+}

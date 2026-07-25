@@ -1,0 +1,49 @@
+examples: improve view count in cookie-sessions
+docs: add missing JSDoc param for parseExtendedQueryString
+lint: remove unused parameters in examples
+lint: remove deprecated String.prototype.substr
+docs: fix typo in private api jsdoc
+Fix handling of undefined when "json escape" is enabled
+lint: remove usages of "=="
+Add "escape json" setting for res.json and res.jsonp
+Add "escape json" setting for res.json and res.jsonp
+perf: re-use options object when generating ETags
+perf: re-use options object when generating ETags
+Improve error message when autoloading invalid view engine
+lint: remove unused err argument
+Add debug message when loading view engine
+examples: use pbkdf2-password module in auth example
+Improve performance for res.json/res.jsonp in most cases
+perf: use strict equality when possible
+Fix hiding platform issues with decodeURIComponent
+Fix regression where "Request aborted" is logged using res.sendFile
+Fix constructing application with non-configurable prototype properties
+Fix res.sendFile not always detecting aborted connection
+Fix incorrect "Request aborted" for res.sendFile when HEAD or 304
+Invoke callback for sendfile when client aborts
+Invoke callback for sendfile when client aborts
+Invoke callback for sendfile when client aborts
+Invoke callback for sendfile when client aborts
+Add res.sendFile
+Add res.sendFile
+Invoke router.param() only when route matches
+Add mergeParams option to Router
+Add mergeParams option to Router
+Restore req.params after invoking Router
+Fix req.next when inside router instance
+Merge pull request #2065 from WebReflection/patch-1
+Merge pull request #2008 from agchou/clean-up-code
+Merge pull request #2004 from agchou/clean-up-code
+Merge pull request #1964 from blakeembrey/modular-routing
+Merge pull request #1935 from visionmedia/router-params-middleware
+Merge pull request #1835 from visionmedia/change-req-params-to-object
+expose connect.middleware using Object.getOwnPropertyDescriptor()
+Merge pull request #1729 from patelatharva/patch-1
+Merge pull request #1625 from ForbesLindesay/patch-1
+Merge pull request #1578 from Notificare/master
+Merge pull request #1466 from ericf/settings-view-engine
+Merge pull request #951 from Raynos/patch-1
+decouple Router options. Closes #941
+Changed template engine signature to engine.__express(path, options, fn). Closes #878
+Added support for multiple callbacks for `app.param()`. Closes #801
+Refactored router. Closes #639

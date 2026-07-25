@@ -1,0 +1,661 @@
+============================================================
+requests: delta最低的 20 对更新 (原文对照)
+============================================================
+
+--- #1 delta=-0.0000 unit=requests::requests/utils.py::unquote_header_value ---
+OLD:
+  def unquote_header_value(value, is_filename=False):
+      r"""Unquotes a header value.  (Reversal of :func:`quote_header_value`).
+      This does not use the real unquoting but what browsers are actually
+      using for quoting.
+  
+      :param value: the header value to unquote.
+      :rtype: str
+      """
+      if value and value[0] == value[-1] == '"':
+          # this is not the real unquoting, but fixing this so that the
+          # RFC is met will result in bugs with internet explorer and
+          # probably some other browsers as well.  IE for example is
+          # uploading files with "C:\foo\bar.txt" as filename
+          value = value[1:-1]
+  
+  ... (24 lines total)
+NEW:
+  def unquote_header_value(value, is_filename=False):
+      r"""Unquotes a header value.  (Reversal of :func:`quote_header_value`).
+      This does not use the real unquoting but what browsers are actually
+      using for quoting.
+  
+      :param value: the header value to unquote.
+      :rtype: str
+      """
+      if value and value[0] == value[-1] == '"':
+          # this is not the real unquoting, but fixing this so that the
+          # RFC is met will result in bugs with internet explorer and
+          # probably some other browsers as well.  IE for example is
+          # uploading files with "C:\foo\bar.txt" as filename
+          value = value[1:-1]
+  
+  ... (24 lines total)
+DIFF (4 changed lines):
+  -        if not is_filename or value[:2] != '\\\\':
+  -            return value.replace('\\\\', '\\').replace('\\"', '"')
+  +        if not is_filename or value[:2] != "\\\\":
+  +            return value.replace("\\\\", "\\").replace('\\"', '"')
+
+--- #2 delta=0.0000 unit=requests::requests/models.py::_encode_files ---
+OLD:
+      def _encode_files(files, data):
+          """Build the body for a multipart/form-data request.
+  
+          Will successfully encode files when passed as a dict or a list of
+          tuples. Order is retained if data is a list of tuples but arbitrary
+          if parameters are supplied as a dict.
+          The tuples may be 2-tuples (filename, fileobj), 3-tuples (filename, fileobj, contentype)
+          or 4-tuples (filename, fileobj, contentype, custom_headers).
+          """
+          if (not files):
+              raise ValueError("Files must be provided.")
+          elif isinstance(data, basestring):
+              raise ValueError("Data must not be a string.")
+  
+          new_fields = []
+  ... (59 lines total)
+NEW:
+      def _encode_files(files, data):
+          """Build the body for a multipart/form-data request.
+  
+          Will successfully encode files when passed as a dict or a list of
+          tuples. Order is retained if data is a list of tuples but arbitrary
+          if parameters are supplied as a dict.
+          The tuples may be 2-tuples (filename, fileobj), 3-tuples (filename, fileobj, contentype)
+          or 4-tuples (filename, fileobj, contentype, custom_headers).
+          """
+          if (not files):
+              raise ValueError("Files must be provided.")
+          elif isinstance(data, basestring):
+              raise ValueError("Data must not be a string.")
+  
+          new_fields = []
+  ... (63 lines total)
+DIFF (6 changed lines):
+  +            elif hasattr(fp, 'read'):
+  +                fdata = fp.read()
+  +            elif fp is None:
+  +                continue
+  -                fdata = fp.read()
+  +                fdata = fp
+
+--- #3 delta=0.0000 unit=requests::requests/models.py::_encode_files ---
+OLD:
+      def _encode_files(files, data):
+          """Build the body for a multipart/form-data request.
+  
+          Will successfully encode files when passed as a dict or a list of
+          tuples. Order is retained if data is a list of tuples but arbitrary
+          if parameters are supplied as a dict.
+          The tuples may be 2-tuples (filename, fileobj), 3-tuples (filename, fileobj, contentype)
+          or 4-tuples (filename, fileobj, contentype, custom_headers).
+          """
+          if not files:
+              raise ValueError("Files must be provided.")
+          elif isinstance(data, basestring):
+              raise ValueError("Data must not be a string.")
+  
+          new_fields = []
+  ... (68 lines total)
+NEW:
+      def _encode_files(files, data):
+          """Build the body for a multipart/form-data request.
+  
+          Will successfully encode files when passed as a dict or a list of
+          tuples. Order is retained if data is a list of tuples but arbitrary
+          if parameters are supplied as a dict.
+          The tuples may be 2-tuples (filename, fileobj), 3-tuples (filename, fileobj, contentype)
+          or 4-tuples (filename, fileobj, contentype, custom_headers).
+          """
+          if not files:
+              raise ValueError("Files must be provided.")
+          elif isinstance(data, basestring):
+              raise ValueError("Data must not be a string.")
+  
+          new_fields = []
+  ... (68 lines total)
+DIFF (2 changed lines):
+  -        for (k, v) in files:
+  +        for k, v in files:
+
+--- #4 delta=0.0000 unit=requests::requests/sessions.py::resolve_redirects ---
+OLD:
+      def resolve_redirects(self, resp, req, stream=False, timeout=None,
+                            verify=True, cert=None, proxies=None, **adapter_kwargs):
+          """Receives a Response. Returns a generator of Responses."""
+  
+          i = 0
+          hist = [] # keep track of history
+  
+          while resp.is_redirect:
+              prepared_request = req.copy()
+  
+              if i > 0:
+                  # Update history and keep track of redirects.
+                  hist.append(resp)
+                  new_hist = list(hist)
+                  resp.history = new_hist
+  ... (96 lines total)
+NEW:
+      def resolve_redirects(self, resp, req, stream=False, timeout=None,
+                            verify=True, cert=None, proxies=None, **adapter_kwargs):
+          """Receives a Response. Returns a generator of Responses."""
+  
+          i = 0
+          hist = [] # keep track of history
+  
+          while resp.is_redirect:
+              prepared_request = req.copy()
+  
+              if i > 0:
+                  # Update history and keep track of redirects.
+                  hist.append(resp)
+                  new_hist = list(hist)
+                  resp.history = new_hist
+  ... (96 lines total)
+DIFF (2 changed lines):
+  -            prepared_request._cookies.update(self.cookies)
+  +            merge_cookies(prepared_request._cookies, self.cookies)
+
+--- #5 delta=0.0000 unit=requests::requests/sessions.py::resolve_redirects ---
+OLD:
+      def resolve_redirects(self, resp, req, stream=False, timeout=None,
+                            verify=True, cert=None, proxies=None, **adapter_kwargs):
+          """Receives a Response. Returns a generator of Responses."""
+  
+          i = 0
+          hist = [] # keep track of history
+  
+          while resp.is_redirect:
+              prepared_request = req.copy()
+  
+              if i > 0:
+                  # Update history and keep track of redirects.
+                  hist.append(resp)
+                  new_hist = list(hist)
+                  resp.history = new_hist
+  ... (96 lines total)
+NEW:
+      def resolve_redirects(self, resp, req, stream=False, timeout=None,
+                            verify=True, cert=None, proxies=None, **adapter_kwargs):
+          """Receives a Response. Returns a generator of Responses."""
+  
+          i = 0
+          hist = [] # keep track of history
+  
+          while resp.is_redirect:
+              prepared_request = req.copy()
+  
+              if i > 0:
+                  # Update history and keep track of redirects.
+                  hist.append(resp)
+                  new_hist = list(hist)
+                  resp.history = new_hist
+  ... (108 lines total)
+DIFF (12 changed lines):
+  +            # A failed tell() sets `_body_position` to `object()`. This non-None
+  +            # value ensures `rewindable` will be True, allowing us to raise an
+  +            # UnrewindableBodyError, instead of hanging the connection.
+  +            rewindable = (
+  +                prepared_request._body_position is not None and
+  +                ('Content-Length' in headers or 'Transfer-Encoding' in headers)
+  +            )
+  +
+  +            # Attempt to rewind consumed file-like object.
+  +            if rewindable:
+  ... (12 total)
+
+--- #6 delta=0.0001 unit=requests::requests/utils.py::parse_dict_header ---
+OLD:
+  def parse_dict_header(value):
+      """Parse lists of key, value pairs as described by RFC 2068 Section 2 and
+      convert them into a python dict:
+  
+      >>> d = parse_dict_header('foo="is a fish", bar="as well"')
+      >>> type(d) is dict
+      True
+      >>> sorted(d.items())
+      [('bar', 'as well'), ('foo', 'is a fish')]
+  
+      If there is no value for a key it will be `None`:
+  
+      >>> parse_dict_header('key_without_value')
+      {'key_without_value': None}
+  
+  ... (33 lines total)
+NEW:
+  def parse_dict_header(value):
+      """Parse lists of key, value pairs as described by RFC 2068 Section 2 and
+      convert them into a python dict:
+  
+      >>> d = parse_dict_header('foo="is a fish", bar="as well"')
+      >>> type(d) is dict
+      True
+      >>> sorted(d.items())
+      [('bar', 'as well'), ('foo', 'is a fish')]
+  
+      If there is no value for a key it will be `None`:
+  
+      >>> parse_dict_header('key_without_value')
+      {'key_without_value': None}
+  
+  ... (33 lines total)
+DIFF (4 changed lines):
+  -        if '=' not in item:
+  +        if "=" not in item:
+  -        name, value = item.split('=', 1)
+  +        name, value = item.split("=", 1)
+
+--- #7 delta=0.0003 unit=requests::requests/utils.py::atomic_open ---
+OLD:
+  def atomic_open(filename):
+      """Write a file to the disk in an atomic fashion"""
+      tmp_descriptor, tmp_name = tempfile.mkstemp(dir=os.path.dirname(filename))
+      try:
+          with os.fdopen(tmp_descriptor, 'wb') as tmp_handler:
+              yield tmp_handler
+          os.replace(tmp_name, filename)
+      except BaseException:
+          os.remove(tmp_name)
+          raise
+  
+NEW:
+  def atomic_open(filename):
+      """Write a file to the disk in an atomic fashion"""
+      tmp_descriptor, tmp_name = tempfile.mkstemp(dir=os.path.dirname(filename))
+      try:
+          with os.fdopen(tmp_descriptor, "wb") as tmp_handler:
+              yield tmp_handler
+          os.replace(tmp_name, filename)
+      except BaseException:
+          os.remove(tmp_name)
+          raise
+  
+DIFF (2 changed lines):
+  -        with os.fdopen(tmp_descriptor, 'wb') as tmp_handler:
+  +        with os.fdopen(tmp_descriptor, "wb") as tmp_handler:
+
+--- #8 delta=0.0004 unit=requests::requests/models.py::_get_idna_encoded_ho ---
+OLD:
+      def _get_idna_encoded_host(host):
+          import idna
+  
+          try:
+              host = idna.encode(host, uts46=True).decode('utf-8')
+          except idna.IDNAError:
+              raise UnicodeError
+          return host
+NEW:
+      def _get_idna_encoded_host(host):
+          import idna
+  
+          try:
+              host = idna.encode(host, uts46=True).decode("utf-8")
+          except idna.IDNAError:
+              raise UnicodeError
+          return host
+DIFF (2 changed lines):
+  -            host = idna.encode(host, uts46=True).decode('utf-8')
+  +            host = idna.encode(host, uts46=True).decode("utf-8")
+
+--- #9 delta=0.0004 unit=requests::requests/models.py::apparent_encoding ---
+OLD:
+      def apparent_encoding(self):
+          """The apparent encoding, provided by the chardet library"""
+          return chardet.detect(self.content)['encoding']
+NEW:
+      def apparent_encoding(self):
+          """The apparent encoding, provided by the chardet library."""
+          return chardet.detect(self.content)['encoding']
+DIFF (2 changed lines):
+  -        """The apparent encoding, provided by the chardet library"""
+  +        """The apparent encoding, provided by the chardet library."""
+
+--- #10 delta=0.0008 unit=requests::requests/models.py::content ---
+OLD:
+      def content(self):
+          """Content of the response, in bytes."""
+  
+          if self._content is False:
+              # Read the contents.
+              if self._content_consumed:
+                  raise RuntimeError(
+                      'The content for this response was already consumed')
+  
+              if self.status_code == 0 or self.raw is None:
+                  self._content = None
+              else:
+                  self._content = b''.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b''
+  
+          self._content_consumed = True
+  ... (18 lines total)
+NEW:
+      def content(self):
+          """Content of the response, in bytes."""
+  
+          if self._content is False:
+              # Read the contents.
+              if self._content_consumed:
+                  raise RuntimeError("The content for this response was already consumed")
+  
+              if self.status_code == 0 or self.raw is None:
+                  self._content = None
+              else:
+                  self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  
+          self._content_consumed = True
+          # don't need to release the connection; that's been handled by urllib3
+  ... (17 lines total)
+DIFF (5 changed lines):
+  -                raise RuntimeError(
+  -                    'The content for this response was already consumed')
+  +                raise RuntimeError("The content for this response was already consumed")
+  -                self._content = b''.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b''
+  +                self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+
+--- #11 delta=0.0011 unit=requests::requests/models.py::is_permanent_redirec ---
+OLD:
+      def is_permanent_redirect(self):
+          """True if this Response one of the permanent versions of redirect"""
+          return ('location' in self.headers and self.status_code in (codes.moved_permanently, codes.permanent_redirect))
+NEW:
+      def is_permanent_redirect(self):
+          """True if this Response one of the permanent versions of redirect."""
+          return ('location' in self.headers and self.status_code in (codes.moved_permanently, codes.permanent_redirect))
+DIFF (2 changed lines):
+  -        """True if this Response one of the permanent versions of redirect"""
+  +        """True if this Response one of the permanent versions of redirect."""
+
+--- #12 delta=0.0012 unit=requests::requests/models.py::ok ---
+OLD:
+      def ok(self):
+          """Returns True if :attr:`status_code` is less than 400.
+  
+          This attribute checks if the status code of the response is between
+          400 and 600 to see if there was a client error or a server error. If
+          the status code, is between 200 and 400, this will return True. This
+          is **not** a check to see if the response code is ``200 OK``.
+          """
+          try:
+              self.raise_for_status()
+          except HTTPError:
+              return False
+          return True
+NEW:
+      def ok(self):
+          """Returns True if :attr:`status_code` is less than 400, False if not.
+  
+          This attribute checks if the status code of the response is between
+          400 and 600 to see if there was a client error or a server error. If
+          the status code is between 200 and 400, this will return True. This
+          is **not** a check to see if the response code is ``200 OK``.
+          """
+          try:
+              self.raise_for_status()
+          except HTTPError:
+              return False
+          return True
+DIFF (4 changed lines):
+  -        """Returns True if :attr:`status_code` is less than 400.
+  +        """Returns True if :attr:`status_code` is less than 400, False if not.
+  -        the status code, is between 200 and 400, this will return True. This
+  +        the status code is between 200 and 400, this will return True. This
+
+--- #13 delta=0.0013 unit=requests::requests/models.py::content ---
+OLD:
+      def content(self):
+          """Content of the response, in bytes."""
+  
+          if self._content is False:
+              # Read the contents.
+              if self._content_consumed:
+                  raise RuntimeError(
+                      'The content for this response was already consumed')
+  
+              if self.status_code == 0:
+                  self._content = None
+              else:
+                  self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  
+          self._content_consumed = True
+  ... (18 lines total)
+NEW:
+      def content(self):
+          """Content of the response, in bytes."""
+  
+          if self._content is False:
+              # Read the contents.
+              if self._content_consumed:
+                  raise RuntimeError(
+                      'The content for this response was already consumed')
+  
+              if not self.status_code:
+                  self._content = None
+              else:
+                  self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  
+          self._content_consumed = True
+  ... (18 lines total)
+DIFF (2 changed lines):
+  -            if self.status_code == 0:
+  +            if not self.status_code:
+
+--- #14 delta=0.0017 unit=requests::requests/utils.py::parse_header ---
+OLD:
+      def parse_header(content_type):
+          #Inner function to parse header
+          content_type_and_params_delimiter = ';'
+  
+          #append delimiter on end to ensure atleast two elements when split by ';'
+          content_type += content_type_and_params_delimiter
+  
+          tokens = content_type.split(content_type_and_params_delimiter)
+          content_type_index = 0
+          params_index = 1
+  
+          content_type = tokens[content_type_index]
+          params = tokens[params_index]
+          params_dict = dict(param.split('=') for param in params.split())
+          return content_type,params_dict
+NEW:
+      def parse_header(content_type):
+          #Inner function to parse header
+          #append delimiter on end to ensure atleast two elements when split by ';'
+          content_type_and_params_delimiter = ';'
+          content_type += content_type_and_params_delimiter
+  
+          tokens = content_type.split(content_type_and_params_delimiter)
+          content_type_index = 0
+          params_index = 1
+  
+          content_type = tokens[content_type_index]
+          params = tokens[params_index]
+          params_dict = dict(param.split('=') for param in params.split())
+          return content_type,params_dict
+DIFF (3 changed lines):
+  +        #append delimiter on end to ensure atleast two elements when split by ';'
+  -
+  -        #append delimiter on end to ensure atleast two elements when split by ';'
+
+--- #15 delta=0.0017 unit=requests::requests/models.py::apparent_encoding ---
+OLD:
+      def apparent_encoding(self):
+          """The apparent encoding, provided by the charset_normalizer or chardet libraries."""
+          return chardet.detect(self.content)['encoding']
+NEW:
+      def apparent_encoding(self):
+          """The apparent encoding, provided by the charset_normalizer or chardet libraries."""
+          return chardet.detect(self.content)["encoding"]
+DIFF (2 changed lines):
+  -        return chardet.detect(self.content)['encoding']
+  +        return chardet.detect(self.content)["encoding"]
+
+--- #16 delta=0.0026 unit=requests::requests/packages/urllib3/contrib/pyopen ---
+OLD:
+      def idna_encode(name):
+          """
+          Borrowed wholesale from the Python Cryptography Project. It turns out
+          that we can't just safely call `idna.encode`: it can explode for
+          wildcard names. This avoids that problem.
+          """
+          for prefix in [u'*.', u'.']:
+              if name.startswith(prefix):
+                  name = name[len(prefix):]
+                  return prefix.encode('ascii') + idna.encode(name)
+          return idna.encode(name)
+NEW:
+      def idna_encode(name):
+          """
+          Borrowed wholesale from the Python Cryptography Project. It turns out
+          that we can't just safely call `idna.encode`: it can explode for
+          wildcard names. This avoids that problem.
+          """
+          import idna
+  
+          for prefix in [u'*.', u'.']:
+              if name.startswith(prefix):
+                  name = name[len(prefix):]
+                  return prefix.encode('ascii') + idna.encode(name)
+          return idna.encode(name)
+DIFF (2 changed lines):
+  +        import idna
+  +
+
+--- #17 delta=0.0029 unit=requests::requests/models.py::is_permanent_redirec ---
+OLD:
+      def is_permanent_redirect(self):
+          """True if this Response one of the permanent versions of redirect."""
+          return ('location' in self.headers and self.status_code in (codes.moved_permanently, codes.permanent_redirect))
+NEW:
+      def is_permanent_redirect(self):
+          """True if this Response one of the permanent versions of redirect."""
+          return "location" in self.headers and self.status_code in (
+              codes.moved_permanently,
+              codes.permanent_redirect,
+          )
+DIFF (5 changed lines):
+  -        return ('location' in self.headers and self.status_code in (codes.moved_permanently, codes.permanent_redirect))
+  +        return "location" in self.headers and self.status_code in (
+  +            codes.moved_permanently,
+  +            codes.permanent_redirect,
+  +        )
+
+--- #18 delta=0.0034 unit=requests::requests/models.py::_encode_files ---
+OLD:
+      def _encode_files(files, data):
+          """Build the body for a multipart/form-data request.
+  
+          Will successfully encode files when passed as a dict or a list of
+          tuples. Order is retained if data is a list of tuples but arbitrary
+          if parameters are supplied as a dict.
+          The tuples may be 2-tuples (filename, fileobj), 3-tuples (filename, fileobj, contentype)
+          or 4-tuples (filename, fileobj, contentype, custom_headers).
+          """
+          if (not files):
+              raise ValueError("Files must be provided.")
+          elif isinstance(data, basestring):
+              raise ValueError("Data must not be a string.")
+  
+          new_fields = []
+  ... (63 lines total)
+NEW:
+      def _encode_files(files, data):
+          """Build the body for a multipart/form-data request.
+  
+          Will successfully encode files when passed as a dict or a list of
+          tuples. Order is retained if data is a list of tuples but arbitrary
+          if parameters are supplied as a dict.
+          The tuples may be 2-tuples (filename, fileobj), 3-tuples (filename, fileobj, contentype)
+          or 4-tuples (filename, fileobj, contentype, custom_headers).
+          """
+          if not files:
+              raise ValueError("Files must be provided.")
+          elif isinstance(data, basestring):
+              raise ValueError("Data must not be a string.")
+  
+          new_fields = []
+  ... (68 lines total)
+DIFF (15 changed lines):
+  -        if (not files):
+  +        if not files:
+  -            if isinstance(val, basestring) or not hasattr(val, '__iter__'):
+  +            if isinstance(val, basestring) or not hasattr(val, "__iter__"):
+  -                        (field.decode('utf-8') if isinstance(field, bytes) else field,
+  -                         v.encode('utf-8') if isinstance(v, str) else v))
+  +                        (
+  +                            field.decode("utf-8")
+  +                            if isinstance(field, bytes)
+  +                            else field,
+  ... (15 total)
+
+--- #19 delta=0.0038 unit=requests::requests/models.py::_encode_params ---
+OLD:
+      def _encode_params(data):
+          """Encode parameters in a piece of data.
+  
+          Will successfully encode parameters when passed as a dict or a list of
+          2-tuples. Order is retained if data is a list of 2-tuples but arbitrary
+          if parameters are supplied as a dict.
+          """
+  
+          if isinstance(data, (str, bytes)):
+              return data
+          elif hasattr(data, 'read'):
+              return data
+          elif hasattr(data, '__iter__'):
+              result = []
+              for k, vs in to_key_val_list(data):
+  ... (25 lines total)
+NEW:
+      def _encode_params(data):
+          """Encode parameters in a piece of data.
+  
+          Will successfully encode parameters when passed as a dict or a list of
+          2-tuples. Order is retained if data is a list of 2-tuples but arbitrary
+          if parameters are supplied as a dict.
+          """
+  
+          if isinstance(data, (str, bytes)):
+              return data
+          elif hasattr(data, "read"):
+              return data
+          elif hasattr(data, "__iter__"):
+              result = []
+              for k, vs in to_key_val_list(data):
+  ... (28 lines total)
+DIFF (13 changed lines):
+  -        elif hasattr(data, 'read'):
+  +        elif hasattr(data, "read"):
+  -        elif hasattr(data, '__iter__'):
+  +        elif hasattr(data, "__iter__"):
+  -                if isinstance(vs, basestring) or not hasattr(vs, '__iter__'):
+  +                if isinstance(vs, basestring) or not hasattr(vs, "__iter__"):
+  -                            (k.encode('utf-8') if isinstance(k, str) else k,
+  -                             v.encode('utf-8') if isinstance(v, str) else v))
+  +                            (
+  +                                k.encode("utf-8") if isinstance(k, str) else k,
+  ... (13 total)
+
+--- #20 delta=0.0038 unit=requests::requests/models.py::is_redirect ---
+OLD:
+      def is_redirect(self):
+          """True if this Response is a well-formed HTTP redirect that could have
+          been processed automatically (by :meth:`Session.resolve_redirects`).
+          """
+          return ('location' in self.headers and self.status_code in REDIRECT_STATI)
+NEW:
+      def is_redirect(self):
+          """True if this Response is a well-formed HTTP redirect that could have
+          been processed automatically (by :meth:`Session.resolve_redirects`).
+          """
+          return "location" in self.headers and self.status_code in REDIRECT_STATI
+DIFF (2 changed lines):
+  -        return ('location' in self.headers and self.status_code in REDIRECT_STATI)
+  +        return "location" in self.headers and self.status_code in REDIRECT_STATI

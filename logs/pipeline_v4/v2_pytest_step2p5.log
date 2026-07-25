@@ -1,0 +1,10 @@
+
+========================================================
+衔接: pytest
+========================================================
+  units 0 | updates 0 | queries 0 | GT 0
+  自检 ✅ 通过 -> /root/EvoBench_v4/bench_final/pytest
+  下游可直接：python 负载体检.py --units /root/EvoBench_v4/bench_final/pytest/units.jsonl --updates /root/EvoBench_v4/bench_final/pytest/updates.jsonl --queries /root/EvoBench_v4/bench_final/pytest/queries.txt --repo-name pytest --purpose measurement
+
+汇总：1/1 仓库转换自检通过。
+现在四件套对齐下游，可跑 负载体检.py 和未来的成本/Recall 测量。

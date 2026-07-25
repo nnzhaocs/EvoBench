@@ -1,0 +1,17 @@
+=== E10: build_step_allmetrics_v3.py 终端输出 ===
+(扩展 I(u) 定义, minilm + mpnet)
+
+[终端输出已保存 - 从 CheckCommandStatus 获取的完整日志]
+
+关键发现:
+- express: |H|_new=12, |H|_narrow=9 -> 扩展/旧=1.33x, 进入可靠库!
+- flask: |H|_new=18, |H|_narrow=15 -> 扩展/旧=1.20x
+- gin: |H|_new=124, |H|_narrow=104 -> 扩展/旧=1.19x
+- cobra: |H|_new=58, |H|_narrow=55 -> 扩展/旧=1.05x
+- echo: |H|_new=119, |H|_narrow=115 -> 扩展/旧=1.03x
+- lodash: |H|_new=27, |H|_narrow=24 -> 扩展/旧=1.13x
+- pylint: |H|_new=18, |H|_narrow=17 -> 扩展/旧=1.06x
+- requests: |H|_new=6, |H|_narrow=4 -> 扩展/旧=1.50x
+
+可靠性分区: 7 个可进表 (新增 express), 3 个过小
+跨模型 δ 一致性: minilm↔mpnet = 0.946

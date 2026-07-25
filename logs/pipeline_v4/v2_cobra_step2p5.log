@@ -1,0 +1,10 @@
+
+========================================================
+衔接: cobra
+========================================================
+  units 259 | updates 1079 | queries 268 | GT 268
+  自检 ✅ 通过 -> /root/EvoBench_v4/bench_final/cobra
+  下游可直接：python 负载体检.py --units /root/EvoBench_v4/bench_final/cobra/units.jsonl --updates /root/EvoBench_v4/bench_final/cobra/updates.jsonl --queries /root/EvoBench_v4/bench_final/cobra/queries.txt --repo-name cobra --purpose measurement
+
+汇总：1/1 仓库转换自检通过。
+现在四件套对齐下游，可跑 负载体检.py 和未来的成本/Recall 测量。

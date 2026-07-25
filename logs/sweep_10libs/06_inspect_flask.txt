@@ -1,0 +1,671 @@
+============================================================
+flask: delta最低的 20 对更新 (原文对照)
+============================================================
+
+--- #1 delta=0.0000 unit=flask::src/flask/app.py::register_blueprint ---
+OLD:
+      def register_blueprint(self, blueprint, **options):
+          """Register a :class:`~flask.Blueprint` on the application. Keyword
+          arguments passed to this method will override the defaults set on the
+          blueprint.
+  
+          Calls the blueprint's :meth:`~flask.Blueprint.register` method after
+          recording the blueprint in the application's :attr:`blueprints`.
+  
+          :param blueprint: The blueprint to register.
+          :param url_prefix: Blueprint routes will be prefixed with this.
+          :param subdomain: Blueprint routes will match on this subdomain.
+          :param url_defaults: Blueprint routes will use these default values for
+              view arguments.
+          :param options: Additional keyword arguments are passed to
+              :class:`~flask.blueprints.BlueprintSetupState`. They can be
+  ... (35 lines total)
+NEW:
+      def register_blueprint(self, blueprint, **options):
+          """Register a :class:`~flask.Blueprint` on the application. Keyword
+          arguments passed to this method will override the defaults set on the
+          blueprint.
+  
+          Calls the blueprint's :meth:`~flask.Blueprint.register` method after
+          recording the blueprint in the application's :attr:`blueprints`.
+  
+          :param blueprint: The blueprint to register.
+          :param url_prefix: Blueprint routes will be prefixed with this.
+          :param subdomain: Blueprint routes will match on this subdomain.
+          :param url_defaults: Blueprint routes will use these default values for
+              view arguments.
+          :param options: Additional keyword arguments are passed to
+              :class:`~flask.blueprints.BlueprintSetupState`. They can be
+  ... (34 lines total)
+DIFF (1 changed lines):
+  -            self._blueprint_order.append(blueprint)
+
+--- #2 delta=0.0000 unit=flask::src/flask/app.py::register_blueprint ---
+OLD:
+      def register_blueprint(self, blueprint, **options):
+          """Register a :class:`~flask.Blueprint` on the application. Keyword
+          arguments passed to this method will override the defaults set on the
+          blueprint.
+  
+          Calls the blueprint's :meth:`~flask.Blueprint.register` method after
+          recording the blueprint in the application's :attr:`blueprints`.
+  
+          :param blueprint: The blueprint to register.
+          :param url_prefix: Blueprint routes will be prefixed with this.
+          :param subdomain: Blueprint routes will match on this subdomain.
+          :param url_defaults: Blueprint routes will use these default values for
+              view arguments.
+          :param options: Additional keyword arguments are passed to
+              :class:`~flask.blueprints.BlueprintSetupState`. They can be
+  ... (34 lines total)
+NEW:
+      def register_blueprint(self, blueprint, **options):
+          """Register a :class:`~flask.Blueprint` on the application. Keyword
+          arguments passed to this method will override the defaults set on the
+          blueprint.
+  
+          Calls the blueprint's :meth:`~flask.Blueprint.register` method after
+          recording the blueprint in the application's :attr:`blueprints`.
+  
+          :param blueprint: The blueprint to register.
+          :param url_prefix: Blueprint routes will be prefixed with this.
+          :param subdomain: Blueprint routes will match on this subdomain.
+          :param url_defaults: Blueprint routes will use these default values for
+              view arguments.
+          :param options: Additional keyword arguments are passed to
+              :class:`~flask.blueprints.BlueprintSetupState`. They can be
+  ... (35 lines total)
+DIFF (9 changed lines):
+  -                "A name collision occurred between blueprints %r and %r. Both"
+  -                ' share the same name "%s". Blueprints that are created on the'
+  -                " fly need unique names."
+  -                % (blueprint, self.blueprints[blueprint.name], blueprint.name)
+  +                "A name collision occurred between blueprints"
+  +                f" {blueprint!r} and {self.blueprints[blueprint.name]!r}."
+  +                f" Both share the same name {blueprint.name!r}."
+  +                f" Blueprints that are created on the fly need unique"
+  +                f" names."
+
+--- #3 delta=0.0000 unit=flask::src/flask/scaffold.py::teardown_request ---
+OLD:
+      def teardown_request(self, f):
+          """Register a function to be run at the end of each request,
+          regardless of whether there was an exception or not.  These functions
+          are executed when the request context is popped, even if not an
+          actual request was performed.
+  
+          Example::
+  
+              ctx = app.test_request_context()
+              ctx.push()
+              ...
+              ctx.pop()
+  
+          When ``ctx.pop()`` is executed in the above example, the teardown
+          functions are called just before the request context moves from the
+  ... (37 lines total)
+NEW:
+      def teardown_request(self, f):
+          """Register a function to be run at the end of each request,
+          regardless of whether there was an exception or not.  These functions
+          are executed when the request context is popped, even if not an
+          actual request was performed.
+  
+          Example::
+  
+              ctx = app.test_request_context()
+              ctx.push()
+              ...
+              ctx.pop()
+  
+          When ``ctx.pop()`` is executed in the above example, the teardown
+          functions are called just before the request context moves from the
+  ... (37 lines total)
+DIFF (2 changed lines):
+  -        self.teardown_request_funcs.setdefault(None, []).append(f)
+  +        self.teardown_request_funcs[None].append(f)
+
+--- #4 delta=0.0000 unit=flask::flask/app.py::register_blueprint ---
+OLD:
+      def register_blueprint(self, blueprint, **options):
+          """Register a :class:`~flask.Blueprint` on the application. Keyword
+          arguments passed to this method will override the defaults set on the
+          blueprint.
+  
+          Calls the blueprint's :meth:`~flask.Blueprint.register` method after
+          recording the blueprint in the application's :attr:`blueprints`.
+  
+          :param blueprint: The blueprint to register.
+          :param url_prefix: Blueprint routes will be prefixed with this.
+          :param subdomain: Blueprint routes will match on this subdomain.
+          :param url_defaults: Blueprint routes will use these default values for
+              view arguments.
+          :param options: Additional keyword arguments are passed to
+              :class:`~flask.blueprints.BlueprintSetupState`. They can be
+  ... (34 lines total)
+NEW:
+      def register_blueprint(self, blueprint, **options):
+          """Register a :class:`~flask.Blueprint` on the application. Keyword
+          arguments passed to this method will override the defaults set on the
+          blueprint.
+  
+          Calls the blueprint's :meth:`~flask.Blueprint.register` method after
+          recording the blueprint in the application's :attr:`blueprints`.
+  
+          :param blueprint: The blueprint to register.
+          :param url_prefix: Blueprint routes will be prefixed with this.
+          :param subdomain: Blueprint routes will match on this subdomain.
+          :param url_defaults: Blueprint routes will use these default values for
+              view arguments.
+          :param options: Additional keyword arguments are passed to
+              :class:`~flask.blueprints.BlueprintSetupState`. They can be
+  ... (35 lines total)
+DIFF (7 changed lines):
+  -                "A name collision occurred between blueprints %r and %r. Both"
+  +                'A name collision occurred between blueprints %r and %r. Both'
+  -                " fly need unique names."
+  -                % (blueprint, self.blueprints[blueprint.name], blueprint.name)
+  +                ' fly need unique names.' % (
+  +                    blueprint, self.blueprints[blueprint.name], blueprint.name
+  +                )
+
+--- #5 delta=0.0000 unit=flask::flask/cli.py::run_command ---
+OLD:
+  def run_command(info, host, port, reload, debugger, eager_loading,
+                  with_threads, cert):
+      """Run a local development server.
+  
+      This server is for development purposes only. It does not provide
+      the stability, security, or performance of production WSGI servers.
+  
+      The reloader and debugger are enabled by default if
+      FLASK_ENV=development or FLASK_DEBUG=1.
+      """
+      debug = get_debug_flag()
+  
+      if reload is None:
+          reload = debug
+  
+  ... (28 lines total)
+NEW:
+  def run_command(info, host, port, reload, debugger, eager_loading, with_threads, cert):
+      """Run a local development server.
+  
+      This server is for development purposes only. It does not provide
+      the stability, security, or performance of production WSGI servers.
+  
+      The reloader and debugger are enabled by default if
+      FLASK_ENV=development or FLASK_DEBUG=1.
+      """
+      debug = get_debug_flag()
+  
+      if reload is None:
+          reload = debug
+  
+      if debugger is None:
+  ... (35 lines total)
+DIFF (15 changed lines):
+  -def run_command(info, host, port, reload, debugger, eager_loading,
+  -                with_threads, cert):
+  +def run_command(info, host, port, reload, debugger, eager_loading, with_threads, cert):
+  -    run_simple(host, port, app, use_reloader=reload, use_debugger=debugger,
+  -               threaded=with_threads, ssl_context=cert)
+  +    run_simple(
+  +        host,
+  +        port,
+  +        app,
+  +        use_reloader=reload,
+  ... (15 total)
+
+--- #6 delta=0.0000 unit=flask::src/flask/scaffold.py::teardown_request ---
+OLD:
+      def teardown_request(self, f):
+          """Register a function to be run at the end of each request,
+          regardless of whether there was an exception or not.  These functions
+          are executed when the request context is popped, even if not an
+          actual request was performed.
+  
+          Example::
+  
+              ctx = app.test_request_context()
+              ctx.push()
+              ...
+              ctx.pop()
+  
+          When ``ctx.pop()`` is executed in the above example, the teardown
+          functions are called just before the request context moves from the
+  ... (37 lines total)
+NEW:
+      def teardown_request(self, f):
+          """Register a function to be run at the end of each request,
+          regardless of whether there was an exception or not.  These functions
+          are executed when the request context is popped, even if not an
+          actual request was performed.
+  
+          Example::
+  
+              ctx = app.test_request_context()
+              ctx.push()
+              ...
+              ctx.pop()
+  
+          When ``ctx.pop()`` is executed in the above example, the teardown
+          functions are called just before the request context moves from the
+  ... (37 lines total)
+DIFF (2 changed lines):
+  -        self.teardown_request_funcs[None].append(f)
+  +        self.teardown_request_funcs.setdefault(None, []).append(self.ensure_sync(f))
+
+--- #7 delta=0.0000 unit=flask::src/flask/scaffold.py::teardown_request ---
+OLD:
+      def teardown_request(self, f: TeardownCallable) -> TeardownCallable:
+          """Register a function to be run at the end of each request,
+          regardless of whether there was an exception or not.  These functions
+          are executed when the request context is popped, even if not an
+          actual request was performed.
+  
+          Example::
+  
+              ctx = app.test_request_context()
+              ctx.push()
+              ...
+              ctx.pop()
+  
+          When ``ctx.pop()`` is executed in the above example, the teardown
+          functions are called just before the request context moves from the
+  ... (37 lines total)
+NEW:
+      def teardown_request(self, f: TeardownCallable) -> TeardownCallable:
+          """Register a function to be run at the end of each request,
+          regardless of whether there was an exception or not.  These functions
+          are executed when the request context is popped, even if not an
+          actual request was performed.
+  
+          Example::
+  
+              ctx = app.test_request_context()
+              ctx.push()
+              ...
+              ctx.pop()
+  
+          When ``ctx.pop()`` is executed in the above example, the teardown
+          functions are called just before the request context moves from the
+  ... (37 lines total)
+DIFF (2 changed lines):
+  -        self.teardown_request_funcs.setdefault(None, []).append(self.ensure_sync(f))
+  +        self.teardown_request_funcs.setdefault(None, []).append(f)
+
+--- #8 delta=0.0001 unit=flask::src/flask/json/__init__.py::get_current_use ---
+OLD:
+          def get_current_user():
+              return jsonify(
+                  username=g.user.username,
+                  email=g.user.email,
+                  id=g.user.id,
+              )
+NEW:
+          def get_current_user():
+              return jsonify(username=g.user.username,
+                             email=g.user.email,
+                             id=g.user.id)
+DIFF (8 changed lines):
+  -            return jsonify(
+  -                username=g.user.username,
+  -                email=g.user.email,
+  -                id=g.user.id,
+  -            )
+  +            return jsonify(username=g.user.username,
+  +                           email=g.user.email,
+  +                           id=g.user.id)
+
+--- #9 delta=0.0001 unit=flask::src/flask/json/__init__.py::get_current_use ---
+OLD:
+          def get_current_user():
+              return jsonify(username=g.user.username,
+                             email=g.user.email,
+                             id=g.user.id)
+NEW:
+          def get_current_user():
+              return jsonify(
+                  username=g.user.username,
+                  email=g.user.email,
+                  id=g.user.id,
+              )
+DIFF (8 changed lines):
+  -            return jsonify(username=g.user.username,
+  -                           email=g.user.email,
+  -                           id=g.user.id)
+  +            return jsonify(
+  +                username=g.user.username,
+  +                email=g.user.email,
+  +                id=g.user.id,
+  +            )
+
+--- #10 delta=0.0001 unit=flask::src/flask/json/__init__.py::get_current_use ---
+OLD:
+          def get_current_user():
+              return jsonify(username=g.user.username,
+                             email=g.user.email,
+                             id=g.user.id)
+NEW:
+          def get_current_user():
+              return jsonify(
+                  username=g.user.username,
+                  email=g.user.email,
+                  id=g.user.id,
+              )
+DIFF (8 changed lines):
+  -            return jsonify(username=g.user.username,
+  -                           email=g.user.email,
+  -                           id=g.user.id)
+  +            return jsonify(
+  +                username=g.user.username,
+  +                email=g.user.email,
+  +                id=g.user.id,
+  +            )
+
+--- #11 delta=0.0002 unit=flask::flask/wrappers.py::max_cookie_size ---
+OLD:
+      def max_cookie_size(self):
+          """Read-only view of the :data:`MAX_COOKIE_SIZE` config key.
+  
+          See :attr:`~werkzeug.wrappers.BaseResponse.max_cookie_size` in
+          Werkzeug's docs.
+          """
+          if current_app:
+              return current_app.config["MAX_COOKIE_SIZE"]
+  
+          # return Werkzeug's default when not in an app context
+          return super(Response, self).max_cookie_size
+NEW:
+      def max_cookie_size(self):
+          """Read-only view of the :data:`MAX_COOKIE_SIZE` config key.
+  
+          See :attr:`~werkzeug.wrappers.BaseResponse.max_cookie_size` in
+          Werkzeug's docs.
+          """
+          if current_app:
+              return current_app.config['MAX_COOKIE_SIZE']
+  
+          # return Werkzeug's default when not in an app context
+          return super(Response, self).max_cookie_size
+DIFF (2 changed lines):
+  -            return current_app.config["MAX_COOKIE_SIZE"]
+  +            return current_app.config['MAX_COOKIE_SIZE']
+
+--- #12 delta=0.0003 unit=flask::src/flask/app.py::add_url_rule ---
+OLD:
+      def add_url_rule(
+          self,
+          rule,
+          endpoint=None,
+          view_func=None,
+          provide_automatic_options=None,
+          **options
+NEW:
+      def add_url_rule(
+          self,
+          rule,
+          endpoint=None,
+          view_func=None,
+          provide_automatic_options=None,
+          **options,
+DIFF (2 changed lines):
+  -        **options
+  +        **options,
+
+--- #13 delta=0.0005 unit=flask::flask/app.py::_register_error_handler ---
+OLD:
+      def _register_error_handler(self, key, code_or_exception, f):
+          """
+          :type key: None|str
+          :type code_or_exception: int|T<=Exception
+          :type f: callable
+          """
+          if isinstance(code_or_exception, HTTPException):  # old broken behavior
+              raise ValueError(
+                  "Tried to register a handler for an exception instance {0!r}."
+                  " Handlers can only be registered for exception classes or"
+                  " HTTP error codes.".format(code_or_exception)
+              )
+  
+          try:
+              exc_class, code = self._get_exc_class_and_code(code_or_exception)
+  ... (23 lines total)
+NEW:
+      def _register_error_handler(self, key, code_or_exception, f):
+          """
+          :type key: None|str
+          :type code_or_exception: int|T<=Exception
+          :type f: callable
+          """
+          if isinstance(code_or_exception, HTTPException):  # old broken behavior
+              raise ValueError(
+                  'Tried to register a handler for an exception instance {0!r}.'
+                  ' Handlers can only be registered for exception classes or'
+                  ' HTTP error codes.'.format(code_or_exception)
+              )
+  
+          try:
+              exc_class, code = self._get_exc_class_and_code(code_or_exception)
+  ... (23 lines total)
+DIFF (6 changed lines):
+  -                "Tried to register a handler for an exception instance {0!r}."
+  -                " Handlers can only be registered for exception classes or"
+  -                " HTTP error codes.".format(code_or_exception)
+  +                'Tried to register a handler for an exception instance {0!r}.'
+  +                ' Handlers can only be registered for exception classes or'
+  +                ' HTTP error codes.'.format(code_or_exception)
+
+--- #14 delta=0.0005 unit=flask::src/flask/blueprints.py::record_once ---
+OLD:
+      def record_once(self, func: t.Callable) -> None:
+          """Works like :meth:`record` but wraps the function in another
+          function that will ensure the function is only called once.  If the
+          blueprint is registered a second time on the application, the
+          function passed is not called.
+          """
+  
+          def wrapper(state: BlueprintSetupState) -> None:
+              if state.first_registration:
+                  func(state)
+  
+          return self.record(update_wrapper(wrapper, func))
+NEW:
+      def record_once(self, func: t.Callable) -> None:
+          """Works like :meth:`record` but wraps the function in another
+          function that will ensure the function is only called once.  If the
+          blueprint is registered a second time on the application, the
+          function passed is not called.
+          """
+  
+          def wrapper(state: BlueprintSetupState) -> None:
+              if state.first_registration:
+                  func(state)
+  
+          self.record(update_wrapper(wrapper, func))
+DIFF (2 changed lines):
+  -        return self.record(update_wrapper(wrapper, func))
+  +        self.record(update_wrapper(wrapper, func))
+
+--- #15 delta=0.0005 unit=flask::flask/wrappers.py::max_content_length ---
+OLD:
+      def max_content_length(self):
+          """Read-only view of the ``MAX_CONTENT_LENGTH`` config key."""
+          if current_app:
+              return current_app.config["MAX_CONTENT_LENGTH"]
+NEW:
+      def max_content_length(self):
+          """Read-only view of the ``MAX_CONTENT_LENGTH`` config key."""
+          if current_app:
+              return current_app.config['MAX_CONTENT_LENGTH']
+DIFF (2 changed lines):
+  -            return current_app.config["MAX_CONTENT_LENGTH"]
+  +            return current_app.config['MAX_CONTENT_LENGTH']
+
+--- #16 delta=0.0005 unit=flask::src/flask/scaffold.py::errorhandler ---
+OLD:
+      def errorhandler(self, code_or_exception):
+          """Register a function to handle errors by code or exception class.
+  
+          A decorator that is used to register a function given an
+          error code.  Example::
+  
+              @app.errorhandler(404)
+              def page_not_found(error):
+                  return 'This page does not exist', 404
+  
+          You can also register handlers for arbitrary exceptions::
+  
+              @app.errorhandler(DatabaseError)
+              def special_exception_handler(error):
+                  return 'Database connection failed', 500
+  ... (35 lines total)
+NEW:
+      def errorhandler(self, code_or_exception):
+          """Register a function to handle errors by code or exception class.
+  
+          A decorator that is used to register a function given an
+          error code.  Example::
+  
+              @app.errorhandler(404)
+              def page_not_found(error):
+                  return 'This page does not exist', 404
+  
+          You can also register handlers for arbitrary exceptions::
+  
+              @app.errorhandler(DatabaseError)
+              def special_exception_handler(error):
+                  return 'Database connection failed', 500
+  ... (35 lines total)
+DIFF (2 changed lines):
+  -            self._register_error_handler(None, code_or_exception, f)
+  +            self.register_error_handler(code_or_exception, f)
+
+--- #17 delta=0.0006 unit=flask::flask/app.py::preserve_context_on_exception ---
+OLD:
+      def preserve_context_on_exception(self):
+          """Returns the value of the ``PRESERVE_CONTEXT_ON_EXCEPTION``
+          configuration value in case it's set, otherwise a sensible default
+          is returned.
+  
+          .. versionadded:: 0.7
+          """
+          rv = self.config["PRESERVE_CONTEXT_ON_EXCEPTION"]
+          if rv is not None:
+              return rv
+          return self.debug
+NEW:
+      def preserve_context_on_exception(self):
+          """Returns the value of the ``PRESERVE_CONTEXT_ON_EXCEPTION``
+          configuration value in case it's set, otherwise a sensible default
+          is returned.
+  
+          .. versionadded:: 0.7
+          """
+          rv = self.config['PRESERVE_CONTEXT_ON_EXCEPTION']
+          if rv is not None:
+              return rv
+          return self.debug
+DIFF (2 changed lines):
+  -        rv = self.config["PRESERVE_CONTEXT_ON_EXCEPTION"]
+  +        rv = self.config['PRESERVE_CONTEXT_ON_EXCEPTION']
+
+--- #18 delta=0.0008 unit=flask::src/flask/sansio/app.py::is_prime ---
+OLD:
+              def is_prime(n):
+                  if n == 2:
+                      return True
+                  for i in range(2, int(math.ceil(math.sqrt(n))) + 1):
+                      if n % i == 0:
+                          return False
+NEW:
+            def is_prime(n):
+                if n == 2:
+                    return True
+                for i in range(2, int(math.ceil(math.sqrt(n))) + 1):
+                    if n % i == 0:
+                        return False
+                return True
+DIFF (13 changed lines):
+  -            def is_prime(n):
+  -                if n == 2:
+  -                    return True
+  -                for i in range(2, int(math.ceil(math.sqrt(n))) + 1):
+  -                    if n % i == 0:
+  -                        return False
+  +          def is_prime(n):
+  +              if n == 2:
+  +                  return True
+  +              for i in range(2, int(math.ceil(math.sqrt(n))) + 1):
+  ... (13 total)
+
+--- #19 delta=0.0008 unit=flask::src/flask/sansio/app.py::is_prime ---
+OLD:
+            def is_prime(n):
+                if n == 2:
+                    return True
+                for i in range(2, int(math.ceil(math.sqrt(n))) + 1):
+                    if n % i == 0:
+                        return False
+                return True
+NEW:
+              def is_prime(n):
+                  if n == 2:
+                      return True
+                  for i in range(2, int(math.ceil(math.sqrt(n))) + 1):
+                      if n % i == 0:
+                          return False
+DIFF (13 changed lines):
+  -          def is_prime(n):
+  -              if n == 2:
+  -                  return True
+  -              for i in range(2, int(math.ceil(math.sqrt(n))) + 1):
+  -                  if n % i == 0:
+  -                      return False
+  -              return True
+  +            def is_prime(n):
+  +                if n == 2:
+  +                    return True
+  ... (13 total)
+
+--- #20 delta=0.0009 unit=flask::flask/app.py::name ---
+OLD:
+      def name(self):
+          """The name of the application.  This is usually the import name
+          with the difference that it's guessed from the run file if the
+          import name is main.  This name is used as a display name when
+          Flask needs the name of the application.  It can be set and overridden
+          to change the value.
+  
+          .. versionadded:: 0.8
+          """
+          if self.import_name == "__main__":
+              fn = getattr(sys.modules["__main__"], "__file__", None)
+              if fn is None:
+                  return "__main__"
+              return os.path.splitext(os.path.basename(fn))[0]
+          return self.import_name
+NEW:
+      def name(self):
+          """The name of the application.  This is usually the import name
+          with the difference that it's guessed from the run file if the
+          import name is main.  This name is used as a display name when
+          Flask needs the name of the application.  It can be set and overridden
+          to change the value.
+  
+          .. versionadded:: 0.8
+          """
+          if self.import_name == '__main__':
+              fn = getattr(sys.modules['__main__'], '__file__', None)
+              if fn is None:
+                  return '__main__'
+              return os.path.splitext(os.path.basename(fn))[0]
+          return self.import_name
+DIFF (6 changed lines):
+  -        if self.import_name == "__main__":
+  -            fn = getattr(sys.modules["__main__"], "__file__", None)
+  +        if self.import_name == '__main__':
+  +            fn = getattr(sys.modules['__main__'], '__file__', None)
+  -                return "__main__"
+  +                return '__main__'

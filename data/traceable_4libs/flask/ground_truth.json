@@ -1,0 +1,398 @@
+{
+ "merge app and request context (#5812)": [
+  "flask::src/flask/ctx.py::session"
+ ],
+ "support call template_filter without parens (#5736)": [
+  "flask::src/flask/sansio/app.py::is_prime",
+  "flask::src/flask/sansio/app.py::template_filter",
+  "flask::src/flask/sansio/app.py::template_global",
+  "flask::src/flask/sansio/app.py::template_test",
+  "flask::src/flask/sansio/blueprints.py::app_template_filter",
+  "flask::src/flask/sansio/blueprints.py::app_template_global",
+  "flask::src/flask/sansio/blueprints.py::app_template_test"
+ ],
+ "add config and docs for limits (#5626)": [
+  "flask::src/flask/wrappers.py::max_content_length"
+ ],
+ "fix pyright type errors (#5620)": [
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "Fix jinja_loader typehint (#5389)": [
+  "flask::src/flask/sansio/scaffold.py::jinja_loader"
+ ],
+ "address mypy strict findings (#5383)": [
+  "flask::src/flask/cli.py::decorator",
+  "flask::src/flask/debughelpers.py::__getitem__",
+  "flask::src/flask/logging.py::wsgi_errors_stream",
+  "flask::src/flask/sansio/blueprints.py::extend",
+  "flask::src/flask/sansio/blueprints.py::record",
+  "flask::src/flask/sansio/blueprints.py::record_once",
+  "flask::src/flask/sansio/scaffold.py::static_folder",
+  "flask::src/flask/sessions.py::on_update",
+  "flask::src/flask/wrappers.py::max_content_length"
+ ],
+ "Split the App and Blueprint into Sansio and IO parts (#5127)": [
+  "flask::src/flask/app.py::add_template_filter",
+  "flask::src/flask/app.py::add_template_global",
+  "flask::src/flask/app.py::add_template_test",
+  "flask::src/flask/app.py::add_url_rule",
+  "flask::src/flask/app.py::debug",
+  "flask::src/flask/app.py::jinja_env",
+  "flask::src/flask/app.py::logger",
+  "flask::src/flask/app.py::name",
+  "flask::src/flask/app.py::register_blueprint",
+  "flask::src/flask/app.py::shell_context_processor",
+  "flask::src/flask/app.py::teardown_appcontext",
+  "flask::src/flask/app.py::template_filter",
+  "flask::src/flask/app.py::template_global",
+  "flask::src/flask/app.py::template_test",
+  "flask::src/flask/blueprints.py::add_app_template_filter",
+  "flask::src/flask/blueprints.py::add_app_template_global",
+  "flask::src/flask/blueprints.py::add_app_template_test",
+  "flask::src/flask/blueprints.py::add_url_rule",
+  "flask::src/flask/blueprints.py::after_app_request",
+  "flask::src/flask/blueprints.py::app_context_processor",
+  "flask::src/flask/blueprints.py::app_errorhandler",
+  "flask::src/flask/blueprints.py::app_template_filter",
+  "flask::src/flask/blueprints.py::app_template_global",
+  "flask::src/flask/blueprints.py::app_template_test",
+  "flask::src/flask/blueprints.py::app_url_defaults",
+  "flask::src/flask/blueprints.py::app_url_value_preprocessor",
+  "flask::src/flask/blueprints.py::before_app_request",
+  "flask::src/flask/blueprints.py::get_send_file_max_age",
+  "flask::src/flask/blueprints.py::record_once",
+  "flask::src/flask/blueprints.py::register_blueprint",
+  "flask::src/flask/blueprints.py::teardown_app_request",
+  "flask::src/flask/sansio/app.py::is_prime",
+  "flask::src/flask/sansio/app.py::name",
+  "flask::src/flask/sansio/app.py::teardown_appcontext",
+  "flask::src/flask/sansio/app.py::template_filter",
+  "flask::src/flask/sansio/app.py::template_global",
+  "flask::src/flask/sansio/app.py::template_test",
+  "flask::src/flask/sansio/blueprints.py::app_template_filter",
+  "flask::src/flask/sansio/blueprints.py::app_template_global",
+  "flask::src/flask/sansio/blueprints.py::app_template_test",
+  "flask::src/flask/sansio/blueprints.py::extend",
+  "flask::src/flask/sansio/blueprints.py::record",
+  "flask::src/flask/sansio/blueprints.py::record_once"
+ ],
+ "remove deprecated code (#5223)": [
+  "flask::src/flask/app.py::got_first_request",
+  "flask::src/flask/globals.py::top"
+ ],
+ "Merge pull request #5071 from pallets/future-annotations": [
+  "flask::src/flask/app.py::register_blueprint",
+  "flask::src/flask/blueprints.py::register_blueprint",
+  "flask::src/flask/globals.py::top",
+  "flask::src/flask/helpers.py::_split_blueprint_path",
+  "flask::src/flask/scaffold.py::jinja_loader",
+  "flask::src/flask/scaffold.py::static_folder",
+  "flask::src/flask/scaffold.py::static_url_path",
+  "flask::src/flask/wrappers.py::blueprint",
+  "flask::src/flask/wrappers.py::blueprints",
+  "flask::src/flask/wrappers.py::endpoint",
+  "flask::src/flask/wrappers.py::max_content_length"
+ ],
+ "Merge pull request #5063 from pallets/cli-routes-domain": [
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "Merge pull request #5058 from pallets/require-blinker": [
+  "flask::src/flask/signals.py::signal"
+ ],
+ "Merge pull request #4995 from pallets/remove-deprecated": [
+  "flask::src/flask/app.py::before_first_request",
+  "flask::src/flask/app.py::propagate_exceptions",
+  "flask::src/flask/app.py::templates_auto_reload",
+  "flask::src/flask/blueprints.py::before_app_first_request",
+  "flask::src/flask/globals.py::top"
+ ],
+ "Merge pull request #4779 from greyli/add-debug-to-run": [
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "Merge pull request #4749 from pallets/shell-env": [
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "Merge pull request #4718 from pallets/remove-lazy-option": [
+  "flask::src/flask/cli.py::_load_app"
+ ],
+ "Merge pull request #4692 from pallets/json-provider": [
+  "flask::src/flask/json/__init__.py::get_current_user"
+ ],
+ "Merge pull request #4682 from pallets/refactor-context-stack": [
+  "flask::src/flask/cli.py::shell_command",
+  "flask::src/flask/globals.py::top"
+ ],
+ "Improve decorator typing (#4676)": [
+  "flask::src/flask/app.py::before_first_request",
+  "flask::src/flask/app.py::shell_context_processor",
+  "flask::src/flask/app.py::teardown_appcontext",
+  "flask::src/flask/blueprints.py::after_app_request",
+  "flask::src/flask/blueprints.py::app_url_defaults",
+  "flask::src/flask/blueprints.py::before_app_request",
+  "flask::src/flask/blueprints.py::teardown_app_request",
+  "flask::src/flask/scaffold.py::after_request",
+  "flask::src/flask/scaffold.py::before_request",
+  "flask::src/flask/scaffold.py::delete",
+  "flask::src/flask/scaffold.py::endpoint",
+  "flask::src/flask/scaffold.py::get",
+  "flask::src/flask/scaffold.py::patch",
+  "flask::src/flask/scaffold.py::post",
+  "flask::src/flask/scaffold.py::put",
+  "flask::src/flask/scaffold.py::route",
+  "flask::src/flask/scaffold.py::teardown_request",
+  "flask::src/flask/scaffold.py::url_defaults"
+ ],
+ "Merge pull request #4667 from pallets/remove-deprecated-code": [
+  "flask::src/flask/ctx.py::g"
+ ],
+ "Merge pull request #4666 from pallets/debug-context": [
+  "flask::src/flask/app.py::preserve_context_on_exception"
+ ],
+ "Merge pull request #4624 from pallets/view-init-scope": [
+  "flask::src/flask/views.py::get"
+ ],
+ "Merge pull request #4579 from lecovi/docs/#4574-test-typing": [
+  "flask::src/flask/blueprints.py::app_errorhandler",
+  "flask::src/flask/scaffold.py::delete",
+  "flask::src/flask/scaffold.py::get",
+  "flask::src/flask/scaffold.py::patch",
+  "flask::src/flask/scaffold.py::post",
+  "flask::src/flask/scaffold.py::put",
+  "flask::src/flask/scaffold.py::route"
+ ],
+ "Merge pull request #4603 from f3ndot/use-correct-response-type-for-after-request-callable": [
+  "flask::src/flask/app.py::teardown_appcontext",
+  "flask::src/flask/blueprints.py::after_app_request",
+  "flask::src/flask/blueprints.py::app_url_defaults",
+  "flask::src/flask/blueprints.py::before_app_request",
+  "flask::src/flask/blueprints.py::teardown_app_request",
+  "flask::src/flask/scaffold.py::after_request",
+  "flask::src/flask/scaffold.py::before_request",
+  "flask::src/flask/scaffold.py::teardown_request",
+  "flask::src/flask/scaffold.py::url_defaults"
+ ],
+ "Merge pull request #4477 from tusharsadhwani/decorator-types": [
+  "flask::src/flask/scaffold.py::delete",
+  "flask::src/flask/scaffold.py::get",
+  "flask::src/flask/scaffold.py::patch",
+  "flask::src/flask/scaffold.py::post",
+  "flask::src/flask/scaffold.py::put",
+  "flask::src/flask/scaffold.py::route"
+ ],
+ "Merge pull request #4189 from mgu/feat/use-exclude-patterns-reloader": [
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "Merge pull request #4342 from pallets/deprecate-req-ctx-g": [
+  "flask::src/flask/ctx.py::g"
+ ],
+ "Merge pull request #4152 from Yourun-proger/fix": [
+  "flask::src/flask/scaffold.py::static_folder"
+ ],
+ "Merge pull request #4139 from awijaya22/issue4099": [
+  "flask::examples/tutorial/flaskr/auth.py::register"
+ ],
+ "Merge pull request #4074 from pgjones/bp": [
+  "flask::src/flask/helpers.py::_split_blueprint_path",
+  "flask::src/flask/wrappers.py::blueprints"
+ ],
+ "Merge pull request #3989 from pgjones/async": [
+  "flask::src/flask/helpers.py::outer"
+ ],
+ "Merge pull request #3973 from pgjones/typing": [
+  "flask::src/flask/app.py::add_template_filter",
+  "flask::src/flask/app.py::add_template_global",
+  "flask::src/flask/app.py::add_template_test",
+  "flask::src/flask/app.py::before_first_request",
+  "flask::src/flask/app.py::debug",
+  "flask::src/flask/app.py::got_first_request",
+  "flask::src/flask/app.py::jinja_env",
+  "flask::src/flask/app.py::logger",
+  "flask::src/flask/app.py::name",
+  "flask::src/flask/app.py::preserve_context_on_exception",
+  "flask::src/flask/app.py::propagate_exceptions",
+  "flask::src/flask/app.py::register_blueprint",
+  "flask::src/flask/app.py::shell_context_processor",
+  "flask::src/flask/app.py::teardown_appcontext",
+  "flask::src/flask/app.py::template_filter",
+  "flask::src/flask/app.py::template_global",
+  "flask::src/flask/app.py::template_test",
+  "flask::src/flask/app.py::templates_auto_reload",
+  "flask::src/flask/blueprints.py::add_app_template_filter",
+  "flask::src/flask/blueprints.py::add_app_template_global",
+  "flask::src/flask/blueprints.py::add_app_template_test",
+  "flask::src/flask/blueprints.py::add_url_rule",
+  "flask::src/flask/blueprints.py::after_app_request",
+  "flask::src/flask/blueprints.py::app_context_processor",
+  "flask::src/flask/blueprints.py::app_errorhandler",
+  "flask::src/flask/blueprints.py::app_template_filter",
+  "flask::src/flask/blueprints.py::app_template_global",
+  "flask::src/flask/blueprints.py::app_template_test",
+  "flask::src/flask/blueprints.py::app_url_defaults",
+  "flask::src/flask/blueprints.py::app_url_value_preprocessor",
+  "flask::src/flask/blueprints.py::before_app_first_request",
+  "flask::src/flask/blueprints.py::before_app_request",
+  "flask::src/flask/blueprints.py::record_once",
+  "flask::src/flask/blueprints.py::register_blueprint",
+  "flask::src/flask/blueprints.py::teardown_app_request",
+  "flask::src/flask/cli.py::routes_command",
+  "flask::src/flask/cli.py::shell_command",
+  "flask::src/flask/ctx.py::g",
+  "flask::src/flask/helpers.py::outer",
+  "flask::src/flask/logging.py::wsgi_errors_stream",
+  "flask::src/flask/scaffold.py::_get_exc_class_and_code",
+  "flask::src/flask/scaffold.py::after_request",
+  "flask::src/flask/scaffold.py::before_request",
+  "flask::src/flask/scaffold.py::context_processor",
+  "flask::src/flask/scaffold.py::delete",
+  "flask::src/flask/scaffold.py::endpoint",
+  "flask::src/flask/scaffold.py::errorhandler",
+  "flask::src/flask/scaffold.py::get",
+  "flask::src/flask/scaffold.py::has_static_folder",
+  "flask::src/flask/scaffold.py::jinja_loader",
+  "flask::src/flask/scaffold.py::patch",
+  "flask::src/flask/scaffold.py::post",
+  "flask::src/flask/scaffold.py::put",
+  "flask::src/flask/scaffold.py::register_error_handler",
+  "flask::src/flask/scaffold.py::route",
+  "flask::src/flask/scaffold.py::static_folder",
+  "flask::src/flask/scaffold.py::static_url_path",
+  "flask::src/flask/scaffold.py::teardown_request",
+  "flask::src/flask/scaffold.py::url_defaults",
+  "flask::src/flask/scaffold.py::url_value_preprocessor",
+  "flask::src/flask/sessions.py::on_update",
+  "flask::src/flask/sessions.py::permanent",
+  "flask::src/flask/signals.py::signal",
+  "flask::src/flask/views.py::as_view",
+  "flask::src/flask/wrappers.py::blueprint",
+  "flask::src/flask/wrappers.py::endpoint",
+  "flask::src/flask/wrappers.py::max_content_length",
+  "flask::src/flask/wrappers.py::max_cookie_size"
+ ],
+ "Merge pull request #3960 from pallets/shell-interactive-hook": [
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "Merge pull request #3923 from pgjones/nested": [
+  "flask::src/flask/blueprints.py::register_blueprint"
+ ],
+ "Merge pull request #3412 from pgjones/async": [
+  "flask::src/flask/helpers.py::outer"
+ ],
+ "Merge pull request #3933 from pallets/more-scaffold": [
+  "flask::src/flask/app.py::index",
+  "flask::src/flask/blueprints.py::merge_dict_lists",
+  "flask::src/flask/helpers.py::static_folder",
+  "flask::src/flask/scaffold.py::_register_error_handler",
+  "flask::src/flask/scaffold.py::has_static_folder",
+  "flask::src/flask/scaffold.py::index",
+  "flask::src/flask/scaffold.py::jinja_loader",
+  "flask::src/flask/scaffold.py::static_folder",
+  "flask::src/flask/scaffold.py::static_url_path"
+ ],
+ "Merge pull request #3907 from pgjones/sugar": [
+  "flask::src/flask/scaffold.py::delete",
+  "flask::src/flask/scaffold.py::get",
+  "flask::src/flask/scaffold.py::patch",
+  "flask::src/flask/scaffold.py::post",
+  "flask::src/flask/scaffold.py::put"
+ ],
+ "Merge pull request #3828 from pallets/move-send-file": [
+  "flask::src/flask/helpers.py::download_file"
+ ],
+ "fix typo in flask shell help (#3744)": [
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "Merge pull request #3709 from MLH-Fellowship/3215-flask-blueprint": [
+  "flask::src/flask/app.py::_get_exc_class_and_code",
+  "flask::src/flask/app.py::_register_error_handler",
+  "flask::src/flask/app.py::index",
+  "flask::src/flask/blueprints.py::merge_dict_lists",
+  "flask::src/flask/scaffold.py::_get_exc_class_and_code",
+  "flask::src/flask/scaffold.py::_register_error_handler",
+  "flask::src/flask/scaffold.py::add_url_rule",
+  "flask::src/flask/scaffold.py::after_request",
+  "flask::src/flask/scaffold.py::before_request",
+  "flask::src/flask/scaffold.py::context_processor",
+  "flask::src/flask/scaffold.py::endpoint",
+  "flask::src/flask/scaffold.py::errorhandler",
+  "flask::src/flask/scaffold.py::example",
+  "flask::src/flask/scaffold.py::index",
+  "flask::src/flask/scaffold.py::register_error_handler",
+  "flask::src/flask/scaffold.py::route",
+  "flask::src/flask/scaffold.py::teardown_request",
+  "flask::src/flask/scaffold.py::url_defaults",
+  "flask::src/flask/scaffold.py::url_value_preprocessor"
+ ],
+ "Merge pull request #3554 from pallets/drop-python2": [
+  "flask::examples/tutorial/flaskr/auth.py::register",
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "Merge pull request #3247 from pallets/join-strings": [
+  "flask::examples/tutorial/flaskr/blog.py::create"
+ ],
+ "Merge pull request #3246 from pallets/reorder-imports": [
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "Merge pull request #3241 from jon-stumpf/jss-updates": [
+  "flask::flask/_compat.py::__new__"
+ ],
+ "Merge pull request #2898 from rochacbruno/2897-Add-Extra-Files-to-CLI": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "Merge pull request #3183 from singingwolfboy/pre-commit": [
+  "flask::flask/app.py::add_url_rule",
+  "flask::flask/cli.py::run_command"
+ ],
+ "Merge pull request #3011 from greyli/improve-cli-help-text": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "Merge pull request #2752 from greyli/patch-9": [
+  "flask::flask/cli.py::routes_command"
+ ],
+ "Merge pull request #2699 from pallets/javascript": [
+  "flask::examples/javascript/js_example/views.py::index",
+  "flask::examples/tutorial/flaskr/auth.py::register"
+ ],
+ "Merge pull request #2693 from davidism/max-cookie-size": [
+  "flask::flask/wrappers.py::max_cookie_size"
+ ],
+ "Merge pull request #2676 from davidism/tutorial": [
+  "flask::examples/tutorial/flaskr/auth.py::register",
+  "flask::examples/tutorial/flaskr/blog.py::create"
+ ],
+ "Add Support for FLASK_ENV (#2570)": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "Fix typo in cli.py (#2502)": [
+  "flask::flask/cli.py::shell_command"
+ ],
+ "document `Flask.register_blueprint` arguments": [
+  "flask::flask/app.py::register_blueprint"
+ ],
+ "Merge pull request #2259 from davidism/routes-command": [
+  "flask::flask/cli.py::routes_command"
+ ],
+ "Merge pull request #2249 from davidism/provide-automatic-options": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "Remove `-a/--app` from Quickstart documentation (#2046)": [
+  "flask::flask/cli.py::shell_command"
+ ],
+ "Don't passthrough_errors unless instructed. (#2006)": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "Merge pull request #1996 from untitaker/propagate-exceptions-werkzeug": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "re-add passthrough_errors to cli runner (#1928)": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "Merge pull request #1679 from miguelgrinberg/passthrough-errors": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "Merge pull request #1291 from flying-sheep/errorhandler-rework": [
+  "flask::flask/app.py::_get_exc_class_and_code"
+ ],
+ "Merge pull request #736 from ThomasWaldmann/sprint-branch": [
+  "flask::flask/_compat.py::__new__"
+ ]
+}

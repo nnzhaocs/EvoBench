@@ -1,0 +1,2114 @@
+{
+ "docs: fix `BindXML` comment referencing nonexistent `binding.BindXML` (#4717)": [
+  "gin::context.go::BindJSON"
+ ],
+ "fix(context): skip chmod on pre-existing dirs in SaveUploadedFile (#4702)": [
+  "gin::context.go::MultipartForm",
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "fix(recovery): record recovered panics in c.Errors (#4698)": [
+  "gin::recovery.go::defaultHandleRecovery"
+ ],
+ "fix(context): Copy() copies Errors and Accepted fields (#4695)": [
+  "gin::context.go::Copy"
+ ],
+ "fix(response): panic on Hijack/CloseNotify when wrapper unsupported (#4645)": [
+  "gin::response_writer.go::Hijack"
+ ],
+ "docs(context): align inline comments in GetPostForm example (#4675)": [
+  "gin::context.go::DefaultPostForm"
+ ],
+ "refactor: optimize error message concatenation in default_validator (#4685)": [
+  "gin::binding/default_validator.go::Error"
+ ],
+ "test(context): use http.StatusContinue constant instead of magic number 100 (#4542)": [
+  "gin::context.go::requestHeader"
+ ],
+ "chore(logger): allow skipping query string output (#4547)": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "fix: Correct typos, improve documentation clarity, and remove dead code (#4511)": [
+  "gin::context.go::MustBindWith",
+  "gin::context.go::SaveUploadedFile",
+  "gin::routergroup.go::StaticFile"
+ ],
+ "feat(render): add bson protocol (#4145)": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/binding_nomsgpack.go::Default"
+ ],
+ "refactor: for loop can be modernized using range over int (#4392)": [
+  "gin::binding/default_validator.go::Error",
+  "gin::binding/default_validator.go::ValidateStruct",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::utils.go::resolveAddress"
+ ],
+ "feat(binding): add support for encoding.UnmarshalText in uri/query binding (#4203)": [
+  "gin::binding/form_mapping.go::setArray",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "chore(context): always trust xff headers from unix socket (#3359)": [
+  "gin::context.go::ClientIP"
+ ],
+ "refactor(recovery): smart error comparison (#4142)": [
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "fix(context): ClientIP handling for multiple X-Forwarded-For header values (#4472)": [
+  "gin::context.go::ClientIP"
+ ],
+ "chore(response): prevent Flush() panic when `http.Flusher` (#4479)": [
+  "gin::response_writer.go::CloseNotify"
+ ],
+ "perf(recovery): optimize line reading in stack function (#4466)": [
+  "gin::recovery.go::source"
+ ],
+ "fix(binding): empty value error (#2169)": [
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "fix(recover): suppress http.ErrAbortHandler in recover (#4336)": [
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "feat(gin): add option to use escaped path (#4420)": [
+  "gin::gin.go::New",
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "fix(gin): literal colon routes not working with engine.Handler() (#4415)": [
+  "gin::gin.go::RunListener"
+ ],
+ "ci(sec): improve type safety and server organization in HTTP middleware (#4437)": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunListener",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::RunUnix"
+ ],
+ "docs(context): add example comments for ShouldBind* methods (#4428)": [
+  "gin::context.go::ShouldBind"
+ ],
+ "fix(gin): close os.File in RunFd to prevent resource leak (#4422)": [
+  "gin::gin.go::RunFd"
+ ],
+ "feat(context): add Protocol Buffers support to content negotiation (#4423)": [
+  "gin::context.go::Negotiate",
+  "gin::context.go::Stream"
+ ],
+ "refactor(context): omit the return value names (#4395)": [
+  "gin::context.go::GetBool",
+  "gin::context.go::GetDuration",
+  "gin::context.go::GetFloat32",
+  "gin::context.go::GetFloat32Slice",
+  "gin::context.go::GetFloat64",
+  "gin::context.go::GetFloat64Slice",
+  "gin::context.go::GetInt",
+  "gin::context.go::GetInt16",
+  "gin::context.go::GetInt16Slice",
+  "gin::context.go::GetInt32",
+  "gin::context.go::GetInt32Slice",
+  "gin::context.go::GetInt64",
+  "gin::context.go::GetInt64Slice",
+  "gin::context.go::GetInt8",
+  "gin::context.go::GetInt8Slice",
+  "gin::context.go::GetIntSlice",
+  "gin::context.go::GetString",
+  "gin::context.go::GetStringMap",
+  "gin::context.go::GetStringMapString",
+  "gin::context.go::GetStringMapStringSlice",
+  "gin::context.go::GetStringSlice",
+  "gin::context.go::GetTime",
+  "gin::context.go::GetUint",
+  "gin::context.go::GetUint16",
+  "gin::context.go::GetUint16Slice",
+  "gin::context.go::GetUint32",
+  "gin::context.go::GetUint32Slice",
+  "gin::context.go::GetUint64",
+  "gin::context.go::GetUint64Slice",
+  "gin::context.go::GetUint8",
+  "gin::context.go::GetUint8Slice",
+  "gin::context.go::GetUintSlice"
+ ],
+ "docs(context): fix some comments (#4396)": [
+  "gin::context.go::Error"
+ ],
+ "fix(binding): improve empty slice/array handling in form binding (#4380)": [
+  "gin::binding/form_mapping.go::setByForm"
+ ],
+ "refactor(binding): use maps.Copy for cleaner map handling (#4352)": [
+  "gin::binding/form_mapping.go::setFormMap"
+ ],
+ "fix(response): refine hijack behavior for response lifecycle (#4373)": [
+  "gin::response_writer.go::Written"
+ ],
+ "refactor(context): using maps.Clone (#4333)": [
+  "gin::context.go::Copy"
+ ],
+ "refactor(ginS): use sync.OnceValue to simplify engine function (#4314)": [
+  "gin::ginS/gins.go::engine"
+ ],
+ "refactor(render): remove headers parameter from writeHeader (#4353)": [
+  "gin::render/reader.go::writeHeaders"
+ ],
+ "refactor(tree): replace string(/) with \"/\" in node.insertChild (#4354)": [
+  "gin::tree.go::insertChild"
+ ],
+ "perf(context): optimize getMapFromFormData performance (#4339)": [
+  "gin::context.go::GetPostFormMap"
+ ],
+ "chore(response): prevention of Hijack() runtime panics (#4295)": [
+  "gin::response_writer.go::Written"
+ ],
+ "docs(context): fix AbortWithStatusPureJSON comment typo (#4310)": [
+  "gin::context.go::AbortWithStatus"
+ ],
+ "refactor(context): remove unused Context dependency in get method (#4304)": [
+  "gin::context.go::getMapFromFormData"
+ ],
+ "chore(mode): remove impossible case (empty value for mode) (#4303)": [
+  "gin::mode.go::SetMode"
+ ],
+ "docs: correct article usage in comments (#4301)": [
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "feat: support custom json codec at runtime (#3391)": [
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::binding/json.go::BindBody",
+  "gin::errors.go::JSON",
+  "gin::render/json.go::WriteContentType",
+  "gin::render/json.go::WriteJSON"
+ ],
+ "docs: small changes (#4261)": [
+  "gin::gin.go::Use",
+  "gin::gin.go::addRoute"
+ ],
+ "perf(recover): replace bytes with strings in function for better performance (#4252)": [
+  "gin::recovery.go::function"
+ ],
+ "refactor(context): refactor `Keys` type to `map[any]any` (#3963)": [
+  "gin::context.go::Get",
+  "gin::context.go::GetBool",
+  "gin::context.go::GetDuration",
+  "gin::context.go::GetFloat32",
+  "gin::context.go::GetFloat32Slice",
+  "gin::context.go::GetFloat64",
+  "gin::context.go::GetFloat64Slice",
+  "gin::context.go::GetInt",
+  "gin::context.go::GetInt16",
+  "gin::context.go::GetInt16Slice",
+  "gin::context.go::GetInt32",
+  "gin::context.go::GetInt32Slice",
+  "gin::context.go::GetInt64",
+  "gin::context.go::GetInt64Slice",
+  "gin::context.go::GetInt8",
+  "gin::context.go::GetInt8Slice",
+  "gin::context.go::GetIntSlice",
+  "gin::context.go::GetString",
+  "gin::context.go::GetStringMap",
+  "gin::context.go::GetStringMapString",
+  "gin::context.go::GetStringMapStringSlice",
+  "gin::context.go::GetStringSlice",
+  "gin::context.go::GetTime",
+  "gin::context.go::GetUint",
+  "gin::context.go::GetUint16",
+  "gin::context.go::GetUint16Slice",
+  "gin::context.go::GetUint32",
+  "gin::context.go::GetUint32Slice",
+  "gin::context.go::GetUint64",
+  "gin::context.go::GetUint64Slice",
+  "gin::context.go::GetUint8",
+  "gin::context.go::GetUint8Slice",
+  "gin::context.go::GetUintSlice",
+  "gin::context.go::MustGet",
+  "gin::context.go::Set"
+ ],
+ "refactor: replace interface{} with any in type declarations (#4249)": [
+  "gin::binding/plain.go::Bind",
+  "gin::debug.go::IsDebugging"
+ ],
+ "chore(bind): return 413 status code when error is `http.MaxBytesError` (#4227)": [
+  "gin::context.go::BindUri"
+ ],
+ "ci(golangci-lint): update configuration and fix lint issues (#4247)": [
+  "gin::binding/xml.go::Bind",
+  "gin::gin.go::New",
+  "gin::render/html.go::Instance"
+ ],
+ "Revert \"fix(time): binding time with empty value (#4103)\" (#4245)": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "perf(all): use strings.Cut to replace strings.SplitN (#4239)": [
+  "gin::recovery.go::CustomRecoveryWithWriter",
+  "gin::tree.go::insertChild"
+ ],
+ "fix(errors): change Unwrap method receiver to value type (#4232)": [
+  "gin::errors.go::Unwrap"
+ ],
+ "refactor: replace magic number 128 with unicode.MaxASCII in AsciiJSON Render (#4224)": [
+  "gin::render/json.go::Render"
+ ],
+ "feat(fs): Implement loading HTML from http.FileSystem (#4053)": [
+  "gin::render/html.go::loadTemplate"
+ ],
+ "perf: optimize AsciiJSON.Render method by using fmt.Appendf and reusing temp buffer (#4175)": [
+  "gin::render/json.go::Render"
+ ],
+ "docs: fix comment (#4205)": [
+  "gin::binding/protobuf.go::BindBody"
+ ],
+ "fix: prevent middleware re-entry issue in HandleContext (#3987)": [
+  "gin::gin.go::ServeHTTP"
+ ],
+ "fix(binding): prevent duplicate decoding and add validation in decodeToml (#4193)": [
+  "gin::binding/toml.go::decodeToml"
+ ],
+ "feat(binding): add support for unixMilli and unixMicro (#4190)": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "refactor(context):Avoid using filepath.Dir twice in SaveUploadedFile (#4181)": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "refactor(context): add an optional permission parameter to the SaveUploadedFile method (#4068) (#4088)": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "refactor(context): simplify \"GetType()\" functions (#4080)": [
+  "gin::context.go::GetString"
+ ],
+ "fix(tree): Keep panic infos consistent when wildcard type build faild (#4077)": [
+  "gin::tree.go::insertChild"
+ ],
+ "docs(gin): Replace broken link to documentation with valid (#4064)": [
+  "gin::gin.go::RunQUIC"
+ ],
+ "feat(form): Support default values for collections in form binding (#4048)": [
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "feat(context): GetXxx added support for more go native types (#3633)": [
+  "gin::context.go::GetFloat32",
+  "gin::context.go::GetFloat32Slice",
+  "gin::context.go::GetFloat64Slice",
+  "gin::context.go::GetInt16",
+  "gin::context.go::GetInt16Slice",
+  "gin::context.go::GetInt32",
+  "gin::context.go::GetInt32Slice",
+  "gin::context.go::GetInt64Slice",
+  "gin::context.go::GetInt8",
+  "gin::context.go::GetInt8Slice",
+  "gin::context.go::GetIntSlice",
+  "gin::context.go::GetUint16",
+  "gin::context.go::GetUint16Slice",
+  "gin::context.go::GetUint32",
+  "gin::context.go::GetUint32Slice",
+  "gin::context.go::GetUint64Slice",
+  "gin::context.go::GetUint8",
+  "gin::context.go::GetUint8Slice",
+  "gin::context.go::GetUintSlice"
+ ],
+ "fix(form): Set default value for form fields (#4047)": [
+  "gin::binding/form_mapping.go::setByForm"
+ ],
+ "feat(form): add array collection format in form binding (#3986)": [
+  "gin::binding/form_mapping.go::trySplit"
+ ],
+ "fix(gin): Do not panic when handling method not allowed on empty tree (#4003)": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "feat(form): add custom string slice for form tag unmarshal (#3970) (#3971)": [
+  "gin::binding/form_mapping.go::setByForm"
+ ],
+ "fix(context): verify URL is Non-nil in initQueryCache() (#3969)": [
+  "gin::context.go::QueryArray"
+ ],
+ "fix(context): YAML judgment logic in Negotiate (#3966)": [
+  "gin::context.go::Negotiate"
+ ],
+ "feat(binding): add BindPlain (#3904)": [
+  "gin::binding/plain.go::Bind"
+ ],
+ "feat(gin): support http3 using quic-go/quic-go (#3210)": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunQUIC"
+ ],
+ "feat(fs): Export, test and document OnlyFilesFS (#3939)": [
+  "gin::fs.go::Open",
+  "gin::fs.go::Readdir",
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "fix(gin): data race warning for gin mode (#1580)": [
+  "gin::mode.go::SetMode"
+ ],
+ "docs(gin): update link to dont-trust-all-proxies section (#3938) (#3945)": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS"
+ ],
+ "refactor(binding): use strings.Cut to replace strings.Index (#3522)": [
+  "gin::binding/form_mapping.go::setTimeDuration"
+ ],
+ "docs(engine): fix comments for the `With` (#3955)": [
+  "gin::gin.go::Use"
+ ],
+ "chore(optimize): the ShouldBindUri method of the Context struct (#3911)": [
+  "gin::context.go::ShouldBindHeader"
+ ],
+ "Revert \"fix(uri): query binding bug (#3236)\" (#3899)": [
+  "gin::binding/query.go::Bind"
+ ],
+ "fix(context): make context Value method adhere to Go standards (#3897)": [
+  "gin::context.go::Err"
+ ],
+ "docs: Add document to constant `AuthProxyUserKey` and `BasicAuthForProxy`. (#3887)": [
+  "gin::auth.go::authorizationHeader"
+ ],
+ "docs(middleware): comments to function `BasicAuthForProxy` (#3881)": [
+  "gin::auth.go::authorizationHeader"
+ ],
+ "chore(debug): add ability to override the debugPrint statement (#2337)": [
+  "gin::debug.go::IsDebugging",
+  "gin::debug.go::debugPrintLoadTemplate"
+ ],
+ "feat(engine): Added `OptionFunc` and `With` (#3572)": [
+  "gin::gin.go::Default",
+  "gin::gin.go::New"
+ ],
+ "docs: fix typo in function documentation (#3872)": [
+  "gin::context.go::GetStringMapStringSlice"
+ ],
+ "fix: protect Context.Keys map when call Copy method (#3873)": [
+  "gin::context.go::Copy"
+ ],
+ "fix(route): Add fullPath in context copy (#3784)": [
+  "gin::context.go::Copy"
+ ],
+ "chore(header): Add support for RFC 9512: application/yaml (#3851)": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/binding_nomsgpack.go::Default"
+ ],
+ "chore(perf): Optimize the Copy method of the Context struct (#3859)": [
+  "gin::context.go::Copy"
+ ],
+ "fix(binding): dereference pointer to struct (#3199)": [
+  "gin::binding/default_validator.go::ValidateStruct"
+ ],
+ "fix(header): Allow header according to RFC 7231 (HTTP 405) (#3759)": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "fix(binding): binding error while not upload file (#3819) (#3820)": [
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "fix(router): catch-all conflicting wildcard (#3812)": [
+  "gin::tree.go::insertChild"
+ ],
+ "feat(logger): ability to skip logs based on user-defined logic (#3593)": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "fix: Add pointer support for url query params (#3659) (#3666)": [
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "docs: remove redundant comments (#3765)": [
+  "gin::gin.go::addRoute"
+ ],
+ "chore(http): use white color for HTTP 1XX (#3741)": [
+  "gin::logger.go::StatusCodeColor"
+ ],
+ "chore: improve linting, testing, and GitHub Actions setup (#3583)": [
+  "gin::fs.go::Readdir",
+  "gin::recovery.go::defaultHandleRecovery"
+ ],
+ "docs: changed documentation link for trusted proxies (#3575)": [
+  "gin::gin.go::RunFd",
+  "gin::gin.go::RunListener",
+  "gin::gin.go::RunUnix"
+ ],
+ "refactor: use bytes.ReplaceAll directly (#3455)": [
+  "gin::recovery.go::function"
+ ],
+ "chore: support min go version 1.18 (#3511)": [
+  "gin::context.go::BindTOML",
+  "gin::context.go::ShouldBindTOML",
+  "gin::context.go::TOML"
+ ],
+ "Fix #3500 Add escape logic for header (#3503)": [
+  "gin::gin.go::redirectTrailingSlash"
+ ],
+ "Stop useless panicking in context and render (#2150)": [
+  "gin::context.go::Render",
+  "gin::render/json.go::Render"
+ ],
+ "Adjust the position of some functions (#3385)": [
+  "gin::binding/toml.go::decodeToml"
+ ],
+ "fix(context): panic on NegotiateFormat - index out of range (#3397)": [
+  "gin::context.go::NegotiateFormat"
+ ],
+ "update context.go Get/Set method use defer (#3429)": [
+  "gin::context.go::Error"
+ ],
+ "console logger HTTP status bug fixed and the corresponding unit test added (#3453)": [
+  "gin::response_writer.go::WriteHeader"
+ ],
+ "refactor: avoid calling strings.ToLower twice (#3433)": [
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "docs(context): #3369 modify the annotation about Context.Param() (#3414)": [
+  "gin::context.go::GetStringMapStringSlice"
+ ],
+ "remove deprecated of package io/ioutil (#3395)": [
+  "gin::binding/protobuf.go::Name",
+  "gin::context.go::ShouldBindBodyWith",
+  "gin::recovery.go::stack"
+ ],
+ "fix: fix typo in comment (#3371)": [
+  "gin::context.go::GetPostFormMap"
+ ],
+ "fix(engine): missing route params for CreateTestContext (#2778) (#2803)": [
+  "gin::gin.go::allocateContext"
+ ],
+ "fix(route): redirectSlash bug (#3227)": [
+  "gin::tree.go::countSections"
+ ],
+ "fix: modify interface check way (#3327)": [
+  "gin::binding/default_validator.go::Error"
+ ],
+ "chore(file): Creates a directory named path (#3316)": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "FIX TYPO: Gin by default useR -> ... useS (#3324)": [
+  "gin::routergroup.go::Static",
+  "gin::routergroup.go::StaticFile"
+ ],
+ "Fix typos in RouterGroup method docs (#3302)": [
+  "gin::routergroup.go::Handle"
+ ],
+ "chore: upgrade golangci-lint and fix golangci-lint error (#3278)": [
+  "gin::context.go::BindHeader",
+  "gin::context.go::BindUri",
+  "gin::context.go::DefaultPostForm",
+  "gin::context.go::DefaultQuery",
+  "gin::context.go::GetStringMapStringSlice",
+  "gin::context.go::MustBindWith",
+  "gin::context.go::Negotiate",
+  "gin::context.go::Query",
+  "gin::context.go::SaveUploadedFile",
+  "gin::errors.go::Last",
+  "gin::ginS/gins.go::StaticFile",
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "Small doc fix on Context's ClientIP() method. (#3180)": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "feat(context): add ContextWithFallback feature flag (#3166) (#3172)": [
+  "gin::context.go::Deadline",
+  "gin::context.go::SetAccepted",
+  "gin::context.go::Value"
+ ],
+ "[GIN-001] - Add TOML bining for gin (#3081)": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/binding_nomsgpack.go::Default",
+  "gin::binding/toml.go::decodeToml",
+  "gin::context.go::BindTOML",
+  "gin::context.go::ShouldBindTOML",
+  "gin::context.go::TOML",
+  "gin::render/toml.go::WriteContentType"
+ ],
+ "fix: the trusted proxies should support ipv6 address by default (#3033)": [
+  "gin::gin.go::New"
+ ],
+ "feat: automatically SetMode to TestMode when run go test. (#3139)": [
+  "gin::mode.go::init"
+ ],
+ "feat(context): return GIN Context from Value method (#2825)": [
+  "gin::context.go::Value"
+ ],
+ "use StringToBytes func (#2798)": [
+  "gin::auth.go::searchCredential"
+ ],
+ "Fix: missing `sameSite` when do context.reset() (#3123)": [
+  "gin::context.go::reset"
+ ],
+ "Update some comments, add function name prefix to comment (#3090)": [
+  "gin::logger.go::ForceConsoleColor",
+  "gin::response_writer.go::Hijack"
+ ],
+ "test support go1.18 (#2990)": [
+  "gin::binding/binding.go::validate",
+  "gin::binding/binding_nomsgpack.go::validate",
+  "gin::binding/default_validator.go::Engine",
+  "gin::binding/default_validator.go::ValidateStruct",
+  "gin::binding/default_validator.go::validateStruct",
+  "gin::binding/form.go::Bind",
+  "gin::binding/form_mapping.go::MapFormWithTag",
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/form_mapping.go::mapURI",
+  "gin::binding/form_mapping.go::mappingByPtr",
+  "gin::binding/form_mapping.go::setFormMap",
+  "gin::binding/header.go::Bind",
+  "gin::binding/header.go::mapHeader",
+  "gin::binding/json.go::Bind",
+  "gin::binding/json.go::BindBody",
+  "gin::binding/json.go::decodeJSON",
+  "gin::binding/msgpack.go::Bind",
+  "gin::binding/msgpack.go::BindBody",
+  "gin::binding/msgpack.go::decodeMsgPack",
+  "gin::binding/protobuf.go::Bind",
+  "gin::binding/protobuf.go::BindBody",
+  "gin::binding/query.go::Bind",
+  "gin::binding/uri.go::BindUri",
+  "gin::binding/xml.go::Bind",
+  "gin::binding/xml.go::BindBody",
+  "gin::binding/xml.go::decodeXML",
+  "gin::binding/yaml.go::Bind",
+  "gin::binding/yaml.go::BindBody",
+  "gin::binding/yaml.go::decodeYAML",
+  "gin::context.go::AbortWithStatusJSON",
+  "gin::context.go::AsciiJSON",
+  "gin::context.go::Bind",
+  "gin::context.go::BindHeader",
+  "gin::context.go::BindJSON",
+  "gin::context.go::BindQuery",
+  "gin::context.go::BindUri",
+  "gin::context.go::BindXML",
+  "gin::context.go::BindYAML",
+  "gin::context.go::Get",
+  "gin::context.go::GetStringMap",
+  "gin::context.go::HTML",
+  "gin::context.go::IndentedJSON",
+  "gin::context.go::JSON",
+  "gin::context.go::JSONP",
+  "gin::context.go::MustBindWith",
+  "gin::context.go::MustGet",
+  "gin::context.go::ProtoBuf",
+  "gin::context.go::PureJSON",
+  "gin::context.go::SSEvent",
+  "gin::context.go::SecureJSON",
+  "gin::context.go::Set",
+  "gin::context.go::ShouldBind",
+  "gin::context.go::ShouldBindBodyWith",
+  "gin::context.go::ShouldBindHeader",
+  "gin::context.go::ShouldBindJSON",
+  "gin::context.go::ShouldBindQuery",
+  "gin::context.go::ShouldBindUri",
+  "gin::context.go::ShouldBindWith",
+  "gin::context.go::ShouldBindXML",
+  "gin::context.go::ShouldBindYAML",
+  "gin::context.go::String",
+  "gin::context.go::Value",
+  "gin::context.go::XML",
+  "gin::context.go::YAML",
+  "gin::debug.go::debugPrint",
+  "gin::deprecated.go::BindWith",
+  "gin::errors.go::JSON",
+  "gin::errors.go::SetMeta",
+  "gin::gin.go::New",
+  "gin::recovery.go::defaultHandleRecovery",
+  "gin::render/html.go::Instance",
+  "gin::render/json.go::WriteJSON",
+  "gin::render/msgpack.go::WriteMsgPack",
+  "gin::render/text.go::WriteString",
+  "gin::utils.go::Bind",
+  "gin::utils.go::chooseData",
+  "gin::utils.go::nameOfFunction"
+ ],
+ "Annotation fix (#3088)": [
+  "gin::tree.go::insertChild"
+ ],
+ "feat attachment filename support utf8 (#3071)": [
+  "gin::utils.go::isASCII"
+ ],
+ "fix typo (#3044)": [
+  "gin::tree.go::insertChild",
+  "gin::tree.go::longestCommonPrefix"
+ ],
+ "Remove incorrect comments about context.Bind() and improve docs (#3028)": [
+  "gin::context.go::MustBindWith",
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "Fix typo (#3023)": [
+  "gin::ginS/gins.go::StaticFS"
+ ],
+ "fix: typo (#2977)": [
+  "gin::gin.go::ServeHTTP"
+ ],
+ "fix:typo (#2975)": [
+  "gin::ginS/gins.go::RunTLS",
+  "gin::ginS/gins.go::StaticFS"
+ ],
+ "TrustedProxies: Add default IPv6 support and refactor (#2967)": [
+  "gin::context.go::RemoteIP",
+  "gin::context.go::validateHeader"
+ ],
+ "fix: typo (#2973)": [
+  "gin::gin.go::NoMethod",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::allocateContext",
+  "gin::logger.go::ErrorLoggerT",
+  "gin::recovery.go::function"
+ ],
+ "fix: description error (#2968)": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "prettify error message for catch-all conflict with existing path segment (#2934)": [
+  "gin::tree.go::insertChild"
+ ],
+ "fix: typo (#2958)": [
+  "gin::gin.go::NoMethod"
+ ],
+ "Export struct sliceValidateError to allow error casting and rename it as (#2777)": [
+  "gin::binding/default_validator.go::Error"
+ ],
+ "Fix grammar (#2933)": [
+  "gin::context.go::HTML",
+  "gin::context.go::MustBindWith",
+  "gin::context.go::SaveUploadedFile",
+  "gin::context.go::Set",
+  "gin::context.go::Status",
+  "gin::context.go::String"
+ ],
+ "Fix typo (#2926)": [
+  "gin::errors.go::Last"
+ ],
+ "adjust the routergroup Any method (#2701)": [
+  "gin::routergroup.go::HEAD"
+ ],
+ "Provide custom options of TrustedPlatform for another CDN services (#2906)": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "Update the code logic for latestNode in tree.go (#2897)": [
+  "gin::context.go::reset",
+  "gin::gin.go::Default",
+  "gin::gin.go::addRoute",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::tree.go::countSections",
+  "gin::tree.go::getValue"
+ ],
+ "ClientIP: check every proxy for trustiness (#2844)": [
+  "gin::context.go::validateHeader"
+ ],
+ "Tidy: Complete TrustedProxies feature (#2887)": [
+  "gin::context.go::ClientIP",
+  "gin::gin.go::isUnsafeTrustedProxies"
+ ],
+ "setted typo fix: There’s no such word as `setted`, `set` is set, set, setting (#2886)": [
+  "gin::binding/form_mapping.go::TrySet",
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/multipart_form_mapping.go::setArrayOfMultipartFormFiles",
+  "gin::binding/multipart_form_mapping.go::setByMultipartFormFile"
+ ],
+ "Quick Fix c.ClientIP() mistakely parsing to 127.0.0.1 for who not using r.Run() to run http server (#2832)": [
+  "gin::gin.go::New",
+  "gin::gin.go::NoRoute"
+ ],
+ "Fix grammatical and spelling errors in context.go (#2883)": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "turn on HandleMethodNotAllowed when using NoMethod #2871 (#2872)": [
+  "gin::gin.go::NoRoute"
+ ],
+ "golangci(lint) : more linters (#2870)": [
+  "gin::binding/form.go::Bind",
+  "gin::context.go::Error",
+  "gin::context.go::initFormCache",
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "fix: check obj type in protobufBinding (#2851)": [
+  "gin::binding/protobuf.go::Bind"
+ ],
+ "minor tweaks,optimize code (#2788)": [
+  "gin::render/json.go::Render"
+ ],
+ "Add short func with named return (#2837)": [
+  "gin::context.go::GetPostFormArray",
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::PostForm",
+  "gin::context.go::PostFormArray",
+  "gin::context.go::PostFormMap",
+  "gin::context.go::Query",
+  "gin::context.go::QueryArray",
+  "gin::context.go::QueryMap"
+ ],
+ "Delete unused arg (#2834)": [
+  "gin::binding/form_mapping.go::setTimeDuration"
+ ],
+ "Delete unused static const (#2830)": [
+  "gin::tree.go::countParams"
+ ],
+ "chore(ci): update dependencies (#2827)": [
+  "gin::binding/form_mapping.go::mapURI",
+  "gin::render/json.go::Render"
+ ],
+ "fallback Context.Deadline() Context.Done() Context.Err() to Context.Request.Context() (#2769)": [
+  "gin::context.go::SetAccepted"
+ ],
+ "use assert1 func (#2783)": [
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "use std http method constant instead of raw string (#2782)": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "Fix typo (#2772)": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "feat(binding): support custom struct tag (#2720)": [
+  "gin::binding/form_mapping.go::MapFormWithTag"
+ ],
+ "gin.Context with fallback value from gin.Context.Request.Context() (#2751)": [
+  "gin::context.go::Value"
+ ],
+ "skip unnecessary variable assignment in timeFormat (#2761)": [
+  "gin::recovery.go::function"
+ ],
+ "fix typo and add comments (#2760)": [
+  "gin::recovery.go::Recovery",
+  "gin::recovery.go::function"
+ ],
+ "Setting trusted platform using an enum-like (#2739)": [
+  "gin::context.go::ShouldBindBodyWith",
+  "gin::gin.go::New"
+ ],
+ "optimize code and reduce code cyclomatic complexity (#2737)": [
+  "gin::binding/form.go::Bind"
+ ],
+ "Optimize code adjust (#2700)": [
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setFormMap",
+  "gin::binding/header.go::TrySet",
+  "gin::binding/multipart_form_mapping.go::TrySet"
+ ],
+ "Get client IP when using Cloudflare (#2723)": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "Update default validator's docs link (#2738)": [
+  "gin::binding/default_validator.go::validateStruct"
+ ],
+ "set engine.TrustedProxies For items that don't use gin.RUN (#2692)": [
+  "gin::gin.go::SetTrustedProxies"
+ ],
+ "use errors.New to replace fmt.Errorf will much better (#2707)": [
+  "gin::binding/json.go::Name"
+ ],
+ "RouterGroup.Handle regular match optimization of http method (#2685)": [
+  "gin::routergroup.go::handle"
+ ],
+ "fix: data race with trustedCIDRs (#2674) (#2675)": [
+  "gin::context.go::RemoteIP"
+ ],
+ "feat(engine): add trustedproxies and remoteIP (#2632)": [
+  "gin::context.go::RemoteIP",
+  "gin::context.go::validateHeader",
+  "gin::gin.go::prepareTrustedCIDRs"
+ ],
+ "Remove the tedious named return value (#2620)": [
+  "gin::internal/bytesconv/bytesconv.go::StringToBytes"
+ ],
+ "basic auth: fix timing oracle (#2609)": [
+  "gin::auth.go::searchCredential"
+ ],
+ "gin mode unknown: show available mode (#2567)": [
+  "gin::mode.go::SetMode"
+ ],
+ "Support binding for slice/array obj [Rewrite] (#2302)": [
+  "gin::binding/default_validator.go::Error",
+  "gin::binding/default_validator.go::validateStruct"
+ ],
+ "chore: update tree (#2371)": [
+  "gin::tree.go::findCaseInsensitivePath",
+  "gin::tree.go::incrementChildPrio"
+ ],
+ "Fix typos in context.go (#2551)": [
+  "gin::context.go::SecureJSON"
+ ],
+ "Allow bind with a map[string]string (#2484)": [
+  "gin::binding/form_mapping.go::setFormMap"
+ ],
+ "implement \".Unwrap() error\" on Error type (#2525) (#2526)": [
+  "gin::errors.go::Unwrap"
+ ],
+ "reduce allocs and improve the render `WriteString` (#2508)": [
+  "gin::render/text.go::WriteString"
+ ],
+ "fix: print headers without Authorization header on broken pipe (#2528)": [
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "use IndexByte replace Split to improve performance (#2500)": [
+  "gin::utils.go::parseAccept"
+ ],
+ "Fix spelling (#2498)": [
+  "gin::context.go::File"
+ ],
+ "Add GetUint and GetUint64 method on gin.context (#2487)": [
+  "gin::context.go::GetUint",
+  "gin::context.go::GetUint64"
+ ],
+ "Prevent panic in Context.GetQuery() when there is no Request (#2412)": [
+  "gin::context.go::QueryArray"
+ ],
+ "binding: avoid 2038 problem on 32-bit architectures (#2450)": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "Add CustomRecovery builtin middleware (#2322)": [
+  "gin::recovery.go::CustomRecoveryWithWriter",
+  "gin::recovery.go::RecoveryWithWriter",
+  "gin::recovery.go::defaultHandleRecovery"
+ ],
+ "Rename some variables (#2393)": [
+  "gin::errors.go::Errors",
+  "gin::errors.go::JSON",
+  "gin::errors.go::SetMeta",
+  "gin::fs.go::Open",
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "chore: rename getQueryCache/getFormCache to initQueryCache/initFormCache (#2375)": [
+  "gin::context.go::getQueryCache",
+  "gin::context.go::initFormCache",
+  "gin::context.go::initQueryCache",
+  "gin::utils.go::filterFlags",
+  "gin::utils.go::joinPaths"
+ ],
+ "Sync route tree to httprouter latest code (#2368)": [
+  "gin::context.go::reset",
+  "gin::gin.go::Default",
+  "gin::gin.go::addRoute",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::tree.go::countParams",
+  "gin::tree.go::findCaseInsensitivePath",
+  "gin::tree.go::findCaseInsensitivePathRec",
+  "gin::tree.go::getValue",
+  "gin::tree.go::insertChild"
+ ],
+ "chore: improve render string performance (#2365)": [
+  "gin::render/text.go::WriteString"
+ ],
+ "chore: update some code style (#2356)": [
+  "gin::context.go::IndentedJSON",
+  "gin::gin.go::Delims",
+  "gin::gin.go::New"
+ ],
+ "chore: update the result of CR (#2354)": [
+  "gin::auth.go::BasicAuth",
+  "gin::path.go::bufApp",
+  "gin::recovery.go::function"
+ ],
+ "chore(performance): Change *sync.RWMutex to sync.RWMutex (#2351)": [
+  "gin::context.go::Error",
+  "gin::context.go::reset",
+  "gin::gin.go::Default"
+ ],
+ "update:SetMode function (#2321)": [
+  "gin::mode.go::SetMode",
+  "gin::mode.go::init"
+ ],
+ "fix missing initial sync.RWMutex (#2305)": [
+  "gin::context.go::Error",
+  "gin::context.go::Set"
+ ],
+ "Add set samesite in cookie. (#2306)": [
+  "gin::context.go::SetCookie"
+ ],
+ "Revert \"fix accept incoming network connections (#2216)\" (#2294)": [
+  "gin::utils.go::resolveAddress"
+ ],
+ "Add mutex for protect Context.Keys map (#1391)": [
+  "gin::context.go::Error",
+  "gin::context.go::reset",
+  "gin::gin.go::Default"
+ ],
+ "Unix Socket Handling (#2280)": [
+  "gin::gin.go::RunUnix"
+ ],
+ "Use json marshall in context json to fix breaking new line issue. Fixes #2209 (#2228)": [
+  "gin::render/json.go::WriteContentType"
+ ],
+ "add yaml negotitation (#2220)": [
+  "gin::context.go::Negotiate"
+ ],
+ "docs(path): improve comments (#2223)": [
+  "gin::path.go::cleanPath",
+  "gin::tree.go::insertChild"
+ ],
+ "Added support for SameSite cookie flag (#1615)": [
+  "gin::context.go::SetCookie"
+ ],
+ "Use zero-copy approach to convert types between string and byte… (#2206)": [
+  "gin::auth.go::processAccounts",
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::gin.go::redirectFixedPath",
+  "gin::internal/bytesconv/bytesconv.go::BytesToString",
+  "gin::internal/bytesconv/bytesconv.go::StringToBytes",
+  "gin::render/json.go::Render"
+ ],
+ "Update docs on Context.Done(), Context.Deadline() and Context.Err() (#2196)": [
+  "gin::context.go::SetAccepted"
+ ],
+ "Reuse bytes when cleaning the URL paths (#2179)": [
+  "gin::path.go::cleanPath"
+ ],
+ "Add build tag nomsgpack (#1852)": [
+  "gin::binding/binding_nomsgpack.go::Default",
+  "gin::binding/binding_nomsgpack.go::validate"
+ ],
+ "Fix spelling (#2202)": [
+  "gin::context.go::NegotiateFormat"
+ ],
+ "tree: remove one else statement (#2177)": [
+  "gin::tree.go::getValue"
+ ],
+ "tree: sync httprouter update (#2173)": [
+  "gin::tree.go::findWildcard",
+  "gin::tree.go::insertChild"
+ ],
+ "tree: sync httprouter update (#2172)": [
+  "gin::tree.go::insertChild"
+ ],
+ "tree: sync httprouter update (#2171)": [
+  "gin::tree.go::findCaseInsensitivePath",
+  "gin::tree.go::getValue"
+ ],
+ "fix maxParams bug (#2166)": [
+  "gin::tree.go::insertChild"
+ ],
+ "tree: sync part httprouter codes and reduce if/else (#2163)": [
+  "gin::tree.go::longestCommonPrefix"
+ ],
+ "use http method constant (#2155)": [
+  "gin::gin.go::redirectRequest",
+  "gin::logger.go::MethodColor",
+  "gin::routergroup.go::Handle"
+ ],
+ "chore(performance): Improve performance for adding RemoveExtraS… (#2159)": [
+  "gin::gin.go::New",
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "Refactor redirect request in gin.go (#1970)": [
+  "gin::gin.go::redirectRequest"
+ ],
+ "fix ignore walking on form mapping (#1942) (#1943)": [
+  "gin::binding/form_mapping.go::mappingByPtr",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "[FIX] c.Request.FormFile maybe file, need close (#2114)": [
+  "gin::context.go::FormFile"
+ ],
+ "Close files opened in static file handler (#2118)": [
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "Fix 'errcheck' linter warnings (#2093)": [
+  "gin::gin.go::RunUnix"
+ ],
+ "Use Writer in Context.Status (#1606)": [
+  "gin::context.go::bodyAllowedForStatus"
+ ],
+ "support run HTTP server with specific net.Listener (#2023)": [
+  "gin::gin.go::RunListener"
+ ],
+ "use url.URL.Query instead of parsing query (#2063)": [
+  "gin::context.go::QueryArray"
+ ],
+ "fix GetPostFormMap (#2051)": [
+  "gin::context.go::PostFormMap"
+ ],
+ "feat(binding): add DisallowUnknownFields() in gin.Context.BindJSON() (#2028)": [
+  "gin::binding/json.go::decodeJSON"
+ ],
+ "upgrade validator version to v9 (#1015)": [
+  "gin::binding/default_validator.go::Engine"
+ ],
+ "Fixed JSONP format (added semicolon) (#2007)": [
+  "gin::render/json.go::Render"
+ ],
+ "Remove unused code (#2013)": [
+  "gin::auth.go::secureCompare"
+ ],
+ "Simplify code (#2004)": [
+  "gin::gin.go::serveError"
+ ],
+ "binding: support unix time (#1980)": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "Typo (#1971)": [
+  "gin::utils.go::resolveAddress"
+ ],
+ "Gin1.5 bytes.Buffer to strings.Builder (#1939)": [
+  "gin::debug.go::debugPrintRoute",
+  "gin::errors.go::String"
+ ],
+ "Bugfix for the FullPath feature (#1919)": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::insertChild"
+ ],
+ "support bind http header param #1956 (#1957)": [
+  "gin::binding/header.go::Bind",
+  "gin::binding/header.go::TrySet",
+  "gin::binding/header.go::mapHeader",
+  "gin::context.go::BindHeader",
+  "gin::context.go::ShouldBindHeader"
+ ],
+ "binding: add support of multipart multi files (#1878) (#1949)": [
+  "gin::binding/multipart_form_mapping.go::TrySet",
+  "gin::binding/multipart_form_mapping.go::setArrayOfMultipartFormFiles",
+  "gin::binding/multipart_form_mapping.go::setByMultipartFormFile"
+ ],
+ "Attempt to fix PostForm cache bug (#1931)": [
+  "gin::context.go::reset"
+ ],
+ "chore: improve GetQueryMap performance. (#1918)": [
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::getQueryCache"
+ ],
+ "add context param query cache (#1450)": [
+  "gin::context.go::QueryArray",
+  "gin::context.go::reset"
+ ],
+ "Fix context.Params race condition on Copy() (#1841)": [
+  "gin::context.go::Copy"
+ ],
+ "Hold matched route full path in the Context (#1826)": [
+  "gin::gin.go::addRoute",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::tree.go::getValue"
+ ],
+ "use encode replace json marshal increase json encoder speed (#1546)": [
+  "gin::render/json.go::WriteContentType"
+ ],
+ "Some code improvements (#1909)": [
+  "gin::binding/form_mapping.go::tryToSetValue",
+  "gin::context.go::ContentType",
+  "gin::tree.go::findCaseInsensitivePath"
+ ],
+ "Now you can parse the inline lowercase start structure (#1893)": [
+  "gin::binding/form_mapping.go::mapping"
+ ],
+ "Use DefaultWriter and DefaultErrorWriter for debug messages (#1891)": [
+  "gin::debug.go::debugPrint"
+ ],
+ "Clean the Request Path early (#1817)": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "v1.4.0 + #1631 (remove go1.6/go1,7 support) (#1851)": [
+  "gin::context.go::PureJSON",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "Fix spelling. (#1861)": [
+  "gin::ginS/gins.go::StaticFS"
+ ],
+ "Remove contents of the Authorization header while dumping requests (#1836)": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "refactor(form_mapping.go): mapping multipart request (#1829)": [
+  "gin::binding/form_mapping.go::TrySet",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::mappingByPtr",
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "update for supporting file binding (#1264)": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/form.go::Bind"
+ ],
+ "add support arrays on mapping (#1797)": [
+  "gin::binding/form_mapping.go::setArray",
+  "gin::binding/form_mapping.go::setSlice"
+ ],
+ "fix #1804 which is caused by calling middleware twice. (#1805)": [
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "make context.Keys available as LogFormatterParams (#1779)": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "spell check (#1796)": [
+  "gin::errors.go::SetMeta",
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::NoMethod",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::gin.go::redirectTrailingSlash",
+  "gin::recovery.go::RecoveryWithWriter",
+  "gin::recovery.go::function"
+ ],
+ "add support time.Duration on mapping (#1794)": [
+  "gin::binding/form_mapping.go::setTimeDuration"
+ ],
+ "refactor(form_mapping.go): mapping ptr, struct and map (#1749)": [
+  "gin::binding/form_mapping.go::head",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "Added stream flag indicates if client disconnected in middle of streaming (#1252)": [
+  "gin::context.go::Stream"
+ ],
+ "Extend context.File to allow for the content-dispositon attachments via a new method context.Attachment (#1260)": [
+  "gin::context.go::FileAttachment"
+ ],
+ "Support negotiation wildcards, fix #391 (#1112)": [
+  "gin::context.go::NegotiateFormat"
+ ],
+ "add prefix from X-Forwarded-Prefix in redirectTrailingSlash (#1238)": [
+  "gin::gin.go::serveError"
+ ],
+ "Fix context.Copy() race condition (#1020)": [
+  "gin::context.go::Copy"
+ ],
+ "Add context.HandlerNames() (#1729)": [
+  "gin::context.go::HandlerNames"
+ ],
+ "Change color methods in using defaultLogger function to public (#1771)": [
+  "gin::logger.go::MethodColor",
+  "gin::logger.go::StatusCodeColor",
+  "gin::logger.go::colorForMethod",
+  "gin::logger.go::colorForStatus"
+ ],
+ "Add response size to LogFormatterParams (#1752)": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "allow ignoring field on form mapping (#1733)": [
+  "gin::binding/form_mapping.go::mapFormByTag"
+ ],
+ "Set socket to recieve writes (#1134)": [
+  "gin::gin.go::RunUnix"
+ ],
+ "Add a function to force color in console output (#1724)": [
+  "gin::logger.go::ForceConsoleColor"
+ ],
+ "Update: examples/graceful-shutdown/server.go (#1530)": [
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "add notify accept signal (#1740)": [
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "fix many redirects (#1760) (#1764)": [
+  "gin::gin.go::ServeHTTP"
+ ],
+ "Fix not to pass formatted string to Fprintf's format specifier parameter (#1747)": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "fix errcheck warnings (#1739)": [
+  "gin::binding/form.go::Bind",
+  "gin::context.go::BindUri",
+  "gin::context.go::BindYAML",
+  "gin::context.go::Negotiate",
+  "gin::context.go::PostFormArray",
+  "gin::context.go::PostFormMap",
+  "gin::context.go::SaveUploadedFile",
+  "gin::gin.go::serveError",
+  "gin::recovery.go::RecoveryWithWriter",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteJSON",
+  "gin::render/protobuf.go::Render",
+  "gin::render/text.go::WriteString",
+  "gin::render/yaml.go::Render"
+ ],
+ "Revert \"context: inherits context cancelation and deadline from http.Request context for Go>=1.7 (#1690)\" (#1736)": [
+  "gin::context.go::Deadline",
+  "gin::context.go::Err"
+ ],
+ "Fix case of GitHub (#1726)": [
+  "gin::routergroup.go::handle"
+ ],
+ "fix mapping inner structs with correct tag (#1718)": [
+  "gin::binding/form_mapping.go::mapFormByTag"
+ ],
+ "Plural is \"Paths\", not \"Pathes\" (#1706)": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "Fix #1693: file.Filename should not be trusted (#1699)": [
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "Add BindUri (#1694)": [
+  "gin::context.go::BindUri",
+  "gin::context.go::MustBindWith"
+ ],
+ "Add LoggerWithFormatter method (#1677)": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "fix bug (#1682)": [
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "Router: Route StaticFS() not found to Router's NoRoute() (#1663)": [
+  "gin::routergroup.go::StaticFS"
+ ],
+ "handle nil body for JSON binding (#1638)": [
+  "gin::binding/json.go::Name"
+ ],
+ "support bind uri param (#1612)": [
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/uri.go::BindUri",
+  "gin::context.go::ShouldBindBodyWith",
+  "gin::context.go::ShouldBindUri"
+ ],
+ "recovery: fix issue about syscall import on google app engine (#1640)": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "Make sure the debug log contains line breaks (#1650)": [
+  "gin::debug.go::debugPrintLoadTemplate"
+ ],
+ "Fix panic stack trace being printed during recovery of broken pipe (#1089) (#1259)": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "feat(server): Implements RunFd method (#1609)": [
+  "gin::gin.go::RunFd"
+ ],
+ "Yaml binding (#1618)": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/yaml.go::Bind",
+  "gin::binding/yaml.go::BindBody",
+  "gin::binding/yaml.go::decodeYAML",
+  "gin::context.go::BindYAML",
+  "gin::context.go::ShouldBindYAML"
+ ],
+ "Fix typos (#1626)": [
+  "gin::binding/protobuf.go::BindBody",
+  "gin::context.go::BindQuery",
+  "gin::examples/grpc/gin/main.go::main",
+  "gin::logger.go::Logger",
+  "gin::routergroup.go::Use"
+ ],
+ "Fix typos (#1625)": [
+  "gin::ginS/gins.go::NoMethod",
+  "gin::ginS/gins.go::Use"
+ ],
+ "Added some comments to avoid having golint warnings (#1619)": [
+  "gin::errors.go::SetMeta"
+ ],
+ "Expose HandlerFunc in RouteInfos (#1272)": [
+  "gin::gin.go::Last",
+  "gin::gin.go::Routes"
+ ],
+ "Pass MaxMultipartMemory when FormFile is called (#1600)": [
+  "gin::context.go::PostFormArray",
+  "gin::context.go::PostFormMap"
+ ],
+ "removed use of sync.pool from HandleContext and added test coverage (#1565)": [
+  "gin::gin.go::ServeHTTP"
+ ],
+ "fix: fmt output log to os.Stderr (#1571)": [
+  "gin::debug.go::debugPrintLoadTemplate"
+ ],
+ "Don't log requests (#1370)": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "improve panic information when a catch-all wildcard conflict occurs (#1529)": [
+  "gin::tree.go::addRoute"
+ ],
+ "chore: fix typo and add a little anotation (#1562)": [
+  "gin::debug.go::IsDebugging"
+ ],
+ "Let's user define how he wants to log his routes (eg. JSON, key value, or something else) (#1553) (#1555)": [
+  "gin::debug.go::IsDebugging"
+ ],
+ "chore: add some annotations (#1550)": [
+  "gin::context.go::Negotiate",
+  "gin::context.go::NegotiateFormat",
+  "gin::context.go::SSEvent",
+  "gin::context.go::Stream",
+  "gin::errors.go::JSON",
+  "gin::errors.go::MarshalJSON",
+  "gin::gin.go::Last",
+  "gin::gin.go::allocateContext",
+  "gin::mode.go::SetMode",
+  "gin::mode.go::init",
+  "gin::render/html.go::Instance",
+  "gin::routergroup.go::Group"
+ ],
+ "chore: add some annotations (#1544)": [
+  "gin::examples/basic/main.go::setupRouter",
+  "gin::examples/realtime-advanced/main.go::main",
+  "gin::ginS/gins.go::Group",
+  "gin::ginS/gins.go::HEAD",
+  "gin::ginS/gins.go::NoRoute",
+  "gin::ginS/gins.go::Static",
+  "gin::ginS/gins.go::engine",
+  "gin::render/data.go::Render",
+  "gin::render/html.go::Instance",
+  "gin::render/html.go::Render",
+  "gin::render/html.go::loadTemplate",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteJSON",
+  "gin::render/protobuf.go::Render",
+  "gin::render/reader.go::Render",
+  "gin::render/redirect.go::Render",
+  "gin::render/yaml.go::Render",
+  "gin::utils.go::Bind"
+ ],
+ "chore: remove else instead of return/continue (#1502)": [
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::context.go::JSONP",
+  "gin::context.go::Status",
+  "gin::render/json.go::Render"
+ ],
+ "chore: add missing copyright and update if/else (#1497)": [
+  "gin::render/text.go::WriteString"
+ ],
+ "not use protobuf on context but use it on render (#1496)": [
+  "gin::context.go::ProtoBuf"
+ ],
+ "Add support for Protobuf format response and unit test (#1479)": [
+  "gin::context.go::ProtoBuf",
+  "gin::render/protobuf.go::Render"
+ ],
+ "Add BindXML AND ShouldBindXML #1484 (#1485)": [
+  "gin::context.go::BindXML",
+  "gin::context.go::ShouldBindXML"
+ ],
+ "chore: use http.Status* instead of hard code (#1482)": [
+  "gin::examples/basic/main.go::setupRouter",
+  "gin::examples/favicon/main.go::main",
+  "gin::examples/http2/main.go::main",
+  "gin::examples/realtime-advanced/routes.go::rateLimit",
+  "gin::examples/realtime-advanced/routes.go::roomGET",
+  "gin::examples/realtime-advanced/routes.go::roomPOST",
+  "gin::examples/realtime-chat/main.go::roomPOST",
+  "gin::examples/realtime-chat/main.go::stream",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "unify test data (#1417)": [
+  "gin::examples/template/main.go::main"
+ ],
+ "chore: add return or remove else for reduce indent (#1470)": [
+  "gin::gin.go::handleHTTPRequest",
+  "gin::gin.go::redirectTrailingSlash"
+ ],
+ "small enhance for cleanPath (#1469)": [
+  "gin::path.go::cleanPath"
+ ],
+ "flush operation will overwrite the origin status code (#1460)": [
+  "gin::response_writer.go::CloseNotify"
+ ],
+ "Support map as query string or post form parameters (#1383)": [
+  "gin::context.go::GetPostFormMap",
+  "gin::context.go::GetQueryMap",
+  "gin::context.go::PostFormMap",
+  "gin::context.go::QueryMap"
+ ],
+ "Simplify context error (#1431)": [
+  "gin::context.go::Error",
+  "gin::ginS/gins.go::RunTLS"
+ ],
+ "return json if jsonp has not callback (#1438)": [
+  "gin::context.go::SecureJSON"
+ ],
+ "add json ASCII string render (#1358)": [
+  "gin::context.go::AsciiJSON",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "chore: remove duplicate code (#1418)": [
+  "gin::gin.go::SecureJsonPrefix",
+  "gin::gin.go::redirectFixedPath"
+ ],
+ "add comment for context (#1413)": [
+  "gin::context.go::SetAccepted"
+ ],
+ "add go version prerequisite and debug warning (#1394)": [
+  "gin::debug.go::debugPrint"
+ ],
+ "remove hardcode instead of http status value (#1411)": [
+  "gin::auth.go::BasicAuthForRealm",
+  "gin::context.go::BindQuery",
+  "gin::context.go::bodyAllowedForStatus",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::gin.go::redirectFixedPath",
+  "gin::gin.go::serveError",
+  "gin::recovery.go::RecoveryWithWriter",
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "add an edge case from httprouter (#1407)": [
+  "gin::path.go::cleanPath"
+ ],
+ "use strings.Split instead of strings.IndexByte (#1406)": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "example: fix typo for grpc (#1405)": [
+  "gin::examples/grpc/gin/main.go::main"
+ ],
+ "add grpc example (#1401)": [
+  "gin::examples/grpc/gin/main.go::main"
+ ],
+ "utils: use strings.Split instead of strings.IndexByte (#1400)": [
+  "gin::utils.go::parseAccept"
+ ],
+ "minor typo in routergroup.go (#1360)": [
+  "gin::routergroup.go::Any"
+ ],
+ "Add and fix the explanation of `HandleContext` (#1371)": [
+  "gin::gin.go::ServeHTTP"
+ ],
+ "Serve easily dynamic files with `DataFromReader` context method (#1304)": [
+  "gin::render/reader.go::Render",
+  "gin::render/reader.go::writeHeaders"
+ ],
+ "fix bug, return err when failed binding bool (#1350)": [
+  "gin::binding/form_mapping.go::setBoolField"
+ ],
+ "Fix #216: Enable to call binding multiple times in some formats (#1341)": [
+  "gin::binding/json.go::BindBody",
+  "gin::binding/json.go::decodeJSON",
+  "gin::binding/msgpack.go::BindBody",
+  "gin::binding/msgpack.go::decodeMsgPack",
+  "gin::binding/protobuf.go::Bind",
+  "gin::binding/protobuf.go::BindBody",
+  "gin::binding/xml.go::BindBody",
+  "gin::binding/xml.go::decodeXML",
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "Fix typo in panic() message (extra single quote) (#1352)": [
+  "gin::tree.go::addRoute"
+ ],
+ "support struct pointer (#1342)": [
+  "gin::binding/form_mapping.go::mapForm"
+ ],
+ "Add support of pointers in form binding (#1336)": [
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "Add Jsonp Support to Context (#1333)": [
+  "gin::context.go::JSONP",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "support default value for form (#1138)": [
+  "gin::binding/form_mapping.go::mapForm"
+ ],
+ "fix(binding): Expose validator engine used by the default Validator (#1277)": [
+  "gin::binding/default_validator.go::Engine"
+ ],
+ "add gin panic time log (#1270)": [
+  "gin::recovery.go::timeFormat"
+ ],
+ "doc(graceful-shutdown): failure to ListenAndServe should be a reason to exit (#1287)": [
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "Make \"\" mode being the same as debug mode (#1250)": [
+  "gin::mode.go::SetMode"
+ ],
+ "Fix some golint warnings in gin.go (#1215)": [
+  "gin::gin.go::Delims",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::gin.go::SetHTMLTemplate"
+ ],
+ "Fix golint warnings in utils.go (#1209)": [
+  "gin::utils.go::Bind",
+  "gin::utils.go::MarshalXML"
+ ],
+ "Doc: Fix typo in documentation of Bind (#1204)": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "use lower if the struct is private (#1185)": [
+  "gin::auth.go::processAccounts",
+  "gin::auth.go::searchCredential"
+ ],
+ "Linting and optimizing struct memory signature. (#1184)": [
+  "gin::errors.go::String",
+  "gin::examples/realtime-advanced/stats.go::statsWorker",
+  "gin::tree.go::findCaseInsensitivePath"
+ ],
+ "Added simple testing documentation and examples (#1156)": [
+  "gin::examples/basic/main.go::main",
+  "gin::examples/basic/main.go::setupRouter"
+ ],
+ "format some codes style (#1165)": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::Status",
+  "gin::gin.go::redirectTrailingSlash"
+ ],
+ "feat(context): ShouldBind counterparts for Bind methods (#1047)": [
+  "gin::context.go::ShouldBind",
+  "gin::context.go::ShouldBindJSON",
+  "gin::context.go::ShouldBindQuery"
+ ],
+ "Print warning log when user create one engine using gin.Default in debug mode (#1121)": [
+  "gin::debug.go::debugPrintWARNINGDefault",
+  "gin::gin.go::New"
+ ],
+ "Empty string check (#1101)": [
+  "gin::auth.go::processAccounts",
+  "gin::gin.go::rebuild405Handlers",
+  "gin::render/html.go::loadTemplate",
+  "gin::utils.go::joinPaths",
+  "gin::utils.go::nameOfFunction",
+  "gin::utils.go::parseAccept"
+ ],
+ "combine var and use tmp var (#1108)": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "Support time location on form binding (#1117)": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "Fixed README.md typo (#1104)": [
+  "gin::examples/graceful-shutdown/close/server.go::main",
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "Moved const 'defaultMemory' to attrib. Engine.MaxMultipartMemory instead. (#1100)": [
+  "gin::context.go::FormFile",
+  "gin::context.go::PostFormArray",
+  "gin::gin.go::New"
+ ],
+ "doc(recovery): add RecoveryWithWriter doc (#1097)": [
+  "gin::recovery.go::Recovery"
+ ],
+ "32 << 10 != 32 Mb (#1094)": [
+  "gin::binding/form.go::Bind",
+  "gin::binding/form.go::Name"
+ ],
+ "correct spelling mistake (#1092)": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "doc(context): add cookie doc (#1088)": [
+  "gin::context.go::GetRawData",
+  "gin::context.go::SetCookie"
+ ],
+ "fix(ginS): fix undefined ref (#1087)": [
+  "gin::ginS/gins.go::Any",
+  "gin::ginS/gins.go::DELETE",
+  "gin::ginS/gins.go::GET",
+  "gin::ginS/gins.go::Group",
+  "gin::ginS/gins.go::HEAD",
+  "gin::ginS/gins.go::Handle",
+  "gin::ginS/gins.go::NoMethod",
+  "gin::ginS/gins.go::NoRoute",
+  "gin::ginS/gins.go::OPTIONS",
+  "gin::ginS/gins.go::PATCH",
+  "gin::ginS/gins.go::POST",
+  "gin::ginS/gins.go::PUT",
+  "gin::ginS/gins.go::Static",
+  "gin::ginS/gins.go::StaticFS",
+  "gin::ginS/gins.go::StaticFile",
+  "gin::ginS/gins.go::Use"
+ ],
+ "feat(binding): add support for custom validator / validation tags (#1068)": [
+  "gin::examples/custom-validation/server.go::main"
+ ],
+ "refactor: using requestHeader internal func (#1083)": [
+  "gin::auth.go::BasicAuthForRealm",
+  "gin::context.go::ClientIP"
+ ],
+ "Use standard library for retrieving header (#1081)": [
+  "gin::context.go::IsWebsocket"
+ ],
+ "not use dot when import package (#1077)": [
+  "gin::ginS/gins.go::engine"
+ ],
+ "reduce go cyclo (#1076)": [
+  "gin::gin.go::HandleContext"
+ ],
+ "not display color when set disableColor (#1072)": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "update comment (#1057)": [
+  "gin::auth.go::BasicAuthForRealm",
+  "gin::auth.go::secureCompare",
+  "gin::context.go::Bind",
+  "gin::context.go::Copy",
+  "gin::context.go::Header",
+  "gin::context.go::MustBindWith",
+  "gin::context.go::Status",
+  "gin::context.go::requestHeader",
+  "gin::errors.go::ByType",
+  "gin::errors.go::JSON",
+  "gin::fs.go::Dir",
+  "gin::fs.go::Open",
+  "gin::gin.go::NoRoute",
+  "gin::logger.go::ErrorLoggerT",
+  "gin::path.go::cleanPath",
+  "gin::recovery.go::RecoveryWithWriter",
+  "gin::response_writer.go::Hijack",
+  "gin::response_writer.go::Written",
+  "gin::routergroup.go::Handle"
+ ],
+ "fix 200 to http.Status (#1067)": [
+  "gin::examples/app-engine/hello.go::init"
+ ],
+ "log format (#1060)": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "merge args if it have same type (#1059)": [
+  "gin::gin.go::RunTLS"
+ ],
+ "fix composite literal uses unkeyed fields warnings, #1050 (#1051)": [
+  "gin::gin.go::New",
+  "gin::gin.go::allocateContext"
+ ],
+ "doc(context): more clearer bind doc when input is not valid (#1049)": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "doc(context): add status func comment. (#1042)": [
+  "gin::context.go::bodyAllowedForStatus"
+ ],
+ "update template example (#1038)": [
+  "gin::examples/template/main.go::main"
+ ],
+ "style: remove optional return (#1036)": [
+  "gin::auth.go::BasicAuthForRealm",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob"
+ ],
+ "feat(context): add BindQuery func (#1029)": [
+  "gin::binding/query.go::Bind",
+  "gin::context.go::BindQuery"
+ ],
+ "not use tmp var (#1032)": [
+  "gin::context.go::QueryArray"
+ ],
+ "refactor(gin): use return not use else for reducing indent (#1031)": [
+  "gin::gin.go::LoadHTMLGlob"
+ ],
+ "use return not use else (#1028)": [
+  "gin::auth.go::BasicAuthForRealm"
+ ],
+ "feat(context): add SaveUploadedFile func. (#1022)": [
+  "gin::context.go::SaveUploadedFile",
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "refactor(doc): use space not tab (#1006)": [
+  "gin::context.go::AbortWithError",
+  "gin::context.go::AbortWithStatus",
+  "gin::context.go::Copy",
+  "gin::context.go::DefaultPostForm",
+  "gin::context.go::DefaultQuery",
+  "gin::context.go::GetStringMapStringSlice",
+  "gin::context.go::IsAborted",
+  "gin::context.go::MultipartForm",
+  "gin::context.go::Param",
+  "gin::context.go::Query"
+ ],
+ "[docs] add http2 example (#1000)": [
+  "gin::examples/http2/main.go::main"
+ ],
+ "add favicon example (#1001)": [
+  "gin::examples/favicon/main.go::main"
+ ],
+ "feat(logger): show query string in logger. (#999) close #988": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "feat(binding): add UseNumber() in gin.Context.BindJSON() (#997) close #368": [
+  "gin::binding/json.go::Name"
+ ],
+ "Merge pull request #987 from easonlin404/secure-json": [
+  "gin::context.go::SecureJSON",
+  "gin::gin.go::SecureJsonPrefix",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "Use single line (#985)": [
+  "gin::utils.go::parseAccept"
+ ],
+ "use comma ok and use single line (#984)": [
+  "gin::context.go::SetCookie"
+ ],
+ "update func comment (#981)": [
+  "gin::context.go::AbortWithError",
+  "gin::errors.go::ByType",
+  "gin::errors.go::MarshalJSON",
+  "gin::fs.go::Dir",
+  "gin::fs.go::Open",
+  "gin::gin.go::RunUnix",
+  "gin::gin.go::ServeHTTP",
+  "gin::response_writer.go::Hijack",
+  "gin::response_writer.go::Written",
+  "gin::tree.go::insertChild"
+ ],
+ "Merge pull request #979 from easonlin404/fix-comment": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "Merge pull request #910 from ammario/develop": [
+  "gin::context.go::AbortWithError"
+ ],
+ "update comment method (#977)": [
+  "gin::auth.go::secureCompare"
+ ],
+ "separate type define (#975)": [
+  "gin::gin.go::Last"
+ ],
+ "improved swap (#974)": [
+  "gin::tree.go::incrementChildPrio"
+ ],
+ "add error check. (#972)": [
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "fix: update autotls example. (#965)": [
+  "gin::examples/auto-tls/example2.go::main"
+ ],
+ "Merge pull request #871 from gin-gonic/develop": [
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::binding/msgpack.go::Bind",
+  "gin::context.go::AbortWithStatusJSON",
+  "gin::context.go::FormFile",
+  "gin::context.go::GetBool",
+  "gin::context.go::GetDuration",
+  "gin::context.go::GetFloat64",
+  "gin::context.go::GetInt",
+  "gin::context.go::GetInt64",
+  "gin::context.go::GetRawData",
+  "gin::context.go::GetString",
+  "gin::context.go::GetStringMap",
+  "gin::context.go::GetStringMapString",
+  "gin::context.go::GetStringMapStringSlice",
+  "gin::context.go::GetStringSlice",
+  "gin::context.go::GetTime",
+  "gin::context.go::IsWebsocket",
+  "gin::context.go::MultipartForm",
+  "gin::context.go::MustBindWith",
+  "gin::context.go::ShouldBindWith",
+  "gin::context.go::bodyAllowedForStatus",
+  "gin::context_appengine.go::init",
+  "gin::deprecated.go::BindWith",
+  "gin::errors.go::Error",
+  "gin::examples/auto-tls/example2.go::main",
+  "gin::examples/graceful-shutdown/close/server.go::main",
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main",
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main",
+  "gin::gin.go::Delims",
+  "gin::gin.go::HandleContext",
+  "gin::logger.go::DisableConsoleColor",
+  "gin::render/data.go::Render",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType",
+  "gin::render/json.go::WriteJSON",
+  "gin::render/msgpack.go::WriteMsgPack",
+  "gin::render/text.go::WriteString",
+  "gin::tree.go::getValue"
+ ],
+ "docs(changelog): add #962 template func maps": [
+  "gin::render/html.go::Instance"
+ ],
+ "docs(readme): add example on custom delims #860": [
+  "gin::gin.go::Delims",
+  "gin::render/html.go::Instance"
+ ],
+ "Merge pull request #855 from gin-gonic/feat/662": [
+  "gin::context.go::MustBindWith",
+  "gin::context.go::ShouldBindWith",
+  "gin::deprecated.go::BindWith"
+ ],
+ "delete else keyword (#948)": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "Add Makefile to check the following thing (#947)": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "feat(context): add cast helpers to c.Keys (#856)": [
+  "gin::context.go::GetBool",
+  "gin::context.go::GetDuration",
+  "gin::context.go::GetFloat64",
+  "gin::context.go::GetInt",
+  "gin::context.go::GetInt64",
+  "gin::context.go::GetString",
+  "gin::context.go::GetStringMap",
+  "gin::context.go::GetStringMapString",
+  "gin::context.go::GetStringMapStringSlice",
+  "gin::context.go::GetStringSlice",
+  "gin::context.go::GetTime"
+ ],
+ "Fix minor type in context.go (#900)": [
+  "gin::context.go::Abort",
+  "gin::context.go::DefaultQuery",
+  "gin::context.go::Error",
+  "gin::context.go::HTML",
+  "gin::context.go::Param",
+  "gin::context.go::Query"
+ ],
+ "Fix time.Time binding (#904)": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "Merge pull request #863 from appleboy/tls": [
+  "gin::examples/auto-tls/example2.go::main"
+ ],
+ "feat: add GetRawData func. (#857)": [
+  "gin::context.go::GetRawData"
+ ],
+ "docs: add graceful-shutdown example for go 1.8 (#835)": [
+  "gin::examples/graceful-shutdown/close/server.go::main",
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "feat: support cygwin for log writer. (#834)": [
+  "gin::logger.go::Logger"
+ ],
+ "The url.RawPath used when engine.UseRawPath is set to true. (#810)": [
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::New",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::tree.go::getValue"
+ ],
+ "Added support for MessagePack binding and rendering (#808)": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/msgpack.go::Bind",
+  "gin::render/msgpack.go::WriteMsgPack"
+ ],
+ "Support time.Time on form binding (#801)": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "chore(errorHandler):new abortWithStatus method with Json body (#800)": [
+  "gin::context.go::AbortWithStatusJSON"
+ ],
+ "Added HandleContext to re-enter soft-rewritten Requests. (#709)": [
+  "gin::gin.go::HandleContext"
+ ],
+ "Fixed typos in Context (#797)": [
+  "gin::context.go::reset"
+ ],
+ "Fix #198 (#781)": [
+  "gin::context.go::bodyAllowedForStatus",
+  "gin::render/data.go::Render",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType",
+  "gin::render/json.go::WriteJSON",
+  "gin::render/text.go::WriteString"
+ ],
+ "better display for log message (#623)": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "Merge pull request #784 from gin-gonic/readme": [
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "Merge pull request #783 from gin-gonic/ip": [
+  "gin::context.go::ClientIP"
+ ],
+ "Add convenience method to check if websockets required (#779)": [
+  "gin::context.go::IsWebsocket"
+ ],
+ "Merge pull request #775 from gin-gonic/upload": [
+  "gin::context.go::FormFile",
+  "gin::context.go::MultipartForm"
+ ],
+ "Merge pull request #770 from gin-gonic/console": [
+  "gin::logger.go::DisableConsoleColor"
+ ],
+ "Merge pull request #701 from maxatome/patch-1": [
+  "gin::context.go::Set"
+ ],
+ "Merge pull request #755 from gin-gonic/755-app-engine-client-ip": [
+  "gin::context.go::ClientIP",
+  "gin::context_appengine.go::init",
+  "gin::gin.go::New"
+ ],
+ "Fix for #630": [
+  "gin::errors.go::Error"
+ ],
+ "Merge pull request #627 from liudanking/develop": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "Merge pull request #754 from gin-gonic/patch-13": [
+  "gin::logger.go::Logger"
+ ],
+ "Revert \"Revert \"Merge pull request #744 from aviddiviner/logger-fix\"\"": [
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "Revert \"Merge pull request #753 from gin-gonic/bug\"": [
+  "gin::logger.go::Logger"
+ ],
+ "Merge pull request #753 from gin-gonic/bug": [
+  "gin::logger.go::Logger"
+ ],
+ "v1.1 (#751)": [
+  "gin::context.go::GetPostFormArray",
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::PostFormArray",
+  "gin::context.go::QueryArray",
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "Merge pull request #570 from andreynering/array": [
+  "gin::context.go::GetPostFormArray",
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::PostFormArray",
+  "gin::context.go::QueryArray"
+ ],
+ "Merge pull request #587 from roylou/develop": [
+  "gin::context.go::Abort",
+  "gin::logger.go::ErrorLogger"
+ ],
+ "closes #514, code from bobbo@b4f0b50": [
+  "gin::context.go::YAML",
+  "gin::render/yaml.go::Render"
+ ],
+ "Merge pull request #576 from kamronbatman/patch-1": [
+  "gin::context.go::GetPostForm"
+ ],
+ "Merge pull request #556 from mpuncel/mpuncel/fix-godoc-handlername": [
+  "gin::context.go::Copy",
+  "gin::context.go::Next"
+ ],
+ "Merge pull request #535 from appleboy/patch-1": [
+  "gin::examples/app-engine/hello.go::init"
+ ],
+ "Merge pull request #494 from dolmen/fix/indent-route-debug": [
+  "gin::debug.go::debugPrintRoute"
+ ],
+ "Merge pull request #478 from kylescottmcgill/master": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::iterate"
+ ],
+ "Merge pull request #470 from bwiggs/master": [
+  "gin::context.go::IsAborted"
+ ],
+ "Merge pull request #1 from kylescottmcgill/docs-spelling": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::iterate"
+ ],
+ "router.Run() can be called without parameters. #405": [
+  "gin::gin.go::Run",
+  "gin::utils.go::resolveAddress"
+ ],
+ "Merge pull request #362 from javierprovecho/fix-middlewares-typo": [
+  "gin::context.go::Copy",
+  "gin::gin.go::Use",
+  "gin::routergroup.go::Use"
+ ],
+ "Merge pull request #363 from error10/patch-1": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "Merge pull request #348 from WnP/master": [
+  "gin::gin.go::Use",
+  "gin::routergroup.go::Any",
+  "gin::routergroup.go::DELETE",
+  "gin::routergroup.go::GET",
+  "gin::routergroup.go::HEAD",
+  "gin::routergroup.go::Handle",
+  "gin::routergroup.go::OPTIONS",
+  "gin::routergroup.go::PATCH",
+  "gin::routergroup.go::POST",
+  "gin::routergroup.go::PUT",
+  "gin::routergroup.go::Static",
+  "gin::routergroup.go::StaticFS",
+  "gin::routergroup.go::StaticFile",
+  "gin::routergroup.go::Use",
+  "gin::routergroup.go::handle",
+  "gin::routergroup.go::returnObj"
+ ],
+ "Merge pull request #319 from bfosberry/fixing-example-bugs": [
+  "gin::examples/realtime-advanced/stats.go::statsWorker"
+ ],
+ "Merge pull request #269 from srid/patch-1": [
+  "gin::context.go::Abort"
+ ],
+ "Merge pull request #254 from bfosberry/fixing-static-bug": [
+  "gin::routergroup.go::UNLINK"
+ ],
+ "Fixes #239 bug": [
+  "gin::response_writer.go::Written"
+ ],
+ "Merge pull request #243 from mattyw/patch-1": [
+  "gin::context.go::Next"
+ ],
+ "Merge pull request #235 from donileo/NoMethod": [
+  "gin::gin.go::NoMethod",
+  "gin::gin.go::handle405",
+  "gin::gin.go::rebuild405Handlers"
+ ],
+ "Add HTML no template string output support #197": [
+  "gin::render/render.go::Render"
+ ],
+ "Added support multipart/form-data #109": [
+  "gin::binding/binding.go::Bind",
+  "gin::context.go::Bind"
+ ],
+ "Merge pull request #231 from frankbille/patch-1": [
+  "gin::auth.go::BasicAuth",
+  "gin::auth.go::BasicAuthForRealm"
+ ],
+ "Merge pull request #220 from ironiridis/patch-1": [
+  "gin::recovery.go::function"
+ ],
+ "Merge pull request #207 from achedeuzot/develop": [
+  "gin::gin.go::Run",
+  "gin::gin.go::ServeHTTP"
+ ],
+ "Solve #164": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS"
+ ],
+ "Fix PR #71": [
+  "gin::examples/pluggable_renderer/example_pongo2.go::main"
+ ],
+ "Merge pull request #80 from andredublin/community": [
+  "gin::context.go::MustGet"
+ ],
+ "Merge pull request #182 from dutchcoders/forwarded-for-fix": [
+  "gin::context.go::ClientIP"
+ ],
+ "Merge pull request #120 from bredov/issue-119": [
+  "gin::gin.go::Default",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::render/render.go::Render"
+ ],
+ "fix typo in PR for #119": [
+  "gin::gin.go::Default",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::render/render.go::Render"
+ ],
+ "Merge pull request #2 from msoedov/tests": [
+  "gin::auth.go::BasicAuth",
+  "gin::binding/binding.go::Bind",
+  "gin::binding/binding.go::setWithProperType",
+  "gin::context.go::Abort",
+  "gin::context.go::Bind",
+  "gin::context.go::Copy",
+  "gin::context.go::Data",
+  "gin::context.go::Error",
+  "gin::context.go::ErrorTyped",
+  "gin::context.go::Fail",
+  "gin::context.go::File",
+  "gin::context.go::Get",
+  "gin::context.go::HTML",
+  "gin::context.go::JSON",
+  "gin::context.go::LastError",
+  "gin::context.go::MustGet",
+  "gin::context.go::Next",
+  "gin::context.go::Render",
+  "gin::context.go::Set",
+  "gin::context.go::String",
+  "gin::context.go::XML",
+  "gin::context.go::createContext",
+  "gin::deprecated.go::NotFound404",
+  "gin::examples/example_basic.go::main",
+  "gin::gin.go::Abort",
+  "gin::gin.go::Copy",
+  "gin::gin.go::Data",
+  "gin::gin.go::Get",
+  "gin::gin.go::HTML",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::gin.go::New",
+  "gin::gin.go::NewWithConfig",
+  "gin::gin.go::NoRoute",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::SetHTMLTemplate",
+  "gin::gin.go::Static",
+  "gin::gin.go::String",
+  "gin::gin.go::Use",
+  "gin::gin.go::createContext",
+  "gin::gin.go::handle404",
+  "gin::gin.go::pathFor",
+  "gin::gin.go::reuseContext",
+  "gin::logger.go::ErrorLoggerT",
+  "gin::render/render.go::Render",
+  "gin::render/render.go::writeHeader",
+  "gin::utils.go::MarshalXML",
+  "gin::utils.go::filterFlags"
+ ],
+ "Merge pull request #76 from mopemope/fix-plainrender": [
+  "gin::render/render.go::Render"
+ ],
+ "Merge pull request #70 from fmd/develop-templates": [
+  "gin::gin.go::SetHTMLTemplate"
+ ],
+ "Merge pull request #33 from jasonrhansen/master": [
+  "gin::gin.go::Abort",
+  "gin::gin.go::HTML",
+  "gin::gin.go::String",
+  "gin::gin.go::Use"
+ ],
+ "Merge pull request #26 from javierprovecho/master": [
+  "gin::examples/app-engine/hello.go::init"
+ ],
+ "Merge pull request #8 from r8k/master": [
+  "gin::examples/example_basic.go::main"
+ ]
+}

@@ -1,0 +1,333 @@
+{
+ "aiohttp#pr-123": [
+  "aiohttp::aiohttp/helpers.py::parse_mimetype",
+  "aiohttp::aiohttp/web_server.py::__init__"
+ ],
+ "aiohttp#issue-2778": [
+  "aiohttp::aiohttp/client.py::requote_redirect_url"
+ ],
+ "aiohttp#issue-3035": [
+  "aiohttp::aiohttp/multipart.py::size",
+  "aiohttp::aiohttp/payload.py::_binary_headers",
+  "aiohttp::aiohttp/payload.py::headers"
+ ],
+ "aiohttp#pr-3092": [
+  "aiohttp::aiohttp/client_reqrep.py::headers",
+  "aiohttp::aiohttp/client_reqrep.py::history",
+  "aiohttp::aiohttp/client_reqrep.py::host",
+  "aiohttp::aiohttp/client_reqrep.py::links",
+  "aiohttp::aiohttp/client_reqrep.py::request_info"
+ ],
+ "aiohttp#pr-3093": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-3094": [
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-3106": [
+  "aiohttp::aiohttp/multipart.py::size"
+ ],
+ "aiohttp#pr-3177": [
+  "aiohttp::aiohttp/web_request.py::remote"
+ ],
+ "aiohttp#issue-3186": [
+  "aiohttp::aiohttp/streams.py::feed_data"
+ ],
+ "aiohttp#pr-3239": [
+  "aiohttp::aiohttp/helpers.py::decode"
+ ],
+ "aiohttp#pr-3280": [
+  "aiohttp::aiohttp/abc.py::filter_cookies",
+  "aiohttp::aiohttp/helpers.py::__init__",
+  "aiohttp::aiohttp/helpers.py::parse_mimetype",
+  "aiohttp::aiohttp/helpers.py::set_exception",
+  "aiohttp::aiohttp/http_exceptions.py::__init__",
+  "aiohttp::aiohttp/http_writer.py::transport",
+  "aiohttp::aiohttp/streams.py::feed_data"
+ ],
+ "aiohttp#pr-3284": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-3294": [
+  "aiohttp::aiohttp/payload.py::headers"
+ ],
+ "aiohttp#pr-3295": [
+  "aiohttp::aiohttp/streams.py::feed_data"
+ ],
+ "aiohttp#pr-3336": [
+  "aiohttp::aiohttp/helpers.py::__init__",
+  "aiohttp::aiohttp/web_log.py::_format_a",
+  "aiohttp::aiohttp/web_log.py::_format_r"
+ ],
+ "aiohttp#pr-3341": [
+  "aiohttp::aiohttp/helpers.py::parse_mimetype"
+ ],
+ "aiohttp#pr-3348": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__",
+  "aiohttp::aiohttp/web_urldispatcher.py::_match",
+  "aiohttp::aiohttp/web_urldispatcher.py::current_app"
+ ],
+ "aiohttp#pr-3353": [
+  "aiohttp::aiohttp/streams.py::feed_data",
+  "aiohttp::aiohttp/web_request.py::protocol"
+ ],
+ "aiohttp#pr-3354": [
+  "aiohttp::aiohttp/worker.py::init_process"
+ ],
+ "aiohttp#pr-3372": [
+  "aiohttp::aiohttp/web_server.py::__init__"
+ ],
+ "aiohttp#pr-3420": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-3436": [
+  "aiohttp::aiohttp/client.py::requote_redirect_url"
+ ],
+ "aiohttp#pr-3462": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__",
+  "aiohttp::aiohttp/web_exceptions.py::link"
+ ],
+ "aiohttp#pr-3475": [
+  "aiohttp::aiohttp/multipart.py::size",
+  "aiohttp::aiohttp/payload.py::_binary_headers",
+  "aiohttp::aiohttp/payload.py::headers"
+ ],
+ "aiohttp#pr-3479": [
+  "aiohttp::aiohttp/payload.py::headers"
+ ],
+ "aiohttp#pr-3492": [
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-3580": [
+  "aiohttp::aiohttp/http_parser.py::__init__",
+  "aiohttp::aiohttp/web_server.py::__init__"
+ ],
+ "aiohttp#pr-3586": [
+  "aiohttp::aiohttp/streams.py::feed_data"
+ ],
+ "aiohttp#pr-3614": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-3615": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-3803": [
+  "aiohttp::aiohttp/http_parser.py::__init__"
+ ],
+ "aiohttp#pr-3848": [
+  "aiohttp::aiohttp/client_reqrep.py::history"
+ ],
+ "aiohttp#pr-3905": [
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-3916": [
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-3933": [
+  "aiohttp::aiohttp/helpers.py::set_exception"
+ ],
+ "aiohttp#pr-3935": [
+  "aiohttp::aiohttp/client.py::requote_redirect_url"
+ ],
+ "aiohttp#pr-3942": [
+  "aiohttp::aiohttp/helpers.py::__init__"
+ ],
+ "aiohttp#pr-4056": [
+  "aiohttp::aiohttp/streams.py::feed_data"
+ ],
+ "aiohttp#pr-4073": [
+  "aiohttp::aiohttp/streams.py::feed_data"
+ ],
+ "aiohttp#pr-4095": [
+  "aiohttp::aiohttp/http_exceptions.py::__init__",
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-4098": [
+  "aiohttp::aiohttp/http_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-4193": [
+  "aiohttp::aiohttp/client.py::requote_redirect_url"
+ ],
+ "aiohttp#pr-4240": [
+  "aiohttp::aiohttp/client.py::trace_configs"
+ ],
+ "aiohttp#pr-4242": [
+  "aiohttp::aiohttp/client.py::trace_configs"
+ ],
+ "aiohttp#pr-4402": [
+  "aiohttp::aiohttp/client_reqrep.py::host"
+ ],
+ "aiohttp#pr-4409": [
+  "aiohttp::aiohttp/client_reqrep.py::host"
+ ],
+ "aiohttp#issue-4506": [
+  "aiohttp::aiohttp/http_parser.py::__init__"
+ ],
+ "aiohttp#pr-4511": [
+  "aiohttp::aiohttp/http_parser.py::__init__"
+ ],
+ "aiohttp#pr-4534": [
+  "aiohttp::aiohttp/http_parser.py::__init__"
+ ],
+ "aiohttp#pr-4734": [
+  "aiohttp::aiohttp/streams.py::feed_data"
+ ],
+ "aiohttp#pr-4736": [
+  "aiohttp::aiohttp/helpers.py::__init__"
+ ],
+ "aiohttp#pr-4973": [
+  "aiohttp::aiohttp/web_urldispatcher.py::_match"
+ ],
+ "aiohttp#pr-5065": [
+  "aiohttp::aiohttp/http_parser.py::__init__"
+ ],
+ "aiohttp#pr-5066": [
+  "aiohttp::aiohttp/http_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-5086": [
+  "aiohttp::aiohttp/web_runner.py::addresses"
+ ],
+ "aiohttp#pr-5088": [
+  "aiohttp::aiohttp/web_runner.py::addresses"
+ ],
+ "aiohttp#pr-5097": [
+  "aiohttp::aiohttp/web_urldispatcher.py::_match"
+ ],
+ "aiohttp#pr-5160": [
+  "aiohttp::aiohttp/client_reqrep.py::connection_key",
+  "aiohttp::aiohttp/client_reqrep.py::links",
+  "aiohttp::aiohttp/helpers.py::__init__",
+  "aiohttp::aiohttp/http_parser.py::__init__",
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-5196": [
+  "aiohttp::aiohttp/streams.py::feed_data"
+ ],
+ "aiohttp#pr-5197": [
+  "aiohttp::aiohttp/helpers.py::__init__",
+  "aiohttp::aiohttp/helpers.py::set_exception",
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-5267": [
+  "aiohttp::aiohttp/http_parser.py::parse_message"
+ ],
+ "aiohttp#pr-5268": [
+  "aiohttp::aiohttp/http_parser.py::parse_message"
+ ],
+ "aiohttp#issue-5275": [
+  "aiohttp::aiohttp/web_server.py::__init__"
+ ],
+ "aiohttp#pr-5278": [
+  "aiohttp::aiohttp/web_server.py::__init__"
+ ],
+ "aiohttp#pr-5287": [
+  "aiohttp::aiohttp/helpers.py::__init__"
+ ],
+ "aiohttp#pr-5310": [
+  "aiohttp::aiohttp/web_server.py::__init__"
+ ],
+ "aiohttp#pr-5335": [
+  "aiohttp::aiohttp/http_parser.py::__init__"
+ ],
+ "aiohttp#pr-5466": [
+  "aiohttp::aiohttp/web_request.py::query"
+ ],
+ "aiohttp#pr-5562": [
+  "aiohttp::aiohttp/helpers.py::set_exception",
+  "aiohttp::aiohttp/web_request.py::_if_match_or_none_impl",
+  "aiohttp::aiohttp/web_request.py::if_match",
+  "aiohttp::aiohttp/web_request.py::if_none_match",
+  "aiohttp::aiohttp/web_request.py::if_unmodified_since",
+  "aiohttp::aiohttp/web_response.py::etag",
+  "aiohttp::aiohttp/web_response.py::last_modified"
+ ],
+ "aiohttp#pr-5575": [
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-5959": [
+  "aiohttp::aiohttp/helpers.py::set_exception"
+ ],
+ "aiohttp#pr-5985": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-6012": [
+  "aiohttp::aiohttp/web_request.py::if_modified_since",
+  "aiohttp::aiohttp/web_request.py::if_range",
+  "aiohttp::aiohttp/web_request.py::if_unmodified_since",
+  "aiohttp::aiohttp/web_response.py::last_modified"
+ ],
+ "aiohttp#pr-6276": [
+  "aiohttp::aiohttp/http_parser.py::parse_message",
+  "aiohttp::aiohttp/multipart.py::filename",
+  "aiohttp::aiohttp/multipart.py::name",
+  "aiohttp::aiohttp/web_request.py::raw_path"
+ ],
+ "aiohttp#pr-6316": [
+  "aiohttp::aiohttp/helpers.py::__init__"
+ ],
+ "aiohttp#pr-6345": [
+  "aiohttp::aiohttp/helpers.py::parse_mimetype"
+ ],
+ "aiohttp#pr-6362": [
+  "aiohttp::aiohttp/helpers.py::parse_mimetype"
+ ],
+ "aiohttp#pr-6397": [
+  "aiohttp::aiohttp/helpers.py::__init__"
+ ],
+ "aiohttp#pr-6409": [
+  "aiohttp::aiohttp/http_parser.py::parse_message"
+ ],
+ "aiohttp#pr-6424": [
+  "aiohttp::aiohttp/client_reqrep.py::links",
+  "aiohttp::aiohttp/web_runner.py::addresses"
+ ],
+ "aiohttp#pr-6452": [
+  "aiohttp::aiohttp/client_reqrep.py::links",
+  "aiohttp::aiohttp/helpers.py::set_exception",
+  "aiohttp::aiohttp/web_runner.py::addresses"
+ ],
+ "aiohttp#pr-6454": [
+  "aiohttp::aiohttp/helpers.py::set_exception"
+ ],
+ "aiohttp#pr-6485": [
+  "aiohttp::aiohttp/multipart.py::filename",
+  "aiohttp::aiohttp/web_response.py::content_length"
+ ],
+ "aiohttp#issue-6494": [
+  "aiohttp::aiohttp/helpers.py::from_url"
+ ],
+ "aiohttp#pr-6495": [
+  "aiohttp::aiohttp/helpers.py::from_url"
+ ],
+ "aiohttp#pr-6498": [
+  "aiohttp::aiohttp/helpers.py::__init__",
+  "aiohttp::aiohttp/helpers.py::set_exception"
+ ],
+ "aiohttp#pr-6547": [
+  "aiohttp::aiohttp/helpers.py::__init__",
+  "aiohttp::aiohttp/helpers.py::set_exception"
+ ],
+ "aiohttp#pr-6548": [
+  "aiohttp::aiohttp/helpers.py::__init__",
+  "aiohttp::aiohttp/helpers.py::set_exception"
+ ],
+ "aiohttp#pr-6594": [
+  "aiohttp::aiohttp/web_exceptions.py::__init__"
+ ],
+ "aiohttp#pr-6675": [
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-6683": [
+  "aiohttp::aiohttp/helpers.py::set_exception",
+  "aiohttp::aiohttp/http_parser.py::__init__",
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-6684": [
+  "aiohttp::aiohttp/helpers.py::set_exception",
+  "aiohttp::aiohttp/http_parser.py::__init__",
+  "aiohttp::aiohttp/multipart.py::__init__"
+ ],
+ "aiohttp#pr-6725": [
+  "aiohttp::aiohttp/http_parser.py::__init__"
+ ]
+}

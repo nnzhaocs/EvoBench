@@ -1,0 +1,14 @@
+{
+  "n_annotated": 100,
+  "hits": 84,
+  "false_positives": 0,
+  "gt_accuracy": 0.84,
+  "ci_lower": 0.756,
+  "ci_upper": 0.899,
+  "ci_method": "Wilson (95%)",
+  "label_distribution": {
+    "relevant": 84,
+    "irrelevant": 16
+  },
+  "notes": "E11 gold annotation result. 1 annotator completed all 100 samples."
+}

@@ -1,0 +1,824 @@
+============================================================
+pylint: delta最低的 20 对更新 (原文对照)
+============================================================
+
+--- #1 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (145 lines total)
+DIFF (6 changed lines):
+  -                or (
+  -                    not isinstance(astmts[0].parent, nodes.Module)
+  -                    and astmts[0].statement().parent_of(node)
+  -                )
+  +                or not isinstance(astmts[0].parent, nodes.Module)
+  +                and astmts[0].statement().parent_of(node)
+
+--- #2 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (144 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (144 lines total)
+DIFF (2 changed lines):
+  -            # TODO: 4.0: Consider using RefactoringChecker._is_function_def_never_returning
+  +            # TODO: 4.0: Consider using utils.is_terminating_func
+
+--- #3 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (140 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (140 lines total)
+DIFF (10 changed lines):
+  -                and astmts[0].statement(future=True).parent_of(node)
+  +                and astmts[0].statement().parent_of(node)
+  -            if astmts[i].statement(future=True).parent_of(
+  -                stmt
+  -            ) and not utils.in_for_else_branch(astmts[i].statement(future=True), stmt):
+  +            if astmts[i].statement().parent_of(stmt) and not utils.in_for_else_branch(
+  +                astmts[i].statement(), stmt
+  +            ):
+  -            and assign.statement(future=True) is not node.statement(future=True)
+  +            and assign.statement() is not node.statement()
+
+--- #4 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (145 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+DIFF (6 changed lines):
+  -                or not isinstance(astmts[0].parent, nodes.Module)
+  -                and astmts[0].statement().parent_of(node)
+  +                or (
+  +                    not isinstance(astmts[0].parent, nodes.Module)
+  +                    and astmts[0].statement().parent_of(node)
+  +                )
+
+--- #5 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (144 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (140 lines total)
+DIFF (8 changed lines):
+  -            try:
+  -                astmt_statement = astmts[i].statement()
+  -            except astroid.exceptions.ParentMissingError:
+  -                continue
+  -            if astmt_statement.parent_of(stmt) and not utils.in_for_else_branch(
+  -                astmt_statement, stmt
+  +            if astmts[i].statement().parent_of(stmt) and not utils.in_for_else_branch(
+  +                astmts[i].statement(), stmt
+
+--- #6 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (145 lines total)
+DIFF (6 changed lines):
+  -                or (
+  -                    not isinstance(astmts[0].parent, nodes.Module)
+  -                    and astmts[0].statement().parent_of(node)
+  -                )
+  +                or not isinstance(astmts[0].parent, nodes.Module)
+  +                and astmts[0].statement().parent_of(node)
+
+--- #7 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (145 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+DIFF (6 changed lines):
+  -                or not isinstance(astmts[0].parent, nodes.Module)
+  -                and astmts[0].statement().parent_of(node)
+  +                or (
+  +                    not isinstance(astmts[0].parent, nodes.Module)
+  +                    and astmts[0].statement().parent_of(node)
+  +                )
+
+--- #8 delta=-0.0000 unit=pylint::pylint/checkers/typecheck.py::visit_subscr ---
+OLD:
+      def visit_subscript(self, node: nodes.Subscript) -> None:
+          self._check_invalid_sequence_index(node)
+  
+          supported_protocol: Callable[[Any, Any], bool] | None = None
+          if isinstance(node.value, (nodes.ListComp, nodes.DictComp)):
+              return
+  
+          if isinstance(node.value, nodes.Dict):
+              # Assert dict key is hashable
+              if not is_hashable(node.slice):
+                  self.add_message(
+                      "unhashable-member",
+                      node=node.value,
+                      args=(node.slice.as_string(), "key", "dict"),
+                      confidence=INFERENCE,
+  ... (54 lines total)
+NEW:
+      def visit_subscript(self, node: nodes.Subscript) -> None:
+          self._check_invalid_sequence_index(node)
+  
+          supported_protocol: Callable[[Any, Any], bool] | None = None
+          if isinstance(node.value, (nodes.ListComp, nodes.DictComp)):
+              return
+  
+          if isinstance(node.value, nodes.Dict):
+              # Assert dict key is hashable
+              if not is_hashable(node.slice):
+                  self.add_message(
+                      "unhashable-member",
+                      node=node.value,
+                      args=(node.slice.as_string(), "key", "dict"),
+                      confidence=INFERENCE,
+  ... (53 lines total)
+DIFF (1 changed lines):
+  -            # pylint: disable-next=possibly-used-before-assignment
+
+--- #9 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (140 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (140 lines total)
+DIFF (2 changed lines):
+  -            # TODO: 3.0: Consider using RefactoringChecker._is_function_def_never_returning
+  +            # TODO: 4.0: Consider using RefactoringChecker._is_function_def_never_returning
+
+--- #10 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: nodes.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+NEW:
+      def _loopvar_name(self, node: nodes.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+DIFF (2 changed lines):
+  -                astroid.objects.FrozenSet,
+  +                objects.FrozenSet,
+
+--- #11 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (145 lines total)
+DIFF (6 changed lines):
+  -                or (
+  -                    not isinstance(astmts[0].parent, nodes.Module)
+  -                    and astmts[0].statement().parent_of(node)
+  -                )
+  +                or not isinstance(astmts[0].parent, nodes.Module)
+  +                and astmts[0].statement().parent_of(node)
+
+--- #12 delta=-0.0000 unit=pylint::pylint/checkers/typecheck.py::visit_subscr ---
+OLD:
+      def visit_subscript(self, node: nodes.Subscript) -> None:
+          self._check_invalid_sequence_index(node)
+  
+          supported_protocol: Callable[[Any, Any], bool] | None = None
+          if isinstance(node.value, (nodes.ListComp, nodes.DictComp)):
+              return
+  
+          if isinstance(node.value, nodes.Dict):
+              # Assert dict key is hashable
+              if not is_hashable(node.slice):
+                  self.add_message(
+                      "unhashable-member",
+                      node=node.value,
+                      args=(node.slice.as_string(), "key", "dict"),
+                      confidence=INFERENCE,
+  ... (53 lines total)
+NEW:
+      def visit_subscript(self, node: nodes.Subscript) -> None:
+          self._check_invalid_sequence_index(node)
+  
+          supported_protocol: Callable[[Any, Any], bool] | None = None
+          if isinstance(node.value, (nodes.ListComp, nodes.DictComp)):
+              return
+  
+          if isinstance(node.value, nodes.Dict):
+              # Assert dict key is hashable
+              if not is_hashable(node.slice):
+                  self.add_message(
+                      "unhashable-member",
+                      node=node.value,
+                      args=(node.slice.as_string(), "key", "dict"),
+                      confidence=INFERENCE,
+  ... (54 lines total)
+DIFF (1 changed lines):
+  +            # pylint: disable-next=possibly-used-before-assignment
+
+--- #13 delta=-0.0000 unit=pylint::pylint/checkers/typecheck.py::visit_with ---
+OLD:
+      def visit_with(self, node: nodes.With) -> None:
+          for ctx_mgr, _ in node.items:
+              context = astroid.context.InferenceContext()
+              match inferred := safe_infer(ctx_mgr, context=context):
+                  case _ if not inferred:
+                      continue
+                  case bases.Generator():
+                      # Check if we are dealing with a function decorated
+                      # with contextlib.contextmanager.
+                      if decorated_with(
+                          inferred.parent, self.linter.config.contextmanager_decorators
+                      ):
+                          continue
+                      # Check if it's an AsyncGenerator decorated with asynccontextmanager
+                      if isinstance(inferred, bases.AsyncGenerator):
+  ... (75 lines total)
+NEW:
+      def visit_with(self, node: nodes.With) -> None:
+          for ctx_mgr, _ in node.items:
+              context = astroid.context.InferenceContext()
+              match inferred := safe_infer(ctx_mgr, context=context):
+                  case _ if not inferred:
+                      continue
+                  case bases.Generator():
+                      # Check if we are dealing with a function decorated
+                      # with contextlib.contextmanager.
+                      if decorated_with(
+                          inferred.parent, self.linter.config.contextmanager_decorators
+                      ):
+                          continue
+                      # Check if it's an AsyncGenerator decorated with asynccontextmanager
+                      if isinstance(inferred, bases.AsyncGenerator):
+  ... (93 lines total)
+DIFF (20 changed lines):
+  +                        # Only read ``name`` from nodes known to define it; any
+  +                        # other inferred result (e.g. a ``Slice`` from
+  +                        # ``slice(...)``) has no ``name``, so fall back to the
+  +                        # inferred type's name to keep the message informative
+  +                        # without risking an ``AttributeError``.
+  +                        if isinstance(
+  +                            inferred,
+  +                            (
+  +                                nodes.ClassDef,
+  +                                nodes.FunctionDef,
+  ... (20 total)
+
+--- #14 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (145 lines total)
+DIFF (6 changed lines):
+  -                or (
+  -                    not isinstance(astmts[0].parent, nodes.Module)
+  -                    and astmts[0].statement().parent_of(node)
+  -                )
+  +                or not isinstance(astmts[0].parent, nodes.Module)
+  +                and astmts[0].statement().parent_of(node)
+
+--- #15 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (145 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (147 lines total)
+DIFF (6 changed lines):
+  -                or not isinstance(astmts[0].parent, nodes.Module)
+  -                and astmts[0].statement().parent_of(node)
+  +                or (
+  +                    not isinstance(astmts[0].parent, nodes.Module)
+  +                    and astmts[0].statement().parent_of(node)
+  +                )
+
+--- #16 delta=-0.0000 unit=pylint::pylint/checkers/variables.py::_loopvar_nam ---
+OLD:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (145 lines total)
+NEW:
+      def _loopvar_name(self, node: astroid.Name) -> None:
+          # filter variables according to node's scope
+          astmts = [s for s in node.lookup(node.name)[1] if hasattr(s, "assign_type")]
+          # If this variable usage exists inside a function definition
+          # that exists in the same loop,
+          # the usage is safe because the function will not be defined either if
+          # the variable is not defined.
+          scope = node.scope()
+          if isinstance(scope, (nodes.Lambda, nodes.FunctionDef)) and any(
+              asmt.scope().parent_of(scope) for asmt in astmts
+          ):
+              return
+          # Filter variables according to their respective scope. Test parent
+          # and statement to avoid #74747. This is not a total fix, which would
+          # introduce a mechanism similar to special attribute lookup in
+  ... (144 lines total)
+DIFF (1 changed lines):
+  -            # after merging it with RefactoringChecker._is_function_def_never_returning
+
+--- #17 delta=0.0000 unit=pylint::pylint/checkers/classes/class_checker.py:: ---
+OLD:
+      def visit_functiondef(self, node: nodes.FunctionDef) -> None:
+          """Check method arguments, overriding."""
+          # ignore actual functions
+          if not node.is_method():
+              return
+  
+          self._check_useless_super_delegation(node)
+          self._check_property_with_parameters(node)
+  
+          # 'is_method()' is called and makes sure that this is a 'nodes.ClassDef'
+          klass: nodes.ClassDef = node.parent.frame()
+          # check first argument is self if this is actually a method
+          self._check_first_arg_for_type(node, klass.type == "metaclass")
+          if node.name == "__init__":
+              self._check_init(node, klass)
+  ... (98 lines total)
+NEW:
+      def visit_functiondef(self, node: nodes.FunctionDef) -> None:
+          """Check method arguments, overriding."""
+          # ignore actual functions
+          if not node.is_method():
+              return
+  
+          self._check_useless_super_delegation(node)
+          self._check_property_with_parameters(node)
+  
+          # 'is_method()' is called and makes sure that this is a 'nodes.ClassDef'
+          klass: nodes.ClassDef = node.parent.frame()
+          # check first argument is self if this is actually a method
+          self._check_first_arg_for_type(node, klass.type == "metaclass")
+          if node.name == "__init__":
+              self._check_init(node, klass)
+  ... (94 lines total)
+DIFF (26 changed lines):
+  -                if isinstance(decorator, nodes.Attribute) and decorator.attrname in {
+  -                    "getter",
+  -                    "setter",
+  -                    "deleter",
+  -                }:
+  -                    # attribute affectation will call this method, not hiding it
+  -                    return
+  -                if isinstance(decorator, nodes.Name):
+  -                    if decorator.name in ALLOWED_PROPERTIES:
+  -                        # attribute affectation will either call a setter or raise
+  ... (26 total)
+
+--- #18 delta=0.0000 unit=pylint::pylint/checkers/classes/class_checker.py:: ---
+OLD:
+      def visit_functiondef(self, node: nodes.FunctionDef) -> None:
+          """Check method arguments, overriding."""
+          # ignore actual functions
+          if not node.is_method():
+              return
+  
+          self._check_useless_super_delegation(node)
+          self._check_property_with_parameters(node)
+  
+          # 'is_method()' is called and makes sure that this is a 'nodes.ClassDef'
+          klass: nodes.ClassDef = node.parent.frame()
+          # check first argument is self if this is actually a method
+          self._check_first_arg_for_type(node, klass.type == "metaclass")
+          if node.name == "__init__":
+              self._check_init(node, klass)
+  ... (94 lines total)
+NEW:
+      def visit_functiondef(self, node: nodes.FunctionDef) -> None:
+          """Check method arguments, overriding."""
+          # ignore actual functions
+          if not node.is_method():
+              return
+  
+          self._check_useless_super_delegation(node)
+          self._check_property_with_parameters(node)
+  
+          # 'is_method()' is called and makes sure that this is a 'nodes.ClassDef'
+          klass: nodes.ClassDef = node.parent.frame()
+          # check first argument is self if this is actually a method
+          self._check_first_arg_for_type(node, klass.type == "metaclass")
+          if node.name == "__init__":
+              self._check_init(node, klass)
+  ... (92 lines total)
+DIFF (8 changed lines):
+  -            if (
+  -                isinstance(overridden_frame, nodes.FunctionDef)
+  -                and overridden_frame.type == "method"
+  -            ):
+  -                overridden_frame = overridden_frame.parent.frame()
+  +            match overridden_frame:
+  +                case nodes.FunctionDef(type="method"):
+  +                    overridden_frame = overridden_frame.parent.frame()
+
+--- #19 delta=0.0000 unit=pylint::pylint/checkers/variables.py::_defines_nam ---
+OLD:
+      def _defines_name_raises_or_returns(name: str, node: nodes.NodeNG) -> bool:
+          if isinstance(node, (nodes.Raise, nodes.Assert, nodes.Return)):
+              return True
+          if (
+              isinstance(node, nodes.AnnAssign)
+              and node.value
+              and isinstance(node.target, nodes.AssignName)
+              and node.target.name == name
+          ):
+              return True
+          if isinstance(node, nodes.Assign):
+              for target in node.targets:
+                  for elt in utils.get_all_elements(target):
+                      if isinstance(elt, nodes.Starred):
+                          elt = elt.value
+  ... (36 lines total)
+NEW:
+      def _defines_name_raises_or_returns(name: str, node: nodes.NodeNG) -> bool:
+          if isinstance(node, (nodes.Raise, nodes.Assert, nodes.Return)):
+              return True
+          if (
+              isinstance(node, nodes.AnnAssign)
+              and node.value
+              and isinstance(node.target, nodes.AssignName)
+              and node.target.name == name
+          ):
+              return True
+          if isinstance(node, nodes.Assign):
+              for target in node.targets:
+                  for elt in utils.get_all_elements(target):
+                      if isinstance(elt, nodes.Starred):
+                          elt = elt.value
+  ... (42 lines total)
+DIFF (6 changed lines):
+  +        if (
+  +            isinstance(node, nodes.ExceptHandler)
+  +            and node.name
+  +            and node.name.name == name
+  +        ):
+  +            return True
+
+--- #20 delta=0.0000 unit=pylint::doc/data/messages/m/missing-any-param-doc/ ---
+OLD:
+  def puppies(head, tail): #[missing-any-param-doc]
+      """Print puppy's details."""
+      print(head, tail)
+NEW:
+  def puppies(head, tail):  # [missing-any-param-doc]
+      """Print puppy's details."""
+      print(head, tail)
+DIFF (2 changed lines):
+  -def puppies(head, tail): #[missing-any-param-doc]
+  +def puppies(head, tail):  # [missing-any-param-doc]

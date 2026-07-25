@@ -1,0 +1,658 @@
+============================================================
+click: delta最低的 20 对更新 (原文对照)
+============================================================
+
+--- #1 delta=0.0001 unit=click::src/click/_termui_impl.py::get_pager_file ---
+OLD:
+  def get_pager_file(color: bool | None = None) -> t.Generator[t.TextIO, None, None]:
+      """Context manager.
+      Yields a writable file-like object which can be used as an output pager.
+      .. versionadded:: 8.2
+      :param color: controls if the pager supports ANSI colors or not.  The
+                    default is autodetection.
+      """
+      with _pager_contextmanager(color=color) as (stream, encoding, color):
+          # Split streams by capabilities rather than the abstract TextIO /
+          # BinaryIO annotations: buffered text streams can be unwrapped to bytes,
+          # while text-only streams are yielded as-is.
+          if _has_binary_buffer(stream):
+              # Text stream backed by a binary buffer.
+              stream = MaybeStripAnsi(stream.buffer, color=color, encoding=encoding)
+          elif isinstance(stream, t.BinaryIO):
+  ... (22 lines total)
+NEW:
+  def get_pager_file(color: bool | None = None) -> t.Generator[t.TextIO, None, None]:
+      """Context manager.
+      Yields a writable file-like object which can be used as an output pager.
+      .. versionadded:: 8.4
+      :param color: controls if the pager supports ANSI colors or not.  The
+                    default is autodetection.
+      """
+      with _pager_contextmanager(color=color) as (stream, encoding, color):
+          # Split streams by capabilities rather than the abstract TextIO /
+          # BinaryIO annotations: buffered text streams can be unwrapped to bytes,
+          # while text-only streams are yielded as-is.
+          if _has_binary_buffer(stream):
+              # Text stream backed by a binary buffer.
+              stream = MaybeStripAnsi(stream.buffer, color=color, encoding=encoding)
+          elif isinstance(stream, t.BinaryIO):
+  ... (22 lines total)
+DIFF (2 changed lines):
+  -    .. versionadded:: 8.2
+  +    .. versionadded:: 8.4
+
+--- #2 delta=0.0019 unit=click::src/click/types.py::convert_type ---
+OLD:
+  def convert_type(
+      ty: t.Any | None, default: t.Any | None = None
+NEW:
+  def convert_type(
+      ty: t.Any | None = None, default: t.Any | None = None
+DIFF (2 changed lines):
+  -    ty: t.Any | None, default: t.Any | None = None
+  +    ty: t.Any | None = None, default: t.Any | None = None
+
+--- #3 delta=0.0029 unit=click::src/click/core.py::meta ---
+OLD:
+      def meta(self) -> t.Dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+NEW:
+      def meta(self) -> dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+DIFF (2 changed lines):
+  -    def meta(self) -> t.Dict[str, t.Any]:
+  +    def meta(self) -> dict[str, t.Any]:
+
+--- #4 delta=0.0029 unit=click::src/click/core.py::meta ---
+OLD:
+      def meta(self) -> dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+NEW:
+      def meta(self) -> t.Dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+DIFF (2 changed lines):
+  -    def meta(self) -> dict[str, t.Any]:
+  +    def meta(self) -> t.Dict[str, t.Any]:
+
+--- #5 delta=0.0029 unit=click::src/click/core.py::meta ---
+OLD:
+      def meta(self) -> t.Dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+NEW:
+      def meta(self) -> dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+DIFF (2 changed lines):
+  -    def meta(self) -> t.Dict[str, t.Any]:
+  +    def meta(self) -> dict[str, t.Any]:
+
+--- #6 delta=0.0029 unit=click::src/click/core.py::meta ---
+OLD:
+      def meta(self) -> dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+NEW:
+      def meta(self) -> t.Dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+DIFF (2 changed lines):
+  -    def meta(self) -> dict[str, t.Any]:
+  +    def meta(self) -> t.Dict[str, t.Any]:
+
+--- #7 delta=0.0029 unit=click::src/click/core.py::meta ---
+OLD:
+      def meta(self) -> t.Dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+NEW:
+      def meta(self) -> dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+DIFF (2 changed lines):
+  -    def meta(self) -> t.Dict[str, t.Any]:
+  +    def meta(self) -> dict[str, t.Any]:
+
+--- #8 delta=0.0029 unit=click::src/click/core.py::meta ---
+OLD:
+      def meta(self) -> dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+NEW:
+      def meta(self) -> t.Dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+DIFF (2 changed lines):
+  -    def meta(self) -> dict[str, t.Any]:
+  +    def meta(self) -> t.Dict[str, t.Any]:
+
+--- #9 delta=0.0029 unit=click::src/click/core.py::meta ---
+OLD:
+      def meta(self) -> t.Dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+NEW:
+      def meta(self) -> dict[str, t.Any]:
+          """This is a dictionary which is shared with all the contexts
+          that are nested.  It exists so that click utilities can store some
+          state here if they need to.  It is however the responsibility of
+          that code to manage this dictionary well.
+  
+          The keys are supposed to be unique dotted strings.  For instance
+          module paths are a good choice for it.  What is stored in there is
+          irrelevant for the operation of click.  However what is important is
+          that code that places data here adheres to the general semantics of
+          the system.
+  
+          Example usage::
+  
+              LANG_KEY = f'{__name__}.lang'
+  ... (26 lines total)
+DIFF (2 changed lines):
+  -    def meta(self) -> t.Dict[str, t.Any]:
+  +    def meta(self) -> dict[str, t.Any]:
+
+--- #10 delta=0.0033 unit=click::src/click/_termui_impl.py::get_pager_file ---
+OLD:
+  def get_pager_file(color: bool | None = None) -> t.Generator[t.TextIO, None, None]:
+      """Context manager.
+      Yields a writable file-like object which can be used as an output pager.
+      .. versionadded:: 8.4
+      :param color: controls if the pager supports ANSI colors or not.  The
+                    default is autodetection.
+      """
+      with _pager_contextmanager(color=color) as (stream, encoding, color):
+          # Split streams by capabilities rather than the abstract TextIO /
+          # BinaryIO annotations: buffered text streams can be unwrapped to bytes,
+          # while text-only streams are yielded as-is.
+          if _has_binary_buffer(stream):
+              # Text stream backed by a binary buffer.
+              stream = MaybeStripAnsi(stream.buffer, color=color, encoding=encoding)
+          elif isinstance(stream, t.BinaryIO):
+  ... (22 lines total)
+NEW:
+  def get_pager_file(color: bool | None = None) -> t.Generator[t.TextIO, None, None]:
+      """Context manager.
+  
+      Yields a writable file-like object which can be used as an output pager.
+  
+      .. versionadded:: 8.4.0
+  
+      :param color: controls if the pager supports ANSI colors or not.  The
+                    default is autodetection.
+      """
+      with _pager_contextmanager(color=color) as (stream, encoding, color):
+          # Split streams by capabilities rather than the abstract TextIO /
+          # BinaryIO annotations: buffered text streams can be unwrapped to bytes,
+          # while text-only streams are yielded as-is.
+          if _has_binary_buffer(stream):
+  ... (25 lines total)
+DIFF (5 changed lines):
+  +
+  -    .. versionadded:: 8.4
+  +
+  +    .. versionadded:: 8.4.0
+  +
+
+--- #11 delta=0.0036 unit=click::src/click/core.py::scope ---
+OLD:
+      def scope(self, cleanup: bool = True) -> cabc.Iterator[Context]:
+          """This helper method can be used with the context object to promote
+          it to the current thread local (see :func:`get_current_context`).
+          The default behavior of this is to invoke the cleanup functions which
+          can be disabled by setting `cleanup` to `False`.  The cleanup
+          functions are typically used for things such as closing file handles.
+  
+          If the cleanup is intended the context object can also be directly
+          used as a context manager.
+  
+          Example usage::
+  
+              with ctx.scope():
+                  assert get_current_context() is ctx
+  
+  ... (36 lines total)
+NEW:
+      def scope(self, cleanup: bool = True) -> cabc.Iterator[Context]:
+          """This helper method can be used with the context object to promote
+          it to the current thread local (see :func:`get_current_context`).
+          The default behavior of this is to invoke the cleanup functions which
+          can be disabled by setting `cleanup` to ``False``.  The cleanup
+          functions are typically used for things such as closing file handles.
+  
+          If the cleanup is intended the context object can also be directly
+          used as a context manager.
+  
+          Example usage::
+  
+              with ctx.scope():
+                  assert get_current_context() is ctx
+  
+  ... (36 lines total)
+DIFF (2 changed lines):
+  -        can be disabled by setting `cleanup` to `False`.  The cleanup
+  +        can be disabled by setting `cleanup` to ``False``.  The cleanup
+
+--- #12 delta=0.0036 unit=click::src/click/core.py::scope ---
+OLD:
+      def scope(self, cleanup: bool = True) -> cabc.Iterator[Context]:
+          """This helper method can be used with the context object to promote
+          it to the current thread local (see :func:`get_current_context`).
+          The default behavior of this is to invoke the cleanup functions which
+          can be disabled by setting `cleanup` to ``False``.  The cleanup
+          functions are typically used for things such as closing file handles.
+  
+          If the cleanup is intended the context object can also be directly
+          used as a context manager.
+  
+          Example usage::
+  
+              with ctx.scope():
+                  assert get_current_context() is ctx
+  
+  ... (36 lines total)
+NEW:
+      def scope(self, cleanup: bool = True) -> cabc.Iterator[Context]:
+          """This helper method can be used with the context object to promote
+          it to the current thread local (see :func:`get_current_context`).
+          The default behavior of this is to invoke the cleanup functions which
+          can be disabled by setting `cleanup` to `False`.  The cleanup
+          functions are typically used for things such as closing file handles.
+  
+          If the cleanup is intended the context object can also be directly
+          used as a context manager.
+  
+          Example usage::
+  
+              with ctx.scope():
+                  assert get_current_context() is ctx
+  
+  ... (36 lines total)
+DIFF (2 changed lines):
+  -        can be disabled by setting `cleanup` to ``False``.  The cleanup
+  +        can be disabled by setting `cleanup` to `False`.  The cleanup
+
+--- #13 delta=0.0045 unit=click::src/click/decorators.py::new_func ---
+OLD:
+          def new_func(*args: P.args, **kwargs: P.kwargs) -> R:
+              ctx = get_current_context()
+              obj = ctx.meta[key]
+              return ctx.invoke(f, obj, *args, **kwargs)
+NEW:
+          def new_func(*args: "P.args", **kwargs: "P.kwargs") -> R:
+              ctx = get_current_context()
+              obj = ctx.meta[key]
+              return ctx.invoke(f, obj, *args, **kwargs)
+DIFF (2 changed lines):
+  -        def new_func(*args: P.args, **kwargs: P.kwargs) -> R:
+  +        def new_func(*args: "P.args", **kwargs: "P.kwargs") -> R:
+
+--- #14 delta=0.0045 unit=click::src/click/decorators.py::new_func ---
+OLD:
+          def new_func(*args: "P.args", **kwargs: "P.kwargs") -> R:
+              ctx = get_current_context()
+              obj = ctx.meta[key]
+              return ctx.invoke(f, obj, *args, **kwargs)
+NEW:
+          def new_func(*args: P.args, **kwargs: P.kwargs) -> R:
+              ctx = get_current_context()
+              obj = ctx.meta[key]
+              return ctx.invoke(f, obj, *args, **kwargs)
+DIFF (2 changed lines):
+  -        def new_func(*args: "P.args", **kwargs: "P.kwargs") -> R:
+  +        def new_func(*args: P.args, **kwargs: P.kwargs) -> R:
+
+--- #15 delta=0.0045 unit=click::src/click/decorators.py::new_func ---
+OLD:
+          def new_func(*args: "P.args", **kwargs: "P.kwargs") -> R:
+              ctx = get_current_context()
+              obj = ctx.meta[key]
+              return ctx.invoke(f, obj, *args, **kwargs)
+NEW:
+          def new_func(*args: P.args, **kwargs: P.kwargs) -> R:
+              ctx = get_current_context()
+              obj = ctx.meta[key]
+              return ctx.invoke(f, obj, *args, **kwargs)
+DIFF (2 changed lines):
+  -        def new_func(*args: "P.args", **kwargs: "P.kwargs") -> R:
+  +        def new_func(*args: P.args, **kwargs: P.kwargs) -> R:
+
+--- #16 delta=0.0085 unit=click::src/click/parser.py::__init__ ---
+OLD:
+      def __init__(self, rargs: t.List[str]) -> None:
+          self.opts: t.Dict[str, t.Any] = {}
+          self.largs: t.List[str] = []
+          self.rargs = rargs
+          self.order: t.List[CoreParameter] = []
+  
+NEW:
+      def __init__(self, rargs: list[str]) -> None:
+          self.opts: dict[str, t.Any] = {}
+          self.largs: list[str] = []
+          self.rargs = rargs
+          self.order: list[CoreParameter] = []
+  
+DIFF (8 changed lines):
+  -    def __init__(self, rargs: t.List[str]) -> None:
+  -        self.opts: t.Dict[str, t.Any] = {}
+  -        self.largs: t.List[str] = []
+  +    def __init__(self, rargs: list[str]) -> None:
+  +        self.opts: dict[str, t.Any] = {}
+  +        self.largs: list[str] = []
+  -        self.order: t.List[CoreParameter] = []
+  +        self.order: list[CoreParameter] = []
+
+--- #17 delta=0.0141 unit=click::src/click/_winconsole.py::_get_error_messag ---
+OLD:
+      def _get_error_message(errno: int) -> str:
+          if errno == ERROR_SUCCESS:
+              return "ERROR_SUCCESS"
+          elif errno == ERROR_NOT_ENOUGH_MEMORY:
+              return "ERROR_NOT_ENOUGH_MEMORY"
+          return f"Windows error {errno}"
+NEW:
+      def _get_error_message(errno: int) -> str:
+          if errno == ERROR_SUCCESS:
+              return "ERROR_SUCCESS"
+          elif errno == ERROR_NOT_ENOUGH_MEMORY:
+              return "ERROR_NOT_ENOUGH_MEMORY"
+          return _("Windows error: {error}").format(error=errno)
+DIFF (2 changed lines):
+  -        return f"Windows error {errno}"
+  +        return _("Windows error: {error}").format(error=errno)
+
+--- #18 delta=0.0179 unit=click::src/click/_termui_impl.py::raw_terminal ---
+OLD:
+      def raw_terminal() -> cabc.Iterator[int]:
+          f: t.TextIO | None
+          fd: int
+  
+          if not isatty(sys.stdin):
+              f = open("/dev/tty")
+              fd = f.fileno()
+          else:
+              fd = sys.stdin.fileno()
+              f = None
+  
+          try:
+              old_settings = termios.tcgetattr(fd)
+  
+              try:
+  ... (25 lines total)
+NEW:
+      def raw_terminal() -> t.Iterator[int]:
+          f: t.Optional[t.TextIO]
+          fd: int
+  
+          if not isatty(sys.stdin):
+              f = open("/dev/tty")
+              fd = f.fileno()
+          else:
+              fd = sys.stdin.fileno()
+              f = None
+  
+          try:
+              old_settings = termios.tcgetattr(fd)
+  
+              try:
+  ... (25 lines total)
+DIFF (4 changed lines):
+  -    def raw_terminal() -> cabc.Iterator[int]:
+  -        f: t.TextIO | None
+  +    def raw_terminal() -> t.Iterator[int]:
+  +        f: t.Optional[t.TextIO]
+
+--- #19 delta=0.0179 unit=click::src/click/_termui_impl.py::raw_terminal ---
+OLD:
+      def raw_terminal() -> t.Iterator[int]:
+          f: t.Optional[t.TextIO]
+          fd: int
+  
+          if not isatty(sys.stdin):
+              f = open("/dev/tty")
+              fd = f.fileno()
+          else:
+              fd = sys.stdin.fileno()
+              f = None
+  
+          try:
+              old_settings = termios.tcgetattr(fd)
+  
+              try:
+  ... (25 lines total)
+NEW:
+      def raw_terminal() -> cabc.Iterator[int]:
+          f: t.TextIO | None
+          fd: int
+  
+          if not isatty(sys.stdin):
+              f = open("/dev/tty")
+              fd = f.fileno()
+          else:
+              fd = sys.stdin.fileno()
+              f = None
+  
+          try:
+              old_settings = termios.tcgetattr(fd)
+  
+              try:
+  ... (25 lines total)
+DIFF (4 changed lines):
+  -    def raw_terminal() -> t.Iterator[int]:
+  -        f: t.Optional[t.TextIO]
+  +    def raw_terminal() -> cabc.Iterator[int]:
+  +        f: t.TextIO | None
+
+--- #20 delta=0.0179 unit=click::src/click/_termui_impl.py::raw_terminal ---
+OLD:
+      def raw_terminal() -> cabc.Iterator[int]:
+          f: t.TextIO | None
+          fd: int
+  
+          if not isatty(sys.stdin):
+              f = open("/dev/tty")
+              fd = f.fileno()
+          else:
+              fd = sys.stdin.fileno()
+              f = None
+  
+          try:
+              old_settings = termios.tcgetattr(fd)
+  
+              try:
+  ... (25 lines total)
+NEW:
+      def raw_terminal() -> t.Iterator[int]:
+          f: t.Optional[t.TextIO]
+          fd: int
+  
+          if not isatty(sys.stdin):
+              f = open("/dev/tty")
+              fd = f.fileno()
+          else:
+              fd = sys.stdin.fileno()
+              f = None
+  
+          try:
+              old_settings = termios.tcgetattr(fd)
+  
+              try:
+  ... (25 lines total)
+DIFF (4 changed lines):
+  -    def raw_terminal() -> cabc.Iterator[int]:
+  -        f: t.TextIO | None
+  +    def raw_terminal() -> t.Iterator[int]:
+  +        f: t.Optional[t.TextIO]

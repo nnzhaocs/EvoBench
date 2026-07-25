@@ -1,0 +1,473 @@
+{
+  "model": "codebert",
+  "k": 10,
+  "taus": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "fake_embed": false,
+  "per_repo": [
+    {
+      "repo": "aiohttp",
+      "n_updates": 409,
+      "n_units": 65,
+      "always_recall": 0.1486175115207373,
+      "always_cost": 409,
+      "never_recall": 0.17869943676395286,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.1486175115207373,
+          "recompute": 409,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.17869943676395286,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.1658986175115207,
+          "recompute": 17,
+          "save_pct": 95.8
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.16321044546850996,
+          "recompute": 12,
+          "save_pct": 97.1
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.17869943676395286,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.17869943676395286,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "click",
+      "n_updates": 86,
+      "n_units": 23,
+      "always_recall": 0.42718253968253966,
+      "always_cost": 86,
+      "never_recall": 0.3712301587301588,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.42718253968253966,
+          "recompute": 86,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.3712301587301588,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.4902777777777778,
+          "recompute": 8,
+          "save_pct": 90.7
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.4902777777777778,
+          "recompute": 7,
+          "save_pct": 91.9
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.3712301587301588,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.3712301587301588,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "cobra",
+      "n_updates": 1079,
+      "n_units": 259,
+      "always_recall": 0.03448471926083866,
+      "always_cost": 1079,
+      "never_recall": 0.03255152807391613,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.03448471926083866,
+          "recompute": 1079,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.03255152807391613,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.03025586353944563,
+          "recompute": 451,
+          "save_pct": 58.2
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.02958422174840085,
+          "recompute": 244,
+          "save_pct": 77.4
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.032125088841506756,
+          "recompute": 138,
+          "save_pct": 87.2
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.03255152807391613,
+          "recompute": 5,
+          "save_pct": 99.5
+        }
+      ]
+    },
+    {
+      "repo": "echo",
+      "n_updates": 3351,
+      "n_units": 678,
+      "always_recall": 0.038012356841470765,
+      "always_cost": 3351,
+      "never_recall": 0.01621961020695198,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.038012356841470765,
+          "recompute": 3351,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.01621961020695198,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.03326552139843279,
+          "recompute": 1735,
+          "save_pct": 48.2
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.029558468957203134,
+          "recompute": 1116,
+          "save_pct": 66.7
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.028752260397830017,
+          "recompute": 637,
+          "save_pct": 81.0
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.023673899939722725,
+          "recompute": 190,
+          "save_pct": 94.3
+        }
+      ]
+    },
+    {
+      "repo": "express",
+      "n_updates": 136,
+      "n_units": 36,
+      "always_recall": 0.3141891891891892,
+      "always_cost": 136,
+      "never_recall": 0.28265765765765766,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.3141891891891892,
+          "recompute": 136,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.28265765765765766,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.28716216216216217,
+          "recompute": 41,
+          "save_pct": 69.9
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.2274774774774775,
+          "recompute": 7,
+          "save_pct": 94.9
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.27139639639639646,
+          "recompute": 3,
+          "save_pct": 97.8
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.28265765765765766,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "flask",
+      "n_updates": 334,
+      "n_units": 131,
+      "always_recall": 0.06882440476190477,
+      "always_cost": 334,
+      "never_recall": 0.11205357142857142,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.06882440476190477,
+          "recompute": 334,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.11205357142857142,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.07689732142857142,
+          "recompute": 108,
+          "save_pct": 67.7
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.07950148809523809,
+          "recompute": 47,
+          "save_pct": 85.9
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.11335565476190476,
+          "recompute": 18,
+          "save_pct": 94.6
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.11205357142857142,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "gin",
+      "n_updates": 1802,
+      "n_units": 434,
+      "always_recall": 0.047741977225672874,
+      "always_cost": 1802,
+      "never_recall": 0.0370018115942029,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.047741977225672874,
+          "recompute": 1802,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.0370018115942029,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.04353002070393375,
+          "recompute": 983,
+          "save_pct": 45.4
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.039195134575569356,
+          "recompute": 500,
+          "save_pct": 72.3
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.03525276052449965,
+          "recompute": 273,
+          "save_pct": 84.9
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.035190217391304346,
+          "recompute": 18,
+          "save_pct": 99.0
+        }
+      ]
+    },
+    {
+      "repo": "lodash",
+      "n_updates": 950,
+      "n_units": 535,
+      "always_recall": 0.022727272727272728,
+      "always_cost": 950,
+      "never_recall": 0.03156565656565657,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.022727272727272728,
+          "recompute": 950,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.03156565656565657,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.03345959595959596,
+          "recompute": 160,
+          "save_pct": 83.2
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.03156565656565657,
+          "recompute": 36,
+          "save_pct": 96.2
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.03156565656565657,
+          "recompute": 11,
+          "save_pct": 98.8
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.03156565656565657,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "pylint",
+      "n_updates": 720,
+      "n_units": 162,
+      "always_recall": 0.07137518684603887,
+      "always_cost": 720,
+      "never_recall": 0.061659192825112105,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.07137518684603887,
+          "recompute": 720,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.061659192825112105,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.05941704035874439,
+          "recompute": 73,
+          "save_pct": 89.9
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.061659192825112105,
+          "recompute": 45,
+          "save_pct": 93.8
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.061659192825112105,
+          "recompute": 31,
+          "save_pct": 95.7
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.061659192825112105,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "requests",
+      "n_updates": 69,
+      "n_units": 43,
+      "always_recall": 0.0640176600441501,
+      "always_cost": 69,
+      "never_recall": 0.046357615894039736,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.0640176600441501,
+          "recompute": 69,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.046357615894039736,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.059602649006622516,
+          "recompute": 9,
+          "save_pct": 87.0
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.059602649006622516,
+          "recompute": 5,
+          "save_pct": 92.8
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.052980132450331126,
+          "recompute": 2,
+          "save_pct": 97.1
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.046357615894039736,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    }
+  ]
+}

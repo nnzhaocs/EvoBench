@@ -1,0 +1,285 @@
+{
+ "express#issue-639": [
+  "express::lib/router/index.js::Router",
+  "express::lib/router/route.js::Route"
+ ],
+ "express#issue-801": [
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::paramCallback"
+ ],
+ "express#issue-824": [
+  "express::lib/router/index.js::param"
+ ],
+ "express#issue-878": [
+  "express::lib/view.js::View"
+ ],
+ "express#issue-941": [
+  "express::lib/router/index.js::Router"
+ ],
+ "express#pr-951": [
+  "express::lib/router/index.js::Router"
+ ],
+ "express#pr-1244": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::stream"
+ ],
+ "express#pr-1466": [
+  "express::lib/view.js::View"
+ ],
+ "express#pr-1578": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "express#pr-1625": [
+  "express::lib/view.js::View"
+ ],
+ "express#pr-1650": [
+  "express::lib/express.js::createApplication"
+ ],
+ "express#pr-1729": [
+  "express::examples/content-negotiation/index.js::format"
+ ],
+ "express#pr-1835": [
+  "express::lib/router/route.js::Route"
+ ],
+ "express#pr-1853": [
+  "express::lib/express.js::createApplication"
+ ],
+ "express#issue-1906": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onstream"
+ ],
+ "express#pr-1935": [
+  "express::lib/router/index.js::trim_prefix",
+  "express::lib/router/layer.js::Layer",
+  "express::lib/router/route.js::Route",
+  "express::lib/utils.js::acceptParams"
+ ],
+ "express#pr-1964": [
+  "express::lib/router/layer.js::Layer"
+ ],
+ "express#issue-1995": [
+  "express::lib/router/index.js::param"
+ ],
+ "express#pr-2004": [
+  "express::lib/router/layer.js::Layer"
+ ],
+ "express#pr-2008": [
+  "express::examples/auth/app.js::authenticate",
+  "express::examples/content-negotiation/index.js::format"
+ ],
+ "express#issue-2016": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::wrap"
+ ],
+ "express#pr-2065": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "express#issue-2078": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "express#issue-2121": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "express#issue-2149": [
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::paramCallback"
+ ],
+ "express#issue-2153": [
+  "express::lib/router/index.js::mergeParams",
+  "express::lib/router/index.js::next"
+ ],
+ "express#issue-2163": [
+  "express::lib/router/index.js::restore",
+  "express::lib/router/index.js::wrap"
+ ],
+ "express#issue-2170": [
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::paramCallback"
+ ],
+ "express#pr-2177": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "express#issue-2189": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "express#issue-2203": [
+  "express::lib/router/index.js::mergeParams",
+  "express::lib/router/index.js::next"
+ ],
+ "express#issue-2206": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/route.js::Route"
+ ],
+ "express#issue-2241": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/route.js::next"
+ ],
+ "express#pr-2266": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onstream"
+ ],
+ "express#pr-2300": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "express#pr-2303": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "express#pr-2305": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "express#pr-2320": [
+  "express::lib/view.js::View"
+ ],
+ "express#pr-2371": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/route.js::next"
+ ],
+ "express#issue-2412": [
+  "express::lib/router/index.js::next"
+ ],
+ "express#issue-2458": [
+  "express::lib/router/index.js::next"
+ ],
+ "express#issue-2481": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfile",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile"
+ ],
+ "express#issue-2489": [
+  "express::lib/response.js::onaborted",
+  "express::lib/response.js::onfile",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::sendfile"
+ ],
+ "express#issue-2494": [
+  "express::lib/router/index.js::restore"
+ ],
+ "express#issue-2561": [
+  "express::lib/express.js::createApplication"
+ ],
+ "express#issue-2571": [
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::sendfile"
+ ],
+ "express#issue-2652": [
+  "express::lib/router/layer.js::decode_param"
+ ],
+ "express#pr-2655": [
+  "express::lib/router/index.js::param"
+ ],
+ "express#pr-2722": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "express#pr-2900": [
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stringify"
+ ],
+ "express#issue-3037": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "express#pr-3158": [
+  "express::lib/view.js::View"
+ ],
+ "express#pr-3207": [
+  "express::examples/auth/index.js::authenticate"
+ ],
+ "express#pr-3228": [
+  "express::lib/router/index.js::restore"
+ ],
+ "express#issue-3268": [
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stringify"
+ ],
+ "express#pr-3269": [
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stringify"
+ ],
+ "express#pr-3312": [
+  "express::examples/cookie-sessions/index.js::count"
+ ],
+ "express#issue-3313": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "express#pr-3314": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "express#issue-3403": [
+  "express::lib/view.js::View"
+ ],
+ "express#pr-3540": [
+  "express::examples/auth/index.js::authenticate",
+  "express::examples/route-middleware/index.js::andRestrictTo",
+  "express::examples/route-middleware/index.js::andRestrictToSelf",
+  "express::examples/view-locals/index.js::ferrets"
+ ],
+ "express#issue-4204": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "express#pr-4205": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "express#pr-4744": [
+  "express::lib/response.js::stringify"
+ ],
+ "express#pr-4843": [
+  "express::lib/response.js::sendfile"
+ ],
+ "express#pr-4860": [
+  "express::lib/router/index.js::getProtohost",
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::trim_prefix",
+  "express::lib/view.js::View"
+ ],
+ "express#pr-4891": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::trim_prefix",
+  "express::lib/router/route.js::next"
+ ],
+ "express#issue-4899": [
+  "express::lib/router/index.js::next"
+ ],
+ "express#issue-4913": [
+  "express::lib/router/route.js::next"
+ ],
+ "express#pr-5113": [
+  "express::examples/error/index.js::error"
+ ],
+ "express#pr-5130": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "express#pr-5414": [
+  "express::examples/cookie-sessions/index.js::count"
+ ],
+ "express#pr-6066": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "express#pr-6464": [
+  "express::lib/application.js::logerror"
+ ]
+}

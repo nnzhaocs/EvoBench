@@ -1,0 +1,18 @@
+Parameterize SupportsItems to handle Mapping key invariance (#7426)
+Add inline types to Requests (#7272)
+Add automatic code formatting to Requests (#6095)
+Avoid zip extract racing condition by using read+write instead extract (#5707)
+Merge pull request #4134 from mlcrazy/master
+Merge pull request #3865 from JohnVillalovos/master
+Merge pull request #3789 from moin18/3780
+Merge pull request #3484 from scop/rtypes
+Merge pull request #2095 from ericfrederich/redirect_cache
+Merge pull request #1918 from zackw/response-is-redirect
+Fix the potential issue mentioned in #1151
+Fix the elapsed test and #1133
+Merge pull request #1031 from sigmavirus24/master
+Fixes #711!
+Merge pull request #573 from idangazit/develop
+Encode Multipart Post data at Request creation
+Only send URL path to servers
+Merge pull request #202 from kennethreitz/feature/content-stream

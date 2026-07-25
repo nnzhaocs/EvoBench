@@ -1,0 +1,13 @@
+
+========================================================
+衔接: pylint
+========================================================
+  units 162 | updates 720 | queries 1 | GT 1
+  自检 ✅ 通过 -> c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_final\pylint
+  下游可直接：python 负载体检.py --units c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_final\pylint/units.jsonl --updates c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_final\pylint/updates.jsonl --queries c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_final\pylint/queries.txt --repo-name pylint --purpose measurement
+
+汇总：1/1 仓库转换自检通过。
+现在四件套对齐下游，可跑 负载体检.py 和未来的成本/Recall 测量。
+
+[耗时] 0.2s
+[退出码] 0

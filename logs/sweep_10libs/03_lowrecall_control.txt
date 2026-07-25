@@ -1,0 +1,30 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784633442.364754   28508 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784633477.727702   28508 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+==============================================================================================================
+低-recall 对照实验：全集 vs 三种命中子集口径下的 always/never 差异
+  主口径 = 并集(always∪never命中，无selection bias)；GTleqk = 并集且|GT|<=k(去分母压低)
+==============================================================================================================
+仓库          查询   并集n GTlekn  |     全集Δ  |   并集_alw   并集_nev     并集Δ  |   仅alwΔ  |  GTk_alw  GTk_nev    GTkΔ
+aiohttp     93    61     61  | +0.0038  |    0.827   0.8212 +0.0059  | +0.0579  |    0.827   0.8212 +0.0059
+click       84    65     65  | -0.0065  |   0.8814   0.8899 -0.0085  | +0.0153  |   0.8814   0.8899 -0.0085
+cobra      335   222    222  | +0.0365  |   0.6614   0.6062 +0.0551  | +0.1201  |   0.6614   0.6062 +0.0551
+echo       474   323    323  | -0.0284  |   0.5797   0.6213 -0.0416  | +0.1182  |   0.5797   0.6213 -0.0416
+express     74    64     64  | -0.0005  |   0.8813   0.8818 -0.0005  | -0.0005  |   0.8813   0.8818 -0.0005
+flask      128    81     81  | +0.0133  |   0.8281    0.807 +0.0211  | +0.0429  |   0.8281    0.807 +0.0211
+gin        552   362    362  | +0.0376  |   0.6911   0.6338 +0.0574  |  +0.155  |   0.6911   0.6338 +0.0574
+lodash     264   110    110  |  +0.039  |   0.6292   0.5356 +0.0936  |  +0.173  |   0.6292   0.5356 +0.0936
+pylint     223   115    115  | -0.0463  |   0.7709   0.8607 -0.0899  | +0.0527  |   0.7709   0.8607 -0.0899
+requests   151   122    122  | +0.0124  |   0.9678   0.9525 +0.0153  | +0.0322  |   0.9678   0.9525 +0.0153
+
+==============================================================================================================
+判读（以【并集Δ】为主口径，【GTkΔ】为最干净复核）：
+  三口径 |Δ| 都在 ±0.02 内 → 差异小不是低recall退化，Finding1 最稳，堵死两个追问 ✅
+  某口径 |Δ| 明显放大        → 低recall/分母确实掩盖了差异，该口径下 Finding1 需改写 🔴
+
+  平均|全集Δ|=0.0224  |并集Δ|=0.0389  |仅alwaysΔ|=0.0768  |GTleqkΔ|=0.0389
+  → 主口径判读：并集中间⚠  GTleqk中间⚠
+  （若并集与GTleqk结论一致且都<0.03，是最强结果；若两者分歧，说明分母效应在起作用，需在论文里分列报告）

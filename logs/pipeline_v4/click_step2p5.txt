@@ -1,0 +1,13 @@
+
+========================================================
+衔接: click
+========================================================
+  units 84 | updates 318 | queries 0 | GT 0
+  自检 ✅ 通过 -> c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_final\click
+  下游可直接：python 负载体检.py --units c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_final\click/units.jsonl --updates c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_final\click/updates.jsonl --queries c:\Users\26240\Desktop\SemView\EvoBench_扩仓库执行包_v4\bench_final\click/queries.txt --repo-name click --purpose measurement
+
+汇总：1/1 仓库转换自检通过。
+现在四件套对齐下游，可跑 负载体检.py 和未来的成本/Recall 测量。
+
+[耗时] 0.2s
+[退出码] 0

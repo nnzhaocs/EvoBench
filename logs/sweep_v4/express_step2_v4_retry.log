@@ -1,0 +1,28 @@
+
+============================================================
+仓库: express  [step2 v4 (行号范围法+花括号定界+GT上限; commit-first号对齐+冻结+issue/PR标记)]  GT上限=8
+============================================================
+[units] 第一步单元 36
+[clone] 需要第一步的克隆目录；重新克隆 https://github.com/expressjs/express.git ...
+[freeze] 本次 clone HEAD = ae6dd37680e3（复现需 checkout 此 SHA）
+[link] 先扫 commit，建 号→修复commit→改动函数 的真实链路...
+  commit 引用了 994 个号（强链接 622 / 弱链接 372）
+[issues] 按引用号拉 issue/PR 详情（对齐拉取，冻结缓存）...
+  [fetch] 按 commit 引用的 500 个号逐个拉详情（对齐拉取，非倒序最新）...
+    进度 100/500，已配到 94 条有效
+    进度 200/500，已配到 190 条有效
+    进度 300/500，已配到 289 条有效
+    进度 400/500，已配到 386 条有效
+  [cache] 冻结 482 条详情 -> /root/expr_retry/work/express/step2/issue_cache.json
+  拿到 482 条有效（真实 issue 270 / PR 212）
+[out] 带非空GT查询 44  |  strong=31 weak=13  |  issue=23 pr=21  |  最严(strong+issue)=23
+[gt-cap] GT上限=8，被丢弃的大commit数=0（丢弃多→该仓库批量重构多、可定位修复少；可调 --gt-max 观察）
+  写出 queries.jsonl + ground_truth.json -> /root/expr_retry/work/express/step2
+
+============================================================
+汇总
+============================================================
+  express      真实查询(带GT)   44  ✅
+
+合格仓库 1/1。
+下一步：build_step3 用真 MiniLM 跑体检/统计，把 units+updates+queries+GT 打包发布。

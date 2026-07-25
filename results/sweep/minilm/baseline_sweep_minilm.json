@@ -1,0 +1,289 @@
+{
+  "model": "minilm",
+  "k": 10,
+  "taus": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "fake_embed": false,
+  "per_repo": [
+    {
+      "repo": "express",
+      "n_updates": 136,
+      "n_units": 36,
+      "always_recall": 0.6507936507936508,
+      "always_cost": 136,
+      "never_recall": 0.6428571428571429,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.6507936507936508,
+          "recompute": 136,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.6428571428571429,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.6507936507936508,
+          "recompute": 107,
+          "save_pct": 21.3
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.6507936507936508,
+          "recompute": 96,
+          "save_pct": 29.4
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.6746031746031746,
+          "recompute": 78,
+          "save_pct": 42.6
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.6547619047619048,
+          "recompute": 24,
+          "save_pct": 82.4
+        }
+      ]
+    },
+    {
+      "repo": "flask",
+      "n_updates": 334,
+      "n_units": 131,
+      "always_recall": 0.25137844611528826,
+      "always_cost": 334,
+      "never_recall": 0.26516290726817043,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.25137844611528826,
+          "recompute": 334,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.26516290726817043,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.2538847117794486,
+          "recompute": 253,
+          "save_pct": 24.3
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.2538847117794486,
+          "recompute": 186,
+          "save_pct": 44.3
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.2714285714285714,
+          "recompute": 137,
+          "save_pct": 59.0
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.26265664160401003,
+          "recompute": 72,
+          "save_pct": 78.4
+        }
+      ]
+    },
+    {
+      "repo": "gin",
+      "n_updates": 1802,
+      "n_units": 434,
+      "always_recall": 0.36434437543133197,
+      "always_cost": 1802,
+      "never_recall": 0.35467391304347823,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.36434437543133197,
+          "recompute": 1802,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.35467391304347823,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.36579365079365084,
+          "recompute": 1664,
+          "save_pct": 7.7
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.3661559696342306,
+          "recompute": 1541,
+          "save_pct": 14.5
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.3668081435472739,
+          "recompute": 1222,
+          "save_pct": 32.2
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.358768115942029,
+          "recompute": 662,
+          "save_pct": 63.3
+        }
+      ]
+    },
+    {
+      "repo": "koa",
+      "n_updates": 53,
+      "n_units": 11,
+      "always_recall": 1.0,
+      "always_cost": 53,
+      "never_recall": 1.0,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 1.0,
+          "recompute": 53,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 1.0,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 1.0,
+          "recompute": 46,
+          "save_pct": 13.2
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 1.0,
+          "recompute": 46,
+          "save_pct": 13.2
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 1.0,
+          "recompute": 45,
+          "save_pct": 15.1
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 1.0,
+          "recompute": 31,
+          "save_pct": 41.5
+        }
+      ]
+    },
+    {
+      "repo": "pylint",
+      "n_updates": 720,
+      "n_units": 162,
+      "always_recall": 0.0,
+      "always_cost": 720,
+      "never_recall": 0.0,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.0,
+          "recompute": 720,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.0,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.0,
+          "recompute": 325,
+          "save_pct": 54.9
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.0,
+          "recompute": 257,
+          "save_pct": 64.3
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.0,
+          "recompute": 150,
+          "save_pct": 79.2
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.0,
+          "recompute": 82,
+          "save_pct": 88.6
+        }
+      ]
+    },
+    {
+      "repo": "requests",
+      "n_updates": 69,
+      "n_units": 43,
+      "always_recall": 0.5588235294117647,
+      "always_cost": 69,
+      "never_recall": 0.5,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.5588235294117647,
+          "recompute": 69,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.5,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.5,
+          "recompute": 25,
+          "save_pct": 63.8
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.5,
+          "recompute": 17,
+          "save_pct": 75.4
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.5,
+          "recompute": 9,
+          "save_pct": 87.0
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.5,
+          "recompute": 2,
+          "save_pct": 97.1
+        }
+      ]
+    }
+  ]
+}

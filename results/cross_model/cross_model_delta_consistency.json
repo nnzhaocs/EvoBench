@@ -1,0 +1,16 @@
+{
+  "models": [
+    "minilm",
+    "mpnet"
+  ],
+  "spearman": {
+    "minilm": {
+      "minilm": 1.0,
+      "mpnet": 0.946
+    },
+    "mpnet": {
+      "minilm": 0.946,
+      "mpnet": 1.0
+    }
+  }
+}

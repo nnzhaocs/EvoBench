@@ -1,0 +1,837 @@
+============================================================
+lodash: delta最低的 20 对更新 (原文对照)
+============================================================
+
+--- #1 delta=-0.0000 unit=lodash::lodash.js::runInContext ---
+OLD:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Array = context.Array,
+          Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  ... (233 lines total)
+NEW:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Array = context.Array,
+          Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  ... (241 lines total)
+DIFF (8 changed lines):
+  +
+  +    /* Used to set `toString` methods. */
+  +    var defineProperty = (function() {
+  +      var func = getNative(context.Object, 'defineProperty'),
+  +          name = getNative.name;
+  +
+  +      return (name && name.length > 2) ? func : undefined;
+  +    }());
+
+--- #2 delta=-0.0000 unit=lodash::lodash.js::runInContext ---
+OLD:
+    function runInContext(context) {
+      context = context ? _.defaults(root.Object(), context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Array = context.Array,
+          Date = context.Date,
+          Error = context.Error,
+          Function = context.Function,
+          Math = context.Math,
+          Object = context.Object,
+          RegExp = context.RegExp,
+          String = context.String,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+  ... (232 lines total)
+NEW:
+    function runInContext(context) {
+      context = context ? _.defaults(root.Object(), context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Array = context.Array,
+          Date = context.Date,
+          Error = context.Error,
+          Function = context.Function,
+          Math = context.Math,
+          Object = context.Object,
+          RegExp = context.RegExp,
+          String = context.String,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+  ... (233 lines total)
+DIFF (5 changed lines):
+  +        defineProperty = Object.defineProperty,
+  -        defineProperty = getNative(Object, 'defineProperty'),
+  -        nativeCreate = getNative(Object, 'create');
+  +        nativeCreate = getNative(Object, 'create'),
+  +        nativeDefineProperty = getNative(Object, 'defineProperty');
+
+--- #3 delta=-0.0000 unit=lodash::dist/lodash.js::createWrap ---
+OLD:
+      function createWrap(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
+        var isBindKey = bitmask & WRAP_BIND_KEY_FLAG;
+        if (!isBindKey && typeof func != 'function') {
+          throw new TypeError(FUNC_ERROR_TEXT);
+        }
+        var length = partials ? partials.length : 0;
+        if (!length) {
+          bitmask &= ~(WRAP_PARTIAL_FLAG | WRAP_PARTIAL_RIGHT_FLAG);
+          partials = holders = undefined;
+        }
+        ary = ary === undefined ? ary : nativeMax(toInteger(ary), 0);
+        arity = arity === undefined ? arity : toInteger(arity);
+        length -= holders ? holders.length : 0;
+  
+        if (bitmask & WRAP_PARTIAL_RIGHT_FLAG) {
+  ... (54 lines total)
+NEW:
+      function createWrap(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
+        var isBindKey = bitmask & WRAP_BIND_KEY_FLAG;
+        if (!isBindKey && typeof func != 'function') {
+          throw new TypeError(FUNC_ERROR_TEXT);
+        }
+        var length = partials ? partials.length : 0;
+        if (!length) {
+          bitmask &= ~(WRAP_PARTIAL_FLAG | WRAP_PARTIAL_RIGHT_FLAG);
+          partials = holders = undefined;
+        }
+        ary = ary === undefined ? ary : nativeMax(toInteger(ary), 0);
+        arity = arity === undefined ? arity : toInteger(arity);
+        length -= holders ? holders.length : 0;
+  
+        if (bitmask & WRAP_PARTIAL_RIGHT_FLAG) {
+  ... (54 lines total)
+DIFF (2 changed lines):
+  -      arity = newData[9] = newData[9] == null
+  +      arity = newData[9] = newData[9] === undefined
+
+--- #4 delta=-0.0000 unit=lodash::lib/main/build-site.js::tidyHighlights ---
+OLD:
+  function tidyHighlights($) {
+    $('.highlight').each(function() {
+      let $spans;
+      const $parent = $(this);
+      const ext = $parent.find('.source,.text').first().attr('class').split(' ').pop();
+  
+      $parent.addClass(ext);
+  
+      // Remove line indicators for single line snippets.
+      $parent.children('pre').each(function() {
+        const $divs = $(this).children('div');
+        if ($divs.length == 1) {
+          $divs.replaceWith($divs.html());
+        }
+      });
+  ... (42 lines total)
+NEW:
+  function tidyHighlights($) {
+    $('.highlight').each(function() {
+      let $spans;
+      const $parent = $(this);
+      const ext = $parent.find('.source,.text').first().attr('class').split(' ').pop();
+  
+      $parent.addClass(ext);
+  
+      // Remove line indicators for single line snippets.
+      $parent.children('pre').each(function() {
+        const $divs = $(this).children('div');
+        if ($divs.length == 1) {
+          $divs.replaceWith($divs.html());
+        }
+      });
+  ... (42 lines total)
+DIFF (6 changed lines):
+  -      $parent.find(`[class~="${ cls }"] > [class~="${ cls }"]`).each(function() {
+  -        const $parent = $(this).parent();
+  -        $parent.text($parent.text());
+  +      $parent.find(`[class~="${ cls }"]`).each(function() {
+  +        const $element = $(this);
+  +        $element.text($element.text());
+
+--- #5 delta=-0.0000 unit=lodash::lodash.js::runInContext ---
+OLD:
+    function runInContext(context) {
+      context = context ? _.defaults(root.Object(), context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Array = context.Array,
+          Date = context.Date,
+          Error = context.Error,
+          Function = context.Function,
+          Math = context.Math,
+          Object = context.Object,
+          RegExp = context.RegExp,
+          String = context.String,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+  ... (233 lines total)
+NEW:
+    function runInContext(context) {
+      context = context ? _.defaults(root.Object(), context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Array = context.Array,
+          Date = context.Date,
+          Error = context.Error,
+          Function = context.Function,
+          Math = context.Math,
+          Object = context.Object,
+          RegExp = context.RegExp,
+          String = context.String,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+  ... (234 lines total)
+DIFF (1 changed lines):
+  +        nativeNow = Date.now,
+
+--- #6 delta=-0.0000 unit=lodash::lodash.js::createRecurry ---
+OLD:
+      function createRecurry(func, bitmask, wrapFunc, placeholder, thisArg, partials, holders, argPos, ary, arity) {
+        var isCurry = bitmask & CURRY_FLAG,
+            newHolders = isCurry ? holders : undefined,
+            newHoldersRight = isCurry ? undefined : holders,
+            newPartials = isCurry ? partials : undefined,
+            newPartialsRight = isCurry ? undefined : partials;
+  
+        bitmask |= (isCurry ? PARTIAL_FLAG : PARTIAL_RIGHT_FLAG);
+        bitmask &= ~(isCurry ? PARTIAL_RIGHT_FLAG : PARTIAL_FLAG);
+  
+        if (!(bitmask & CURRY_BOUND_FLAG)) {
+          bitmask &= ~(BIND_FLAG | BIND_KEY_FLAG);
+        }
+        var newData = [
+          func, bitmask, thisArg, newPartials, newHolders, newPartialsRight,
+  ... (25 lines total)
+NEW:
+      function createRecurry(func, bitmask, wrapFunc, placeholder, thisArg, partials, holders, argPos, ary, arity) {
+        var isCurry = bitmask & CURRY_FLAG,
+            newHolders = isCurry ? holders : undefined,
+            newHoldersRight = isCurry ? undefined : holders,
+            newPartials = isCurry ? partials : undefined,
+            newPartialsRight = isCurry ? undefined : partials;
+  
+        bitmask |= (isCurry ? PARTIAL_FLAG : PARTIAL_RIGHT_FLAG);
+        bitmask &= ~(isCurry ? PARTIAL_RIGHT_FLAG : PARTIAL_FLAG);
+  
+        if (!(bitmask & CURRY_BOUND_FLAG)) {
+          bitmask &= ~(BIND_FLAG | BIND_KEY_FLAG);
+        }
+        var newData = [
+          func, bitmask, thisArg, newPartials, newHolders, newPartialsRight,
+  ... (25 lines total)
+DIFF (2 changed lines):
+  -      return result;
+  +      return setWrapToString(result, func, bitmask);
+
+--- #7 delta=0.0000 unit=lodash::dist/lodash.js::equalArrays ---
+OLD:
+      function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
+        var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+            arrLength = array.length,
+            othLength = other.length;
+  
+        if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+          return false;
+        }
+        // Assume cyclic values are equal.
+        var stacked = stack.get(array);
+        if (stacked && stack.get(other)) {
+          return stacked == other;
+        }
+        var index = -1,
+            result = true,
+  ... (59 lines total)
+NEW:
+      function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
+        var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+            arrLength = array.length,
+            othLength = other.length;
+  
+        if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+          return false;
+        }
+        // Assume cyclic values are equal.
+        var stacked = stack.get(array);
+        if (stacked && stack.get(other)) {
+          return stacked == other;
+        }
+        var index = -1,
+            result = true,
+  ... (60 lines total)
+DIFF (1 changed lines):
+  +      stack['delete'](other);
+
+--- #8 delta=0.0000 unit=lodash::lodash.js::runInContext ---
+OLD:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Array = context.Array,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (242 lines total)
+NEW:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Array = context.Array,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (240 lines total)
+DIFF (6 changed lines):
+  -        Reflect = context.Reflect,
+  -        enumerate = Reflect ? Reflect.enumerate : undefined,
+  +        getPrototype = overArg(Object.getPrototypeOf, Object),
+  -        nativeGetPrototype = Object.getPrototypeOf,
+  -        nativeKeys = Object.keys,
+  +        nativeKeys = overArg(Object.keys, Object),
+
+--- #9 delta=0.0000 unit=lodash::dist/lodash.js::template ---
+OLD:
+      function template(string, options, guard) {
+        // Based on John Resig's `tmpl` implementation
+        // (http://ejohn.org/blog/javascript-micro-templating/)
+        // and Laura Doktorova's doT.js (https://github.com/olado/doT).
+        var settings = lodash.templateSettings;
+  
+        if (guard && isIterateeCall(string, options, guard)) {
+          options = undefined;
+        }
+        string = toString(string);
+        options = assignInWith({}, options, settings, customDefaultsAssignIn);
+  
+        var imports = assignInWith({}, options.imports, settings.imports, customDefaultsAssignIn),
+            importsKeys = keys(imports),
+            importsValues = baseValues(imports, importsKeys);
+  ... (107 lines total)
+NEW:
+      function template(string, options, guard) {
+        // Based on John Resig's `tmpl` implementation
+        // (http://ejohn.org/blog/javascript-micro-templating/)
+        // and Laura Doktorova's doT.js (https://github.com/olado/doT).
+        var settings = lodash.templateSettings;
+  
+        if (guard && isIterateeCall(string, options, guard)) {
+          options = undefined;
+        }
+        string = toString(string);
+        options = assignInWith({}, options, settings, customDefaultsAssignIn);
+  
+        var imports = assignInWith({}, options.imports, settings.imports, customDefaultsAssignIn),
+            importsKeys = keys(imports),
+            importsValues = baseValues(imports, importsKeys);
+  ... (112 lines total)
+DIFF (11 changed lines):
+  +      // The sourceURL gets injected into the source that's eval-ed, so be careful
+  +      // with lookup (in case of e.g. prototype pollution), and strip newlines if any.
+  +      // A newline wouldn't be a valid sourceURL anyway, and it'd enable code injection.
+  -        ('sourceURL' in options
+  -          ? options.sourceURL
+  +        (hasOwnProperty.call(options, 'sourceURL')
+  +          ? (options.sourceURL + '').replace(/[\r\n]/g, ' ')
+  -      var variable = options.variable;
+  +      // Like with sourceURL, we take care to not check the option's prototype,
+  +      // as this configuration is a code injection vector.
+  ... (11 total)
+
+--- #10 delta=0.0000 unit=lodash::lodash.js::template ---
+OLD:
+      function template(string, options, guard) {
+        // Based on John Resig's `tmpl` implementation
+        // (http://ejohn.org/blog/javascript-micro-templating/)
+        // and Laura Doktorova's doT.js (https://github.com/olado/doT).
+        var settings = lodash.templateSettings;
+  
+        if (guard && isIterateeCall(string, options, guard)) {
+          options = undefined;
+        }
+        string = toString(string);
+        options = assignInWith({}, options, settings, customDefaultsAssignIn);
+  
+        var imports = assignInWith({}, options.imports, settings.imports, customDefaultsAssignIn),
+            importsKeys = keys(imports),
+            importsValues = baseValues(imports, importsKeys);
+  ... (112 lines total)
+NEW:
+      function template(string, options, guard) {
+        // Based on John Resig's `tmpl` implementation
+        // (http://ejohn.org/blog/javascript-micro-templating/)
+        // and Laura Doktorova's doT.js (https://github.com/olado/doT).
+        var settings = lodash.templateSettings;
+  
+        if (guard && isIterateeCall(string, options, guard)) {
+          options = undefined;
+        }
+        string = toString(string);
+        options = assignInWith({}, options, settings, customDefaultsAssignIn);
+  
+        var imports = assignInWith({}, options.imports, settings.imports, customDefaultsAssignIn),
+            importsKeys = keys(imports),
+            importsValues = baseValues(imports, importsKeys);
+  ... (110 lines total)
+DIFF (8 changed lines):
+  -      // with lookup (in case of e.g. prototype pollution), and strip newlines if any.
+  -      // A newline wouldn't be a valid sourceURL anyway, and it'd enable code injection.
+  +      // to normalize all kinds of whitespace, so e.g. newlines (and unicode versions of it) can't sneak in
+  +      // and escape the comment, thus injecting code that gets evaled.
+  -          ? (options.sourceURL + '').replace(/[\r\n]/g, ' ')
+  +          ? (options.sourceURL + '').replace(/\s/g, ' ')
+  -      // Like with sourceURL, we take care to not check the option's prototype,
+  -      // as this configuration is a code injection vector.
+
+--- #11 delta=0.0000 unit=lodash::lodash.js::runInContext ---
+OLD:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (230 lines total)
+NEW:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (231 lines total)
+DIFF (1 changed lines):
+  +        nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined,
+
+--- #12 delta=0.0000 unit=lodash::lodash.js::equalByTag ---
+OLD:
+      function equalByTag(object, other, tag, equalFunc, customizer, bitmask, stack) {
+        switch (tag) {
+          case dataViewTag:
+            if ((object.byteLength != other.byteLength) ||
+                (object.byteOffset != other.byteOffset)) {
+              return false;
+            }
+            object = object.buffer;
+            other = other.buffer;
+  
+          case arrayBufferTag:
+            if ((object.byteLength != other.byteLength) ||
+                !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+              return false;
+            }
+  ... (62 lines total)
+NEW:
+      function equalByTag(object, other, tag, equalFunc, customizer, bitmask, stack) {
+        switch (tag) {
+          case dataViewTag:
+            if ((object.byteLength != other.byteLength) ||
+                (object.byteOffset != other.byteOffset)) {
+              return false;
+            }
+            object = object.buffer;
+            other = other.buffer;
+  
+          case arrayBufferTag:
+            if ((object.byteLength != other.byteLength) ||
+                !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+              return false;
+            }
+  ... (64 lines total)
+DIFF (6 changed lines):
+  -          stack.set(object, other);
+  -          return equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
+  +          stack.set(object, other);
+  +          var result = equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
+  +          stack['delete'](object);
+  +          return result;
+
+--- #13 delta=0.0000 unit=lodash::lodash.js::equalObjects ---
+OLD:
+      function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
+        var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+            objProps = keys(object),
+            objLength = objProps.length,
+            othProps = keys(other),
+            othLength = othProps.length;
+  
+        if (objLength != othLength && !isPartial) {
+          return false;
+        }
+        var index = objLength;
+        while (index--) {
+          var key = objProps[index];
+          if (!(isPartial ? key in other : baseHas(other, key))) {
+            return false;
+  ... (62 lines total)
+NEW:
+      function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
+        var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
+            objProps = keys(object),
+            objLength = objProps.length,
+            othProps = keys(other),
+            othLength = othProps.length;
+  
+        if (objLength != othLength && !isPartial) {
+          return false;
+        }
+        var index = objLength;
+        while (index--) {
+          var key = objProps[index];
+          if (!(isPartial ? key in other : baseHas(other, key))) {
+            return false;
+  ... (63 lines total)
+DIFF (1 changed lines):
+  +      stack['delete'](other);
+
+--- #14 delta=0.0000 unit=lodash::fp/_baseConvert.js::baseConvert ---
+OLD:
+  function baseConvert(util, name, func, options) {
+    var setPlaceholder,
+        isLib = typeof name == 'function',
+        isObj = name === Object(name);
+  
+    if (isObj) {
+      options = func;
+      func = name;
+      name = undefined;
+    }
+    if (func == null) {
+      throw new TypeError;
+    }
+    options || (options = {});
+  
+  ... (136 lines total)
+NEW:
+  function baseConvert(util, name, func, options) {
+    var setPlaceholder,
+        isLib = typeof name == 'function',
+        isObj = name === Object(name);
+  
+    if (isObj) {
+      options = func;
+      func = name;
+      name = undefined;
+    }
+    if (func == null) {
+      throw new TypeError;
+    }
+    options || (options = {});
+  
+  ... (140 lines total)
+DIFF (4 changed lines):
+  +    'isError': util.isError,
+  +    'isWeakMap': util.isWeakMap,
+  +      isError = helpers.isError,
+  +      isWeakMap = helpers.isWeakMap,
+
+--- #15 delta=0.0000 unit=lodash::lodash.js::runInContext ---
+OLD:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (229 lines total)
+NEW:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (229 lines total)
+DIFF (4 changed lines):
+  -        clearTimeout = context.clearTimeout,
+  +        clearTimeout = function(id) { return context.clearTimeout.call(root, id); },
+  -        setTimeout = context.setTimeout,
+  +        setTimeout = function(func, wait) { return context.setTimeout.call(root, func, wait); },
+
+--- #16 delta=0.0000 unit=lodash::lodash.js::runInContext ---
+OLD:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (230 lines total)
+NEW:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (230 lines total)
+DIFF (2 changed lines):
+  -        getOwnPropertySymbols = Object.getOwnPropertySymbols,
+  +        nativeGetSymbols = Object.getOwnPropertySymbols,
+
+--- #17 delta=0.0000 unit=lodash::lodash.js::runInContext ---
+OLD:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (231 lines total)
+NEW:
+    function runInContext(context) {
+      context = context ? _.defaults({}, context, _.pick(root, contextProps)) : root;
+  
+      /** Built-in constructor references. */
+      var Date = context.Date,
+          Error = context.Error,
+          Math = context.Math,
+          RegExp = context.RegExp,
+          TypeError = context.TypeError;
+  
+      /** Used for built-in method references. */
+      var arrayProto = context.Array.prototype,
+          objectProto = context.Object.prototype,
+          stringProto = context.String.prototype;
+  
+  ... (230 lines total)
+DIFF (3 changed lines):
+  -    var clearTimeout = function(id) { return context.clearTimeout.call(root, id); },
+  -        setTimeout = function(func, wait) { return context.setTimeout.call(root, func, wait); };
+  +    var setTimeout = function(func, wait) { return context.setTimeout.call(root, func, wait); };
+
+--- #18 delta=0.0000 unit=lodash::fp/_baseConvert.js::baseConvert ---
+OLD:
+  function baseConvert(util, name, func, options) {
+    var setPlaceholder,
+        isLib = typeof name == 'function',
+        isObj = name === Object(name);
+  
+    if (isObj) {
+      options = func;
+      func = name;
+      name = undefined;
+    }
+    if (func == null) {
+      throw new TypeError;
+    }
+    options || (options = {});
+  
+  ... (138 lines total)
+NEW:
+  function baseConvert(util, name, func, options) {
+    var setPlaceholder,
+        isLib = typeof name == 'function',
+        isObj = name === Object(name);
+  
+    if (isObj) {
+      options = func;
+      func = name;
+      name = undefined;
+    }
+    if (func == null) {
+      throw new TypeError;
+    }
+    options || (options = {});
+  
+  ... (136 lines total)
+DIFF (2 changed lines):
+  -    'spread': util.spread,
+  -      spread = helpers.spread,
+
+--- #19 delta=0.0000 unit=lodash::fp/_baseConvert.js::baseConvert ---
+OLD:
+  function baseConvert(util, name, func, options) {
+    var setPlaceholder,
+        isLib = typeof name == 'function',
+        isObj = name === Object(name);
+  
+    if (isObj) {
+      options = func;
+      func = name;
+      name = undefined;
+    }
+    if (func == null) {
+      throw new TypeError;
+    }
+    options || (options = {});
+  
+  ... (130 lines total)
+NEW:
+  function baseConvert(util, name, func, options) {
+    var setPlaceholder,
+        isLib = typeof name == 'function',
+        isObj = name === Object(name);
+  
+    if (isObj) {
+      options = func;
+      func = name;
+      name = undefined;
+    }
+    if (func == null) {
+      throw new TypeError;
+    }
+    options || (options = {});
+  
+  ... (138 lines total)
+DIFF (12 changed lines):
+  +    'toInteger': util.toInteger,
+  +      toInteger = helpers.toInteger,
+  +    'nthArg': function(nthArg) {
+  +      return function(n) {
+  +        var arity = n < 0 ? 1 : (toInteger(n) + 1);
+  +        return curry(nthArg(n), arity);
+  +      };
+  +    },
+  -        var n = indexes ? indexes.length : 0;
+  -        return curry(rearg(func, indexes), n);
+  ... (12 total)
+
+--- #20 delta=0.0000 unit=lodash::lodash.js::baseClone ---
+OLD:
+      function baseClone(value, bitmask, customizer, key, object, stack) {
+        var result,
+            isDeep = bitmask & CLONE_DEEP_FLAG,
+            isFlat = bitmask & CLONE_FLAT_FLAG,
+            isFull = bitmask & CLONE_SYMBOLS_FLAG;
+  
+        if (customizer) {
+          result = object ? customizer(value, key, object, stack) : customizer(value);
+        }
+        if (result !== undefined) {
+          return result;
+        }
+        if (!isObject(value)) {
+          return value;
+        }
+  ... (81 lines total)
+NEW:
+      function baseClone(value, bitmask, customizer, key, object, stack) {
+        var result,
+            isDeep = bitmask & CLONE_DEEP_FLAG,
+            isFlat = bitmask & CLONE_FLAT_FLAG,
+            isFull = bitmask & CLONE_SYMBOLS_FLAG;
+  
+        if (customizer) {
+          result = object ? customizer(value, key, object, stack) : customizer(value);
+        }
+        if (result !== undefined) {
+          return result;
+        }
+        if (!isObject(value)) {
+          return value;
+        }
+  ... (75 lines total)
+DIFF (10 changed lines):
+  -       value.forEach(function(subValue) {
+  +        value.forEach(function(subValue) {
+  -
+  -        return result;
+  -      }
+  -
+  -      if (isMap(value)) {
+  +      } else if (isMap(value)) {
+  -
+  -        return result;

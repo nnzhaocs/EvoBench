@@ -1,0 +1,534 @@
+============================================================
+gin: delta最低的 20 对更新 (原文对照)
+============================================================
+
+--- #1 delta=-0.0000 unit=gin::tree.go::getValue ---
+OLD:
+  func (n *node) getValue(path string, params *Params, skippedNodes *[]skippedNode, unescape bool) (value nodeValue) {
+  	var globalParamsCount int16
+  
+  walk: // Outer loop for walking the tree
+  	for {
+  		prefix := n.path
+  		if len(path) > len(prefix) {
+  			if path[:len(prefix)] == prefix {
+  				path = path[len(prefix):]
+  
+  				// Try all the non-wildcard children first by matching the indices
+  				idxc := path[0]
+  				for i, c := range []byte(n.indices) {
+  					if c == idxc {
+  						//  strings.HasPrefix(n.children[len(n.children)-1].path, ":") == n.wildChild
+  ... (228 lines total)
+NEW:
+  func (n *node) getValue(path string, params *Params, skippedNodes *[]skippedNode, unescape bool) (value nodeValue) {
+  	var globalParamsCount int16
+  
+  walk: // Outer loop for walking the tree
+  	for {
+  		prefix := n.path
+  		if len(path) > len(prefix) {
+  			if path[:len(prefix)] == prefix {
+  				path = path[len(prefix):]
+  
+  				// Try all the non-wildcard children first by matching the indices
+  				idxc := path[0]
+  				for i, c := range []byte(n.indices) {
+  					if c == idxc {
+  						//  strings.HasPrefix(n.children[len(n.children)-1].path, ":") == n.wildChild
+  ... (229 lines total)
+DIFF (3 changed lines):
+  -			(len(prefix) == len(path)+1 && n.handlers != nil)
+  +			(len(prefix) == len(path)+1 && prefix[len(path)] == '/' &&
+  +				path == prefix[:len(prefix)-1] && n.handlers != nil)
+
+--- #2 delta=-0.0000 unit=gin::routergroup.go::Static ---
+OLD:
+  func (group *RouterGroup) Static(relativePath, root string) RoutesInterface {
+  	return group.StaticFS(relativePath, Dir(root, false))
+  }
+NEW:
+  func (group *RouterGroup) Static(relativePath, root string) routesInterface {
+  	return group.StaticFS(relativePath, Dir(root, false))
+  }
+DIFF (2 changed lines):
+  -func (group *RouterGroup) Static(relativePath, root string) RoutesInterface {
+  +func (group *RouterGroup) Static(relativePath, root string) routesInterface {
+
+--- #3 delta=-0.0000 unit=gin::binding/multipart_form_mapping.go::setByMulti ---
+OLD:
+  func setByMultipartFormFile(value reflect.Value, field reflect.StructField, files []*multipart.FileHeader) (isSetted bool, err error) {
+  	switch value.Kind() {
+  	case reflect.Ptr:
+  		switch value.Interface().(type) {
+  		case *multipart.FileHeader:
+  			value.Set(reflect.ValueOf(files[0]))
+  			return true, nil
+  		}
+  	case reflect.Struct:
+  		switch value.Interface().(type) {
+  		case multipart.FileHeader:
+  			value.Set(reflect.ValueOf(*files[0]))
+  			return true, nil
+  		}
+  	case reflect.Slice:
+  ... (27 lines total)
+NEW:
+  func setByMultipartFormFile(value reflect.Value, field reflect.StructField, files []*multipart.FileHeader) (isSetted bool, err error) {
+  	switch value.Kind() {
+  	case reflect.Ptr:
+  		switch value.Interface().(type) {
+  		case *multipart.FileHeader:
+  			value.Set(reflect.ValueOf(files[0]))
+  			return true, nil
+  		}
+  	case reflect.Struct:
+  		switch value.Interface().(type) {
+  		case multipart.FileHeader:
+  			value.Set(reflect.ValueOf(*files[0]))
+  			return true, nil
+  		}
+  	case reflect.Slice:
+  ... (27 lines total)
+DIFF (2 changed lines):
+  -	return false, errors.New("unsupported field type for multipart.FileHeader")
+  +	return false, ErrMultiFileHeader
+
+--- #4 delta=-0.0000 unit=gin::examples/app-engine/hello.go::init ---
+OLD:
+  func init() {
+  	// Starts a new Gin instance with no middle-ware
+  	r := gin.New()
+  
+  	// Define your handlers
+  	r.GET("/", func(c *gin.Context){
+  		c.String(200, "Hello World!")
+  	})
+  	r.GET("/ping", func(c *gin.Context){
+  		c.String(200, "pong")
+  	})
+  
+  	// Handle all requests using net/http
+  	http.Handle("/", r)
+  }
+NEW:
+  func init() {
+  	// Starts a new Gin instance with no middle-ware
+  	r := gin.New()
+  
+  	// Define your handlers
+  	r.GET("/", func(c *gin.Context) {
+  		c.String(200, "Hello World!")
+  	})
+  	r.GET("/ping", func(c *gin.Context) {
+  		c.String(200, "pong")
+  	})
+  
+  	// Handle all requests using net/http
+  	http.Handle("/", r)
+  }
+DIFF (4 changed lines):
+  -	r.GET("/", func(c *gin.Context){
+  +	r.GET("/", func(c *gin.Context) {
+  -	r.GET("/ping", func(c *gin.Context){
+  +	r.GET("/ping", func(c *gin.Context) {
+
+--- #5 delta=-0.0000 unit=gin::tree.go::insertChild ---
+OLD:
+  func (n *node) insertChild(numParams uint8, path string, fullPath string, handlers HandlersChain) {
+  	var offset int // already handled bytes of the path
+  
+  	// find prefix until first wildcard (beginning with ':' or '*')
+  	for i, max := 0, len(path); numParams > 0; i++ {
+  		c := path[i]
+  		if c != ':' && c != '*' {
+  			continue
+  		}
+  
+  		// find wildcard end (either '/' or path end)
+  		end := i + 1
+  		for end < max && path[end] != '/' {
+  			switch path[end] {
+  			// the wildcard name must not contain ':' and '*'
+  ... (116 lines total)
+NEW:
+  func (n *node) insertChild(numParams uint8, path string, fullPath string, handlers HandlersChain) {
+  	var offset int // already handled bytes of the path
+  
+  	// find prefix until first wildcard (beginning with ':' or '*')
+  	for i, max := 0, len(path); numParams > 0; i++ {
+  		c := path[i]
+  		if c != ':' && c != '*' {
+  			continue
+  		}
+  
+  		// find wildcard end (either '/' or path end)
+  		end := i + 1
+  		for end < max && path[end] != '/' {
+  			switch path[end] {
+  			// the wildcard name must not contain ':' and '*'
+  ... (117 lines total)
+DIFF (1 changed lines):
+  +	n.fullPath = fullPath
+
+--- #6 delta=-0.0000 unit=gin::context.go::ShouldBindBodyWith ---
+OLD:
+  func (c *Context) ShouldBindBodyWith(
+  	obj interface{}
+NEW:
+  func (c *Context) ShouldBindBodyWith(obj interface{}
+DIFF (3 changed lines):
+  -func (c *Context) ShouldBindBodyWith(
+  -	obj interface{}
+  +func (c *Context) ShouldBindBodyWith(obj interface{}
+
+--- #7 delta=-0.0000 unit=gin::context.go::IsAborted ---
+OLD:
+  func (c *Context) IsAborted() bool {
+  	return c.index >= AbortIndex
+  }
+NEW:
+  func (c *Context) IsAborted() bool {
+  	return c.index >= abortIndex
+  }
+DIFF (2 changed lines):
+  -	return c.index >= AbortIndex
+  +	return c.index >= abortIndex
+
+--- #8 delta=-0.0000 unit=gin::tree.go::insertChild ---
+OLD:
+  func (n *node) insertChild(path string, fullPath string, handlers HandlersChain) {
+  	for {
+  		// Find prefix until first wildcard
+  		wildcard, i, valid := findWildcard(path)
+  		if i < 0 { // No wildcard found
+  			break
+  		}
+  
+  		// The wildcard name must only contain one ':' or '*' character
+  		if !valid {
+  			panic("only one wildcard per path segment is allowed, has: '" +
+  				wildcard + "' in path '" + fullPath + "'")
+  		}
+  
+  		// check if the wildcard has a name
+  ... (110 lines total)
+NEW:
+  func (n *node) insertChild(path string, fullPath string, handlers HandlersChain) {
+  	for {
+  		// Find prefix until first wildcard
+  		wildcard, i, valid := findWildcard(path)
+  		if i < 0 { // No wildcard found
+  			break
+  		}
+  
+  		// The wildcard name must only contain one ':' or '*' character
+  		if !valid {
+  			panic("only one wildcard per path segment is allowed, has: '" +
+  				wildcard + "' in path '" + fullPath + "'")
+  		}
+  
+  		// check if the wildcard has a name
+  ... (110 lines total)
+DIFF (2 changed lines):
+  -				pathSeg = strings.SplitN(n.children[0].path, "/", 2)[0]
+  +				pathSeg, _, _ = strings.Cut(n.children[0].path, "/")
+
+--- #9 delta=-0.0000 unit=gin::context.go::Abort ---
+OLD:
+  func (c *Context) Abort() {
+  	c.index = AbortIndex
+  }
+NEW:
+  func (c *Context) Abort() {
+  	c.index = abortIndex
+  }
+DIFF (2 changed lines):
+  -	c.index = AbortIndex
+  +	c.index = abortIndex
+
+--- #10 delta=-0.0000 unit=gin::context.go::Abort ---
+OLD:
+  func (c *Context) Abort() {
+  	c.index = AbortIndex
+  }
+NEW:
+  func (c *Context) Abort() {
+  	c.index = abortIndex
+  }
+DIFF (2 changed lines):
+  -	c.index = AbortIndex
+  +	c.index = abortIndex
+
+--- #11 delta=-0.0000 unit=gin::routergroup.go::DELETE ---
+OLD:
+  func (group *RouterGroup) DELETE(relativePath string, handlers ...HandlerFunc) routesInterface {
+  	return group.handle("DELETE", relativePath, handlers)
+  }
+NEW:
+  func (group *RouterGroup) DELETE(relativePath string, handlers ...HandlerFunc) RoutesInterface {
+  	return group.handle("DELETE", relativePath, handlers)
+  }
+DIFF (2 changed lines):
+  -func (group *RouterGroup) DELETE(relativePath string, handlers ...HandlerFunc) routesInterface {
+  +func (group *RouterGroup) DELETE(relativePath string, handlers ...HandlerFunc) RoutesInterface {
+
+--- #12 delta=0.0000 unit=gin::routergroup.go::Handle ---
+OLD:
+  func (group *RouterGroup) Handle(httpMethod, relativePath string, handlers ...HandlerFunc) routesInterface {
+  	if matches, err := regexp.MatchString("^[A-Z]+$", httpMethod); !matches || err != nil {
+  		panic("http method " + httpMethod + " is not valid")
+  	}
+  	return group.handle(httpMethod, relativePath, handlers)
+  }
+NEW:
+  func (group *RouterGroup) Handle(httpMethod, relativePath string, handlers ...HandlerFunc) RoutesInterface {
+  	if matches, err := regexp.MatchString("^[A-Z]+$", httpMethod); !matches || err != nil {
+  		panic("http method " + httpMethod + " is not valid")
+  	}
+  	return group.handle(httpMethod, relativePath, handlers)
+  }
+DIFF (2 changed lines):
+  -func (group *RouterGroup) Handle(httpMethod, relativePath string, handlers ...HandlerFunc) routesInterface {
+  +func (group *RouterGroup) Handle(httpMethod, relativePath string, handlers ...HandlerFunc) RoutesInterface {
+
+--- #13 delta=0.0000 unit=gin::gin.go::New ---
+OLD:
+  func New() *Engine {
+  	debugPrintWARNINGNew()
+  	engine := &Engine{
+  		RouterGroup: RouterGroup{
+  			Handlers: nil,
+  			basePath: "/",
+  			root:     true,
+  		},
+  		FuncMap:                template.FuncMap{},
+  		RedirectTrailingSlash:  true,
+  		RedirectFixedPath:      false,
+  		HandleMethodNotAllowed: false,
+  		ForwardedByClientIP:    true,
+  		RemoteIPHeaders:        []string{"X-Forwarded-For", "X-Real-IP"},
+  		TrustedPlatform:        defaultPlatform,
+  ... (31 lines total)
+NEW:
+  func New() *Engine {
+  	debugPrintWARNINGNew()
+  	engine := &Engine{
+  		RouterGroup: RouterGroup{
+  			Handlers: nil,
+  			basePath: "/",
+  			root:     true,
+  		},
+  		FuncMap:                template.FuncMap{},
+  		RedirectTrailingSlash:  true,
+  		RedirectFixedPath:      false,
+  		HandleMethodNotAllowed: false,
+  		ForwardedByClientIP:    true,
+  		RemoteIPHeaders:        []string{"X-Forwarded-For", "X-Real-IP"},
+  		TrustedPlatform:        defaultPlatform,
+  ... (31 lines total)
+DIFF (2 changed lines):
+  -		return engine.allocateContext()
+  +		return engine.allocateContext(engine.maxParams)
+
+--- #14 delta=0.0000 unit=gin::gin.go::SecureJsonPrefix ---
+OLD:
+  func (engine *Engine) SecureJsonPrefix(prefix string) *Engine {
+  	engine.secureJsonPrefix = prefix
+  	return engine
+  }
+NEW:
+  func (engine *Engine) SecureJsonPrefix(prefix string) *Engine {
+  	engine.secureJSONPrefix = prefix
+  	return engine
+  }
+DIFF (2 changed lines):
+  -	engine.secureJsonPrefix = prefix
+  +	engine.secureJSONPrefix = prefix
+
+--- #15 delta=0.0000 unit=gin::routergroup.go::HEAD ---
+OLD:
+  func (group *RouterGroup) HEAD(relativePath string, handlers ...HandlerFunc) routesInterface {
+  	return group.handle("HEAD", relativePath, handlers)
+  }
+NEW:
+  func (group *RouterGroup) HEAD(relativePath string, handlers ...HandlerFunc) RoutesInterface {
+  	return group.handle("HEAD", relativePath, handlers)
+  }
+DIFF (2 changed lines):
+  -func (group *RouterGroup) HEAD(relativePath string, handlers ...HandlerFunc) routesInterface {
+  +func (group *RouterGroup) HEAD(relativePath string, handlers ...HandlerFunc) RoutesInterface {
+
+--- #16 delta=0.0000 unit=gin::routergroup.go::Handle ---
+OLD:
+  func (group *RouterGroup) Handle(httpMethod, relativePath string, handlers ...HandlerFunc) RoutesInterface {
+  	if matches, err := regexp.MatchString("^[A-Z]+$", httpMethod); !matches || err != nil {
+  		panic("http method " + httpMethod + " is not valid")
+  	}
+  	return group.handle(httpMethod, relativePath, handlers)
+  }
+NEW:
+  func (group *RouterGroup) Handle(httpMethod, relativePath string, handlers ...HandlerFunc) routesInterface {
+  	if matches, err := regexp.MatchString("^[A-Z]+$", httpMethod); !matches || err != nil {
+  		panic("http method " + httpMethod + " is not valid")
+  	}
+  	return group.handle(httpMethod, relativePath, handlers)
+  }
+DIFF (2 changed lines):
+  -func (group *RouterGroup) Handle(httpMethod, relativePath string, handlers ...HandlerFunc) RoutesInterface {
+  +func (group *RouterGroup) Handle(httpMethod, relativePath string, handlers ...HandlerFunc) routesInterface {
+
+--- #17 delta=0.0000 unit=gin::logger.go::LoggerWithConfig ---
+OLD:
+  func LoggerWithConfig(conf LoggerConfig) HandlerFunc {
+  	formatter := conf.Formatter
+  	if formatter == nil {
+  		formatter = defaultLogFormatter
+  	}
+  
+  	out := conf.Output
+  	if out == nil {
+  		out = DefaultWriter
+  	}
+  
+  	notlogged := conf.SkipPaths
+  
+  	isTerm := true
+  
+  ... (66 lines total)
+NEW:
+  func LoggerWithConfig(conf LoggerConfig) HandlerFunc {
+  	formatter := conf.Formatter
+  	if formatter == nil {
+  		formatter = defaultLogFormatter
+  	}
+  
+  	out := conf.Output
+  	if out == nil {
+  		out = DefaultWriter
+  	}
+  
+  	notlogged := conf.SkipPaths
+  
+  	isTerm := true
+  
+  ... (66 lines total)
+DIFF (2 changed lines):
+  -			fmt.Fprintf(out, formatter(param))
+  +			fmt.Fprint(out, formatter(param))
+
+--- #18 delta=0.0000 unit=gin::gin.go::New ---
+OLD:
+  func New() *Engine {
+  	debugPrintWARNINGNew()
+  	engine := &Engine{
+  		RouterGroup: RouterGroup{
+  			Handlers: nil,
+  			basePath: "/",
+  			root:     true,
+  		},
+  		FuncMap:                template.FuncMap{},
+  		RedirectTrailingSlash:  true,
+  		RedirectFixedPath:      false,
+  		HandleMethodNotAllowed: false,
+  		ForwardedByClientIP:    true,
+  		RemoteIPHeaders:        []string{"X-Forwarded-For", "X-Real-IP"},
+  		TrustedProxies:         []string{"0.0.0.0/0"},
+  ... (30 lines total)
+NEW:
+  func New() *Engine {
+  	debugPrintWARNINGNew()
+  	engine := &Engine{
+  		RouterGroup: RouterGroup{
+  			Handlers: nil,
+  			basePath: "/",
+  			root:     true,
+  		},
+  		FuncMap:                template.FuncMap{},
+  		RedirectTrailingSlash:  true,
+  		RedirectFixedPath:      false,
+  		HandleMethodNotAllowed: false,
+  		ForwardedByClientIP:    true,
+  		RemoteIPHeaders:        []string{"X-Forwarded-For", "X-Real-IP"},
+  		TrustedProxies:         []string{"0.0.0.0/0"},
+  ... (31 lines total)
+DIFF (1 changed lines):
+  +		trustedCIDRs:           []*net.IPNet{{IP: net.IP{0x0, 0x0, 0x0, 0x0}, Mask: net.IPMask{0x0, 0x0, 0x0, 0x0}}},
+
+--- #19 delta=0.0000 unit=gin::tree.go::getValue ---
+OLD:
+  func (n *node) getValue(path string, params *Params, unescape bool) (value nodeValue) {
+  	var skipped *skip
+  
+  walk: // Outer loop for walking the tree
+  	for {
+  		prefix := n.path
+  		if len(path) > len(prefix) {
+  			if path[:len(prefix)] == prefix {
+  				path = path[len(prefix):]
+  
+  				// Try all the non-wildcard children first by matching the indices
+  				idxc := path[0]
+  				for i, c := range []byte(n.indices) {
+  					if c == idxc {
+  						if strings.HasPrefix(n.children[len(n.children)-1].path, ":") {
+  ... (175 lines total)
+NEW:
+  func (n *node) getValue(path string, params *Params, unescape bool) (value nodeValue) {
+  	var skipped *skip
+  
+  walk: // Outer loop for walking the tree
+  	for {
+  		prefix := n.path
+  		if len(path) > len(prefix) {
+  			if path[:len(prefix)] == prefix {
+  				path = path[len(prefix):]
+  
+  				// Try all the non-wildcard children first by matching the indices
+  				idxc := path[0]
+  				for i, c := range []byte(n.indices) {
+  					if c == idxc {
+  						if strings.HasPrefix(n.children[len(n.children)-1].path, ":") {
+  ... (175 lines total)
+DIFF (2 changed lines):
+  -					if params != nil {
+  +					if params != nil && cap(*params) > 0 {
+
+--- #20 delta=0.0000 unit=gin::gin.go::handleHTTPRequest ---
+OLD:
+  func (engine *Engine) handleHTTPRequest(c *Context) {
+  	httpMethod := c.Request.Method
+  	rPath := c.Request.URL.Path
+  	unescape := false
+  	if engine.UseRawPath && len(c.Request.URL.RawPath) > 0 {
+  		rPath = c.Request.URL.RawPath
+  		unescape = engine.UnescapePathValues
+  	}
+  
+  	if engine.RemoveExtraSlash {
+  		rPath = cleanPath(rPath)
+  	}
+  
+  	// Find root of the tree for the given HTTP method
+  	t := engine.trees
+  ... (59 lines total)
+NEW:
+  func (engine *Engine) handleHTTPRequest(c *Context) {
+  	httpMethod := c.Request.Method
+  	rPath := c.Request.URL.Path
+  	unescape := false
+  	if engine.UseRawPath && len(c.Request.URL.RawPath) > 0 {
+  		rPath = c.Request.URL.RawPath
+  		unescape = engine.UnescapePathValues
+  	}
+  
+  	if engine.RemoveExtraSlash {
+  		rPath = cleanPath(rPath)
+  	}
+  
+  	// Find root of the tree for the given HTTP method
+  	t := engine.trees
+  ... (59 lines total)
+DIFF (2 changed lines):
+  -		if httpMethod != "CONNECT" && rPath != "/" {
+  +		if httpMethod != http.MethodConnect && rPath != "/" {

@@ -1,0 +1,80 @@
+{
+ "requests#issue-7426": [
+  "requests::src/requests/_types.py::items"
+ ],
+ "requests#issue-7272": [
+  "requests::src/requests/_types.py::items",
+  "requests::src/requests/cookies.py::host",
+  "requests::src/requests/cookies.py::origin_req_host",
+  "requests::src/requests/cookies.py::unverifiable",
+  "requests::src/requests/models.py::_encode_files",
+  "requests::src/requests/models.py::_encode_params",
+  "requests::src/requests/models.py::_get_idna_encoded_host",
+  "requests::src/requests/models.py::apparent_encoding",
+  "requests::src/requests/models.py::content",
+  "requests::src/requests/models.py::is_permanent_redirect",
+  "requests::src/requests/models.py::is_redirect",
+  "requests::src/requests/models.py::links",
+  "requests::src/requests/models.py::next",
+  "requests::src/requests/models.py::ok",
+  "requests::src/requests/models.py::path_url",
+  "requests::src/requests/models.py::text",
+  "requests::src/requests/structures.py::copy",
+  "requests::src/requests/utils.py::atomic_open",
+  "requests::src/requests/utils.py::get_proxy",
+  "requests::src/requests/utils.py::parse_dict_header",
+  "requests::src/requests/utils.py::parse_list_header",
+  "requests::src/requests/utils.py::set_environ",
+  "requests::src/requests/utils.py::to_key_val_list",
+  "requests::src/requests/utils.py::unquote_header_value"
+ ],
+ "requests#issue-6095": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-5223": [
+  "requests::requests/utils.py::atomic_open"
+ ],
+ "requests#issue-4134": [
+  "requests::requests/utils.py::set_environ"
+ ],
+ "requests#issue-3865": [
+  "requests::requests/utils.py::set_environ"
+ ],
+ "requests#issue-3789": [
+  "requests::requests/models.py::_get_idna_encoded_host"
+ ],
+ "requests#issue-3484": [
+  "requests::requests/utils.py::parse_dict_header",
+  "requests::requests/utils.py::unquote_header_value"
+ ],
+ "requests#issue-2095": [
+  "requests::requests/models.py::is_permanent_redirect"
+ ],
+ "requests#issue-1918": [
+  "requests::requests/models.py::is_redirect"
+ ],
+ "requests#issue-1151": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1133": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1031": [
+  "requests::requests/utils.py::unquote_header_value"
+ ],
+ "requests#issue-711": [
+  "requests::requests/models.py::links"
+ ],
+ "requests#issue-573": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#issue-298": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#issue-256": [
+  "requests::requests/models.py::path_url"
+ ],
+ "requests#issue-202": [
+  "requests::requests/models.py::content"
+ ]
+}

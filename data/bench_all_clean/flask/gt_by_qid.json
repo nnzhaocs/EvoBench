@@ -1,0 +1,464 @@
+{
+ "flask#issue-86": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "flask#issue-258": [
+  "flask::flask/wrappers.py::blueprint"
+ ],
+ "flask#issue-279": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "flask#pr-530": [
+  "flask::flask/ctx.py::index"
+ ],
+ "flask#issue-570": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "flask#pr-591": [
+  "flask::flask/app.py::register_blueprint"
+ ],
+ "flask#pr-734": [
+  "flask::flask/app.py::jinja_env"
+ ],
+ "flask#pr-736": [
+  "flask::flask/_compat.py::__new__",
+  "flask::flask/app.py::_register_error_handler",
+  "flask::flask/app.py::jinja_env"
+ ],
+ "flask#issue-815": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "flask#pr-1032": [
+  "flask::flask/_compat.py::__new__"
+ ],
+ "flask#pr-1240": [
+  "flask::flask/app.py::add_url_rule",
+  "flask::flask/app.py::preserve_context_on_exception",
+  "flask::flask/app.py::propagate_exceptions",
+  "flask::flask/wrappers.py::max_content_length"
+ ],
+ "flask#issue-1288": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "flask#pr-1290": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "flask#pr-1291": [
+  "flask::flask/app.py::_get_exc_class_and_code",
+  "flask::flask/app.py::_register_error_handler"
+ ],
+ "flask#pr-1515": [
+  "flask::flask/app.py::_get_exc_class_and_code",
+  "flask::flask/app.py::_register_error_handler"
+ ],
+ "flask#pr-1539": [
+  "flask::flask/_compat.py::__new__"
+ ],
+ "flask#pr-1679": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#issue-1809": [
+  "flask::flask/app.py::register_blueprint"
+ ],
+ "flask#pr-1811": [
+  "flask::flask/app.py::register_blueprint"
+ ],
+ "flask#pr-1830": [
+  "flask::flask/cli.py::shell_command"
+ ],
+ "flask#issue-1837": [
+  "flask::flask/app.py::_register_error_handler"
+ ],
+ "flask#pr-1841": [
+  "flask::flask/_compat.py::__new__"
+ ],
+ "flask#pr-1912": [
+  "flask::flask/app.py::register_blueprint"
+ ],
+ "flask#pr-1928": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-1996": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#issue-2005": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-2006": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-2046": [
+  "flask::flask/cli.py::shell_command"
+ ],
+ "flask#pr-2249": [
+  "flask::flask/app.py::add_url_rule"
+ ],
+ "flask#pr-2259": [
+  "flask::flask/cli.py::routes_command",
+  "flask::flask/cli.py::shell_command"
+ ],
+ "flask#pr-2350": [
+  "flask::flask/app.py::_register_error_handler"
+ ],
+ "flask#pr-2358": [
+  "flask::flask/wrappers.py::max_content_length"
+ ],
+ "flask#pr-2371": [
+  "flask::flask/app.py::register_blueprint"
+ ],
+ "flask#pr-2416": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-2436": [
+  "flask::flask/app.py::preserve_context_on_exception"
+ ],
+ "flask#pr-2490": [
+  "flask::flask/cli.py::routes_command"
+ ],
+ "flask#pr-2502": [
+  "flask::flask/cli.py::shell_command"
+ ],
+ "flask#pr-2570": [
+  "flask::flask/app.py::add_url_rule",
+  "flask::flask/cli.py::run_command",
+  "flask::flask/cli.py::shell_command"
+ ],
+ "flask#pr-2591": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-2603": [
+  "flask::flask/cli.py::routes_command"
+ ],
+ "flask#pr-2606": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-2676": [
+  "flask::examples/tutorial/flaskr/auth.py::register",
+  "flask::examples/tutorial/flaskr/blog.py::create"
+ ],
+ "flask#pr-2693": [
+  "flask::flask/wrappers.py::max_cookie_size"
+ ],
+ "flask#pr-2699": [
+  "flask::examples/javascript/js_example/views.py::index",
+  "flask::examples/tutorial/flaskr/auth.py::register"
+ ],
+ "flask#issue-2706": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-2707": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-2752": [
+  "flask::flask/cli.py::routes_command"
+ ],
+ "flask#issue-2897": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#pr-2898": [
+  "flask::flask/cli.py::run_command"
+ ],
+ "flask#issue-2935": [
+  "flask::flask/ctx.py::do_some_work",
+  "flask::flask/ctx.py::index"
+ ],
+ "flask#pr-2936": [
+  "flask::flask/ctx.py::do_some_work",
+  "flask::flask/ctx.py::index"
+ ],
+ "flask#pr-3011": [
+  "flask::flask/cli.py::run_command",
+  "flask::flask/cli.py::shell_command"
+ ],
+ "flask#pr-3190": [
+  "flask::flask/app.py::jinja_env"
+ ],
+ "flask#pr-3241": [
+  "flask::flask/_compat.py::__new__",
+  "flask::flask/cli.py::_load_app"
+ ],
+ "flask#pr-3246": [
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "flask#pr-3247": [
+  "flask::examples/tutorial/flaskr/blog.py::create"
+ ],
+ "flask#pr-3253": [
+  "flask::flask/app.py::_get_exc_class_and_code"
+ ],
+ "flask#pr-3282": [
+  "flask::src/flask/app.py::logger"
+ ],
+ "flask#pr-3434": [
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "flask#pr-3456": [
+  "flask::src/flask/helpers.py::static_folder"
+ ],
+ "flask#pr-3562": [
+  "flask::src/flask/json/__init__.py::get_current_user"
+ ],
+ "flask#pr-3574": [
+  "flask::src/flask/app.py::_get_exc_class_and_code"
+ ],
+ "flask#pr-3579": [
+  "flask::src/flask/helpers.py::static_folder"
+ ],
+ "flask#pr-3678": [
+  "flask::src/flask/helpers.py::static_folder"
+ ],
+ "flask#issue-3738": [
+  "flask::src/flask/blueprints.py::add_url_rule"
+ ],
+ "flask#pr-3739": [
+  "flask::src/flask/blueprints.py::add_url_rule"
+ ],
+ "flask#pr-3744": [
+  "flask::src/flask/cli.py::run_command",
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "flask#pr-3823": [
+  "flask::src/flask/blueprints.py::app_url_defaults",
+  "flask::src/flask/blueprints.py::app_url_value_preprocessor"
+ ],
+ "flask#pr-3828": [
+  "flask::src/flask/helpers.py::download_file"
+ ],
+ "flask#pr-3894": [
+  "flask::src/flask/wrappers.py::max_cookie_size"
+ ],
+ "flask#pr-3907": [
+  "flask::src/flask/scaffold.py::delete",
+  "flask::src/flask/scaffold.py::get",
+  "flask::src/flask/scaffold.py::patch",
+  "flask::src/flask/scaffold.py::post",
+  "flask::src/flask/scaffold.py::put"
+ ],
+ "flask#pr-3918": [
+  "flask::src/flask/blueprints.py::merge_dict_lists",
+  "flask::src/flask/scaffold.py::_register_error_handler",
+  "flask::src/flask/scaffold.py::after_request",
+  "flask::src/flask/scaffold.py::before_request",
+  "flask::src/flask/scaffold.py::teardown_request",
+  "flask::src/flask/scaffold.py::url_defaults",
+  "flask::src/flask/scaffold.py::url_value_preprocessor"
+ ],
+ "flask#pr-3923": [
+  "flask::src/flask/app.py::register_blueprint",
+  "flask::src/flask/blueprints.py::add_url_rule",
+  "flask::src/flask/blueprints.py::register_blueprint"
+ ],
+ "flask#pr-3960": [
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "flask#pr-3962": [
+  "flask::src/flask/helpers.py::download_file"
+ ],
+ "flask#pr-3964": [
+  "flask::src/flask/app.py::add_url_rule",
+  "flask::src/flask/helpers.py::outer"
+ ],
+ "flask#pr-4019": [
+  "flask::src/flask/helpers.py::download_file"
+ ],
+ "flask#pr-4045": [
+  "flask::src/flask/blueprints.py::add_url_rule"
+ ],
+ "flask#pr-4049": [
+  "flask::src/flask/helpers.py::static_folder"
+ ],
+ "flask#pr-4074": [
+  "flask::src/flask/app.py::register_blueprint",
+  "flask::src/flask/blueprints.py::add_url_rule",
+  "flask::src/flask/blueprints.py::register_blueprint",
+  "flask::src/flask/helpers.py::_split_blueprint_path",
+  "flask::src/flask/wrappers.py::blueprint",
+  "flask::src/flask/wrappers.py::blueprints",
+  "flask::src/flask/wrappers.py::endpoint"
+ ],
+ "flask#pr-4139": [
+  "flask::examples/tutorial/flaskr/auth.py::register"
+ ],
+ "flask#pr-4152": [
+  "flask::src/flask/scaffold.py::static_folder"
+ ],
+ "flask#pr-4160": [
+  "flask::src/flask/json/__init__.py::get_current_user"
+ ],
+ "flask#pr-4169": [
+  "flask::src/flask/cli.py::_load_app"
+ ],
+ "flask#pr-4189": [
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "flask#pr-4268": [
+  "flask::src/flask/scaffold.py::teardown_request"
+ ],
+ "flask#pr-4283": [
+  "flask::src/flask/debughelpers.py::__getitem__",
+  "flask::src/flask/scaffold.py::register_error_handler"
+ ],
+ "flask#pr-4337": [
+  "flask::src/flask/helpers.py::download_file"
+ ],
+ "flask#pr-4342": [
+  "flask::src/flask/ctx.py::g"
+ ],
+ "flask#pr-4348": [
+  "flask::src/flask/ctx.py::add_header"
+ ],
+ "flask#pr-4461": [
+  "flask::src/flask/cli.py::_load_app"
+ ],
+ "flask#pr-4477": [
+  "flask::src/flask/scaffold.py::delete",
+  "flask::src/flask/scaffold.py::get",
+  "flask::src/flask/scaffold.py::patch",
+  "flask::src/flask/scaffold.py::post",
+  "flask::src/flask/scaffold.py::put",
+  "flask::src/flask/scaffold.py::route"
+ ],
+ "flask#pr-4487": [
+  "flask::src/flask/blueprints.py::app_errorhandler",
+  "flask::src/flask/scaffold.py::errorhandler",
+  "flask::src/flask/scaffold.py::register_error_handler"
+ ],
+ "flask#pr-4492": [
+  "flask::src/flask/debughelpers.py::__getitem__"
+ ],
+ "flask#pr-4560": [
+  "flask::src/flask/scaffold.py::_get_exc_class_and_code",
+  "flask::src/flask/scaffold.py::register_error_handler"
+ ],
+ "flask#pr-4621": [
+  "flask::src/flask/app.py::before_first_request",
+  "flask::src/flask/blueprints.py::before_app_first_request"
+ ],
+ "flask#pr-4624": [
+  "flask::src/flask/views.py::as_view",
+  "flask::src/flask/views.py::get"
+ ],
+ "flask#pr-4630": [
+  "flask::src/flask/helpers.py::download_file"
+ ],
+ "flask#pr-4642": [
+  "flask::src/flask/cli.py::routes_command"
+ ],
+ "flask#pr-4646": [
+  "flask::src/flask/cli.py::routes_command",
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "flask#pr-4647": [
+  "flask::src/flask/cli.py::decorator"
+ ],
+ "flask#pr-4666": [
+  "flask::src/flask/app.py::preserve_context_on_exception"
+ ],
+ "flask#pr-4667": [
+  "flask::src/flask/ctx.py::g",
+  "flask::src/flask/helpers.py::download_file"
+ ],
+ "flask#pr-4682": [
+  "flask::src/flask/app.py::teardown_appcontext",
+  "flask::src/flask/cli.py::shell_command",
+  "flask::src/flask/ctx.py::add_header",
+  "flask::src/flask/globals.py::top",
+  "flask::src/flask/scaffold.py::teardown_request"
+ ],
+ "flask#pr-4685": [
+  "flask::src/flask/ctx.py::add_header",
+  "flask::src/flask/globals.py::top"
+ ],
+ "flask#pr-4692": [
+  "flask::src/flask/blueprints.py::add_url_rule",
+  "flask::src/flask/json/__init__.py::get_current_user"
+ ],
+ "flask#pr-4718": [
+  "flask::src/flask/cli.py::_load_app",
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "flask#pr-4720": [
+  "flask::src/flask/app.py::debug",
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "flask#pr-4722": [
+  "flask::src/flask/app.py::debug",
+  "flask::src/flask/app.py::propagate_exceptions",
+  "flask::src/flask/app.py::templates_auto_reload"
+ ],
+ "flask#pr-4735": [
+  "flask::src/flask/blueprints.py::add_url_rule"
+ ],
+ "flask#pr-4749": [
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "flask#pr-4779": [
+  "flask::src/flask/cli.py::run_command"
+ ],
+ "flask#pr-4942": [
+  "flask::src/flask/views.py::as_view"
+ ],
+ "flask#pr-4995": [
+  "flask::src/flask/app.py::before_first_request",
+  "flask::src/flask/app.py::propagate_exceptions",
+  "flask::src/flask/app.py::templates_auto_reload",
+  "flask::src/flask/blueprints.py::before_app_first_request",
+  "flask::src/flask/globals.py::top"
+ ],
+ "flask#pr-4997": [
+  "flask::src/flask/app.py::got_first_request"
+ ],
+ "flask#pr-4998": [
+  "flask::src/flask/app.py::logger",
+  "flask::src/flask/app.py::name"
+ ],
+ "flask#pr-5058": [
+  "flask::src/flask/signals.py::signal"
+ ],
+ "flask#pr-5063": [
+  "flask::src/flask/cli.py::routes_command",
+  "flask::src/flask/cli.py::shell_command"
+ ],
+ "flask#pr-5223": [
+  "flask::src/flask/app.py::got_first_request",
+  "flask::src/flask/globals.py::top"
+ ],
+ "flask#pr-5389": [
+  "flask::src/flask/sansio/scaffold.py::jinja_loader"
+ ],
+ "flask#pr-5599": [
+  "flask::src/flask/helpers.py::download_file"
+ ],
+ "flask#pr-5620": [
+  "flask::src/flask/cli.py::run_command",
+  "flask::src/flask/views.py::as_view"
+ ],
+ "flask#pr-5626": [
+  "flask::src/flask/wrappers.py::max_content_length"
+ ],
+ "flask#pr-5638": [
+  "flask::src/flask/sessions.py::permanent"
+ ],
+ "flask#pr-5736": [
+  "flask::src/flask/sansio/app.py::is_prime",
+  "flask::src/flask/sansio/app.py::template_filter",
+  "flask::src/flask/sansio/app.py::template_global",
+  "flask::src/flask/sansio/app.py::template_test",
+  "flask::src/flask/sansio/blueprints.py::app_template_filter",
+  "flask::src/flask/sansio/blueprints.py::app_template_global",
+  "flask::src/flask/sansio/blueprints.py::app_template_test"
+ ],
+ "flask#pr-5799": [
+  "flask::src/flask/helpers.py::generate",
+  "flask::src/flask/helpers.py::streamed_response"
+ ],
+ "flask#pr-5812": [
+  "flask::src/flask/ctx.py::add_header",
+  "flask::src/flask/ctx.py::session",
+  "flask::src/flask/sansio/app.py::teardown_appcontext",
+  "flask::src/flask/sansio/scaffold.py::teardown_request"
+ ],
+ "flask#pr-5928": [
+  "flask::src/flask/helpers.py::_split_blueprint_path"
+ ]
+}

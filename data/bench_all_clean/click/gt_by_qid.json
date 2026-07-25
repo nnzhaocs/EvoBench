@@ -1,0 +1,292 @@
+{
+ "click#pr-938": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-1303": [
+  "click::src/click/types.py::__init__",
+  "click::src/click/types.py::_clamp"
+ ],
+ "click#pr-1549": [
+  "click::src/click/core.py::lookup_default"
+ ],
+ "click#pr-1572": [
+  "click::src/click/_termui_impl.py::__init__",
+  "click::src/click/_termui_impl.py::get_pager_file"
+ ],
+ "click#pr-1609": [
+  "click::src/click/core.py::main"
+ ],
+ "click#pr-1621": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-1622": [
+  "click::src/click/core.py::main",
+  "click::src/click/shell_completion.py::_check_version"
+ ],
+ "click#pr-1623": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-1679": [
+  "click::src/click/core.py::main"
+ ],
+ "click#pr-1687": [
+  "click::src/click/types.py::convert_type"
+ ],
+ "click#pr-1698": [
+  "click::src/click/_termui_impl.py::__init__"
+ ],
+ "click#pr-1807": [
+  "click::src/click/decorators.py::new_func"
+ ],
+ "click#pr-1816": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-1829": [
+  "click::src/click/core.py::invoke",
+  "click::src/click/core.py::main",
+  "click::src/click/shell_completion.py::_check_version",
+  "click::src/click/types.py::__init__"
+ ],
+ "click#pr-1830": [
+  "click::src/click/core.py::main"
+ ],
+ "click#pr-1840": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-1848": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-1896": [
+  "click::src/click/decorators.py::command",
+  "click::src/click/decorators.py::group"
+ ],
+ "click#pr-1909": [
+  "click::src/click/_termui_impl.py::__init__"
+ ],
+ "click#pr-1913": [
+  "click::src/click/types.py::convert_type"
+ ],
+ "click#pr-1918": [
+  "click::src/click/core.py::main"
+ ],
+ "click#pr-1942": [
+  "click::src/click/shell_completion.py::_check_version"
+ ],
+ "click#pr-1962": [
+  "click::src/click/types.py::__init__"
+ ],
+ "click#pr-1965": [
+  "click::src/click/decorators.py::group"
+ ],
+ "click#pr-2074": [
+  "click::src/click/core.py::main"
+ ],
+ "click#pr-2095": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-2103": [
+  "click::src/click/core.py::lookup_default",
+  "click::src/click/core.py::main"
+ ],
+ "click#pr-2202": [
+  "click::src/click/decorators.py::command"
+ ],
+ "click#pr-2203": [
+  "click::src/click/decorators.py::command"
+ ],
+ "click#pr-2212": [
+  "click::src/click/decorators.py::command",
+  "click::src/click/decorators.py::new_func"
+ ],
+ "click#pr-2217": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-2233": [
+  "click::src/click/decorators.py::command",
+  "click::src/click/decorators.py::group"
+ ],
+ "click#pr-2237": [
+  "click::src/click/types.py::__init__"
+ ],
+ "click#pr-2256": [
+  "click::src/click/decorators.py::command",
+  "click::src/click/decorators.py::group"
+ ],
+ "click#pr-2269": [
+  "click::src/click/_termui_impl.py::__init__",
+  "click::src/click/parser.py::__init__",
+  "click::src/click/types.py::__init__"
+ ],
+ "click#pr-2271": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-2380": [
+  "click::src/click/core.py::main"
+ ],
+ "click#pr-2401": [
+  "click::src/click/core.py::invoke",
+  "click::src/click/decorators.py::command",
+  "click::src/click/decorators.py::group",
+  "click::src/click/decorators.py::new_func",
+  "click::src/click/types.py::__init__"
+ ],
+ "click#pr-2462": [
+  "click::src/click/shell_completion.py::_check_version"
+ ],
+ "click#pr-2496": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-2517": [
+  "click::src/click/types.py::convert_type"
+ ],
+ "click#pr-2555": [
+  "click::src/click/_termui_impl.py::__init__"
+ ],
+ "click#pr-2562": [
+  "click::src/click/decorators.py::command"
+ ],
+ "click#pr-2565": [
+  "click::src/click/decorators.py::group"
+ ],
+ "click#pr-2576": [
+  "click::src/click/shell_completion.py::_check_version"
+ ],
+ "click#pr-2591": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-2592": [
+  "click::src/click/core.py::invoke",
+  "click::src/click/parser.py::__init__"
+ ],
+ "click#pr-2604": [
+  "click::src/click/decorators.py::command"
+ ],
+ "click#issue-2609": [
+  "click::src/click/_termui_impl.py::__init__"
+ ],
+ "click#pr-2639": [
+  "click::src/click/shell_completion.py::_check_version"
+ ],
+ "click#pr-2656": [
+  "click::src/click/decorators.py::new_func"
+ ],
+ "click#pr-2658": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-2660": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-2727": [
+  "click::src/click/_termui_impl.py::__init__"
+ ],
+ "click#pr-2788": [
+  "click::src/click/types.py::_clamp"
+ ],
+ "click#pr-2796": [
+  "click::src/click/types.py::__init__"
+ ],
+ "click#pr-2803": [
+  "click::src/click/_winconsole.py::_get_error_message"
+ ],
+ "click#pr-2805": [
+  "click::src/click/core.py::human_readable_name",
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-2873": [
+  "click::src/click/shell_completion.py::_check_version"
+ ],
+ "click#pr-2893": [
+  "click::src/click/types.py::_clamp"
+ ],
+ "click#pr-2902": [
+  "click::src/click/_winconsole.py::_get_error_message",
+  "click::src/click/parser.py::__init__"
+ ],
+ "click#issue-2952": [
+  "click::src/click/types.py::_clamp"
+ ],
+ "click#pr-2956": [
+  "click::src/click/types.py::_clamp"
+ ],
+ "click#pr-3001": [
+  "click::src/click/types.py::_clamp"
+ ],
+ "click#pr-3030": [
+  "click::src/click/core.py::lookup_default"
+ ],
+ "click#pr-3068": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-3114": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-3224": [
+  "click::src/click/core.py::lookup_default"
+ ],
+ "click#pr-3240": [
+  "click::src/click/core.py::lookup_default"
+ ],
+ "click#pr-3371": [
+  "click::src/click/types.py::__init__",
+  "click::src/click/types.py::_clamp",
+  "click::src/click/types.py::arity",
+  "click::src/click/types.py::convert_type",
+  "click::src/click/types.py::name"
+ ],
+ "click#pr-3372": [
+  "click::src/click/types.py::convert_type"
+ ],
+ "click#pr-3373": [
+  "click::src/click/types.py::convert_type"
+ ],
+ "click#pr-3405": [
+  "click::src/click/_termui_impl.py::get_pager_file"
+ ],
+ "click#pr-3430": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-3450": [
+  "click::src/click/types.py::__init__",
+  "click::src/click/types.py::_clamp",
+  "click::src/click/types.py::arity",
+  "click::src/click/types.py::convert_type"
+ ],
+ "click#pr-3454": [
+  "click::src/click/formatting.py::indentation",
+  "click::src/click/formatting.py::section"
+ ],
+ "click#pr-3463": [
+  "click::src/click/core.py::augment_usage_errors",
+  "click::src/click/core.py::scope"
+ ],
+ "click#pr-3482": [
+  "click::src/click/_termui_impl.py::__init__"
+ ],
+ "click#pr-3498": [
+  "click::src/click/_termui_impl.py::get_pager_file"
+ ],
+ "click#pr-3521": [
+  "click::src/click/formatting.py::indentation",
+  "click::src/click/formatting.py::section"
+ ],
+ "click#pr-3533": [
+  "click::src/click/_termui_impl.py::__init__",
+  "click::src/click/_termui_impl.py::get_pager_file"
+ ],
+ "click#pr-3563": [
+  "click::src/click/_termui_impl.py::__init__",
+  "click::src/click/_termui_impl.py::get_pager_file",
+  "click::src/click/core.py::augment_usage_errors",
+  "click::src/click/core.py::scope",
+  "click::src/click/types.py::__init__",
+  "click::src/click/types.py::_clamp",
+  "click::src/click/types.py::arity",
+  "click::src/click/types.py::convert_type"
+ ],
+ "click#pr-3641": [
+  "click::src/click/core.py::invoke"
+ ],
+ "click#pr-3695": [
+  "click::src/click/core.py::main"
+ ]
+}

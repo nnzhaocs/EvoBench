@@ -1,0 +1,1040 @@
+{
+ "lodash#issue-20": [
+  "lodash::lodash.js::indexOf",
+  "lodash::lodash.js::lastIndexOf"
+ ],
+ "lodash#pr-23": [
+  "lodash::lodash.js::compact",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::indexOf",
+  "lodash::lodash.js::initial",
+  "lodash::lodash.js::last",
+  "lodash::lodash.js::lastIndexOf",
+  "lodash::lodash.js::rest",
+  "lodash::lodash.js::shuffle"
+ ],
+ "lodash#issue-24": [
+  "lodash::lodash.js::compact",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::indexOf",
+  "lodash::lodash.js::initial",
+  "lodash::lodash.js::last",
+  "lodash::lodash.js::lastIndexOf",
+  "lodash::lodash.js::rest",
+  "lodash::lodash.js::shuffle"
+ ],
+ "lodash#pr-38": [
+  "lodash::lodash.js::initial",
+  "lodash::lodash.js::last",
+  "lodash::lodash.js::rest"
+ ],
+ "lodash#issue-44": [
+  "lodash::lodash.js::template"
+ ],
+ "lodash#issue-52": [
+  "lodash::lodash.js::template"
+ ],
+ "lodash#issue-59": [
+  "lodash::lodash.js::isPlainObject"
+ ],
+ "lodash#issue-73": [
+  "lodash::lodash.js::flatten"
+ ],
+ "lodash#pr-90": [
+  "lodash::lodash.js::template"
+ ],
+ "lodash#issue-126": [
+  "lodash::lodash.js::isNumber",
+  "lodash::lodash.js::isString"
+ ],
+ "lodash#issue-140": [
+  "lodash::lodash.js::cloneDeep"
+ ],
+ "lodash#issue-148": [
+  "lodash::lodash.js::template"
+ ],
+ "lodash#issue-154": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-155": [
+  "lodash::lodash.js::initial",
+  "lodash::lodash.js::last",
+  "lodash::lodash.js::rest"
+ ],
+ "lodash#issue-166": [
+  "lodash::lodash.js::template"
+ ],
+ "lodash#issue-189": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-193": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-196": [
+  "lodash::dist/lodash.js::runInContext"
+ ],
+ "lodash#issue-197": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-199": [
+  "lodash::lodash.js::find",
+  "lodash::lodash.js::findIndex",
+  "lodash::lodash.js::findKey",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-202": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-204": [
+  "lodash::dist/lodash.js::flatten",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-213": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-220": [
+  "lodash::dist/lodash.js::runInContext"
+ ],
+ "lodash#issue-222": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-225": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-226": [
+  "lodash::lodash.js::memoize",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-227": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-231": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-232": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-243": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-247": [
+  "lodash::lodash.js::lazyValue",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-248": [
+  "lodash::dist/lodash.js::runInContext"
+ ],
+ "lodash#pr-254": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-257": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-259": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-263": [
+  "lodash::lodash.js::random",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-265": [
+  "lodash::lodash.js::memoize",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-267": [
+  "lodash::dist/lodash.js::memoize",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-270": [
+  "lodash::lodash.js::clone",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-281": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-282": [
+  "lodash::dist/lodash.js::flatten",
+  "lodash::dist/lodash.js::indexOf",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-283": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-285": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-292": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-309": [
+  "lodash::lodash.js::findLast",
+  "lodash::lodash.js::findLastIndex",
+  "lodash::lodash.js::findLastKey",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-320": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-325": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-327": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-330": [
+  "lodash::dist/lodash.js::memoize",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::memoize",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-334": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-339": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-349": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-352": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-353": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-354": [
+  "lodash::dist/lodash.js::random",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::random",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-355": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-358": [
+  "lodash::dist/lodash.js::baseClone",
+  "lodash::dist/lodash.js::random",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-362": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-371": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-379": [
+  "lodash::dist/lodash.js::flatten",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::flatten",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-380": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-382": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-388": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::dist/lodash.js::transform",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::transform"
+ ],
+ "lodash#pr-389": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-393": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-394": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-397": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-400": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-404": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-408": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-415": [
+  "lodash::dist/lodash.js::baseIsEqual",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-416": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-418": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-420": [
+  "lodash::dist/lodash.js::baseIsEqual",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-425": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::endsWith",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::startsWith",
+  "lodash::lodash.js::template",
+  "lodash::lodash.js::truncate"
+ ],
+ "lodash#pr-426": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-427": [
+  "lodash::dist/lodash.js::isElement",
+  "lodash::dist/lodash.js::isNative",
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::isElement",
+  "lodash::lodash.js::isNative",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-429": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-432": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-444": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-454": [
+  "lodash::lodash.js::result",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-455": [
+  "lodash::lodash.js::result",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-461": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-463": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-464": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-465": [
+  "lodash::lodash.js::chunk",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-472": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-484": [
+  "lodash::dist/lodash.js::runInContext",
+  "lodash::dist/lodash.js::template",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::template"
+ ],
+ "lodash#pr-508": [
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::isObject",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-509": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-520": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-521": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-523": [
+  "lodash::lodash.js::matches",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-526": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-536": [
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-540": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-541": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-549": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-567": [
+  "lodash::lodash.js::cancel",
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::debounced",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-573": [
+  "lodash::lodash.js::baseMerge",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-576": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-583": [
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-585": [
+  "lodash::lodash.js::chunk",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-586": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-596": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-609": [
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::shuffle"
+ ],
+ "lodash#issue-624": [
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::cloneBuffer",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-650": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-667": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-676": [
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-678": [
+  "lodash::lodash.js::lazyValue",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-703": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-710": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-738": [
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::template"
+ ],
+ "lodash#issue-767": [
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::wrap"
+ ],
+ "lodash#issue-776": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-790": [
+  "lodash::lodash.js::baseIsEqual",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-793": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-796": [
+  "lodash::lodash.js::lazyValue",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-814": [
+  "lodash::lodash.js::ary",
+  "lodash::lodash.js::mergeData",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-819": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-826": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-842": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-969": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1375": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1413": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1453": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1463": [
+  "lodash::lodash.js::createPadding",
+  "lodash::lodash.js::endsWith",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::size",
+  "lodash::lodash.js::startsWith",
+  "lodash::lodash.js::stringSize",
+  "lodash::lodash.js::toArray"
+ ],
+ "lodash#issue-1484": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1498": [
+  "lodash::lodash.js::isFunction",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1560": [
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1621": [
+  "lodash::lodash.js::isFunction",
+  "lodash::lodash.js::isObject",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1636": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1664": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1753": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1758": [
+  "lodash::lodash.js::equalObjects",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1783": [
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1784": [
+  "lodash::dist/lodash.core.js::baseMatches",
+  "lodash::dist/lodash.core.js::equalObjects"
+ ],
+ "lodash#issue-1787": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1789": [
+  "lodash::dist/lodash.core.js::slice"
+ ],
+ "lodash#issue-1790": [
+  "lodash::lodash.js::fromPairs",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1794": [
+  "lodash::lodash.js::baseMerge",
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::createAssigner",
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1801": [
+  "lodash::lodash.js::baseMerge",
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::createAssigner",
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1802": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1811": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1856": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1880": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1883": [
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::sumBy"
+ ],
+ "lodash#pr-1888": [
+  "lodash::lodash.js::isEmpty",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1940": [
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::cloneBuffer",
+  "lodash::lodash.js::initCloneByTag",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1964": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::debounced",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1971": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "lodash#issue-1976": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1987": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-1994": [
+  "lodash::lodash.js::isError",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2000": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2007": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "lodash#issue-2008": [
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2017": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "lodash#issue-2018": [
+  "lodash::lodash.js::isPlainObject",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::transform"
+ ],
+ "lodash#issue-2022": [
+  "lodash::lodash.js::assignValue",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2039": [
+  "lodash::lodash.js::equalByTag",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2044": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2060": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2073": [
+  "lodash::lodash.js::hasPath",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2081": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2085": [
+  "lodash::lodash.js::isPlainObject",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2111": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2157": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2159": [
+  "lodash::lodash.js::isEmpty",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2164": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2190": [
+  "lodash::lodash.js::hasPath",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2193": [
+  "lodash::lodash.js::createOver",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2212": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2229": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::debounced",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2254": [
+  "lodash::lodash.js::basePullAt",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2270": [
+  "lodash::lodash.js::equalArrays",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2271": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::fp/_baseConvert.js::cloneByPath"
+ ],
+ "lodash#issue-2277": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2311": [
+  "lodash::lodash.js::createAssigner",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2313": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2314": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2342": [
+  "lodash::lodash.js::cancel",
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::runInContext",
+  "lodash::lodash.js::shouldInvoke"
+ ],
+ "lodash#pr-2355": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2356": [
+  "lodash::lodash.js::basePullAll",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2367": [
+  "lodash::lodash.js::createFind",
+  "lodash::lodash.js::find",
+  "lodash::lodash.js::findLast",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2372": [
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2381": [
+  "lodash::lodash.js::defaultTo",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2405": [
+  "lodash::lodash.js::createMathOperation",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2413": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "lodash#issue-2418": [
+  "lodash::lodash.js::createOver",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2422": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2424": [
+  "lodash::lodash.js::copyObject",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2447": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2461": [
+  "lodash::lib/main/build-site.js::build"
+ ],
+ "lodash#pr-2465": [
+  "lodash::lib/main/build-site.js::build"
+ ],
+ "lodash#pr-2468": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2511": [
+  "lodash::lodash.js::deburr",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2529": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::isFlattenable",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2530": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2543": [
+  "lodash::lodash.js::baseMergeDeep",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::mergeDefaults",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2548": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2553": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2558": [
+  "lodash::lodash.js::baseSet",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2591": [
+  "lodash::lodash.js::assignValue",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#pr-2610": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2614": [
+  "lodash::lodash.js::hasPath",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2622": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::runInContext"
+ ],
+ "lodash#issue-2676": [
+  "lodash::lodash.js::assignMergeValue",
+  "lodash::lodash.js::baseMergeDeep"
+ ],
+ "lodash#issue-2689": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::isFunction"
+ ],
+ "lodash#issue-2699": [
+  "lodash::lodash.js::baseMergeDeep"
+ ],
+ "lodash#issue-2728": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::fp/_baseConvert.js::createConverter",
+  "lodash::fp/_baseConvert.js::wrap"
+ ],
+ "lodash#pr-2755": [
+  "lodash::lodash.js::getRawTag"
+ ],
+ "lodash#issue-2758": [
+  "lodash::lodash.js::baseXor"
+ ],
+ "lodash#issue-2776": [
+  "lodash::lodash.js::baseXor"
+ ],
+ "lodash#issue-2786": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::spread"
+ ],
+ "lodash#pr-2794": [
+  "lodash::lodash.js::basePick",
+  "lodash::lodash.js::basePickBy"
+ ],
+ "lodash#issue-2808": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::pickBy"
+ ],
+ "lodash#issue-2809": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#issue-2825": [
+  "lodash::fp/_baseConvert.js::baseConvert"
+ ],
+ "lodash#issue-2826": [
+  "lodash::lodash.js::basePickBy"
+ ],
+ "lodash#issue-2840": [
+  "lodash::lodash.js::baseIsEqualDeep",
+  "lodash::lodash.js::equalObjects"
+ ],
+ "lodash#pr-2849": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#issue-2874": [
+  "lodash::lodash.js::createFlow",
+  "lodash::lodash.js::lazyValue"
+ ],
+ "lodash#issue-2912": [
+  "lodash::lodash.js::customOmitClone"
+ ],
+ "lodash#issue-2983": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#issue-3122": [
+  "lodash::lodash.js::addMapEntry",
+  "lodash::lodash.js::addSetEntry",
+  "lodash::lodash.js::baseClone",
+  "lodash::lodash.js::cloneMap",
+  "lodash::lodash.js::cloneSet",
+  "lodash::lodash.js::initCloneByTag"
+ ],
+ "lodash#issue-3189": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::isIndex"
+ ],
+ "lodash#issue-3203": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::fp/_baseConvert.js::cloneByPath"
+ ],
+ "lodash#pr-3226": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#issue-3260": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-3280": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::remainingWait"
+ ],
+ "lodash#pr-3308": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#issue-3440": [
+  "lodash::fp/_baseConvert.js::baseConvert",
+  "lodash::fp/_baseConvert.js::wrap"
+ ],
+ "lodash#issue-3951": [
+  "lodash::lodash.js::baseClone"
+ ],
+ "lodash#issue-3952": [
+  "lodash::lodash.js::basePick"
+ ],
+ "lodash#pr-4139": [
+  "lodash::lodash.js::debounce",
+  "lodash::lodash.js::debounced",
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-4230": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::toNumber"
+ ],
+ "lodash#pr-4244": [
+  "lodash::lodash.js::baseMerge"
+ ],
+ "lodash#pr-4272": [
+  "lodash::lodash.js::createRound"
+ ],
+ "lodash#issue-4320": [
+  "lodash::lodash.js::equalArrays",
+  "lodash::lodash.js::equalObjects"
+ ],
+ "lodash#pr-4336": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::safeGet"
+ ],
+ "lodash#pr-4355": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::template"
+ ],
+ "lodash#issue-4438": [
+  "lodash::lodash.js::baseOrderBy"
+ ],
+ "lodash#pr-4467": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-4497": [
+  "lodash::lodash.js::baseSortedIndexBy"
+ ],
+ "lodash#issue-4510": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-4513": [
+  "lodash::lodash.js::baseOrderBy"
+ ],
+ "lodash#pr-4514": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-4515": [
+  "lodash::lodash.js::equalArrays",
+  "lodash::lodash.js::equalObjects"
+ ],
+ "lodash#pr-4518": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::template"
+ ],
+ "lodash#pr-4759": [
+  "lodash::lodash.js::baseSet"
+ ],
+ "lodash#pr-5065": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::toNumber",
+  "lodash::lodash.js::trim",
+  "lodash::lodash.js::trimEnd"
+ ],
+ "lodash#pr-5085": [
+  "lodash::lodash.js::insertWrapDetails",
+  "lodash::lodash.js::template"
+ ],
+ "lodash#pr-6022": [
+  "lodash::dist/lodash.js::baseOrderBy",
+  "lodash::lodash.js::baseOrderBy"
+ ],
+ "lodash#pr-6056": [
+  "lodash::lib/main/build-site.js::autoLink",
+  "lodash::lib/main/build-site.js::build"
+ ],
+ "lodash#pr-6062": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-6090": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-6099": [
+  "lodash::dist/lodash.js::insertWrapDetails",
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-6115": [
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-6137": [
+  "lodash::dist/lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-6153": [
+  "lodash::dist/lodash.js::fromPairs",
+  "lodash::dist/lodash.js::insertWrapDetails",
+  "lodash::lodash.js::fromPairs",
+  "lodash::lodash.js::insertWrapDetails"
+ ],
+ "lodash#pr-6249": [
+  "lodash::dist/lodash.js::insertWrapDetails",
+  "lodash::lodash.js::insertWrapDetails"
+ ]
+}

@@ -1,0 +1,18 @@
+{"line_no": 0, "query_id": "requests#issue-7426", "issue_number": 7426, "query": "Parameterize SupportsItems to handle Mapping key invariance (#7426)"}
+{"line_no": 1, "query_id": "requests#issue-7272", "issue_number": 7272, "query": "Add inline types to Requests (#7272)"}
+{"line_no": 2, "query_id": "requests#issue-6095", "issue_number": 6095, "query": "Add automatic code formatting to Requests (#6095)"}
+{"line_no": 3, "query_id": "requests#issue-5223", "issue_number": 5223, "query": "Avoid zip extract racing condition by using read+write instead extract (#5707)"}
+{"line_no": 4, "query_id": "requests#issue-4134", "issue_number": 4134, "query": "Merge pull request #4134 from mlcrazy/master"}
+{"line_no": 5, "query_id": "requests#issue-3865", "issue_number": 3865, "query": "Merge pull request #3865 from JohnVillalovos/master"}
+{"line_no": 6, "query_id": "requests#issue-3789", "issue_number": 3789, "query": "Merge pull request #3789 from moin18/3780"}
+{"line_no": 7, "query_id": "requests#issue-3484", "issue_number": 3484, "query": "Merge pull request #3484 from scop/rtypes"}
+{"line_no": 8, "query_id": "requests#issue-2095", "issue_number": 2095, "query": "Merge pull request #2095 from ericfrederich/redirect_cache"}
+{"line_no": 9, "query_id": "requests#issue-1918", "issue_number": 1918, "query": "Merge pull request #1918 from zackw/response-is-redirect"}
+{"line_no": 10, "query_id": "requests#issue-1151", "issue_number": 1151, "query": "Fix the potential issue mentioned in #1151"}
+{"line_no": 11, "query_id": "requests#issue-1133", "issue_number": 1133, "query": "Fix the elapsed test and #1133"}
+{"line_no": 12, "query_id": "requests#issue-1031", "issue_number": 1031, "query": "Merge pull request #1031 from sigmavirus24/master"}
+{"line_no": 13, "query_id": "requests#issue-711", "issue_number": 711, "query": "Fixes #711!"}
+{"line_no": 14, "query_id": "requests#issue-573", "issue_number": 573, "query": "Merge pull request #573 from idangazit/develop"}
+{"line_no": 15, "query_id": "requests#issue-298", "issue_number": 298, "query": "Encode Multipart Post data at Request creation"}
+{"line_no": 16, "query_id": "requests#issue-256", "issue_number": 256, "query": "Only send URL path to servers"}
+{"line_no": 17, "query_id": "requests#issue-202", "issue_number": 202, "query": "Merge pull request #202 from kennethreitz/feature/content-stream"}
