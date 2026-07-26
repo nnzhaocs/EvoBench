@@ -1,0 +1,2283 @@
+{
+ "gin#pr-1": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::iterate"
+ ],
+ "gin#pr-11": [
+  "gin::gin.go::HTML"
+ ],
+ "gin#pr-26": [
+  "gin::examples/app-engine/hello.go::init"
+ ],
+ "gin#issue-29": [
+  "gin::gin.go::handle404"
+ ],
+ "gin#pr-33": [
+  "gin::gin.go::Abort",
+  "gin::gin.go::HTML",
+  "gin::gin.go::String",
+  "gin::gin.go::Use"
+ ],
+ "gin#pr-70": [
+  "gin::gin.go::Default",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::gin.go::SetHTMLTemplate"
+ ],
+ "gin#pr-71": [
+  "gin::examples/pluggable_renderer/example_pongo2.go::main"
+ ],
+ "gin#pr-76": [
+  "gin::render/render.go::Render"
+ ],
+ "gin#issue-109": [
+  "gin::binding/binding.go::Bind",
+  "gin::context.go::Bind"
+ ],
+ "gin#issue-119": [
+  "gin::gin.go::Default",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::render/render.go::Render"
+ ],
+ "gin#pr-120": [
+  "gin::gin.go::Default",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::render/render.go::Render"
+ ],
+ "gin#issue-164": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#pr-182": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::MustGet"
+ ],
+ "gin#issue-197": [
+  "gin::context.go::String",
+  "gin::render/render.go::Render"
+ ],
+ "gin#pr-200": [
+  "gin::render/render.go::writeHeader"
+ ],
+ "gin#pr-207": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#pr-217": [
+  "gin::binding/binding.go::setWithProperType"
+ ],
+ "gin#pr-220": [
+  "gin::recovery.go::function"
+ ],
+ "gin#pr-231": [
+  "gin::auth.go::BasicAuth",
+  "gin::auth.go::BasicAuthForRealm",
+  "gin::auth.go::Len"
+ ],
+ "gin#pr-235": [
+  "gin::gin.go::New",
+  "gin::gin.go::NoMethod",
+  "gin::gin.go::NoRoute",
+  "gin::gin.go::Use",
+  "gin::gin.go::handle404",
+  "gin::gin.go::handle405",
+  "gin::gin.go::rebuild404Handlers",
+  "gin::gin.go::rebuild405Handlers"
+ ],
+ "gin#pr-239": [
+  "gin::response_writer.go::Hijack",
+  "gin::response_writer.go::Written"
+ ],
+ "gin#pr-243": [
+  "gin::context.go::Next"
+ ],
+ "gin#issue-252": [
+  "gin::context.go::Copy",
+  "gin::gin.go::NoMethod",
+  "gin::gin.go::Use",
+  "gin::routergroup.go::Group",
+  "gin::routergroup.go::Use"
+ ],
+ "gin#pr-254": [
+  "gin::routergroup.go::Static",
+  "gin::routergroup.go::UNLINK"
+ ],
+ "gin#pr-269": [
+  "gin::context.go::Abort"
+ ],
+ "gin#pr-319": [
+  "gin::examples/realtime-advanced/stats.go::statsWorker"
+ ],
+ "gin#issue-329": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::getValue",
+  "gin::tree.go::insertChild",
+  "gin::tree.go::longestCommonPrefix"
+ ],
+ "gin#pr-362": [
+  "gin::context.go::Copy",
+  "gin::gin.go::NoMethod",
+  "gin::gin.go::Use",
+  "gin::routergroup.go::Group",
+  "gin::routergroup.go::Use"
+ ],
+ "gin#pr-363": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#issue-368": [
+  "gin::binding/json.go::Bind",
+  "gin::binding/json.go::Name"
+ ],
+ "gin#issue-391": [
+  "gin::context.go::NegotiateFormat"
+ ],
+ "gin#issue-405": [
+  "gin::gin.go::Run",
+  "gin::gin.go::iterate",
+  "gin::utils.go::joinPaths",
+  "gin::utils.go::resolveAddress"
+ ],
+ "gin#pr-470": [
+  "gin::context.go::IsAborted"
+ ],
+ "gin#pr-478": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::iterate"
+ ],
+ "gin#pr-494": [
+  "gin::debug.go::debugPrintRoute"
+ ],
+ "gin#issue-514": [
+  "gin::context.go::XML",
+  "gin::context.go::YAML",
+  "gin::render/yaml.go::Render"
+ ],
+ "gin#pr-535": [
+  "gin::examples/app-engine/hello.go::init"
+ ],
+ "gin#pr-556": [
+  "gin::context.go::Copy",
+  "gin::context.go::Next"
+ ],
+ "gin#pr-570": [
+  "gin::context.go::DefaultPostForm",
+  "gin::context.go::DefaultQuery",
+  "gin::context.go::GetPostForm",
+  "gin::context.go::GetPostFormArray",
+  "gin::context.go::GetQuery",
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::PostFormArray",
+  "gin::context.go::QueryArray"
+ ],
+ "gin#pr-576": [
+  "gin::context.go::GetPostForm"
+ ],
+ "gin#issue-585": [
+  "gin::context.go::Abort",
+  "gin::context.go::AbortWithStatus",
+  "gin::logger.go::ErrorLogger",
+  "gin::logger.go::ErrorLoggerT"
+ ],
+ "gin#pr-587": [
+  "gin::context.go::Abort",
+  "gin::context.go::AbortWithStatus",
+  "gin::logger.go::ErrorLogger",
+  "gin::logger.go::ErrorLoggerT"
+ ],
+ "gin#issue-610": [
+  "gin::binding/form_mapping.go::head",
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-623": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-627": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#issue-630": [
+  "gin::errors.go::Error",
+  "gin::errors.go::MarshalJSON"
+ ],
+ "gin#pr-701": [
+  "gin::context.go::Get",
+  "gin::context.go::Set"
+ ],
+ "gin#pr-709": [
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#issue-723": [
+  "gin::context.go::ClientIP",
+  "gin::context_appengine.go::init",
+  "gin::gin.go::New"
+ ],
+ "gin#pr-744": [
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#issue-752": [
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-753": [
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-754": [
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-770": [
+  "gin::examples/basic/main.go::main",
+  "gin::logger.go::DisableConsoleColor",
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-775": [
+  "gin::context.go::FormFile",
+  "gin::context.go::GetPostFormArray",
+  "gin::context.go::MultipartForm",
+  "gin::context.go::PostFormArray"
+ ],
+ "gin#pr-779": [
+  "gin::context.go::ContentType",
+  "gin::context.go::IsWebsocket"
+ ],
+ "gin#pr-783": [
+  "gin::context.go::ClientIP"
+ ],
+ "gin#pr-784": [
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "gin#pr-797": [
+  "gin::context.go::reset"
+ ],
+ "gin#pr-800": [
+  "gin::context.go::AbortWithStatus",
+  "gin::context.go::AbortWithStatusJSON"
+ ],
+ "gin#pr-801": [
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-808": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/msgpack.go::Bind",
+  "gin::render/msgpack.go::WriteMsgPack"
+ ],
+ "gin#pr-810": [
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::New",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::tree.go::getValue",
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-834": [
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-835": [
+  "gin::examples/graceful-shutdown/close/server.go::main",
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "gin#pr-839": [
+  "gin::context.go::Header"
+ ],
+ "gin#pr-855": [
+  "gin::context.go::BindJSON",
+  "gin::context.go::MustBindWith",
+  "gin::context.go::ShouldBindWith",
+  "gin::deprecated.go::BindWith"
+ ],
+ "gin#pr-857": [
+  "gin::context.go::GetRawData"
+ ],
+ "gin#pr-860": [
+  "gin::gin.go::Delims",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::gin.go::New",
+  "gin::gin.go::SetHTMLTemplate",
+  "gin::gin.go::allocateContext",
+  "gin::render/html.go::Instance",
+  "gin::render/html.go::loadTemplate"
+ ],
+ "gin#pr-863": [
+  "gin::examples/auto-tls/example2.go::main"
+ ],
+ "gin#pr-900": [
+  "gin::context.go::Abort",
+  "gin::context.go::DefaultQuery",
+  "gin::context.go::Error",
+  "gin::context.go::HTML",
+  "gin::context.go::Param",
+  "gin::context.go::Query"
+ ],
+ "gin#pr-904": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-910": [
+  "gin::context.go::AbortWithError",
+  "gin::context.go::Error"
+ ],
+ "gin#pr-945": [
+  "gin::binding/binding.go::Default"
+ ],
+ "gin#pr-947": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-962": [
+  "gin::gin.go::Delims",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::gin.go::New",
+  "gin::gin.go::SetHTMLTemplate",
+  "gin::render/html.go::Instance",
+  "gin::render/html.go::loadTemplate"
+ ],
+ "gin#pr-965": [
+  "gin::examples/auto-tls/example2.go::main"
+ ],
+ "gin#pr-972": [
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "gin#pr-975": [
+  "gin::gin.go::Last"
+ ],
+ "gin#pr-977": [
+  "gin::auth.go::secureCompare"
+ ],
+ "gin#pr-979": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-984": [
+  "gin::context.go::GetRawData",
+  "gin::context.go::SetCookie",
+  "gin::gin.go::Last"
+ ],
+ "gin#pr-985": [
+  "gin::utils.go::parseAccept"
+ ],
+ "gin#pr-987": [
+  "gin::context.go::IndentedJSON",
+  "gin::context.go::SecureJSON",
+  "gin::gin.go::Delims",
+  "gin::gin.go::New",
+  "gin::gin.go::SecureJsonPrefix",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "gin#issue-988": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-997": [
+  "gin::binding/json.go::Bind",
+  "gin::binding/json.go::Name"
+ ],
+ "gin#pr-999": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-1000": [
+  "gin::examples/http2/main.go::main"
+ ],
+ "gin#pr-1001": [
+  "gin::examples/favicon/main.go::main"
+ ],
+ "gin#pr-1009": [
+  "gin::examples/http2/main.go::main"
+ ],
+ "gin#pr-1015": [
+  "gin::binding/default_validator.go::Engine",
+  "gin::binding/default_validator.go::lazyinit"
+ ],
+ "gin#pr-1020": [
+  "gin::context.go::Copy"
+ ],
+ "gin#pr-1022": [
+  "gin::context.go::MultipartForm",
+  "gin::context.go::SaveUploadedFile",
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "gin#pr-1028": [
+  "gin::auth.go::BasicAuthForRealm"
+ ],
+ "gin#pr-1029": [
+  "gin::binding/query.go::Bind",
+  "gin::context.go::BindJSON",
+  "gin::context.go::BindQuery"
+ ],
+ "gin#pr-1031": [
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob"
+ ],
+ "gin#pr-1032": [
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::QueryArray"
+ ],
+ "gin#pr-1036": [
+  "gin::auth.go::BasicAuthForRealm",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob"
+ ],
+ "gin#pr-1038": [
+  "gin::examples/template/main.go::main"
+ ],
+ "gin#pr-1042": [
+  "gin::context.go::bodyAllowedForStatus"
+ ],
+ "gin#pr-1047": [
+  "gin::context.go::MustBindWith",
+  "gin::context.go::ShouldBind",
+  "gin::context.go::ShouldBindJSON",
+  "gin::context.go::ShouldBindQuery"
+ ],
+ "gin#pr-1049": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#issue-1050": [
+  "gin::gin.go::Delims",
+  "gin::gin.go::New",
+  "gin::gin.go::allocateContext"
+ ],
+ "gin#pr-1051": [
+  "gin::gin.go::Delims",
+  "gin::gin.go::New",
+  "gin::gin.go::allocateContext"
+ ],
+ "gin#pr-1059": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS"
+ ],
+ "gin#pr-1060": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-1067": [
+  "gin::examples/app-engine/hello.go::init"
+ ],
+ "gin#pr-1068": [
+  "gin::binding/default_validator.go::ValidateStruct",
+  "gin::examples/custom-validation/server.go::main"
+ ],
+ "gin#pr-1072": [
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-1076": [
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-1077": [
+  "gin::ginS/gins.go::engine"
+ ],
+ "gin#pr-1081": [
+  "gin::context.go::IsWebsocket",
+  "gin::context.go::requestHeader"
+ ],
+ "gin#pr-1083": [
+  "gin::auth.go::BasicAuthForRealm",
+  "gin::context.go::ClientIP"
+ ],
+ "gin#pr-1088": [
+  "gin::context.go::GetRawData",
+  "gin::context.go::SetCookie"
+ ],
+ "gin#issue-1089": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "gin#pr-1092": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "gin#pr-1094": [
+  "gin::binding/form.go::Bind",
+  "gin::binding/form.go::Name"
+ ],
+ "gin#pr-1097": [
+  "gin::recovery.go::Recovery"
+ ],
+ "gin#pr-1100": [
+  "gin::context.go::FormFile",
+  "gin::context.go::GetPostFormArray",
+  "gin::context.go::MultipartForm",
+  "gin::context.go::PostFormArray",
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main",
+  "gin::gin.go::New"
+ ],
+ "gin#pr-1104": [
+  "gin::examples/graceful-shutdown/close/server.go::main",
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "gin#pr-1108": [
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::gin.go::SecureJsonPrefix",
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-1112": [
+  "gin::context.go::NegotiateFormat"
+ ],
+ "gin#pr-1117": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-1121": [
+  "gin::debug.go::debugPrint",
+  "gin::debug.go::debugPrintWARNINGDefault",
+  "gin::gin.go::Default",
+  "gin::gin.go::New"
+ ],
+ "gin#pr-1134": [
+  "gin::gin.go::RunUnix"
+ ],
+ "gin#pr-1138": [
+  "gin::binding/form_mapping.go::mapForm"
+ ],
+ "gin#pr-1156": [
+  "gin::examples/basic/main.go::main",
+  "gin::examples/basic/main.go::setupRouter"
+ ],
+ "gin#pr-1165": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::Header",
+  "gin::context.go::Next",
+  "gin::context.go::Status",
+  "gin::gin.go::redirectTrailingSlash"
+ ],
+ "gin#pr-1174": [
+  "gin::mode.go::SetMode",
+  "gin::mode.go::init"
+ ],
+ "gin#pr-1184": [
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::errors.go::String",
+  "gin::examples/realtime-advanced/stats.go::statsWorker",
+  "gin::tree.go::findCaseInsensitivePath",
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-1185": [
+  "gin::auth.go::processAccounts",
+  "gin::auth.go::searchCredential"
+ ],
+ "gin#pr-1204": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#pr-1209": [
+  "gin::utils.go::Bind",
+  "gin::utils.go::MarshalXML"
+ ],
+ "gin#pr-1215": [
+  "gin::gin.go::Delims",
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::gin.go::SetHTMLTemplate"
+ ],
+ "gin#pr-1220": [
+  "gin::routergroup.go::StaticFS",
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "gin#pr-1238": [
+  "gin::gin.go::redirectTrailingSlash",
+  "gin::gin.go::serveError"
+ ],
+ "gin#pr-1250": [
+  "gin::mode.go::SetMode"
+ ],
+ "gin#pr-1252": [
+  "gin::context.go::SSEvent",
+  "gin::context.go::Stream"
+ ],
+ "gin#pr-1259": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "gin#pr-1260": [
+  "gin::context.go::File",
+  "gin::context.go::FileAttachment"
+ ],
+ "gin#pr-1264": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/form.go::Bind"
+ ],
+ "gin#pr-1270": [
+  "gin::recovery.go::RecoveryWithWriter",
+  "gin::recovery.go::function",
+  "gin::recovery.go::timeFormat"
+ ],
+ "gin#pr-1272": [
+  "gin::gin.go::Last",
+  "gin::gin.go::Routes",
+  "gin::gin.go::iterate"
+ ],
+ "gin#pr-1277": [
+  "gin::binding/default_validator.go::Engine",
+  "gin::binding/default_validator.go::ValidateStruct",
+  "gin::examples/custom-validation/server.go::main"
+ ],
+ "gin#pr-1287": [
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "gin#pr-1304": [
+  "gin::context.go::Data",
+  "gin::render/reader.go::Render",
+  "gin::render/reader.go::writeHeaders"
+ ],
+ "gin#issue-1331": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "gin#pr-1333": [
+  "gin::context.go::JSONP",
+  "gin::context.go::SecureJSON",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "gin#pr-1336": [
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "gin#pr-1342": [
+  "gin::binding/form_mapping.go::mapForm"
+ ],
+ "gin#pr-1350": [
+  "gin::binding/form_mapping.go::setBoolField"
+ ],
+ "gin#pr-1352": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-1358": [
+  "gin::context.go::AsciiJSON",
+  "gin::context.go::JSON",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "gin#pr-1360": [
+  "gin::routergroup.go::Any"
+ ],
+ "gin#pr-1370": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "gin#pr-1371": [
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#pr-1383": [
+  "gin::context.go::GetPostFormArray",
+  "gin::context.go::GetPostFormMap",
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::GetQueryMap",
+  "gin::context.go::PostFormMap",
+  "gin::context.go::QueryMap"
+ ],
+ "gin#pr-1391": [
+  "gin::context.go::Error",
+  "gin::context.go::Get",
+  "gin::context.go::Set",
+  "gin::context.go::reset",
+  "gin::gin.go::Default",
+  "gin::gin.go::allocateContext"
+ ],
+ "gin#pr-1394": [
+  "gin::debug.go::debugPrint",
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-1398": [
+  "gin::gin.go::Default",
+  "gin::gin.go::Run",
+  "gin::gin.go::RunListener",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::RunUnix"
+ ],
+ "gin#pr-1400": [
+  "gin::utils.go::parseAccept"
+ ],
+ "gin#pr-1401": [
+  "gin::examples/grpc/gin/main.go::main"
+ ],
+ "gin#issue-1403": [
+  "gin::examples/grpc/gin/main.go::main"
+ ],
+ "gin#pr-1405": [
+  "gin::examples/grpc/gin/main.go::main"
+ ],
+ "gin#pr-1406": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "gin#pr-1407": [
+  "gin::path.go::cleanPath"
+ ],
+ "gin#pr-1413": [
+  "gin::context.go::SetAccepted"
+ ],
+ "gin#pr-1416": [
+  "gin::binding/default_validator.go::ValidateStruct",
+  "gin::binding/default_validator.go::lazyinit"
+ ],
+ "gin#pr-1417": [
+  "gin::examples/template/main.go::main"
+ ],
+ "gin#pr-1418": [
+  "gin::gin.go::LoadHTMLGlob",
+  "gin::gin.go::SecureJsonPrefix",
+  "gin::gin.go::redirectFixedPath"
+ ],
+ "gin#pr-1419": [
+  "gin::mode.go::init"
+ ],
+ "gin#pr-1431": [
+  "gin::context.go::Error",
+  "gin::ginS/gins.go::RunTLS"
+ ],
+ "gin#issue-1432": [
+  "gin::gin.go::Run",
+  "gin::tree.go::findWildcard"
+ ],
+ "gin#pr-1438": [
+  "gin::context.go::JSONP",
+  "gin::context.go::SecureJSON"
+ ],
+ "gin#pr-1450": [
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::QueryArray",
+  "gin::context.go::reset"
+ ],
+ "gin#pr-1460": [
+  "gin::response_writer.go::CloseNotify",
+  "gin::response_writer.go::Flush"
+ ],
+ "gin#pr-1469": [
+  "gin::path.go::cleanPath"
+ ],
+ "gin#pr-1470": [
+  "gin::gin.go::handleHTTPRequest",
+  "gin::gin.go::redirectTrailingSlash",
+  "gin::gin.go::serveError"
+ ],
+ "gin#pr-1479": [
+  "gin::context.go::ProtoBuf",
+  "gin::context.go::Stream",
+  "gin::render/protobuf.go::Render"
+ ],
+ "gin#issue-1484": [
+  "gin::context.go::BindJSON",
+  "gin::context.go::BindXML",
+  "gin::context.go::ShouldBindJSON",
+  "gin::context.go::ShouldBindXML"
+ ],
+ "gin#pr-1485": [
+  "gin::context.go::BindJSON",
+  "gin::context.go::BindXML",
+  "gin::context.go::ShouldBindJSON",
+  "gin::context.go::ShouldBindXML"
+ ],
+ "gin#pr-1487": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-1496": [
+  "gin::context.go::ProtoBuf",
+  "gin::context.go::Stream",
+  "gin::context.go::YAML",
+  "gin::render/protobuf.go::Render"
+ ],
+ "gin#pr-1497": [
+  "gin::render/text.go::WriteString"
+ ],
+ "gin#pr-1498": [
+  "gin::render/msgpack.go::WriteMsgPack"
+ ],
+ "gin#pr-1502": [
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::context.go::Header",
+  "gin::context.go::JSONP",
+  "gin::context.go::Status",
+  "gin::render/json.go::Render"
+ ],
+ "gin#pr-1529": [
+  "gin::tree.go::addRoute"
+ ],
+ "gin#pr-1530": [
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "gin#pr-1546": [
+  "gin::render/json.go::WriteContentType",
+  "gin::render/json.go::WriteJSON"
+ ],
+ "gin#issue-1553": [
+  "gin::debug.go::IsDebugging",
+  "gin::debug.go::debugPrintRoute"
+ ],
+ "gin#pr-1555": [
+  "gin::debug.go::IsDebugging",
+  "gin::debug.go::debugPrintRoute"
+ ],
+ "gin#pr-1560": [
+  "gin::debug.go::debugPrint",
+  "gin::debug.go::debugPrintLoadTemplate"
+ ],
+ "gin#pr-1562": [
+  "gin::debug.go::IsDebugging"
+ ],
+ "gin#pr-1565": [
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#pr-1571": [
+  "gin::debug.go::debugPrint",
+  "gin::debug.go::debugPrintLoadTemplate"
+ ],
+ "gin#pr-1572": [
+  "gin::debug.go::debugPrint",
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-1580": [
+  "gin::debug.go::IsDebugging",
+  "gin::mode.go::Mode",
+  "gin::mode.go::SetMode"
+ ],
+ "gin#pr-1600": [
+  "gin::context.go::FormFile",
+  "gin::context.go::PostFormArray",
+  "gin::context.go::PostFormMap"
+ ],
+ "gin#pr-1606": [
+  "gin::context.go::Status",
+  "gin::context.go::bodyAllowedForStatus"
+ ],
+ "gin#pr-1609": [
+  "gin::gin.go::RunFd",
+  "gin::gin.go::RunUnix"
+ ],
+ "gin#pr-1612": [
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/uri.go::BindUri",
+  "gin::context.go::ShouldBindBodyWith",
+  "gin::context.go::ShouldBindUri",
+  "gin::context.go::ShouldBindWith",
+  "gin::context.go::ShouldBindYAML"
+ ],
+ "gin#pr-1615": [
+  "gin::context.go::GetRawData",
+  "gin::context.go::SetCookie"
+ ],
+ "gin#pr-1619": [
+  "gin::errors.go::SetMeta"
+ ],
+ "gin#pr-1638": [
+  "gin::binding/json.go::Bind",
+  "gin::binding/json.go::Name"
+ ],
+ "gin#pr-1640": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "gin#issue-1644": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-1650": [
+  "gin::debug.go::debugPrint",
+  "gin::debug.go::debugPrintLoadTemplate"
+ ],
+ "gin#pr-1663": [
+  "gin::routergroup.go::StaticFS",
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "gin#issue-1672": [
+  "gin::binding/form_mapping.go::head",
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-1677": [
+  "gin::logger.go::ErrorLoggerT",
+  "gin::logger.go::Logger",
+  "gin::logger.go::LoggerWithConfig",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-1690": [
+  "gin::context.go::Deadline",
+  "gin::context.go::Err",
+  "gin::context.go::SetAccepted"
+ ],
+ "gin#issue-1693": [
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "gin#pr-1699": [
+  "gin::examples/upload-file/multiple/main.go::main",
+  "gin::examples/upload-file/single/main.go::main"
+ ],
+ "gin#pr-1706": [
+  "gin::logger.go::LoggerWithConfig",
+  "gin::logger.go::LoggerWithWriter"
+ ],
+ "gin#pr-1718": [
+  "gin::binding/form_mapping.go::mapFormByTag"
+ ],
+ "gin#pr-1722": [
+  "gin::render/reader.go::writeHeaders"
+ ],
+ "gin#pr-1724": [
+  "gin::logger.go::DisableConsoleColor",
+  "gin::logger.go::ForceConsoleColor",
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "gin#pr-1726": [
+  "gin::routergroup.go::handle"
+ ],
+ "gin#pr-1729": [
+  "gin::context.go::HandlerNames"
+ ],
+ "gin#pr-1733": [
+  "gin::binding/form_mapping.go::mapFormByTag"
+ ],
+ "gin#pr-1736": [
+  "gin::context.go::Deadline",
+  "gin::context.go::Err",
+  "gin::context.go::SetAccepted"
+ ],
+ "gin#pr-1740": [
+  "gin::examples/graceful-shutdown/graceful-shutdown/server.go::main"
+ ],
+ "gin#pr-1745": [
+  "gin::context.go::Next"
+ ],
+ "gin#pr-1747": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "gin#pr-1749": [
+  "gin::binding/form_mapping.go::head",
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-1752": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "gin#issue-1760": [
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#pr-1764": [
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#pr-1771": [
+  "gin::logger.go::LoggerWithConfig",
+  "gin::logger.go::MethodColor",
+  "gin::logger.go::StatusCodeColor",
+  "gin::logger.go::colorForMethod",
+  "gin::logger.go::colorForStatus"
+ ],
+ "gin#pr-1779": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "gin#pr-1794": [
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeDuration",
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "gin#pr-1797": [
+  "gin::binding/form_mapping.go::setArray",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-1802": [
+  "gin::logger.go::DisableConsoleColor",
+  "gin::logger.go::ForceConsoleColor",
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "gin#issue-1804": [
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "gin#pr-1805": [
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "gin#pr-1817": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-1822": [
+  "gin::ginS/gins.go::Use"
+ ],
+ "gin#pr-1826": [
+  "gin::context.go::reset",
+  "gin::gin.go::addRoute",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::tree.go::addRoute",
+  "gin::tree.go::getValue",
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-1829": [
+  "gin::binding/form.go::Bind",
+  "gin::binding/form_mapping.go::TrySet",
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::mappingByPtr",
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-1836": [
+  "gin::recovery.go::RecoveryWithWriter"
+ ],
+ "gin#pr-1841": [
+  "gin::context.go::Copy"
+ ],
+ "gin#pr-1852": [
+  "gin::binding/binding_nomsgpack.go::Default",
+  "gin::binding/binding_nomsgpack.go::validate"
+ ],
+ "gin#issue-1878": [
+  "gin::binding/form.go::Bind",
+  "gin::binding/multipart_form_mapping.go::TrySet",
+  "gin::binding/multipart_form_mapping.go::setArrayOfMultipartFormFiles",
+  "gin::binding/multipart_form_mapping.go::setByMultipartFormFile"
+ ],
+ "gin#pr-1891": [
+  "gin::debug.go::debugPrint",
+  "gin::debug.go::debugPrintError"
+ ],
+ "gin#pr-1893": [
+  "gin::binding/form_mapping.go::mapping"
+ ],
+ "gin#pr-1909": [
+  "gin::binding/form_mapping.go::tryToSetValue",
+  "gin::context.go::ContentType",
+  "gin::context.go::IsWebsocket",
+  "gin::tree.go::findCaseInsensitivePath"
+ ],
+ "gin#pr-1918": [
+  "gin::context.go::GetQueryArray",
+  "gin::context.go::GetQueryMap",
+  "gin::context.go::QueryArray",
+  "gin::context.go::QueryMap",
+  "gin::context.go::getQueryCache"
+ ],
+ "gin#pr-1919": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-1920": [
+  "gin::context.go::GetPostFormArray",
+  "gin::context.go::PostFormArray"
+ ],
+ "gin#pr-1931": [
+  "gin::context.go::reset"
+ ],
+ "gin#pr-1933": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-1939": [
+  "gin::debug.go::debugPrintLoadTemplate",
+  "gin::debug.go::debugPrintRoute",
+  "gin::errors.go::String"
+ ],
+ "gin#issue-1942": [
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::mappingByPtr",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-1943": [
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::mappingByPtr",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-1949": [
+  "gin::binding/form.go::Bind",
+  "gin::binding/multipart_form_mapping.go::TrySet",
+  "gin::binding/multipart_form_mapping.go::setArrayOfMultipartFormFiles",
+  "gin::binding/multipart_form_mapping.go::setByMultipartFormFile"
+ ],
+ "gin#issue-1956": [
+  "gin::binding/header.go::Bind",
+  "gin::binding/header.go::TrySet",
+  "gin::binding/header.go::mapHeader",
+  "gin::context.go::BindHeader",
+  "gin::context.go::BindYAML",
+  "gin::context.go::ShouldBindHeader",
+  "gin::context.go::ShouldBindYAML"
+ ],
+ "gin#pr-1957": [
+  "gin::binding/header.go::Bind",
+  "gin::binding/header.go::TrySet",
+  "gin::binding/header.go::mapHeader",
+  "gin::context.go::BindHeader",
+  "gin::context.go::BindYAML",
+  "gin::context.go::ShouldBindHeader",
+  "gin::context.go::ShouldBindYAML"
+ ],
+ "gin#pr-1970": [
+  "gin::gin.go::redirectFixedPath",
+  "gin::gin.go::redirectRequest",
+  "gin::gin.go::redirectTrailingSlash"
+ ],
+ "gin#pr-1980": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-1981": [
+  "gin::render/reader.go::Render"
+ ],
+ "gin#pr-2007": [
+  "gin::render/json.go::Render"
+ ],
+ "gin#pr-2013": [
+  "gin::auth.go::authorizationHeader",
+  "gin::auth.go::secureCompare"
+ ],
+ "gin#pr-2023": [
+  "gin::gin.go::RunFd",
+  "gin::gin.go::RunListener"
+ ],
+ "gin#pr-2028": [
+  "gin::binding/json.go::decodeJSON"
+ ],
+ "gin#pr-2051": [
+  "gin::context.go::GetPostFormMap",
+  "gin::context.go::PostFormMap"
+ ],
+ "gin#pr-2052": [
+  "gin::tree.go::countParams"
+ ],
+ "gin#pr-2063": [
+  "gin::context.go::QueryArray",
+  "gin::context.go::getQueryCache"
+ ],
+ "gin#pr-2093": [
+  "gin::gin.go::RunUnix"
+ ],
+ "gin#pr-2114": [
+  "gin::context.go::FormFile"
+ ],
+ "gin#pr-2118": [
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "gin#pr-2121": [
+  "gin::render/reader.go::Render"
+ ],
+ "gin#pr-2147": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-2150": [
+  "gin::context.go::Render",
+  "gin::render/json.go::Render"
+ ],
+ "gin#pr-2159": [
+  "gin::gin.go::New",
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-2163": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::findCaseInsensitivePath",
+  "gin::tree.go::longestCommonPrefix"
+ ],
+ "gin#pr-2166": [
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-2169": [
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeDuration",
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "gin#pr-2171": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::findCaseInsensitivePath",
+  "gin::tree.go::getValue",
+  "gin::tree.go::incrementChildPrio"
+ ],
+ "gin#pr-2172": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-2173": [
+  "gin::tree.go::findWildcard",
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-2177": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-2179": [
+  "gin::path.go::bufApp",
+  "gin::path.go::cleanPath"
+ ],
+ "gin#pr-2196": [
+  "gin::context.go::SetAccepted"
+ ],
+ "gin#pr-2206": [
+  "gin::auth.go::authorizationHeader",
+  "gin::auth.go::processAccounts",
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::gin.go::redirectFixedPath",
+  "gin::internal/bytesconv/bytesconv.go::BytesToString",
+  "gin::internal/bytesconv/bytesconv.go::StringToBytes",
+  "gin::render/json.go::Render"
+ ],
+ "gin#issue-2209": [
+  "gin::render/json.go::WriteContentType",
+  "gin::render/json.go::WriteJSON"
+ ],
+ "gin#pr-2212": [
+  "gin::path.go::cleanPath"
+ ],
+ "gin#pr-2216": [
+  "gin::utils.go::resolveAddress"
+ ],
+ "gin#pr-2220": [
+  "gin::context.go::Negotiate"
+ ],
+ "gin#pr-2223": [
+  "gin::path.go::bufApp",
+  "gin::path.go::cleanPath",
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-2228": [
+  "gin::render/json.go::WriteContentType",
+  "gin::render/json.go::WriteJSON"
+ ],
+ "gin#pr-2229": [
+  "gin::tree.go::addRoute"
+ ],
+ "gin#pr-2280": [
+  "gin::gin.go::RunUnix"
+ ],
+ "gin#pr-2294": [
+  "gin::utils.go::resolveAddress"
+ ],
+ "gin#pr-2302": [
+  "gin::binding/default_validator.go::Error",
+  "gin::binding/default_validator.go::ValidateStruct",
+  "gin::binding/default_validator.go::validateStruct"
+ ],
+ "gin#pr-2305": [
+  "gin::context.go::Error",
+  "gin::context.go::Get",
+  "gin::context.go::Set"
+ ],
+ "gin#pr-2306": [
+  "gin::context.go::GetRawData",
+  "gin::context.go::SetCookie"
+ ],
+ "gin#pr-2321": [
+  "gin::mode.go::SetMode",
+  "gin::mode.go::init"
+ ],
+ "gin#pr-2322": [
+  "gin::recovery.go::CustomRecoveryWithWriter",
+  "gin::recovery.go::RecoveryWithWriter",
+  "gin::recovery.go::defaultHandleRecovery"
+ ],
+ "gin#pr-2337": [
+  "gin::debug.go::IsDebugging",
+  "gin::debug.go::debugPrint",
+  "gin::debug.go::debugPrintLoadTemplate"
+ ],
+ "gin#pr-2351": [
+  "gin::context.go::Copy",
+  "gin::context.go::Error",
+  "gin::context.go::Get",
+  "gin::context.go::Set",
+  "gin::context.go::reset",
+  "gin::gin.go::Default",
+  "gin::gin.go::allocateContext"
+ ],
+ "gin#pr-2354": [
+  "gin::auth.go::BasicAuth",
+  "gin::auth.go::processAccounts",
+  "gin::path.go::bufApp",
+  "gin::recovery.go::function",
+  "gin::recovery.go::timeFormat"
+ ],
+ "gin#pr-2356": [
+  "gin::context.go::IndentedJSON",
+  "gin::context.go::SecureJSON",
+  "gin::gin.go::Delims",
+  "gin::gin.go::New",
+  "gin::gin.go::SecureJsonPrefix"
+ ],
+ "gin#pr-2365": [
+  "gin::render/text.go::WriteString"
+ ],
+ "gin#pr-2366": [
+  "gin::tree.go::addRoute"
+ ],
+ "gin#pr-2371": [
+  "gin::tree.go::findCaseInsensitivePath",
+  "gin::tree.go::findCaseInsensitivePathRec",
+  "gin::tree.go::incrementChildPrio"
+ ],
+ "gin#pr-2378": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::countParams",
+  "gin::tree.go::longestCommonPrefix"
+ ],
+ "gin#pr-2387": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::countParams",
+  "gin::tree.go::longestCommonPrefix"
+ ],
+ "gin#pr-2393": [
+  "gin::errors.go::Errors",
+  "gin::errors.go::JSON",
+  "gin::errors.go::SetMeta",
+  "gin::fs.go::Dir",
+  "gin::fs.go::Open",
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "gin#pr-2412": [
+  "gin::context.go::QueryArray",
+  "gin::context.go::initQueryCache"
+ ],
+ "gin#pr-2450": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-2484": [
+  "gin::binding/form_mapping.go::head",
+  "gin::binding/form_mapping.go::mapForm",
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/form_mapping.go::setFormMap"
+ ],
+ "gin#pr-2487": [
+  "gin::context.go::GetInt64",
+  "gin::context.go::GetUint",
+  "gin::context.go::GetUint64"
+ ],
+ "gin#pr-2500": [
+  "gin::utils.go::parseAccept"
+ ],
+ "gin#pr-2508": [
+  "gin::render/text.go::WriteString"
+ ],
+ "gin#pr-2512": [
+  "gin::context.go::FileAttachment"
+ ],
+ "gin#issue-2525": [
+  "gin::errors.go::Unwrap"
+ ],
+ "gin#pr-2526": [
+  "gin::errors.go::Unwrap"
+ ],
+ "gin#pr-2528": [
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "gin#pr-2551": [
+  "gin::context.go::SecureJSON"
+ ],
+ "gin#pr-2567": [
+  "gin::mode.go::SetMode"
+ ],
+ "gin#pr-2572": [
+  "gin::internal/bytesconv/bytesconv.go::StringToBytes"
+ ],
+ "gin#pr-2584": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-2600": [
+  "gin::internal/bytesconv/bytesconv.go::StringToBytes"
+ ],
+ "gin#pr-2609": [
+  "gin::auth.go::searchCredential"
+ ],
+ "gin#pr-2620": [
+  "gin::internal/bytesconv/bytesconv.go::StringToBytes"
+ ],
+ "gin#pr-2632": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::RemoteIP",
+  "gin::context.go::ShouldBindBodyWith",
+  "gin::context.go::validateHeader",
+  "gin::gin.go::New",
+  "gin::gin.go::Run",
+  "gin::gin.go::iterate",
+  "gin::gin.go::prepareTrustedCIDRs"
+ ],
+ "gin#pr-2663": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::getValue",
+  "gin::tree.go::insertChild",
+  "gin::tree.go::longestCommonPrefix"
+ ],
+ "gin#issue-2674": [
+  "gin::context.go::RemoteIP"
+ ],
+ "gin#pr-2675": [
+  "gin::context.go::RemoteIP"
+ ],
+ "gin#pr-2679": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-2685": [
+  "gin::routergroup.go::Handle",
+  "gin::routergroup.go::handle"
+ ],
+ "gin#pr-2692": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunFd",
+  "gin::gin.go::RunListener",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::RunUnix",
+  "gin::gin.go::SetTrustedProxies",
+  "gin::gin.go::iterate",
+  "gin::gin.go::prepareTrustedCIDRs"
+ ],
+ "gin#pr-2700": [
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setFormMap",
+  "gin::binding/header.go::TrySet",
+  "gin::binding/multipart_form_mapping.go::TrySet",
+  "gin::binding/multipart_form_mapping.go::setArrayOfMultipartFormFiles",
+  "gin::binding/multipart_form_mapping.go::setByMultipartFormFile"
+ ],
+ "gin#pr-2701": [
+  "gin::routergroup.go::Any",
+  "gin::routergroup.go::HEAD"
+ ],
+ "gin#pr-2706": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-2707": [
+  "gin::binding/json.go::Bind",
+  "gin::binding/json.go::Name"
+ ],
+ "gin#pr-2720": [
+  "gin::binding/form_mapping.go::MapFormWithTag",
+  "gin::binding/form_mapping.go::mapForm"
+ ],
+ "gin#pr-2723": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "gin#pr-2737": [
+  "gin::binding/form.go::Bind",
+  "gin::debug.go::debugPrintError"
+ ],
+ "gin#pr-2738": [
+  "gin::binding/default_validator.go::validateStruct"
+ ],
+ "gin#pr-2739": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::ShouldBindBodyWith",
+  "gin::context_appengine.go::init",
+  "gin::gin.go::New"
+ ],
+ "gin#pr-2749": [
+  "gin::routergroup.go::Any",
+  "gin::routergroup.go::StaticFile"
+ ],
+ "gin#pr-2751": [
+  "gin::context.go::Value"
+ ],
+ "gin#pr-2755": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-2760": [
+  "gin::recovery.go::Recovery",
+  "gin::recovery.go::function"
+ ],
+ "gin#pr-2761": [
+  "gin::recovery.go::function",
+  "gin::recovery.go::timeFormat"
+ ],
+ "gin#issue-2762": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-2765": [
+  "gin::binding/default_validator.go::Error"
+ ],
+ "gin#pr-2769": [
+  "gin::context.go::Deadline",
+  "gin::context.go::Err",
+  "gin::context.go::SetAccepted"
+ ],
+ "gin#pr-2777": [
+  "gin::binding/default_validator.go::Error",
+  "gin::binding/default_validator.go::ValidateStruct"
+ ],
+ "gin#issue-2778": [
+  "gin::gin.go::New",
+  "gin::gin.go::allocateContext"
+ ],
+ "gin#pr-2782": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-2783": [
+  "gin::routergroup.go::combineHandlers",
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "gin#issue-2786": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-2788": [
+  "gin::render/json.go::Render"
+ ],
+ "gin#pr-2798": [
+  "gin::auth.go::searchCredential"
+ ],
+ "gin#pr-2803": [
+  "gin::gin.go::New",
+  "gin::gin.go::allocateContext"
+ ],
+ "gin#pr-2825": [
+  "gin::context.go::Value"
+ ],
+ "gin#pr-2827": [
+  "gin::binding/form_mapping.go::mapURI",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::binding/uri.go::BindUri",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "gin#pr-2830": [
+  "gin::tree.go::countParams"
+ ],
+ "gin#pr-2832": [
+  "gin::gin.go::New",
+  "gin::gin.go::NoRoute"
+ ],
+ "gin#pr-2834": [
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeDuration",
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "gin#pr-2844": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::RemoteIP",
+  "gin::context.go::validateHeader"
+ ],
+ "gin#pr-2847": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-2848": [
+  "gin::context.go::Param"
+ ],
+ "gin#pr-2851": [
+  "gin::binding/protobuf.go::Bind",
+  "gin::binding/protobuf.go::BindBody"
+ ],
+ "gin#pr-2857": [
+  "gin::gin.go::Run",
+  "gin::tree.go::findWildcard"
+ ],
+ "gin#pr-2870": [
+  "gin::binding/form.go::Bind",
+  "gin::context.go::Error",
+  "gin::context.go::initFormCache",
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "gin#issue-2871": [
+  "gin::gin.go::NoMethod",
+  "gin::gin.go::NoRoute"
+ ],
+ "gin#pr-2872": [
+  "gin::gin.go::NoMethod",
+  "gin::gin.go::NoRoute"
+ ],
+ "gin#pr-2883": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "gin#pr-2886": [
+  "gin::binding/form_mapping.go::TrySet",
+  "gin::binding/form_mapping.go::mapFormByTag",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::tryToSetValue",
+  "gin::binding/multipart_form_mapping.go::TrySet",
+  "gin::binding/multipart_form_mapping.go::setArrayOfMultipartFormFiles",
+  "gin::binding/multipart_form_mapping.go::setByMultipartFormFile"
+ ],
+ "gin#pr-2897": [
+  "gin::context.go::reset",
+  "gin::gin.go::Default",
+  "gin::gin.go::addRoute",
+  "gin::gin.go::allocateContext",
+  "gin::gin.go::handleHTTPRequest",
+  "gin::tree.go::countParams",
+  "gin::tree.go::countSections",
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-2906": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "gin#pr-2924": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-2934": [
+  "gin::tree.go::insertChild"
+ ],
+ "gin#issue-2959": [
+  "gin::tree.go::findCaseInsensitivePathRec"
+ ],
+ "gin#pr-2964": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-2967": [
+  "gin::context.go::ClientIP",
+  "gin::context.go::RemoteIP",
+  "gin::context.go::validateHeader",
+  "gin::gin.go::SetTrustedProxies",
+  "gin::gin.go::isUnsafeTrustedProxies"
+ ],
+ "gin#pr-2968": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "gin#pr-2983": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-3028": [
+  "gin::context.go::MustBindWith",
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#pr-3033": [
+  "gin::gin.go::New"
+ ],
+ "gin#pr-3071": [
+  "gin::context.go::FileAttachment",
+  "gin::utils.go::isASCII",
+  "gin::utils.go::resolveAddress"
+ ],
+ "gin#pr-3090": [
+  "gin::logger.go::ForceConsoleColor",
+  "gin::response_writer.go::Hijack"
+ ],
+ "gin#pr-3123": [
+  "gin::context.go::reset"
+ ],
+ "gin#pr-3139": [
+  "gin::mode.go::SetMode",
+  "gin::mode.go::init"
+ ],
+ "gin#issue-3166": [
+  "gin::context.go::Deadline",
+  "gin::context.go::Err",
+  "gin::context.go::SetAccepted",
+  "gin::context.go::Value"
+ ],
+ "gin#pr-3172": [
+  "gin::context.go::Deadline",
+  "gin::context.go::Err",
+  "gin::context.go::SetAccepted",
+  "gin::context.go::Value"
+ ],
+ "gin#pr-3180": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "gin#pr-3199": [
+  "gin::binding/default_validator.go::ValidateStruct"
+ ],
+ "gin#pr-3201": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-3210": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunFd",
+  "gin::gin.go::RunQUIC",
+  "gin::gin.go::iterate"
+ ],
+ "gin#pr-3211": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-3221": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-3227": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::countSections",
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-3236": [
+  "gin::binding/query.go::Bind"
+ ],
+ "gin#pr-3302": [
+  "gin::routergroup.go::Handle"
+ ],
+ "gin#pr-3316": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#pr-3324": [
+  "gin::routergroup.go::Static",
+  "gin::routergroup.go::StaticFile"
+ ],
+ "gin#pr-3327": [
+  "gin::binding/default_validator.go::Error"
+ ],
+ "gin#pr-3359": [
+  "gin::context.go::ClientIP"
+ ],
+ "gin#pr-3361": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#issue-3369": [
+  "gin::context.go::GetStringMapStringSlice"
+ ],
+ "gin#pr-3371": [
+  "gin::context.go::GetPostFormMap"
+ ],
+ "gin#pr-3385": [
+  "gin::binding/toml.go::decodeToml"
+ ],
+ "gin#pr-3391": [
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::binding/json.go::BindBody",
+  "gin::binding/json.go::decodeJSON",
+  "gin::errors.go::JSON",
+  "gin::errors.go::MarshalJSON",
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType",
+  "gin::render/json.go::WriteJSON"
+ ],
+ "gin#pr-3395": [
+  "gin::binding/protobuf.go::Bind",
+  "gin::binding/protobuf.go::Name",
+  "gin::context.go::GetRawData",
+  "gin::context.go::ShouldBindBodyWith",
+  "gin::recovery.go::stack"
+ ],
+ "gin#pr-3397": [
+  "gin::context.go::NegotiateFormat"
+ ],
+ "gin#issue-3404": [
+  "gin::context.go::HandlerNames",
+  "gin::context.go::Next"
+ ],
+ "gin#pr-3413": [
+  "gin::context.go::HandlerNames",
+  "gin::context.go::Next"
+ ],
+ "gin#pr-3414": [
+  "gin::context.go::GetStringMapStringSlice"
+ ],
+ "gin#pr-3419": [
+  "gin::context.go::GetRawData"
+ ],
+ "gin#pr-3429": [
+  "gin::context.go::Error",
+  "gin::context.go::Get",
+  "gin::context.go::Set"
+ ],
+ "gin#pr-3433": [
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "gin#pr-3453": [
+  "gin::response_writer.go::WriteHeader"
+ ],
+ "gin#pr-3455": [
+  "gin::recovery.go::function"
+ ],
+ "gin#pr-3460": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-3464": [
+  "gin::routergroup.go::Any"
+ ],
+ "gin#pr-3500": [
+  "gin::gin.go::redirectTrailingSlash"
+ ],
+ "gin#pr-3502": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-3503": [
+  "gin::gin.go::redirectTrailingSlash"
+ ],
+ "gin#pr-3511": [
+  "gin::context.go::BindTOML",
+  "gin::context.go::BindYAML",
+  "gin::context.go::ShouldBindTOML",
+  "gin::context.go::ShouldBindYAML",
+  "gin::context.go::TOML",
+  "gin::context.go::YAML",
+  "gin::debug.go::debugPrintWARNINGDefault",
+  "gin::deprecated.go::BindWith"
+ ],
+ "gin#pr-3522": [
+  "gin::binding/form_mapping.go::head",
+  "gin::binding/form_mapping.go::setTimeDuration"
+ ],
+ "gin#pr-3556": [
+  "gin::context.go::FileAttachment"
+ ],
+ "gin#pr-3572": [
+  "gin::gin.go::Default",
+  "gin::gin.go::New",
+  "gin::gin.go::Use"
+ ],
+ "gin#pr-3575": [
+  "gin::gin.go::RunFd",
+  "gin::gin.go::RunListener",
+  "gin::gin.go::RunUnix"
+ ],
+ "gin#pr-3583": [
+  "gin::fs.go::Open",
+  "gin::fs.go::Readdir",
+  "gin::recovery.go::CustomRecoveryWithWriter",
+  "gin::recovery.go::defaultHandleRecovery"
+ ],
+ "gin#pr-3593": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "gin#issue-3659": [
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "gin#pr-3666": [
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "gin#pr-3741": [
+  "gin::logger.go::StatusCodeColor"
+ ],
+ "gin#pr-3759": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-3765": [
+  "gin::gin.go::addRoute"
+ ],
+ "gin#pr-3784": [
+  "gin::context.go::Copy"
+ ],
+ "gin#pr-3812": [
+  "gin::tree.go::insertChild"
+ ],
+ "gin#issue-3819": [
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "gin#pr-3820": [
+  "gin::binding/form_mapping.go::setWithProperType"
+ ],
+ "gin#pr-3834": [
+  "gin::tree.go::getValue"
+ ],
+ "gin#pr-3851": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/binding_nomsgpack.go::Default"
+ ],
+ "gin#pr-3859": [
+  "gin::context.go::Copy"
+ ],
+ "gin#pr-3871": [
+  "gin::context.go::ShouldBindBodyWith"
+ ],
+ "gin#pr-3872": [
+  "gin::context.go::GetStringMapStringSlice"
+ ],
+ "gin#pr-3873": [
+  "gin::context.go::Copy"
+ ],
+ "gin#pr-3877": [
+  "gin::auth.go::authorizationHeader"
+ ],
+ "gin#pr-3881": [
+  "gin::auth.go::authorizationHeader"
+ ],
+ "gin#pr-3887": [
+  "gin::auth.go::authorizationHeader"
+ ],
+ "gin#pr-3897": [
+  "gin::context.go::Err",
+  "gin::context.go::Value"
+ ],
+ "gin#pr-3899": [
+  "gin::binding/query.go::Bind"
+ ],
+ "gin#pr-3904": [
+  "gin::binding/plain.go::Bind",
+  "gin::context.go::BindTOML",
+  "gin::context.go::SaveUploadedFile",
+  "gin::context.go::ShouldBindTOML"
+ ],
+ "gin#pr-3910": [
+  "gin::binding/default_validator.go::Error"
+ ],
+ "gin#pr-3911": [
+  "gin::context.go::ShouldBindHeader",
+  "gin::context.go::ShouldBindUri"
+ ],
+ "gin#pr-3933": [
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#issue-3938": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS"
+ ],
+ "gin#pr-3939": [
+  "gin::fs.go::Dir",
+  "gin::fs.go::Open",
+  "gin::fs.go::Readdir",
+  "gin::routergroup.go::createStaticHandler"
+ ],
+ "gin#pr-3945": [
+  "gin::gin.go::Run",
+  "gin::gin.go::RunTLS"
+ ],
+ "gin#pr-3955": [
+  "gin::gin.go::Use"
+ ],
+ "gin#pr-3957": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-3960": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-3966": [
+  "gin::context.go::Negotiate"
+ ],
+ "gin#pr-3969": [
+  "gin::context.go::QueryArray",
+  "gin::context.go::initQueryCache"
+ ],
+ "gin#issue-3970": [
+  "gin::binding/form_mapping.go::setByForm"
+ ],
+ "gin#pr-3971": [
+  "gin::binding/form_mapping.go::setByForm"
+ ],
+ "gin#pr-3975": [
+  "gin::tree.go::addRoute",
+  "gin::tree.go::findCaseInsensitivePathRec",
+  "gin::tree.go::longestCommonPrefix"
+ ],
+ "gin#pr-3986": [
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::trySplit"
+ ],
+ "gin#pr-3987": [
+  "gin::gin.go::HandleContext",
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#pr-4003": [
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-4047": [
+  "gin::binding/form_mapping.go::setByForm"
+ ],
+ "gin#pr-4048": [
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-4053": [
+  "gin::gin.go::LoadHTMLFiles",
+  "gin::render/html.go::loadTemplate"
+ ],
+ "gin#pr-4064": [
+  "gin::gin.go::RunQUIC"
+ ],
+ "gin#issue-4068": [
+  "gin::context.go::MultipartForm",
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#pr-4077": [
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-4087": [
+  "gin::context.go::Next"
+ ],
+ "gin#pr-4088": [
+  "gin::context.go::MultipartForm",
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#pr-4103": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-4127": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-4142": [
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "gin#pr-4143": [
+  "gin::recovery.go::CustomRecoveryWithWriter",
+  "gin::recovery.go::stack"
+ ],
+ "gin#pr-4145": [
+  "gin::binding/binding.go::Default",
+  "gin::binding/binding_nomsgpack.go::Default",
+  "gin::context.go::Negotiate",
+  "gin::context.go::ProtoBuf"
+ ],
+ "gin#pr-4146": [
+  "gin::logger.go::StatusCodeColor"
+ ],
+ "gin#pr-4175": [
+  "gin::render/json.go::Render",
+  "gin::render/json.go::WriteContentType"
+ ],
+ "gin#pr-4181": [
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#pr-4187": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-4190": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-4193": [
+  "gin::binding/toml.go::decodeToml"
+ ],
+ "gin#pr-4203": [
+  "gin::binding/form_mapping.go::mapping",
+  "gin::binding/form_mapping.go::setArray",
+  "gin::binding/form_mapping.go::setByForm",
+  "gin::binding/form_mapping.go::setSlice",
+  "gin::binding/form_mapping.go::setTimeField",
+  "gin::binding/form_mapping.go::setWithProperType",
+  "gin::binding/form_mapping.go::trySplit",
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-4205": [
+  "gin::binding/protobuf.go::BindBody"
+ ],
+ "gin#pr-4206": [
+  "gin::render/data.go::Render"
+ ],
+ "gin#pr-4224": [
+  "gin::render/json.go::Render"
+ ],
+ "gin#pr-4227": [
+  "gin::context.go::BindUri",
+  "gin::context.go::MustBindWith"
+ ],
+ "gin#pr-4232": [
+  "gin::errors.go::Unwrap"
+ ],
+ "gin#pr-4239": [
+  "gin::recovery.go::CustomRecoveryWithWriter",
+  "gin::tree.go::addRoute",
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-4240": [
+  "gin::context.go::SetCookie"
+ ],
+ "gin#pr-4245": [
+  "gin::binding/form_mapping.go::setTimeField"
+ ],
+ "gin#pr-4246": [
+  "gin::tree.go::countParams",
+  "gin::tree.go::countSections"
+ ],
+ "gin#pr-4247": [
+  "gin::binding/xml.go::Bind",
+  "gin::gin.go::New",
+  "gin::render/html.go::Instance"
+ ],
+ "gin#pr-4249": [
+  "gin::binding/plain.go::Bind",
+  "gin::debug.go::IsDebugging"
+ ],
+ "gin#pr-4252": [
+  "gin::recovery.go::function",
+  "gin::recovery.go::source",
+  "gin::recovery.go::stack"
+ ],
+ "gin#pr-4258": [
+  "gin::recovery.go::CustomRecoveryWithWriter",
+  "gin::recovery.go::stack"
+ ],
+ "gin#pr-4261": [
+  "gin::gin.go::Use",
+  "gin::gin.go::addRoute"
+ ],
+ "gin#pr-4290": [
+  "gin::context.go::AbortWithStatus"
+ ],
+ "gin#pr-4295": [
+  "gin::response_writer.go::Hijack",
+  "gin::response_writer.go::Written"
+ ],
+ "gin#pr-4301": [
+  "gin::binding/form_mapping.go::tryToSetValue"
+ ],
+ "gin#pr-4303": [
+  "gin::mode.go::SetMode"
+ ],
+ "gin#pr-4304": [
+  "gin::context.go::GetPostFormMap",
+  "gin::context.go::GetQueryMap",
+  "gin::context.go::PostFormMap",
+  "gin::context.go::QueryMap",
+  "gin::context.go::getMapFromFormData"
+ ],
+ "gin#pr-4310": [
+  "gin::context.go::AbortWithStatus"
+ ],
+ "gin#pr-4314": [
+  "gin::ginS/gins.go::engine"
+ ],
+ "gin#pr-4319": [
+  "gin::render/toml.go::WriteContentType"
+ ],
+ "gin#pr-4333": [
+  "gin::context.go::Copy"
+ ],
+ "gin#pr-4336": [
+  "gin::recovery.go::CustomRecoveryWithWriter"
+ ],
+ "gin#pr-4339": [
+  "gin::context.go::GetPostFormMap",
+  "gin::context.go::getMapFromFormData"
+ ],
+ "gin#pr-4352": [
+  "gin::binding/form_mapping.go::setFormMap"
+ ],
+ "gin#pr-4353": [
+  "gin::render/reader.go::Render",
+  "gin::render/reader.go::writeHeaders"
+ ],
+ "gin#pr-4354": [
+  "gin::tree.go::insertChild"
+ ],
+ "gin#pr-4373": [
+  "gin::response_writer.go::Hijack",
+  "gin::response_writer.go::Written"
+ ],
+ "gin#pr-4380": [
+  "gin::binding/form_mapping.go::setByForm"
+ ],
+ "gin#pr-4388": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-4392": [
+  "gin::binding/default_validator.go::Error",
+  "gin::binding/default_validator.go::ValidateStruct",
+  "gin::binding/form_mapping.go::mapping",
+  "gin::utils.go::isASCII",
+  "gin::utils.go::resolveAddress"
+ ],
+ "gin#pr-4396": [
+  "gin::context.go::Error"
+ ],
+ "gin#pr-4404": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#pr-4414": [
+  "gin::gin.go::redirectTrailingSlash",
+  "gin::path.go::bufApp"
+ ],
+ "gin#pr-4415": [
+  "gin::gin.go::RunListener",
+  "gin::gin.go::ServeHTTP"
+ ],
+ "gin#pr-4417": [
+  "gin::tree.go::findCaseInsensitivePath"
+ ],
+ "gin#pr-4420": [
+  "gin::gin.go::New",
+  "gin::gin.go::handleHTTPRequest"
+ ],
+ "gin#pr-4422": [
+  "gin::gin.go::RunFd"
+ ],
+ "gin#pr-4423": [
+  "gin::context.go::Negotiate",
+  "gin::context.go::Stream"
+ ],
+ "gin#pr-4428": [
+  "gin::context.go::ShouldBind"
+ ],
+ "gin#pr-4437": [
+  "gin::context.go::Next",
+  "gin::gin.go::Run",
+  "gin::gin.go::RunListener",
+  "gin::gin.go::RunTLS",
+  "gin::gin.go::RunUnix",
+  "gin::tree.go::countParams",
+  "gin::tree.go::countSections"
+ ],
+ "gin#pr-4466": [
+  "gin::recovery.go::CustomRecoveryWithWriter",
+  "gin::recovery.go::source",
+  "gin::recovery.go::stack"
+ ],
+ "gin#pr-4467": [
+  "gin::utils.go::isASCII"
+ ],
+ "gin#pr-4472": [
+  "gin::context.go::ClientIP"
+ ],
+ "gin#pr-4479": [
+  "gin::response_writer.go::CloseNotify",
+  "gin::response_writer.go::Flush"
+ ],
+ "gin#issue-4489": [
+  "gin::context.go::bodyAllowedForStatus",
+  "gin::context.go::requestHeader"
+ ],
+ "gin#pr-4491": [
+  "gin::context.go::XML"
+ ],
+ "gin#pr-4502": [
+  "gin::context.go::GetDuration",
+  "gin::context.go::GetStringSlice"
+ ],
+ "gin#pr-4511": [
+  "gin::context.go::MustBindWith",
+  "gin::context.go::SaveUploadedFile",
+  "gin::routergroup.go::StaticFile"
+ ],
+ "gin#pr-4529": [
+  "gin::context.go::bodyAllowedForStatus",
+  "gin::context.go::requestHeader"
+ ],
+ "gin#pr-4535": [
+  "gin::tree.go::findCaseInsensitivePathRec"
+ ],
+ "gin#pr-4542": [
+  "gin::context.go::requestHeader"
+ ],
+ "gin#pr-4547": [
+  "gin::logger.go::LoggerWithConfig"
+ ],
+ "gin#pr-4550": [
+  "gin::debug.go::debugPrintWARNINGDefault"
+ ],
+ "gin#issue-4622": [
+  "gin::context.go::MultipartForm",
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#issue-4638": [
+  "gin::response_writer.go::CloseNotify",
+  "gin::response_writer.go::Hijack"
+ ],
+ "gin#pr-4645": [
+  "gin::response_writer.go::CloseNotify",
+  "gin::response_writer.go::Hijack"
+ ],
+ "gin#pr-4655": [
+  "gin::context.go::IsWebsocket"
+ ],
+ "gin#pr-4675": [
+  "gin::context.go::DefaultPostForm"
+ ],
+ "gin#pr-4685": [
+  "gin::binding/default_validator.go::Error"
+ ],
+ "gin#pr-4695": [
+  "gin::context.go::Copy"
+ ],
+ "gin#pr-4698": [
+  "gin::recovery.go::defaultHandleRecovery"
+ ],
+ "gin#pr-4702": [
+  "gin::context.go::MultipartForm",
+  "gin::context.go::SaveUploadedFile"
+ ],
+ "gin#pr-4717": [
+  "gin::context.go::BindJSON"
+ ]
+}

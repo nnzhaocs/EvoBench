@@ -1,0 +1,285 @@
+{
+ "Move / refactor router from connect im moving connect's router into express, it's becoming far to specific to express to be general purpose anymore, and its really annoying editing connect _just_ for express. It will remain in connect until the next major release": [
+  "express::lib/router/index.js::Router",
+  "express::lib/router/route.js::Route"
+ ],
+ "app.param(), multiple middleware? I saw a previous post regarding this, but I wasn't sure if this functionality was just proposed or actually exists. Currently I have my app.param() for 'username' accepting two middleware functions. However, the second isn't getting hit it looks like. I suppose I could make a more \"macro\" middleware containing the logic for both, but it would be convenient to allow the granularity of multiple (the two individual middleware are used in other places as well), not to mention cleaner. Any ideas?": [
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::paramCallback"
+ ],
+ "app.param support for multiple params in one route If you run the app below and browse to http://localhost:3000/123/456, you would expect to see: ``` bash $ node example.js forum_id: 123 thread_id: 456 ``` Instead, only the line `forum_id: 123` is printed, and the function passed into `app.param('thread_id',...);` is never called. **App to reproduce:** ``` javascript var express = require('express'); var app = module.exports = express.createServer(); app.configure(function(){ app.param('forum_id', function(req, res, next, id){ console.log('forum_id: %s', id); next(); }); app.param('thread_id', function(req, res, next, id){ console.log('thread_id: %s', id); next(); }); }); app.get('/:forum_id/:thread_id', function(req, res){ res.send('Hello World'); }); app.listen(3000); ```": [
+  "express::lib/router/index.js::param"
+ ],
+ "change view signature to accept filename currently: `engine.render(str, [options, ] callback)` proposed: `engine.render(filename, [options, ] callback)` With this we can also remove the view cache option as express will not be touching the files for lookup. This pushes more work on the engine but ultimately a bit more flexibility for the engine as well. Also since `.render()` is so common we should probably go with something ugly like `engine.__render(filename...)` We also have the choice of doing _some_ lookup, for example allowing `index.<engine>` files so you can do `res.render('user')` for _./views/user.jade_ or _./views/user/index.jade_, or leave this entirely to the engine as well.": [
+  "express::lib/view.js::View"
+ ],
+ "Remove 'app' argument to creating a new router If the app is not required for Router creation, then users can create disjoint routes and use them at different times in the middleware chain. It could also aid in more dynamic route creation disjoint from knowing the app. Currently the 'app' parameter is used only to detect strict and case sensitive routes which could instead be arguments to the router creation.": [
+  "express::lib/router/index.js::Router"
+ ],
+ "Gave the router a name. All the other connect middlewares are named functions.": [
+  "express::lib/router/index.js::Router"
+ ],
+ "EventEmitter memory leak with successful sendfile If sendfile is successful, the socket error listener doesn't get removed. This leads to an EventEmitter memory leak (source: [StackOverflow](http://stackoverflow.com/questions/11605634/nodejs-express-set-server-possible-eventemitter-memory-leak-detected/11628001#11628001)): ``` (node) warning: possible EventEmitter memory leak detected. 11 listeners added. Use emitter.setMaxListeners() to increase limit. Trace: at Socket.<anonymous> (events.js:139:15) at ServerResponse.sendfile (/data/www/margintop/server/node_modules/express/lib/response.js:185:14) at /data/www/margintop/server/webserver/webserver.js:17:9 at callbacks (/data/www/margintop/server/node_modules/express/lib/router/index.js:165:11) at param (/data/www/margintop/server/node_modules/express/lib/router/index.js:139:11) at pass (/data/www/margintop/server/node_modules/express/lib/router/index.js:146:5) at Router._dispatch (/data/www/margintop/server/node_modules/express/lib/router/index.js:173:4)": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::stream"
+ ],
+ "Add full extname support to the \"view engine\" setting; e.g., \".jade\". This allows View to support a `defaultEngine` (a.k.a. an app's \"view engine\" setting) which contains a \".\", for example: ``` javascript app.engine('.jade', jadeEngine); app.set('view engine', '.jade'); ``` This brings View's handling of template filename extensions to parity with `app.engine()`. This allows an app's \"view engine\" setting to be a full extension name, including the \".\". I ran into this issue when trying to extract the configuration for the default view extension name into a config file and represent it as a variable when configuring my Express app. I realized that an app's `engine()` registration and \"view engine\" setting do not behave the same; this give them parity.": [
+  "express::lib/view.js::View"
+ ],
+ "Correct sorting of long list of accept header v8 does an unstable sort for arrays longer than 10 elements. Added an 'originalIndex' property to the parsed array, so order of equal-quality elements stays the same.": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "Throw a meaningful error when there is no default engine See https://github.com/visionmedia/jade/issues/1023 for an example of the current lack of helpful error messages biting people (@lbj96347). I've run into this myself before as well at some point.": [
+  "express::lib/view.js::View"
+ ],
+ "move .app to req's & res's prototypes Set it only once.": [
+  "express::lib/express.js::createApplication"
+ ],
+ "Improved variable names and updated comments for better clarity of example": [
+  "express::examples/content-negotiation/index.js::format"
+ ],
+ "change req.params to an object instead of an array this seems to trip people up a lot even though it behaves the same an object. technically a breaking change, though the impact would probably be extremely minimal - it might be best to wait until a 4.0 or we'll get lots of flack from trolls": [
+  "express::lib/router/route.js::Route"
+ ],
+ "Object.getOwnPropertyDescriptor called on inherited property causes unhalted TypeError `connect.middleware` object seems to have 'isString' function in its prototype chain which makes Object.getOwnPropertyDescriptor() to fail. I experienced that after running express 3.4.6 with connect 2.11.2. ``` c:\\Users\\xxx\\express\\lib\\express.js:48 Object.defineProperty( ^ TypeError: Property description must be an object: undefined at Function.defineProperty (native) at Object.<anonymous> (c:\\Users\\xxx\\express\\lib\\express.js:48:10) at Module._compile (module.js:456:26) at Object.Module._extensions..js (module.js:474:10) at Module.load (module.js:356:32) at Function.Module._load (module.js:312:12) at Module.require (module.js:364:17) at require (module.js:380:17) at Object.<anonymous> (c:\\Users\\xxx\\express\\index.js:4:5) at Module._compile (module.js:456:26) ``` Besides from the above-mentioned circumstance I think it would be reasonable in general to filter object properties before calling something like `Object.get ===> Own <===": [
+  "express::lib/express.js::createApplication"
+ ],
+ "res.sendfile does not accept file system paths I have come across an issue with a project I am writing to create a music player with nodejs. I came accross a strange error that would throw on some songs. I couldn't work out what was linking them all at the start but then I figured out it was that they all contained the percentage symbol \"%\" in their file location. I ruled out if the song was playable and if the url was correct by running the example urls directly from my terminal with `mpg123` and they played correctly. Here is there error: ``` Error: Bad Request at SendStream.error (/home/benkaiser/GIT/node-music-player/node_modules/express.io/node_modules/express/node_modules/send/lib/send.js:145:16) at SendStream.pipe (/home/benkaiser/GIT/node-music-player/node_modules/express.io/node_modules/express/node_modules/send/lib/send.js:298:31) at ServerResponse.res.sendfile (/home/benkaiser/GIT/node-music-player/node_modules/express.io/node_modules/express/lib/response.js:345:8) at /home/benkaiser/GIT/node-music-pla": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onstream"
+ ],
+ "Router: add parameter handling to middleware Middleware (.use) can now specify parameter arguments to trigger Router.param loading. This is handy if you want to `.use` additional routers but need to load certain objects before the mounted middleware runs. This will resolve #696": [
+  "express::lib/router/index.js::trim_prefix",
+  "express::lib/router/layer.js::Layer",
+  "express::lib/router/route.js::Route",
+  "express::lib/utils.js::acceptParams"
+ ],
+ "Modular routing Enable dynamic `.use` mounting for more modular applications. For example: ``` js var mount = app.route('/').get(function (req) { console.log(req.params.route); // Works! }); app.use('/:route', mount); ```": [
+  "express::lib/router/layer.js::Layer"
+ ],
+ "Route gets called twice when using params and throwing error I really thought I was going crazy, but after lots of debugging I was finally able to write a simple reproducible test case. This is for express `4.0.0-rc3`. When having routes that uses params (`app.get('/test/:id', ...)`) and throws an error, the route will be called twice. It also ignores when my custom error handler writes to the socket and uses the default 500 to output a page to the client. ``` js var express = require('express'); var incomingRequests = 0; var routeCalled = 0; app = express(); app.use(function (req, res, next) { incomingRequests += 1; next(); }); app.get('/test/:id', function (req, res) { routeCalled += 1; console.log(' --- '); console.log('incomingRequests', incomingRequests); console.log('routeCalled', routeCalled); console.log(' --- '); throw new Error('Error in get'); }); app.listen(1337); ``` Start the app and hit the route: - `node twice.js` - `curl localhost:1337/test/2`": [
+  "express::lib/router/index.js::param"
+ ],
+ "some code clean up Hey guys! First of all, just want to say thank you for creating such an amazing framework. I'm currently working hard to become a full-stack javascript developer and have been recently learning express. While reading through the code many times, I noticed some inconsistencies in the formatting (especially with the \"Module Dependencies\") and thought it could be a chance for me to try and become involved in open source. In this commit I formatted the \"Module Dependencies\", moved the export to the top with comments, and added comments to the initialize function for Layer. If this is not acceptable please let me know if I can help out in any other way. I am willing to go through all files and format \"Module Dependencies\" or any other mundane tasks you need completed. Thanks so much for reading—I am greatly inspired by you all!": [
+  "express::lib/router/layer.js::Layer"
+ ],
+ "some code clean up Changed from single var to multiple var declaration and fixed some semi-colons for some examples. Will run through others later.": [
+  "express::examples/auth/app.js::authenticate",
+  "express::examples/content-negotiation/index.js::format"
+ ],
+ "res.format error is not catchable by Router error middleware Hi, Is it an expected behavior to not be able to catch `res.format` error when used inside a Router route handler? Example code ``` javascript var app = express() , router = express.Router() router.get('/', function(req, res){ res.format({ json : function() { res.send(200) } }) }) router.use(function(err, req, res, next) { // We should get a Not Acceptable error here if requesting with a wrong accept header next() }) app.use(router).listen(3000) ```": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::wrap"
+ ],
+ "trim_prefix causing --use-strict flag to fail as specified in bug https://github.com/visionmedia/express/issues/2051#issue-31472860 the `trim_prefix` function declaration within the `try/catch` causes problems when starting express with `--use_strict` directive.": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "Expose mount paths to router Right now, the only path information available in a router is its localized path. I want to be able to do things like build navigation and dynamic urls without having to hard code a value in my views. So if I mount \"/outerapp\", and inside i mount \"/innerapp\", I would expect to find some property in an object that would allow me to write \"/outerapp/innerapp\" in my views.": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "Repeated call parameters and context changes id test.js ``` JavaScript var express = require('express') , Router = express.Router , assert = require('assert') , pending = require('./support/pending') describe('Router', function () { it('should not call a repeat', function (done) { done = pending(3, done); var users = Router() , messages = Router() , comments = Router(); comments.get('/comments', function (req, res, next) { res.end(req.user); }); users.param('_user', function (req, res, next, _user) { setTimeout(function () { req.user = _user; next(); }, 0); }); users .use('/users/:_user/', messages) .use('/users/:_user/', comments); users.handle({ url: '/users/1/comments', method: 'GET' }, { end: function (user) { return assert.equal(user, 1); } }, done); users.handle({ url: '/users/2/comments', method: 'GET' }, { end: function (user) { return assert.equal(user, 2); } }, done)": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "bad .param(name, fn) behaviour when a parameter and route is matched more than once I'm a very new Node.js and Express user (started using them this month) but I think if a parameter is rejected, like for example if `id` is not a number, all routes expecting that parameter should be avoided, but that doesn't happen in 4.3.1. If you have a `.param()` callback rejecting/skipping a value and there are more than one route expecting the variable related and matching the route pattern, the second route will be called instead of also being skipped like the first. The test code below stopped working at 4.3.1 version. Instead of getting `get.new` we now get `get.id`. I tried to find the root cause of this issue but unfortunately I started using Express and Node.js last month and I do not know its internals enough to fix the problem. Anyway, it seems that it is somehow related to the commits 31b2e2d7b4774eed16a93f9a8a20a9967e91e524 and its reversion 7f049164b7f253166b43b789475971d6dd8ec2c0. Should I make a pull request to ask for this test to be merged even known that it stil": [
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::paramCallback"
+ ],
+ "Allow routes on verbs under route, or provide parent params to nested routers Related to #2113. I'm attempting to set up an endpoint that lists all users associated with a particular entity. The entityId is important when fetching the list of users, but is abstracted in the route binding itself. ``` javascript app.route('/entity/:entityId/users') .get(userController.list) .get('/:userId', userController.get) .post('/:userId', userController.add) .delete('/:userId', userController.delete) .all('*', utils.responseFormatter); ``` This doesn't work because you can't do nested routes on the verbs. Express expects a function as the first param. So instead I tried: ``` javascript app.use('/entity/:entityId/users', express.Router() .get(userController.list) .get('/:userId', userController.get) .post('/:userId', userController.add) .delete('/:userId', userController.delete) .all('*', utils.responseFormatter)); ``` This doesn't work because you can't access the `:entityId` param on the base route": [
+  "express::lib/router/index.js::mergeParams",
+  "express::lib/router/index.js::next"
+ ],
+ "router will voids req.params in following handle ![screen shot 2014-06-06 at 5 08 03 pm](https://cloud.githubusercontent.com/assets/2306358/3198488/5b11174a-ed5a-11e3-9f98-af3207d51d72.png) Here I couldn't get req.params[0] in the handle which is placed after the router.": [
+  "express::lib/router/index.js::restore",
+  "express::lib/router/index.js::wrap"
+ ],
+ "app.param doesn't work for POST requests Using express 4.x, app.param does not seem to even execute for POST requests. ### Sample code: ``` javascript var express = require('express'); var app = express(); app.param('test', function(req, res, next, val) { req.params.test = 'b'; next(); }); app.get('/:test', function(req, res) { res.send(req.params.test + '\\n'); }); app.post('/:test', function(req, res) { res.send(req.params.test + '\\n'); }); app.listen(4000); ``` ### Expected result: ``` $ curl http://localhost:4000/a b $ curl -X POST http://localhost:4000/a b ``` ### Actual result: ``` $ curl http://localhost:4000/a b $ curl -X POST http://localhost:4000/a a ```": [
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::paramCallback"
+ ],
+ "Fixed: debug displaying values prematurely in router": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "`sendfile` should call the provided `fn` callback on `finish` Basically the following is an excerpt from [`res.sendfile()`](https://github.com/visionmedia/express/blob/master/lib/response.js#L317) code: ``` res.sendfile = function(path, options, fn){ .... // cleanup function cleanup() { req.socket.removeListener('error', error); } ... this.on('finish', cleanup); }; ``` When sending the file is done, it calls `finish` which calls `cleanup`. That's all. Nobody calls `fn` callback. This causes a problem that the callee flow never ends. For instance, I use `async.waterfall`. In the last callback flow I send a file which should call its callback. Then the last error callback is called and the async flow is completed. Since `sendfile` never calls the callback, the main async flow never completes. Ideally, it should: ``` this.on('finish', function () { cleanup(); if (fn) fn(); }); ``` I can send a PR if necessary.": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "Allow Router not to trample req.params Right now when a router is entered, it will trample the incoming value of `req.params`. There should probably be an option to give the router to merge the incoming `req.params` if people wish to do so. TL;DR ``` js var express = require('express'); var app = express(); app.use('/foo/:user', express.Router({ mergeParams: true }) .get('/:action', function (req, res) { console.dir(req.params); // { user: 'tj', action: 'rename' } })); ```": [
+  "express::lib/router/index.js::mergeParams",
+  "express::lib/router/index.js::next"
+ ],
+ "Route params handler conflict We've recently updated a Express 3.x application to 4.x. I noticed the following error: Given the following two routes: ``` app.get(\"/:someVar\", fn) app.post(\"/:someOtherVar\", fn) ``` These two will compile to the same regular expression. Then, add two params handlers: ``` app.param(\":someVar\", function(req,res,next){ next(new Error(\"Validation failed.\")); }); app.param(\":someOtherVar\", fn) ``` You'd expect that a GET to /foo will fail and a POST to /foo will succeed. This is the case under Express 3.x but not under Express 4.x. The POST will also always fail. Given two (or more) routes which compile to the same regular expression, the first one's middleware will be executed while matching. Even if the route params have different names. A complete barebones express app can be found in [this gist](https://gist.github.com/Spekpannenkoek/bca9cf72e8205e424d54). It includes three example routes and a couple of tests. Try running them under Express 3 and Express 4. Notice that un": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/route.js::Route"
+ ],
+ "Method for bailing out of a router and returning to the previous middleware level Per conversation with @dougwilson on IRC, it would be very useful to have an equivalent for `next('route')`, but at the router level. Calling it would cause a router to skip all remaining middleware and routes on that router. This would allow for conditional execution of middleware, such as session handling and session related middleware only being evoked for users with an existing session cookie. `next('router')` could work, but that might be too close of terms.": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/route.js::next"
+ ],
+ "Alias `res.sendfile` as `res.sendFile` `sendfile` is the wrong casing, so I always get it wrong. Can we just alias it as `res.sendFile`?": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onstream"
+ ],
+ "#sendFile callback not invoked when request aborted Hi. I have been hunting memory and file descriptor leaks in my web service. There are several issues in `#sendFile` and in the `send` dependency when requests are aborted. The following example leaks open files and I think it also leads to a memory leak that prevents the request and response object from being garbage collected. ``` javascript var express = require('express'); var app = express(); var http = require('http'); app.get('/', function (req, res) { res.sendFile(__filename); }); http.createServer(app).listen(3000, 'localhost'); ``` I used following script to generate some aborted requests and looked with `lsof` for open files after. ``` javascript var net = require('net'); var headers = [ 'GET / HTTP/1.1', 'Host: localhost:3000', '', '' ].join('\\r\\n'); function sendCanceledRequest () { var socket = new net.Socket(); socket.connect(3000, 'localhost', function() { socket.write(headers, 'utf-8', function () { socket.destroy(); });": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "Clean up #sendFile In case my pull request for send gets merged `#sendFile` can get cleaned up (https://github.com/visionmedia/send/pull/58) This would also fix an issue that in some cases the callback of `#sendFile` is never invoked.": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "res.sendFile does not invoke callback for aborted requests. I added two currently failing tests for cases where sendFile fails to invoke the callback.": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "Add Support for Multiple View Folders This adds support for supplying an array of view folders in place of a single view folder [string], allowing for a \"fallback\" folder of views to be overridden by a preferred location, if they exist.": [
+  "express::lib/view.js::View"
+ ],
+ "Allow immediate bail in Router This allows one to bail out of a router immediately. This is useful if you check for some conditions inside a generic handler on the router (via `.use()`) first and then decide to skip the rest of that router's routes.": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/route.js::next"
+ ],
+ "Recursive route matching can overflow stack re: express@4.10.0, I searched but could not find a similar issue See simple demo here: https://gist.github.com/ahamid/4064dc457a80ced1ab29 After upgrading from express 3.x to 4.x, I noticed some behavior that was really hard to track down. On some routes Express would throw `RangeError: Maximum call stack size exceeded`. After some experimentation I found that changing routes of the style: ``` js app.post(\"thepath\", handler); app.put(\"thepath\", handler); ``` to ``` js app.route(\"thepath\").post(handler) .put(handler); ``` superficially made the problem go away; I assumed it had something to do with mapping multiple verbs to the same path or handler. It turns out though that the problem is simply that Express is matching routes recursively, not iteratively, so if you just happen to request a route that was mapped later instead of earlier you run the risk of the `RangeError: Maximum call stack size exceeded`. Obviously this depends on the stack size for the": [
+  "express::lib/router/index.js::next"
+ ],
+ "Allow header in response to OPTIONS contains duplicate methods Should you have duplicate handlers for a single method, the `Allow` header in response to `OPTIONS` will contain the same method twice. E.g. `GET, GET, POST`.": [
+  "express::lib/router/index.js::next"
+ ],
+ "Callback of res.download always throws \"Request aborted\" error on Chrome ``` res.download(filePath, fileName, function(err) {....}) ``` ... always throws an \"Request aborted\" error express: v4.10.6 node: v0.10.35 Chrome: Version 39.0.2171.95": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfile",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile"
+ ],
+ "Intermittent test `res.sendFile(path, fn) should invoke the callback when client already aborted` ``` 1) res .sendFile(path, fn) should invoke the callback when client already aborted: Uncaught AssertionError: expected undefined to be truthy at Assertion.fail (/Users/josemoreira/GitHub/cusspvz/express/node_modules/should/lib/assertion.js:113:17) at Assertion.prop.(anonymous function) [as ok] (/Users/josemoreira/GitHub/cusspvz/express/node_modules/should/lib/assertion.js:39:14) at /Users/josemoreira/GitHub/cusspvz/express/test/res.sendFile.js:228:27 at /Users/josemoreira/GitHub/cusspvz/express/lib/response.js:398:20 at SendStream.onend (/Users/josemoreira/GitHub/cusspvz/express/lib/response.js:934:5) at SendStream.emit (events.js:92:17) at ReadStream.onend (/Users/josemoreira/GitHub/cusspvz/express/node_modules/send/index.js:678:10) at ReadStream.emit (events.js:117:20) at _stream_readable.js:943:16 at process._tickCallback (node.js:419:13) ```": [
+  "express::lib/response.js::onaborted",
+  "express::lib/response.js::onfile",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::sendfile"
+ ],
+ "default OPTIONS handler crashes ``` javascript // for options requests, respond with a default if nothing else responds if (req.method === 'OPTIONS') { done = wrap(done, function(old, err) { if (err || options.length === 0) return old(err); var body = options.join(','); return res.set('Allow', body).send(body); }); } ``` this is due to `http.ServerResponse` not having a set method. i believe the intent here is to call `http.ServerResponse.setHeader()`": [
+  "express::lib/router/index.js::restore"
+ ],
+ "`Cannot redefine property: name` in createApplication since v4.10 Issue happens in v4.10 and v4.12 but not in v4.9.8 it can be reproduced easily using a coffee repl: ``` coffee> (require 'events').EventEmitter.prototype.name = \"letscrashthis\" coffee> (require 'express')() ``` In my case, I ran into this issue because `require('events').EventEmitter.prototype.name`'s value at runtime before executing `require('express')()` is \"EventEmitter\" as a read-only property. In `createApplication()`, the line `mixin(app, EventEmitter.prototype);` causes the following error: ``` TypeError: Cannot redefine property: name at Function.defineProperty (native) at ./node_modules/express/node_modules/merge-descriptors/index.js:4:12 at Array.forEach (native) at module.exports (./node_modules/express/node_modules/merge-descriptors/index.js:2:35) at createApplication (./node_modules/express/lib/express.js:35:3) ``` I am still investigating what is defining EventEmitter.prototype.name and will send more info when I find something": [
+  "express::lib/express.js::createApplication"
+ ],
+ "sendFile \"Error: read ECONNRESET\", express >= 4.9 Hi guys, I have an issue (no crash) similar to #2433 , but with different output when I send a \"big\" file ~12.6 MB with `sendFile` and browser splits the request in 3 chunks (1 HTTP code 200 + 2 HTTP code 206) tested with: - express ~4.9, ~4.10, ~4.11, ~4.12, - node ~0.12, iojs ~1.1 - chrome 41.0 - with express ~4.8, I haven't this error error: ``` sh Error: read ECONNRESET at exports._errnoException (util.js:734:11) at TCP.onread (net.js:538:26) ```": [
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::sendfile"
+ ],
+ "TypeError: Failed to decode param '' We have a nodejs app running on Heroku, and sometimes, without warning, all requests on a specific web dyno start to fail with a 400 Bad Request response. In the logs we can see entries like this: ``` TypeError: Failed to decode param '' at decode_param (/app/node_modules/express/lib/router/layer.js:162:15) ``` Restarting the app usually helps, but not always. Any idea what could be wrong? Our package.json dependencies: ``` \"dependencies\": { \"body-parser\": \"^1.12.2\", \"compression\": \"^1.4.3\", \"ejs\": \"~1.0.0\", \"errorhandler\": \"^1.0.0\", \"express\": \"~4.12.3\", \"extend\": \"1.2.1\", \"forever\": \"^0.14.1\", \"jslint\": \"^0.3.1\", \"mandrill-api\": \"^1.0.39\", \"newrelic\": \"1.17.2\", \"querystring\": \"^0.2.0\", \"request\": \"2.29.0\", \"requirejs\": \"^2.1.16\", \"ws\": \"^0.4.32\" }, ``` We haven't been able to reproduce or trigger this error in a test environment. Since this error is thrown by `decodeURIComponent`, we thought that we were missing some enco": [
+  "express::lib/router/layer.js::decode_param"
+ ],
+ "Inconsistent router behavior Fixes an inconsistency within the router: ``` coffeescript express = require \"express\" app = express() app.param \"num\", (req, res, next, value) -> if value.match(/[0-9]+/) next() else next(\"route\") app.param \"alpha\", (req, res, next, value) -> if value.match(/[a-z]+/) next() else next(\"route\") app.get \"/:alpha/:num\", (req, res) -> # this works for /asd/123 res.status(200).send(\"Matched Alpha/Num\") app.get \"/:alpha/static\", (req, res) -> # this works for /asd/static res.status(200).send(\"Matched Alpha/Static\") app.get \"/:num/static\", (req, res) -> # this works for /123/static res.status(200).send(\"Matched Num/Static\") app.get \"/:num/:alpha\", (req, res) -> # but this doesn't work for /123/asd (generic 'no route matched' 404 error) res.status(200).send(\"Matched Num/Alpha\") app.listen 1234, -> console.log(\"Ready\") ``` This could probably be fixed by using a param regexp instead of a function. However there are cases when that's not": [
+  "express::lib/router/index.js::param"
+ ],
+ "Use `===` instead of `==` except when testing for `null` or `undefined`.": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "Optimize `JSON.stringify` performance in V8. Older versions of V8 have a bug [1](https://bugs.chromium.org/p/v8/issues/detail?id=4730) where using empty `replacer` or `space` arguments decreases performance.": [
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stringify"
+ ],
+ "TypeError: res.set is not a function My server is scanned by the security team of my company to detect secutity flaws, and I've got a strange error in my console: Here is the logged stack: > GET /mainui/ 404 2.194 ms - 9 > TypeError: res.set is not a function > at sendOptionsResponse (c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:626:9) > at c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:168:7 > at proxy (c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:643:8) > at next (c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:256:14) > at trim_prefix (c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:286:45) > at c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:280:7 > at Function.process_params (c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:330:12) > at next (c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:271:10) > at trim_prefix (c:\\git\\WebSite\\node_modules\\express\\lib\\router\\index.js:286:45) > at c:\\git\\WebSite\\node_mod": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "debug require engine Requiring new engine can take more than 300ms, it make sense to include it in debug to inform developers whence the delays comes from.": [
+  "express::lib/view.js::View"
+ ],
+ "examples: fix pbkdf2 invocation Calling `crypto.pbkdf2()` without a digest has been deprecated in Node and is scheduled to be broken in Node 8. Fix this by actually passing a digest. ref: https://github.com/nodejs/node/pull/11305 **Note**: `npm test` still fails with Node master for me, but I’m on it :S": [
+  "express::examples/auth/index.js::authenticate"
+ ],
+ "Remove unused err argument restore() function in lib/router/index.js does not use it's err argument at all. All tests passed.": [
+  "express::lib/router/index.js::restore"
+ ],
+ "Option to unicode escape <, >, and & in JSON output An option to unicode escape <, >, & as \\u003c, \\u003e, \\u0026 \"to keep some browsers from misinterpreting JSON output as HTML.\" https://golang.org/src/encoding/json/encode.go?s=6456:6499#L48 This can be implemented as a middleware layer monkey-patching `res.send` as below, but it might be nicer to have in core. ```js const escapeJson = function (json) { if (typeof json !== 'string') { return json; } return json.replace(/</g, '\\\\u003c') .replace(/>/g, '\\\\u003e') .replace(/&/g, '\\\\u0026'); }; module.exports = function(req, res, next) { var _send = res.send; res.send = function (body) { if (res.get('Content-Type') === 'application/json') { body = escapeJson(body); } _send.call(res, body); }; next(); }; ```": [
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stringify"
+ ],
+ "Add 'json escape' option to unicode escape <, >, and & refs: #3268": [
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stringify"
+ ],
+ "fix examples/cookie-sessions and the test In real world, the first is 1, the second is 2. So: On first visit, the viewed times should be 1 instead of 0. On second visit, the viewed times should be 2 instead of 1.": [
+  "express::examples/cookie-sessions/index.js::count"
+ ],
+ "DRY up etag and wetag code in ./lib/utils.js There is an opportunity to DRY up a bit of code that's in ./lib/utils.js, specifically for exports.etag and exports.wetag. Drying up the code would NOT change the API.": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "Issue #3313: DRY up etag and wetag code. After implementing the code, all tests passed and performance benchmarks checked out.": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "TypeError: this.engine is not a function Content in localhost: ``` TypeError: this.engine is not a function at View.render (/home/vitalkanev/node_modules/express/lib/view.js:127:8) at tryRender (/home/vitalkanev/node_modules/express/lib/application.js:640:10) at Function.render (/home/vitalkanev/node_modules/express/lib/application.js:592:3) at ServerResponse.render (/home/vitalkanev/node_modules/express/lib/response.js:971:7) at /home/vitalkanev/siteData/expressors/data.js:5:13 at Layer.handle [as handle_request] (/home/vitalkanev/node_modules/express/lib/router/layer.js:95:5) at next (/home/vitalkanev/node_modules/express/lib/router/route.js:137:13) at Route.dispatch (/home/vitalkanev/node_modules/express/lib/router/route.js:112:3) at Layer.handle [as handle_request] (/home/vitalkanev/node_modules/express/lib/router/layer.js:95:5) at /home/vitalkanev/node_modules/express/lib/router/index.js:281:22 ``` Content of the file: ```js let express = require(\"express\"); let": [
+  "express::lib/view.js::View"
+ ],
+ "Update equality (==) operators for identically (===) operators": [
+  "express::examples/auth/index.js::authenticate",
+  "express::examples/route-middleware/index.js::andRestrictTo",
+  "express::examples/route-middleware/index.js::andRestrictToSelf",
+  "express::examples/view-locals/index.js::ferrets"
+ ],
+ "Router with a regexp doesn't handle request in the correct layer In case we define a layer that matches path with a regexp not from the beginning of the path, the router doesn't handle it in the correct way. Here is a minimum reproducible example: ```javascript var app = express(); app.use(/\\/api.*/, function(req, res){ res.end('api') }); app.use(function(req, res){ res.end('error') }); request(app) .get('/test/api/123') .expect('api', done); ``` This test is gonna fail becuase instead of `api` response, we will get `error` This is happening because in the `trim_prefix` function, the router has a small bug: https://github.com/expressjs/express/blob/e1b45ebd050b6f06aa38cda5aaf0c21708b0c71e/lib/router/index.js#L291 It always tests for the `/` or `.` character from the beginning of the path, even though in this example, the `layerPath` variable is set to `/api/123`. The funny thing, this will work correctly if you have the same amount of characters after the last `/` symbol as in the prefix (everything before the matche": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "Fix regexp handing logic in router. Closes #4204 It closes #4204. When regexp matches path not from the beginning, `trim_prefx` validates if path breaks on a path separator in a wrong way. Here is a small illustration of the problem: ``` path: /test/api/123 layerPath: /api/123 c: ^ ``` after the fix: ``` path: /test/api/123 startIndex: ^ layerPath: /api/123 c: ^ ``` This PR fixes his behaviors by testing matched layerPath not from the begging of the path but from the start of the match. I have also added a unit test to cover this case. Existing logic should not be affected, because in case of a match from the beginning of the path, the `startIndex` variable will be 0 and we will end up an old logic.": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "res.json & \"json escape\" should always return json When using the \"json escape\" setting, `res.json` was returning `text/html` response when being called with a falsy value such as `undefined`. `JSON.stringify()` can return `undefined` so this guards against that before using `String.replace()`.": [
+  "express::lib/response.js::stringify"
+ ],
+ "replace \"replaces\" with \"replacer\" in jsdoc I hope it helps.": [
+  "express::lib/response.js::sendfile"
+ ],
+ "Replace deprecated String.prototype.substr() [String.prototype.substr()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr) is deprecated so we replace it with [String.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) or [String.prototype.substring()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring) which work similarily but aren't deprecated. .substr() probably isn't going away anytime soon but the change is trivial so it doesn't hurt to do it.": [
+  "express::lib/router/index.js::getProtohost",
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::trim_prefix",
+  "express::lib/view.js::View"
+ ],
+ "Correctly invoke async router callback asynchronously Sometimes this error occurs: RangeError: Maximum call stack size exceeded This pull request can fix the error.": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::trim_prefix",
+  "express::lib/router/route.js::next"
+ ],
+ "The `max sync stack` is breaking routing We recently updated to v4.18.0 and find some routes are not working anymore due to https://github.com/expressjs/express/commit/708ac4cdf5cd0a658d62490a9f4d78d3e1ec6612. 1. This `100` limitation is not in the change log http://expressjs.com/en/changelog/4x.html#4.18.0. Can you help update it? 2. Can this value be configurable? Thanks": [
+  "express::lib/router/index.js::next"
+ ],
+ "Combinations of middleware series with \"app.all\" is broken since 4.18.0 Like all `app.METHOD()`, `app.all()` takes callback functions that, according to http://expressjs.com/en/4x/api.html#app.all can be - A middleware function. - A series of middleware functions (separated by commas). - An array of middleware functions. - A combination of all of the above. Which should make this example perfectly valid: ```js const express = require('express'); const app = express(); function mw1 (req, res, next) { next() }; function mw2 (req, res, next) { next() }; function mw3 (req, res, next) { next() }; function mw4 (req, res, next) { next() }; function mw5 (req, res, next) { next() }; app.all('/path', mw1, // x [ mw2, // x [ mw3, // x mw4 // x ], ], [ mw5, // x ], (req, res, next) => res.send('OK') ); app.use((req, res) => res.status(404).send('Not Found')); app.listen(3000); ``` **However with express@4.18.0 (and also 4.18.1):** ```sh curl": [
+  "express::lib/router/route.js::next"
+ ],
+ "examples: remove unused params": [
+  "express::examples/error/index.js::error"
+ ],
+ "fix: parameter str is not described in JSDoc": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "Fix favicon-related bug in cookie-sessions example Added the check for /favicon request in \" count\" middleware. Without this check, a request to /favicon that is made by most browsers will also increment the counter. This will lead to unwanted behaviour when a reload of a page will increment the counter for 2 instead of 1. <img width=\"378\" alt=\"image\" src=\"https://github.com/expressjs/express/assets/61388150/6a8cbcc4-2da1-4b0c-adfd-095e186fd4b1\">": [
+  "express::examples/cookie-sessions/index.js::count"
+ ],
+ "Use loop for acceptParams Using a loop here would improve performance for parsing over splitting into an array and iterating over it, then splitting some more. If we prefer the overall split on `;` for readability though, we can still avoid the second split by using `indexOf` instead. There's also some slices and `trim` that could be avoided for extra performance but it seemed a little overkill for this function. Finally, given the code is only used here: https://github.com/expressjs/express/blob/a46cfdc37f5e422db7ce6f12d321eb79694c1e9b/lib/response.js#L575-L584. If we avoid exporting these utils to users we can just return `value` only and avoid the rest of the processing entirely. _closes https://github.com/expressjs/security-triage/issues/24_": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "Improve error logging by logging full error object This PR updates the `logerror` function in `application.js` to use `console.error(err)` instead of `err.stack || err.toString()`. This change improves error visibility, especially for complex or nested errors (like those thrown by Sequelize), and supports modern features like `Error.cause`. Fixes: #6462": [
+  "express::lib/application.js::logerror"
+ ]
+}

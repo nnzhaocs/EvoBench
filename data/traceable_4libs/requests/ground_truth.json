@@ -1,0 +1,80 @@
+{
+ "Parameterize SupportsItems to handle Mapping key invariance (#7426)": [
+  "requests::src/requests/_types.py::items"
+ ],
+ "Add inline types to Requests (#7272)": [
+  "requests::src/requests/_types.py::items",
+  "requests::src/requests/cookies.py::host",
+  "requests::src/requests/cookies.py::origin_req_host",
+  "requests::src/requests/cookies.py::unverifiable",
+  "requests::src/requests/models.py::_encode_files",
+  "requests::src/requests/models.py::_encode_params",
+  "requests::src/requests/models.py::_get_idna_encoded_host",
+  "requests::src/requests/models.py::apparent_encoding",
+  "requests::src/requests/models.py::content",
+  "requests::src/requests/models.py::is_permanent_redirect",
+  "requests::src/requests/models.py::is_redirect",
+  "requests::src/requests/models.py::links",
+  "requests::src/requests/models.py::next",
+  "requests::src/requests/models.py::ok",
+  "requests::src/requests/models.py::path_url",
+  "requests::src/requests/models.py::text",
+  "requests::src/requests/structures.py::copy",
+  "requests::src/requests/utils.py::atomic_open",
+  "requests::src/requests/utils.py::get_proxy",
+  "requests::src/requests/utils.py::parse_dict_header",
+  "requests::src/requests/utils.py::parse_list_header",
+  "requests::src/requests/utils.py::set_environ",
+  "requests::src/requests/utils.py::to_key_val_list",
+  "requests::src/requests/utils.py::unquote_header_value"
+ ],
+ "Add automatic code formatting to Requests (#6095)": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "Avoid zip extract racing condition by using read+write instead extract (#5707)": [
+  "requests::requests/utils.py::atomic_open"
+ ],
+ "Merge pull request #4134 from mlcrazy/master": [
+  "requests::requests/utils.py::set_environ"
+ ],
+ "Merge pull request #3865 from JohnVillalovos/master": [
+  "requests::requests/utils.py::set_environ"
+ ],
+ "Merge pull request #3789 from moin18/3780": [
+  "requests::requests/models.py::_get_idna_encoded_host"
+ ],
+ "Merge pull request #3484 from scop/rtypes": [
+  "requests::requests/utils.py::parse_dict_header",
+  "requests::requests/utils.py::unquote_header_value"
+ ],
+ "Merge pull request #2095 from ericfrederich/redirect_cache": [
+  "requests::requests/models.py::is_permanent_redirect"
+ ],
+ "Merge pull request #1918 from zackw/response-is-redirect": [
+  "requests::requests/models.py::is_redirect"
+ ],
+ "Fix the potential issue mentioned in #1151": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "Fix the elapsed test and #1133": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "Merge pull request #1031 from sigmavirus24/master": [
+  "requests::requests/utils.py::unquote_header_value"
+ ],
+ "Fixes #711!": [
+  "requests::requests/models.py::links"
+ ],
+ "Merge pull request #573 from idangazit/develop": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "Encode Multipart Post data at Request creation": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "Only send URL path to servers": [
+  "requests::requests/models.py::path_url"
+ ],
+ "Merge pull request #202 from kennethreitz/feature/content-stream": [
+  "requests::requests/models.py::content"
+ ]
+}

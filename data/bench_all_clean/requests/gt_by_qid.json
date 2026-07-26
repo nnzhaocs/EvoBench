@@ -1,0 +1,471 @@
+{
+ "requests#issue-1": [
+  "requests::requests/models.py::_encode_files",
+  "requests::requests/models.py::content",
+  "requests::requests/models.py::ok",
+  "requests::requests/models.py::register_hook",
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-150": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-196": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-202": [
+  "requests::requests/models.py::_encode_params",
+  "requests::requests/models.py::content"
+ ],
+ "requests#issue-236": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#issue-256": [
+  "requests::requests/models.py::_encode_params",
+  "requests::requests/models.py::path_url"
+ ],
+ "requests#issue-282": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#issue-298": [
+  "requests::requests/models.py::_encode_files",
+  "requests::requests/models.py::content"
+ ],
+ "requests#issue-338": [
+  "requests::requests/models.py::text"
+ ],
+ "requests#issue-377": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-387": [
+  "requests::requests/models.py::path_url"
+ ],
+ "requests#pr-477": [
+  "requests::requests/models.py::text"
+ ],
+ "requests#issue-496": [
+  "requests::requests/models.py::ok"
+ ],
+ "requests#issue-520": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-542": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-573": [
+  "requests::requests/models.py::_encode_files",
+  "requests::requests/models.py::_encode_params"
+ ],
+ "requests#pr-659": [
+  "requests::requests/models.py::_encode_params"
+ ],
+ "requests#issue-661": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#issue-711": [
+  "requests::requests/models.py::links"
+ ],
+ "requests#pr-729": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-746": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-760": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-762": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#issue-785": [
+  "requests::requests/models.py::register_hook"
+ ],
+ "requests#issue-795": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-797": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-805": [
+  "requests::requests/models.py::_encode_params"
+ ],
+ "requests#pr-863": [
+  "requests::requests/models.py::register_hook"
+ ],
+ "requests#pr-867": [
+  "requests::requests/models.py::text"
+ ],
+ "requests#pr-876": [
+  "requests::requests/models.py::register_hook"
+ ],
+ "requests#pr-884": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-912": [
+  "requests::requests/models.py::path_url"
+ ],
+ "requests#pr-925": [
+  "requests::requests/models.py::_encode_params"
+ ],
+ "requests#pr-955": [
+  "requests::requests/models.py::register_hook"
+ ],
+ "requests#pr-1020": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1031": [
+  "requests::requests/utils.py::unquote_header_value"
+ ],
+ "requests#pr-1064": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1084": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1091": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-1099": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1122": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#issue-1133": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1146": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1151": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1158": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1173": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1180": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1208": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1219": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1223": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1228": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1239": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1243": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1244": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1267": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1270": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1276": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-1279": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#issue-1287": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1290": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1303": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1311": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1315": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1334": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1355": [
+  "requests::requests/models.py::links"
+ ],
+ "requests#pr-1361": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1373": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-1503": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-1527": [
+  "requests::requests/models.py::register_hook"
+ ],
+ "requests#pr-1537": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-1587": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1630": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1637": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1640": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-1667": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-1696": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1720": [
+  "requests::requests/models.py::text"
+ ],
+ "requests#issue-1728": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1746": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1747": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1754": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1776": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1805": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1810": [
+  "requests::requests/models.py::text"
+ ],
+ "requests#pr-1823": [
+  "requests::requests/models.py::text"
+ ],
+ "requests#issue-1887": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1888": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1892": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1901": [
+  "requests::requests/models.py::apparent_encoding"
+ ],
+ "requests#pr-1918": [
+  "requests::requests/models.py::is_redirect",
+  "requests::requests/models.py::ok",
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1944": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1951": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-1955": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-1963": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-2087": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-2090": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-2168": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-2172": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-2207": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-2353": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-2382": [
+  "requests::requests/models.py::ok"
+ ],
+ "requests#pr-2468": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-2472": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-2489": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-2504": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-2844": [
+  "requests::requests/models.py::_encode_params"
+ ],
+ "requests#pr-2845": [
+  "requests::requests/models.py::_encode_params"
+ ],
+ "requests#pr-2931": [
+  "requests::requests/models.py::_encode_params"
+ ],
+ "requests#pr-2972": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-3060": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-3069": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-3484": [
+  "requests::requests/utils.py::parse_dict_header",
+  "requests::requests/utils.py::unquote_header_value"
+ ],
+ "requests#pr-3493": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-3591": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-3607": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-3655": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-3698": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-3718": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-3789": [
+  "requests::requests/models.py::_get_idna_encoded_host"
+ ],
+ "requests#pr-3827": [
+  "requests::requests/packages/urllib3/contrib/pyopenssl.py::idna_encode"
+ ],
+ "requests#pr-3846": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-3865": [
+  "requests::requests/utils.py::set_environ"
+ ],
+ "requests#pr-3876": [
+  "requests::requests/models.py::ok"
+ ],
+ "requests#pr-3877": [
+  "requests::requests/models.py::ok"
+ ],
+ "requests#pr-3885": [
+  "requests::requests/utils.py::set_environ"
+ ],
+ "requests#pr-3963": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-3979": [
+  "requests::requests/utils.py::set_environ"
+ ],
+ "requests#pr-4066": [
+  "requests::requests/models.py::apparent_encoding",
+  "requests::requests/models.py::is_permanent_redirect",
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-4067": [
+  "requests::requests/models.py::_get_idna_encoded_host"
+ ],
+ "requests#pr-4099": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-4108": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-4134": [
+  "requests::requests/utils.py::set_environ"
+ ],
+ "requests#pr-4390": [
+  "requests::requests/models.py::ok"
+ ],
+ "requests#pr-4452": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-4661": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#issue-4965": [
+  "requests::requests/models.py::content"
+ ],
+ "requests#pr-4976": [
+  "requests::requests/models.py::text"
+ ],
+ "requests#pr-5105": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-5119": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#pr-5160": [
+  "requests::requests/sessions.py::resolve_redirects"
+ ],
+ "requests#issue-5223": [
+  "requests::requests/utils.py::atomic_open"
+ ],
+ "requests#pr-5707": [
+  "requests::requests/utils.py::atomic_open"
+ ],
+ "requests#pr-5797": [
+  "requests::requests/models.py::apparent_encoding",
+  "requests::requests/models.py::text"
+ ],
+ "requests#pr-6498": [
+  "requests::requests/models.py::_encode_files"
+ ],
+ "requests#pr-6702": [
+  "requests::src/requests/models.py::apparent_encoding"
+ ],
+ "requests#pr-7426": [
+  "requests::src/requests/_types.py::items",
+  "requests::src/requests/utils.py::to_key_val_list"
+ ],
+ "requests#pr-7427": [
+  "requests::src/requests/utils.py::get_proxy"
+ ],
+ "requests#pr-7496": [
+  "requests::src/requests/models.py::_encode_files"
+ ],
+ "requests#pr-7497": [
+  "requests::src/requests/models.py::_encode_files"
+ ],
+ "requests#pr-7502": [
+  "requests::src/requests/models.py::_encode_files"
+ ],
+ "requests#pr-7505": [
+  "requests::src/requests/models.py::_encode_files",
+  "requests::src/requests/models.py::_encode_params"
+ ]
+}

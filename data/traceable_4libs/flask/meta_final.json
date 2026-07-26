@@ -1,0 +1,11 @@
+{
+  "repo": "flask",
+  "units": 131,
+  "updates": 334,
+  "queries": 63,
+  "gt_queries": 62,
+  "dangling_gt": 0,
+  "selfcheck_pass": true,
+  "synthetic_data": false,
+  "note": "格式转换 only；未新增/编造任何查询或 GT"
+}

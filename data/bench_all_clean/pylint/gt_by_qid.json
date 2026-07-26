@@ -1,0 +1,768 @@
+{
+ "pylint#issue-85": [
+  "pylint::pylint/checkers/variables.py::consumed_uncertain"
+ ],
+ "pylint#issue-202": [
+  "pylint::pylint/checkers/variables.py::_loopvar_name"
+ ],
+ "pylint#issue-240": [
+  "pylint::pylint/checkers/typecheck.py::visit_with"
+ ],
+ "pylint#issue-294": [
+  "pylint::pylint/checkers/utils.py::class_is_abstract"
+ ],
+ "pylint#issue-297": [
+  "pylint::pylint/checkers/utils.py::class_is_abstract"
+ ],
+ "pylint#issue-330": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#issue-511": [
+  "pylint::pylint/checkers/variables.py::_defined_in_function_definition"
+ ],
+ "pylint#issue-586": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#issue-593": [
+  "pylint::pylint/checkers/typecheck.py::visit_with",
+  "pylint::pylint/checkers/utils.py::safe_infer"
+ ],
+ "pylint#issue-685": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#issue-705": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#issue-750": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order"
+ ],
+ "pylint#issue-767": [
+  "pylint::pylint/checkers/design_analysis.py::visit_functiondef",
+  "pylint::pylint/checkers/newstyle.py::visit_functiondef"
+ ],
+ "pylint#issue-769": [
+  "pylint::pylint/checkers/utils.py::unimplemented_abstract_methods",
+  "pylint::pylint/checkers/variables.py::_analyse_fallback_blocks",
+  "pylint::pylint/checkers/variables.py::_ignored_modules",
+  "pylint::pylint/checkers/variables.py::visit_import",
+  "pylint::pylint/checkers/variables.py::visit_importfrom"
+ ],
+ "pylint#pr-805": [
+  "pylint::pylint/checkers/typecheck.py::visit_with"
+ ],
+ "pylint#issue-826": [
+  "pylint::pylint/checkers/utils.py::unimplemented_abstract_methods"
+ ],
+ "pylint#issue-862": [
+  "pylint::pylint/checkers/design_analysis.py::visit_functiondef"
+ ],
+ "pylint#pr-879": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order"
+ ],
+ "pylint#pr-888": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order"
+ ],
+ "pylint#pr-906": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order"
+ ],
+ "pylint#issue-919": [
+  "pylint::pylint/checkers/variables.py::_allow_global_unused_variables",
+  "pylint::pylint/checkers/variables.py::_ignored_modules",
+  "pylint::pylint/checkers/variables.py::leave_module"
+ ],
+ "pylint#issue-957": [
+  "pylint::pylint/checkers/strings.py::visit_binop"
+ ],
+ "pylint#issue-977": [
+  "pylint::pylint/checkers/variables.py::visit_assign",
+  "pylint::pylint/checkers/variables.py::visit_importfrom"
+ ],
+ "pylint#pr-988": [
+  "pylint::doc/exts/pylint_extensions.py::builder_inited",
+  "pylint::doc/exts/pylint_features.py::builder_inited"
+ ],
+ "pylint#issue-996": [
+  "pylint::pylint/checkers/typecheck.py::_is_asyncio_coroutine",
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#pr-999": [
+  "pylint::pylint/checkers/variables.py::_ignored_modules",
+  "pylint::pylint/checkers/variables.py::visit_for"
+ ],
+ "pylint#issue-1081": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-1109": [
+  "pylint::pylint/checkers/newstyle.py::visit_functiondef"
+ ],
+ "pylint#pr-1154": [
+  "pylint::pylint/checkers/spelling.py::_check_spelling"
+ ],
+ "pylint#issue-1168": [
+  "pylint::pylint/checkers/variables.py::_defined_in_function_definition"
+ ],
+ "pylint#issue-1177": [
+  "pylint::pylint/checkers/variables.py::leave_module"
+ ],
+ "pylint#issue-1190": [
+  "pylint::pylint/checkers/variables.py::_check_imports"
+ ],
+ "pylint#issue-1195": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#pr-1202": [
+  "pylint::pylint/checkers/variables.py::leave_module"
+ ],
+ "pylint#pr-1250": [
+  "pylint::pylint/checkers/spelling.py::_check_spelling"
+ ],
+ "pylint#issue-1263": [
+  "pylint::pylint/checkers/utils.py::class_is_abstract"
+ ],
+ "pylint#pr-1266": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#issue-1267": [
+  "pylint::pylint/checkers/utils.py::safe_infer"
+ ],
+ "pylint#pr-1299": [
+  "pylint::pylint/checkers/strings.py::visit_binop"
+ ],
+ "pylint#issue-1327": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#issue-1375": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#issue-1419": [
+  "pylint::pylint/checkers/exceptions.py::visit_raise"
+ ],
+ "pylint#issue-1453": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#pr-1485": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#pr-1569": [
+  "pylint::doc/exts/pylint_extensions.py::builder_inited",
+  "pylint::doc/exts/pylint_features.py::builder_inited"
+ ],
+ "pylint#pr-1636": [
+  "pylint::pylint/checkers/design_analysis.py::visit_functiondef"
+ ],
+ "pylint#pr-1641": [
+  "pylint::pylint/checkers/utils.py::safe_infer"
+ ],
+ "pylint#pr-1733": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#pr-1757": [
+  "pylint::pylint/checkers/variables.py::consumed",
+  "pylint::pylint/checkers/variables.py::leave_module",
+  "pylint::pylint/checkers/variables.py::scope_type",
+  "pylint::pylint/checkers/variables.py::to_consume"
+ ],
+ "pylint#pr-1761": [
+  "pylint::doc/exts/pylint_extensions.py::builder_inited"
+ ],
+ "pylint#issue-1824": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#issue-1874": [
+  "pylint::pylint/checkers/typecheck.py::visit_with"
+ ],
+ "pylint#issue-1896": [
+  "pylint::pylint/checkers/format.py::visit_default",
+  "pylint::pylint/checkers/imports.py::_check_imports_order",
+  "pylint::pylint/checkers/newstyle.py::visit_functiondef"
+ ],
+ "pylint#issue-1948": [
+  "pylint::pylint/checkers/variables.py::_check_imports"
+ ],
+ "pylint#issue-1976": [
+  "pylint::pylint/checkers/variables.py::_defined_in_function_definition"
+ ],
+ "pylint#issue-1978": [
+  "pylint::pylint/checkers/design_analysis.py::visit_functiondef",
+  "pylint::pylint/checkers/design_analysis.py::visit_if"
+ ],
+ "pylint#pr-1979": [
+  "pylint::pylint/checkers/design_analysis.py::visit_functiondef",
+  "pylint::pylint/checkers/design_analysis.py::visit_if"
+ ],
+ "pylint#issue-2039": [
+  "pylint::pylint/checkers/variables.py::_loopvar_name"
+ ],
+ "pylint#pr-2087": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#pr-2089": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#pr-2090": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#issue-2327": [
+  "pylint::pylint/checkers/newstyle.py::visit_functiondef",
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#issue-2366": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order"
+ ],
+ "pylint#issue-2431": [
+  "pylint::pylint/checkers/exceptions.py::visit_raise"
+ ],
+ "pylint#issue-2494": [
+  "pylint::pylint/checkers/exceptions.py::visit_binop",
+  "pylint::pylint/checkers/exceptions.py::visit_compare"
+ ],
+ "pylint#issue-2503": [
+  "pylint::pylint/checkers/utils.py::safe_infer"
+ ],
+ "pylint#issue-2533": [
+  "pylint::pylint/checkers/variables.py::_loopvar_name"
+ ],
+ "pylint#issue-2541": [
+  "pylint::pylint/lint/expand_modules.py::expand_modules"
+ ],
+ "pylint#issue-2727": [
+  "pylint::pylint/checkers/strings.py::visit_binop"
+ ],
+ "pylint#issue-2761": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#issue-2848": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#issue-2866": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order",
+  "pylint::pylint/checkers/imports.py::_isort_config"
+ ],
+ "pylint#issue-2895": [
+  "pylint::pylint/checkers/spelling.py::_check_spelling"
+ ],
+ "pylint#issue-2915": [
+  "pylint::pylint/checkers/variables.py::_check_imports"
+ ],
+ "pylint#issue-2957": [
+  "pylint::pylint/checkers/format.py::remove_pylint_option_from_lines"
+ ],
+ "pylint#issue-3031": [
+  "pylint::pylint/checkers/refactoring/implicit_booleaness_checker.py::visit_compare"
+ ],
+ "pylint#issue-3057": [
+  "pylint::pylint/checkers/design_analysis.py::visit_classdef"
+ ],
+ "pylint#issue-3081": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#issue-3088": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#pr-3097": [
+  "pylint::pylint/checkers/exceptions.py::visit_raise",
+  "pylint::pylint/checkers/newstyle.py::visit_functiondef",
+  "pylint::pylint/checkers/stdlib.py::visit_call",
+  "pylint::pylint/checkers/variables.py::_defined_in_function_definition",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#issue-3119": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#issue-3127": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#issue-3178": [
+  "pylint::pylint/checkers/variables.py::_check_imports"
+ ],
+ "pylint#issue-3190": [
+  "pylint::pylint/checkers/strings.py::visit_binop"
+ ],
+ "pylint#issue-3299": [
+  "pylint::pylint/checkers/variables.py::visit_const"
+ ],
+ "pylint#pr-3316": [
+  "pylint::pylint/checkers/format.py::remove_pylint_option_from_lines",
+  "pylint::pylint/checkers/format.py::visit_default",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-3446": [
+  "pylint::pylint/checkers/utils.py::class_is_abstract"
+ ],
+ "pylint#issue-3457": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#issue-3494": [
+  "pylint::pylint/checkers/variables.py::_defined_in_function_definition",
+  "pylint::pylint/checkers/variables.py::_in_lambda_or_comprehension_body"
+ ],
+ "pylint#issue-3512": [
+  "pylint::pylint/config/arguments_manager.py::options_providers",
+  "pylint::pylint/lint/pylinter.py::option_groups"
+ ],
+ "pylint#issue-3533": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#issue-3585": [
+  "pylint::pylint/checkers/base/name_checker/checker.py::_assigns_typealias",
+  "pylint::pylint/checkers/base/name_checker/checker.py::visit_assignname"
+ ],
+ "pylint#issue-3590": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#issue-3675": [
+  "pylint::pylint/checkers/utils.py::safe_infer"
+ ],
+ "pylint#issue-3688": [
+  "pylint::pylint/checkers/variables.py::_is_first_level_self_reference",
+  "pylint::pylint/checkers/variables.py::_is_never_evaluated"
+ ],
+ "pylint#issue-3692": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#issue-3694": [
+  "pylint::pylint/checkers/exceptions.py::visit_raise"
+ ],
+ "pylint#issue-3716": [
+  "pylint::pylint/checkers/base/basic_checker.py::visit_functiondef"
+ ],
+ "pylint#issue-3722": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order"
+ ],
+ "pylint#issue-3771": [
+  "pylint::pylint/checkers/variables.py::_is_first_level_self_reference",
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment"
+ ],
+ "pylint#issue-3826": [
+  "pylint::pylint/checkers/stdlib.py::visit_call",
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#issue-3859": [
+  "pylint::pylint/checkers/variables.py::_check_imports"
+ ],
+ "pylint#pr-3890": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#issue-4042": [
+  "pylint::pylint/checkers/strings.py::visit_binop"
+ ],
+ "pylint#issue-4045": [
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_except_blocks",
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_try_blocks_when_evaluating_except_blocks"
+ ],
+ "pylint#issue-4053": [
+  "pylint::pylint/lint/expand_modules.py::expand_modules"
+ ],
+ "pylint#issue-4150": [
+  "pylint::pylint/checkers/variables.py::leave_module"
+ ],
+ "pylint#pr-4205": [
+  "pylint::pylint/checkers/deprecated.py::visit_call"
+ ],
+ "pylint#pr-4225": [
+  "pylint::pylint/checkers/deprecated.py::visit_call",
+  "pylint::pylint/checkers/deprecated.py::visit_importfrom"
+ ],
+ "pylint#issue-4227": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-4339": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-4359": [
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::_check_consider_using_min_max_builtin"
+ ],
+ "pylint#pr-4380": [
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::_check_consider_using_min_max_builtin"
+ ],
+ "pylint#issue-4388": [
+  "pylint::pylint/checkers/deprecated.py::visit_call",
+  "pylint::pylint/checkers/deprecated.py::visit_importfrom",
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#pr-4398": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-4419": [
+  "pylint::pylint/checkers/deprecated.py::visit_call",
+  "pylint::pylint/checkers/deprecated.py::visit_importfrom",
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#pr-4469": [
+  "pylint::pylint/checkers/refactoring/recommendation_checker.py::_is_builtin"
+ ],
+ "pylint#pr-4513": [
+  "pylint::pylint/checkers/deprecated.py::visit_decorators"
+ ],
+ "pylint#pr-4516": [
+  "pylint::pylint/lint/expand_modules.py::expand_modules"
+ ],
+ "pylint#pr-4568": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#pr-4678": [
+  "pylint::pylint/checkers/deprecated.py::visit_importfrom"
+ ],
+ "pylint#pr-4702": [
+  "pylint::pylint/checkers/variables.py::visit_import",
+  "pylint::pylint/checkers/variables.py::visit_importfrom"
+ ],
+ "pylint#pr-4721": [
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::visit_return",
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::visit_with"
+ ],
+ "pylint#pr-4753": [
+  "pylint::pylint/checkers/stdlib.py::visit_call",
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-4758": [
+  "pylint::pylint/checkers/design_analysis.py::visit_classdef"
+ ],
+ "pylint#issue-4761": [
+  "pylint::pylint/checkers/variables.py::_check_consumer",
+  "pylint::pylint/checkers/variables.py::consumed",
+  "pylint::pylint/checkers/variables.py::consumed_uncertain"
+ ],
+ "pylint#pr-4771": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#issue-4774": [
+  "pylint::pylint/checkers/refactoring/implicit_booleaness_checker.py::visit_compare"
+ ],
+ "pylint#issue-4778": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-4793": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-4794": [
+  "pylint::pylint/checkers/strings.py::visit_binop"
+ ],
+ "pylint#issue-4809": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#pr-4855": [
+  "pylint::pylint/checkers/deprecated.py::visit_call",
+  "pylint::pylint/checkers/deprecated.py::visit_decorators"
+ ],
+ "pylint#pr-4869": [
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::_check_consider_using_min_max_builtin",
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::_duplicated_isinstance_types",
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::_is_and_or_ternary",
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::_is_simple_assignment",
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::_type_and_name_are_equal",
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::visit_return",
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::visit_with",
+  "pylint::pylint/extensions/bad_builtin.py::visit_call"
+ ],
+ "pylint#issue-4891": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#issue-4945": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#pr-4980": [
+  "pylint::pylint/lint/expand_modules.py::expand_modules"
+ ],
+ "pylint#pr-4990": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#issue-5017": [
+  "pylint::pylint/checkers/stdlib.py::visit_call"
+ ],
+ "pylint#pr-5044": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5063": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order"
+ ],
+ "pylint#pr-5110": [
+  "pylint::pylint/checkers/variables.py::_check_imports"
+ ],
+ "pylint#issue-5112": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation",
+  "pylint::pylint/checkers/variables.py::_maybe_used_and_assigned_at_once"
+ ],
+ "pylint#pr-5118": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5120": [
+  "pylint::pylint/checkers/refactoring/implicit_booleaness_checker.py::visit_compare"
+ ],
+ "pylint#pr-5123": [
+  "pylint::doc/exts/pylint_extensions.py::builder_inited"
+ ],
+ "pylint#pr-5132": [
+  "pylint::pylint/checkers/refactoring/implicit_booleaness_checker.py::visit_call"
+ ],
+ "pylint#pr-5139": [
+  "pylint::pylint/checkers/strings.py::visit_binop"
+ ],
+ "pylint#issue-5140": [
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5148": [
+  "pylint::pylint/checkers/unsupported_version.py::visit_joinedstr"
+ ],
+ "pylint#pr-5158": [
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#issue-5162": [
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5163": [
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5165": [
+  "pylint::pylint/checkers/unsupported_version.py::visit_joinedstr"
+ ],
+ "pylint#pr-5167": [
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation",
+  "pylint::pylint/checkers/variables.py::_loopvar_name"
+ ],
+ "pylint#pr-5184": [
+  "pylint::pylint/checkers/variables.py::_is_first_level_self_reference",
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment"
+ ],
+ "pylint#issue-5194": [
+  "pylint::pylint/lint/expand_modules.py::expand_modules"
+ ],
+ "pylint#pr-5196": [
+  "pylint::pylint/extensions/for_any_all.py::_build_suggested_string"
+ ],
+ "pylint#pr-5201": [
+  "pylint::pylint/lint/expand_modules.py::expand_modules"
+ ],
+ "pylint#pr-5209": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-5227": [
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::visit_return"
+ ],
+ "pylint#pr-5241": [
+  "pylint::pylint/checkers/variables.py::_check_consumer",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5303": [
+  "pylint::pylint/utils/utils.py::cmp"
+ ],
+ "pylint#pr-5310": [
+  "pylint::pylint/checkers/format.py::visit_default",
+  "pylint::pylint/checkers/variables.py::_check_consumer",
+  "pylint::pylint/checkers/variables.py::_defined_in_function_definition",
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment",
+  "pylint::pylint/checkers/variables.py::_is_variable_violation",
+  "pylint::pylint/checkers/variables.py::_loopvar_name"
+ ],
+ "pylint#pr-5311": [
+  "pylint::pylint/checkers/unicode.py::_find_line_matches",
+  "pylint::pylint/checkers/unicode.py::_is_invalid_codec"
+ ],
+ "pylint#pr-5315": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-5318": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#issue-5326": [
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment"
+ ],
+ "pylint#issue-5333": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#issue-5370": [
+  "pylint::pylint/checkers/variables.py::leave_excepthandler",
+  "pylint::pylint/checkers/variables.py::visit_excepthandler"
+ ],
+ "pylint#pr-5379": [
+  "pylint::pylint/checkers/imports.py::_check_imports_order",
+  "pylint::pylint/checkers/refactoring/refactoring_checker.py::_check_consider_using_min_max_builtin"
+ ],
+ "pylint#pr-5384": [
+  "pylint::pylint/checkers/variables.py::consumed_uncertain"
+ ],
+ "pylint#pr-5396": [
+  "pylint::doc/exts/pylint_messages.py::build_messages_pages"
+ ],
+ "pylint#issue-5399": [
+  "pylint::pylint/checkers/variables.py::_check_consumer",
+  "pylint::pylint/checkers/variables.py::_is_first_level_self_reference"
+ ],
+ "pylint#pr-5402": [
+  "pylint::pylint/checkers/variables.py::_check_consumer",
+  "pylint::pylint/checkers/variables.py::consumed",
+  "pylint::pylint/checkers/variables.py::consumed_uncertain"
+ ],
+ "pylint#pr-5409": [
+  "pylint::pylint/checkers/utils.py::safe_infer"
+ ],
+ "pylint#pr-5447": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#pr-5454": [
+  "pylint::pylint/checkers/variables.py::_is_first_level_self_reference"
+ ],
+ "pylint#pr-5531": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#pr-5532": [
+  "pylint::pylint/checkers/variables.py::_is_first_level_self_reference"
+ ],
+ "pylint#pr-5541": [
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_except_blocks"
+ ],
+ "pylint#issue-5568": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5575": [
+  "pylint::pylint/checkers/format.py::visit_default",
+  "pylint::pylint/checkers/typecheck.py::visit_with",
+  "pylint::pylint/checkers/utils.py::unimplemented_abstract_methods",
+  "pylint::pylint/lint/pylinter.py::should_analyze_file",
+  "pylint::pylint/lint/run.py::__init__",
+  "pylint::pylint/lint/utils.py::fix_import_path"
+ ],
+ "pylint#pr-5582": [
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_except_blocks",
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_try_blocks_when_evaluating_except_blocks"
+ ],
+ "pylint#pr-5583": [
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_try_blocks_when_evaluating_except_blocks",
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_try_blocks_when_evaluating_finally_blocks"
+ ],
+ "pylint#pr-5584": [
+  "pylint::pylint/config/argument.py::__init__"
+ ],
+ "pylint#issue-5586": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#pr-5591": [
+  "pylint::pylint/lint/run.py::__init__"
+ ],
+ "pylint#pr-5605": [
+  "pylint::pylint/message/message_id_store.py::_raise_duplicate_msgid"
+ ],
+ "pylint#pr-5610": [
+  "pylint::pylint/extensions/private_import.py::_name_is_private",
+  "pylint::pylint/extensions/private_import.py::visit_import",
+  "pylint::pylint/extensions/private_import.py::visit_importfrom"
+ ],
+ "pylint#pr-5628": [
+  "pylint::pylint/checkers/modified_iterating_checker.py::_is_node_assigns_subscript_name",
+  "pylint::pylint/checkers/modified_iterating_checker.py::_is_node_expr_that_calls_attribute_name"
+ ],
+ "pylint#pr-5630": [
+  "pylint::pylint/checkers/variables.py::leave_excepthandler",
+  "pylint::pylint/checkers/variables.py::visit_excepthandler"
+ ],
+ "pylint#pr-5639": [
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment",
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_except_blocks"
+ ],
+ "pylint#pr-5643": [
+  "pylint::pylint/checkers/non_ascii_names.py::visit_assignname"
+ ],
+ "pylint#pr-5649": [
+  "pylint::pylint/checkers/utils.py::in_for_else_branch",
+  "pylint::pylint/checkers/variables.py::_loopvar_name",
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_try_blocks_when_evaluating_finally_blocks",
+  "pylint::pylint/checkers/variables.py::visit_for"
+ ],
+ "pylint#pr-5651": [
+  "pylint::pylint/checkers/variables.py::_is_only_type_assignment"
+ ],
+ "pylint#pr-5652": [
+  "pylint::pylint/checkers/refactoring/implicit_booleaness_checker.py::visit_call"
+ ],
+ "pylint#issue-5654": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#pr-5656": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#pr-5664": [
+  "pylint::pylint/checkers/classes/class_checker.py::_is_called_inside_special_method"
+ ],
+ "pylint#pr-5666": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#pr-5674": [
+  "pylint::pylint/checkers/stdlib.py::visit_functiondef"
+ ],
+ "pylint#pr-5681": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#issue-5683": [
+  "pylint::pylint/checkers/variables.py::_check_loop_finishes_via_except",
+  "pylint::pylint/checkers/variables.py::_recursive_search_for_continue_before_break",
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_except_blocks"
+ ],
+ "pylint#pr-5684": [
+  "pylint::pylint/checkers/variables.py::_check_loop_finishes_via_except",
+  "pylint::pylint/checkers/variables.py::_recursive_search_for_continue_before_break",
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_except_blocks"
+ ],
+ "pylint#pr-5688": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5690": [
+  "pylint::pylint/checkers/variables.py::visit_global"
+ ],
+ "pylint#pr-5697": [
+  "pylint::pylint/checkers/classes/class_checker.py::visit_functiondef"
+ ],
+ "pylint#issue-5707": [
+  "pylint::pylint/checkers/variables.py::_nodes_to_unpack"
+ ],
+ "pylint#pr-5708": [
+  "pylint::pylint/checkers/variables.py::_nodes_to_unpack"
+ ],
+ "pylint#pr-5709": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#pr-5711": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#issue-5713": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#pr-5718": [
+  "pylint::pylint/checkers/variables.py::_check_consumer"
+ ],
+ "pylint#pr-5720": [
+  "pylint::pylint/checkers/typecheck.py::visit_subscript"
+ ],
+ "pylint#pr-5727": [
+  "pylint::pylint/checkers/variables.py::_check_consumer",
+  "pylint::pylint/checkers/variables.py::_is_first_level_self_reference"
+ ],
+ "pylint#pr-5730": [
+  "pylint::doc/exts/pylint_extensions.py::builder_inited"
+ ],
+ "pylint#pr-5745": [
+  "pylint::pylint/checkers/variables.py::_check_consumer",
+  "pylint::pylint/checkers/variables.py::_is_first_level_self_reference"
+ ],
+ "pylint#pr-5748": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation"
+ ],
+ "pylint#pr-5758": [
+  "pylint::pylint/checkers/spelling.py::_check_spelling"
+ ],
+ "pylint#pr-5764": [
+  "pylint::pylint/checkers/variables.py::_defines_name_raises_or_returns",
+  "pylint::pylint/checkers/variables.py::_uncertain_nodes_in_except_blocks"
+ ],
+ "pylint#pr-5775": [
+  "pylint::pylint/checkers/utils.py::safe_infer"
+ ],
+ "pylint#pr-5812": [
+  "pylint::pylint/checkers/variables.py::_is_variable_violation",
+  "pylint::pylint/checkers/variables.py::_maybe_used_and_assigned_at_once"
+ ]
+}

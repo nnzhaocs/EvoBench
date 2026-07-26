@@ -1,0 +1,63 @@
+merge app and request context (#5812)
+support call template_filter without parens (#5736)
+add config and docs for limits (#5626)
+fix pyright type errors (#5620)
+Fix jinja_loader typehint (#5389)
+address mypy strict findings (#5383)
+Split the App and Blueprint into Sansio and IO parts (#5127)
+remove deprecated code (#5223)
+Merge pull request #5071 from pallets/future-annotations
+Merge pull request #5063 from pallets/cli-routes-domain
+Merge pull request #5058 from pallets/require-blinker
+Merge pull request #4995 from pallets/remove-deprecated
+Merge pull request #4779 from greyli/add-debug-to-run
+Merge pull request #4749 from pallets/shell-env
+Merge pull request #4718 from pallets/remove-lazy-option
+Merge pull request #4692 from pallets/json-provider
+Merge pull request #4682 from pallets/refactor-context-stack
+Improve decorator typing (#4676)
+Merge pull request #4667 from pallets/remove-deprecated-code
+Merge pull request #4666 from pallets/debug-context
+Merge pull request #4624 from pallets/view-init-scope
+Merge pull request #4579 from lecovi/docs/#4574-test-typing
+Merge pull request #4579 from lecovi/docs/#4574-test-typing
+Merge pull request #4603 from f3ndot/use-correct-response-type-for-after-request-callable
+Merge pull request #4477 from tusharsadhwani/decorator-types
+Merge pull request #4189 from mgu/feat/use-exclude-patterns-reloader
+Merge pull request #4342 from pallets/deprecate-req-ctx-g
+Merge pull request #4152 from Yourun-proger/fix
+Merge pull request #4139 from awijaya22/issue4099
+Merge pull request #4074 from pgjones/bp
+Merge pull request #3989 from pgjones/async
+Merge pull request #3973 from pgjones/typing
+Merge pull request #3960 from pallets/shell-interactive-hook
+Merge pull request #3923 from pgjones/nested
+Merge pull request #3412 from pgjones/async
+Merge pull request #3933 from pallets/more-scaffold
+Merge pull request #3907 from pgjones/sugar
+Merge pull request #3828 from pallets/move-send-file
+fix typo in flask shell help (#3744)
+Merge pull request #3709 from MLH-Fellowship/3215-flask-blueprint
+Merge pull request #3554 from pallets/drop-python2
+Merge pull request #3247 from pallets/join-strings
+Merge pull request #3246 from pallets/reorder-imports
+Merge pull request #3241 from jon-stumpf/jss-updates
+Merge pull request #2898 from rochacbruno/2897-Add-Extra-Files-to-CLI
+Merge pull request #3183 from singingwolfboy/pre-commit
+Merge pull request #3011 from greyli/improve-cli-help-text
+Merge pull request #2752 from greyli/patch-9
+Merge pull request #2699 from pallets/javascript
+Merge pull request #2693 from davidism/max-cookie-size
+Merge pull request #2676 from davidism/tutorial
+Add Support for FLASK_ENV (#2570)
+Fix typo in cli.py (#2502)
+document `Flask.register_blueprint` arguments
+Merge pull request #2259 from davidism/routes-command
+Merge pull request #2249 from davidism/provide-automatic-options
+Remove `-a/--app` from Quickstart documentation (#2046)
+Don't passthrough_errors unless instructed. (#2006)
+Merge pull request #1996 from untitaker/propagate-exceptions-werkzeug
+re-add passthrough_errors to cli runner (#1928)
+Merge pull request #1679 from miguelgrinberg/passthrough-errors
+Merge pull request #1291 from flying-sheep/errorhandler-rework
+Merge pull request #736 from ThomasWaldmann/sprint-branch

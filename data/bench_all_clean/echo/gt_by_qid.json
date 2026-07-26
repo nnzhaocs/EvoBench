@@ -1,0 +1,2161 @@
+{
+ "echo#issue-1": [
+  "echo::context.go::Get",
+  "echo::context.go::Set",
+  "echo::context.go::reset"
+ ],
+ "echo#pr-4": [
+  "echo::middleware/logger.go::Logger"
+ ],
+ "echo#issue-16": [
+  "echo::router.go::Find",
+  "echo::router.go::insert",
+  "echo::router.go::newNode"
+ ],
+ "echo#pr-17": [
+  "echo::echo.go::RunServer",
+  "echo::echo.go::RunTLS",
+  "echo::echo.go::RunTLSServer",
+  "echo::echo.go::ServeHTTP"
+ ],
+ "echo#issue-18": [
+  "echo::context.go::Bind",
+  "echo::context.go::Param",
+  "echo::echo.go::Binder",
+  "echo::echo.go::New",
+  "echo::echo.go::NotFoundHandler"
+ ],
+ "echo#pr-19": [
+  "echo::echo.go::Sub"
+ ],
+ "echo#issue-20": [
+  "echo::echo.go::Index",
+  "echo::echo.go::ServeHTTP",
+  "echo::router.go::Get",
+  "echo::router.go::ServeHTTP"
+ ],
+ "echo#issue-22": [
+  "echo::router.go::Find",
+  "echo::router.go::insert",
+  "echo::router.go::newNode"
+ ],
+ "echo#issue-29": [
+  "echo::middleware/logger.go::Logger"
+ ],
+ "echo#issue-32": [
+  "echo::router.go::Find",
+  "echo::router.go::addChild",
+  "echo::router.go::insert",
+  "echo::router.go::newNode"
+ ],
+ "echo#pr-35": [
+  "echo::context.go::Error",
+  "echo::context.go::NoContent",
+  "echo::echo.go::New",
+  "echo::echo.go::ServeHTTP",
+  "echo::middleware/logger.go::Logger"
+ ],
+ "echo#pr-37": [
+  "echo::echo.go::WebSocket",
+  "echo::echo.go::add"
+ ],
+ "echo#issue-38": [
+  "echo::context.go::P",
+  "echo::context.go::Param",
+  "echo::echo.go::Index",
+  "echo::echo.go::New",
+  "echo::echo.go::ServeHTTP",
+  "echo::router.go::Find",
+  "echo::router.go::ServeHTTP"
+ ],
+ "echo#issue-44": [
+  "echo::context.go::HTML",
+  "echo::context.go::JSON",
+  "echo::context.go::String",
+  "echo::echo.go::New",
+  "echo::router.go::Add",
+  "echo::router.go::Find",
+  "echo::router.go::findCchild"
+ ],
+ "echo#issue-46": [
+  "echo::router.go::Find",
+  "echo::router.go::findCchild",
+  "echo::router.go::insert"
+ ],
+ "echo#pr-47": [
+  "echo::echo.go::RunTLSServer",
+  "echo::echo.go::wrapH",
+  "echo::echo.go::wrapM"
+ ],
+ "echo#issue-49": [
+  "echo::router.go::Add",
+  "echo::router.go::Find"
+ ],
+ "echo#issue-51": [
+  "echo::echo.go::New",
+  "echo::response.go::Header",
+  "echo::response.go::Size",
+  "echo::response.go::Status",
+  "echo::response.go::Write",
+  "echo::response.go::WriteHeader",
+  "echo::response.go::reset"
+ ],
+ "echo#pr-54": [
+  "echo::echo.go::Index",
+  "echo::echo.go::Static",
+  "echo::echo.go::add",
+  "echo::examples/web/server.go::main",
+  "echo::examples/web/server.go::welcome",
+  "echo::router.go::insert",
+  "echo::router.go::newNode"
+ ],
+ "echo#pr-56": [
+  "echo::middleware/slash.go::RedirectToSlash",
+  "echo::middleware/slash.go::StripTrailingSlash"
+ ],
+ "echo#issue-65": [
+  "echo::echo.go::New",
+  "echo::echo.go::ServeHTTP",
+  "echo::examples/crud/server.go::main",
+  "echo::examples/hello/server.go::main",
+  "echo::examples/middleware/server.go::main",
+  "echo::examples/web/server.go::main",
+  "echo::router.go::ServeHTTP"
+ ],
+ "echo#pr-70": [
+  "echo::response.go::CloseNotify",
+  "echo::response.go::Flush",
+  "echo::response.go::Hijack",
+  "echo::response.go::Size",
+  "echo::response.go::Write",
+  "echo::response.go::reset"
+ ],
+ "echo#issue-71": [
+  "echo::echo.go::NewHTTPError",
+  "echo::middleware/auth.go::BasicAuth",
+  "echo::middleware/auth.go::JWTAuth",
+  "echo::router.go::Find"
+ ],
+ "echo#issue-78": [
+  "echo::echo.go::NewHTTPError",
+  "echo::examples/website/server.go::main"
+ ],
+ "echo#issue-84": [
+  "echo::echo.go::New",
+  "echo::echo.go::Router",
+  "echo::echo.go::wrapHandler"
+ ],
+ "echo#pr-85": [
+  "echo::echo.go::New",
+  "echo::echo.go::ServeDir",
+  "echo::echo.go::ServeFile",
+  "echo::echo.go::Static",
+  "echo::echo.go::serveFile",
+  "echo::group.go::Static"
+ ],
+ "echo#pr-86": [
+  "echo::response.go::Size",
+  "echo::response.go::reset"
+ ],
+ "echo#issue-95": [
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::URI",
+  "echo::middleware/compress.go::Gzip"
+ ],
+ "echo#issue-100": [
+  "echo::echo.go::serveFile"
+ ],
+ "echo#issue-103": [
+  "echo::context.go::P",
+  "echo::context.go::Param",
+  "echo::context.go::Socket"
+ ],
+ "echo#pr-109": [
+  "echo::echo.go::serveFile"
+ ],
+ "echo#pr-121": [
+  "echo::recipes/file-upload/server.go::upload",
+  "echo::recipes/subdomains/server.go::main"
+ ],
+ "echo#issue-124": [
+  "echo::context.go::Form",
+  "echo::context.go::Param",
+  "echo::context.go::Query",
+  "echo::recipes/file-upload/server.go::upload"
+ ],
+ "echo#issue-135": [
+  "echo::context.go::Error",
+  "echo::context.go::reset",
+  "echo::echo.go::New"
+ ],
+ "echo#pr-138": [
+  "echo::context.go::NoContent",
+  "echo::context.go::Redirect"
+ ],
+ "echo#issue-141": [
+  "echo::echo.go::New"
+ ],
+ "echo#pr-149": [
+  "echo::context.go::HTML",
+  "echo::context.go::JSON",
+  "echo::context.go::NoContent",
+  "echo::context.go::Redirect",
+  "echo::context.go::Render",
+  "echo::context.go::String",
+  "echo::context.go::XML",
+  "echo::echo.go::New"
+ ],
+ "echo#issue-151": [
+  "echo::router.go::Find"
+ ],
+ "echo#issue-154": [
+  "echo::context.go::HTML",
+  "echo::context.go::Render",
+  "echo::context.go::Socket",
+  "echo::context.go::String",
+  "echo::recipes/file-upload/server.go::upload",
+  "echo::recipes/streaming-file-upload/server.go::upload"
+ ],
+ "echo#issue-165": [
+  "echo::echo.go::New"
+ ],
+ "echo#pr-170": [
+  "echo::context.go::File",
+  "echo::context.go::XML",
+  "echo::echo.go::Bind",
+  "echo::echo.go::wrapHandler"
+ ],
+ "echo#pr-172": [
+  "echo::router.go::findTree"
+ ],
+ "echo#issue-176": [
+  "echo::echo.go::New",
+  "echo::echo.go::NewContext",
+  "echo::response.go::Before",
+  "echo::response.go::Header",
+  "echo::response.go::NewResponse",
+  "echo::response.go::WriteHeader"
+ ],
+ "echo#issue-178": [
+  "echo::echo.go::Group",
+  "echo::echo.go::serveFile"
+ ],
+ "echo#issue-184": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-185": [
+  "echo::context.go::File",
+  "echo::context.go::XML"
+ ],
+ "echo#pr-186": [
+  "echo::echo.go::Any",
+  "echo::echo.go::Match",
+  "echo::echo.go::Trace"
+ ],
+ "echo#pr-191": [
+  "echo::echo.go::Debug",
+  "echo::echo.go::SetDebug",
+  "echo::examples/middleware/server.go::main",
+  "echo::router.go::Add",
+  "echo::router.go::Find",
+  "echo::router.go::findTree"
+ ],
+ "echo#pr-200": [
+  "echo::middleware/compress.go::CloseNotify",
+  "echo::middleware/compress.go::Gzip"
+ ],
+ "echo#pr-201": [
+  "echo::response.go::Size"
+ ],
+ "echo#pr-202": [
+  "echo::echo.go::Debug",
+  "echo::echo.go::SetDebug"
+ ],
+ "echo#pr-205": [
+  "echo::router.go::Find"
+ ],
+ "echo#issue-207": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-208": [
+  "echo::recipes/embed-resources/rice.go::main"
+ ],
+ "echo#issue-210": [
+  "echo::echo.go::ServeDir",
+  "echo::echo.go::Static",
+  "echo::router.go::Add",
+  "echo::router.go::Find"
+ ],
+ "echo#pr-214": [
+  "echo::middleware/logger.go::Logger"
+ ],
+ "echo#issue-217": [
+  "echo::router.go::Add",
+  "echo::router.go::Find"
+ ],
+ "echo#issue-218": [
+  "echo::router.go::Find"
+ ],
+ "echo#issue-219": [
+  "echo::router.go::Find"
+ ],
+ "echo#issue-222": [
+  "echo::recipes/file-upload/server.go::upload",
+  "echo::router.go::Find"
+ ],
+ "echo#issue-225": [
+  "echo::context.go::Bind",
+  "echo::context.go::File",
+  "echo::context.go::HTML",
+  "echo::context.go::JSON",
+  "echo::context.go::JSONP",
+  "echo::context.go::Render",
+  "echo::context.go::String",
+  "echo::context.go::XML"
+ ],
+ "echo#pr-233": [
+  "echo::recipes/graceful-shutdown/grace/server.go::main",
+  "echo::recipes/graceful-shutdown/graceful/server.go::main"
+ ],
+ "echo#issue-237": [
+  "echo::context.go::File",
+  "echo::context.go::XML"
+ ],
+ "echo#issue-238": [
+  "echo::echo.go::serveFile"
+ ],
+ "echo#pr-240": [
+  "echo::middleware/logger.go::Logger"
+ ],
+ "echo#pr-243": [
+  "echo::router.go::addHandler",
+  "echo::router.go::findHandler"
+ ],
+ "echo#pr-248": [
+  "echo::context.go::JSON",
+  "echo::context.go::JSONIndent",
+  "echo::context.go::XML",
+  "echo::context.go::XMLIndent"
+ ],
+ "echo#issue-257": [
+  "echo::echo.go::Routes",
+  "echo::echo.go::ServeHTTP",
+  "echo::router.go::ServeHTTP"
+ ],
+ "echo#issue-259": [
+  "echo::context.go::reset"
+ ],
+ "echo#issue-261": [
+  "echo::echo.go::Debug",
+  "echo::echo.go::Hook",
+  "echo::echo.go::Routes",
+  "echo::echo.go::ServeHTTP",
+  "echo::router.go::Find"
+ ],
+ "echo#issue-265": [
+  "echo::router.go::Find",
+  "echo::router.go::findHandler"
+ ],
+ "echo#issue-274": [
+  "echo::middleware/cors.go::CORS"
+ ],
+ "echo#issue-294": [
+  "echo::echo.go::Bind",
+  "echo::engine/fasthttp/server.go::Start",
+  "echo::engine/fasthttp/server.go::WrapHandler",
+  "echo::engine/fasthttp/server.go::WrapMiddleware",
+  "echo::engine/standard/server.go::ServeHTTP",
+  "echo::engine/standard/server.go::WrapHandler",
+  "echo::engine/standard/server.go::WrapMiddleware"
+ ],
+ "echo#issue-298": [
+  "echo::context.go::Bind",
+  "echo::context.go::Validate"
+ ],
+ "echo#issue-304": [
+  "echo::context.go::Logger",
+  "echo::context.go::SetHandler",
+  "echo::echo.go::Logger",
+  "echo::echo.go::New",
+  "echo::echo.go::Router",
+  "echo::echo.go::SetDebug",
+  "echo::echo.go::SetLogger"
+ ],
+ "echo#issue-305": [
+  "echo::context.go::Bind",
+  "echo::context.go::Validate"
+ ],
+ "echo#issue-310": [
+  "echo::context.go::Bind",
+  "echo::context.go::Param",
+  "echo::context.go::ParamNames",
+  "echo::context.go::Render",
+  "echo::context.go::Set",
+  "echo::echo.go::Bind",
+  "echo::echo.go::Error"
+ ],
+ "echo#issue-344": [
+  "echo::echo.go::Bind"
+ ],
+ "echo#pr-349": [
+  "echo::context.go::Logger",
+  "echo::context.go::SetHandler",
+  "echo::echo.go::Logger",
+  "echo::echo.go::New",
+  "echo::echo.go::Router",
+  "echo::echo.go::SetDebug",
+  "echo::echo.go::SetLogger"
+ ],
+ "echo#pr-350": [
+  "echo::echo.go::Bind"
+ ],
+ "echo#issue-364": [
+  "echo::echo.go::New",
+  "echo::echo.go::Run",
+  "echo::engine/fasthttp/server.go::WithConfig",
+  "echo::engine/standard/request.go::FormParams",
+  "echo::engine/standard/request.go::FormValue",
+  "echo::engine/standard/server.go::WithConfig",
+  "echo::router.go::Add",
+  "echo::router.go::NewRouter"
+ ],
+ "echo#pr-371": [
+  "echo::router.go::Add",
+  "echo::router.go::Find"
+ ],
+ "echo#issue-372": [
+  "echo::router.go::Add",
+  "echo::router.go::Find"
+ ],
+ "echo#pr-378": [
+  "echo::engine/fasthttp/server.go::WrapHandler",
+  "echo::engine/fasthttp/server.go::WrapMiddleware",
+  "echo::engine/standard/server.go::WrapHandler",
+  "echo::engine/standard/server.go::WrapMiddleware",
+  "echo::router.go::Find"
+ ],
+ "echo#issue-389": [
+  "echo::engine/fasthttp/server.go::New",
+  "echo::engine/fasthttp/server.go::NewFromConfig",
+  "echo::engine/fasthttp/server.go::NewFromTLS",
+  "echo::engine/standard/server.go::New",
+  "echo::engine/standard/server.go::NewFromConfig",
+  "echo::engine/standard/server.go::NewFromTLS",
+  "echo::middleware/auth.go::BasicAuth"
+ ],
+ "echo#issue-391": [
+  "echo::context.go::ServeContent"
+ ],
+ "echo#pr-393": [
+  "echo::context.go::Attachment",
+  "echo::context.go::File"
+ ],
+ "echo#pr-396": [
+  "echo::echo.go::Bind",
+  "echo::echo.go::WrapMiddleware"
+ ],
+ "echo#issue-399": [
+  "echo::context.go::Deadline",
+  "echo::context.go::Done",
+  "echo::context.go::Err",
+  "echo::context.go::Handle",
+  "echo::context.go::NewContext",
+  "echo::context.go::Value"
+ ],
+ "echo#issue-402": [
+  "echo::engine/fasthttp/request.go::Method",
+  "echo::engine/fasthttp/request.go::SetMethod",
+  "echo::engine/standard/request.go::Method"
+ ],
+ "echo#issue-404": [
+  "echo::echo.go::Debug",
+  "echo::echo.go::New",
+  "echo::echo.go::Pre",
+  "echo::echo.go::Use",
+  "echo::router.go::Handle",
+  "echo::router.go::NewRouter"
+ ],
+ "echo#issue-405": [
+  "echo::echo.go::File",
+  "echo::echo.go::add",
+  "echo::group.go::add"
+ ],
+ "echo#issue-406": [
+  "echo::engine/fasthttp/header.go::Add",
+  "echo::engine/fasthttp/header.go::reset",
+  "echo::engine/fasthttp/url.go::QueryValue",
+  "echo::engine/standard/url.go::QueryValue"
+ ],
+ "echo#issue-407": [
+  "echo::context.go::Get",
+  "echo::context.go::detectContentType",
+  "echo::context.go::reset",
+  "echo::engine/fasthttp/response.go::Write",
+  "echo::engine/fasthttp/response.go::WriteHeader",
+  "echo::engine/standard/response.go::Write",
+  "echo::engine/standard/response.go::reset",
+  "echo::engine/standard/server.go::ServeHTTP",
+  "echo::engine/standard/server.go::WrapHandler",
+  "echo::engine/standard/server.go::WrapMiddleware"
+ ],
+ "echo#issue-410": [
+  "echo::echo.go::Run",
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::SetLogLevel",
+  "echo::middleware/auth.go::BasicAuth",
+  "echo::middleware/logger.go::Logger",
+  "echo::middleware/logger.go::LoggerFromConfig"
+ ],
+ "echo#pr-411": [
+  "echo::engine/fasthttp/header.go::Get",
+  "echo::engine/fasthttp/header.go::Set",
+  "echo::engine/standard/header.go::Get"
+ ],
+ "echo#pr-413": [
+  "echo::engine/fasthttp/response.go::Write",
+  "echo::engine/fasthttp/response.go::WriteHeader"
+ ],
+ "echo#pr-418": [
+  "echo::engine/standard/request.go::MultipartForm"
+ ],
+ "echo#pr-423": [
+  "echo::echo.go::DefaultHTTPErrorHandler",
+  "echo::engine/standard/response.go::CloseNotify",
+  "echo::engine/standard/response.go::Flush",
+  "echo::engine/standard/response.go::Hijack",
+  "echo::engine/standard/response.go::reset",
+  "echo::middleware/recover.go::Recover",
+  "echo::middleware/recover.go::RecoverFromConfig",
+  "echo::middleware/recover.go::RecoverWithConfig"
+ ],
+ "echo#issue-424": [
+  "echo::middleware/compress.go::GzipFromConfig",
+  "echo::middleware/logger.go::LoggerFromConfig"
+ ],
+ "echo#issue-427": [
+  "echo::middleware/compress.go::GzipFromConfig",
+  "echo::middleware/logger.go::LoggerFromConfig"
+ ],
+ "echo#issue-430": [
+  "echo::context.go::NewContext",
+  "echo::context.go::Reset",
+  "echo::engine/fasthttp/server.go::WithConfig",
+  "echo::engine/fasthttp/server.go::WithTLS",
+  "echo::engine/standard/server.go::WithTLS"
+ ],
+ "echo#pr-434": [
+  "echo::context.go::File",
+  "echo::context.go::ServeContent",
+  "echo::middleware/static.go::StaticFromConfig"
+ ],
+ "echo#issue-435": [
+  "echo::engine/fasthttp/request.go::ContentLength",
+  "echo::engine/fasthttp/request.go::IsTLS",
+  "echo::engine/fasthttp/request.go::TLS",
+  "echo::engine/standard/request.go::ContentLength",
+  "echo::engine/standard/request.go::Scheme",
+  "echo::engine/standard/request.go::TLS"
+ ],
+ "echo#issue-437": [
+  "echo::engine/standard/response.go::CloseNotify",
+  "echo::engine/standard/response.go::Flush",
+  "echo::engine/standard/response.go::Header",
+  "echo::engine/standard/response.go::Hijack",
+  "echo::engine/standard/response.go::Write",
+  "echo::engine/standard/response.go::WriteHeader",
+  "echo::engine/standard/response.go::reset",
+  "echo::middleware/compress.go::GzipFromConfig"
+ ],
+ "echo#issue-438": [
+  "echo::context.go::Bind",
+  "echo::context.go::Validate"
+ ],
+ "echo#issue-444": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::WriteHeader"
+ ],
+ "echo#issue-446": [
+  "echo::echo.go::Group",
+  "echo::echo.go::add",
+  "echo::middleware/static.go::StaticFromConfig"
+ ],
+ "echo#issue-454": [
+  "echo::middleware/cors.go::CORS"
+ ],
+ "echo#issue-461": [
+  "echo::echo.go::Run",
+  "echo::group.go::File",
+  "echo::group.go::Use",
+  "echo::router.go::Add",
+  "echo::router.go::NewRouter"
+ ],
+ "echo#issue-463": [
+  "echo::context.go::Echo",
+  "echo::context.go::Handler"
+ ],
+ "echo#pr-469": [
+  "echo::context.go::NewContext",
+  "echo::context.go::Reset",
+  "echo::engine/fasthttp/server.go::WithConfig",
+  "echo::engine/fasthttp/server.go::WithTLS",
+  "echo::engine/standard/server.go::WithTLS"
+ ],
+ "echo#pr-475": [
+  "echo::engine/fasthttp/request.go::IsTLS",
+  "echo::engine/fasthttp/request.go::NewRequest"
+ ],
+ "echo#pr-482": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-488": [
+  "echo::middleware/auth.go::BasicAuthWithConfig",
+  "echo::middleware/auth.go::JWTAuth",
+  "echo::middleware/auth.go::JWTAuthWithConfig"
+ ],
+ "echo#issue-489": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::WriteHeader"
+ ],
+ "echo#issue-496": [
+  "echo::middleware/static.go::StaticWithConfig"
+ ],
+ "echo#issue-505": [
+  "echo::engine/fasthttp/request.go::Referer"
+ ],
+ "echo#issue-517": [
+  "echo::context.go::Contains",
+  "echo::context.go::Del",
+  "echo::engine/fasthttp/header.go::Contains",
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#pr-518": [
+  "echo::context.go::Contains",
+  "echo::context.go::Del",
+  "echo::engine/fasthttp/header.go::Contains",
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#issue-520": [
+  "echo::echo.go::Routes",
+  "echo::echo.go::URL",
+  "echo::echo.go::add",
+  "echo::router.go::NewRouter"
+ ],
+ "echo#pr-521": [
+  "echo::engine/fasthttp/header.go::Contains"
+ ],
+ "echo#issue-525": [
+  "echo::context.go::Blob",
+  "echo::context.go::JSON",
+  "echo::context.go::JSONBlob",
+  "echo::context.go::JSONP",
+  "echo::context.go::JSONPBlob",
+  "echo::context.go::Stream",
+  "echo::context.go::XML",
+  "echo::context.go::XMLBlob"
+ ],
+ "echo#issue-533": [
+  "echo::context.go::Logger",
+  "echo::context.go::SetHandler",
+  "echo::echo.go::Logger",
+  "echo::echo.go::New",
+  "echo::echo.go::Router",
+  "echo::echo.go::SetDebug",
+  "echo::echo.go::SetLogger"
+ ],
+ "echo#pr-535": [
+  "echo::middleware/slash.go::RemoveTrailingSlashWithConfig"
+ ],
+ "echo#pr-539": [
+  "echo::engine/fasthttp/url.go::QueryParams",
+  "echo::engine/standard/request.go::Scheme"
+ ],
+ "echo#pr-550": [
+  "echo::engine/fasthttp/request.go::Cookie",
+  "echo::engine/fasthttp/request.go::Cookies",
+  "echo::engine/fasthttp/request.go::FormParams",
+  "echo::engine/fasthttp/request.go::FormValue",
+  "echo::engine/fasthttp/request.go::Method",
+  "echo::engine/fasthttp/request.go::Referer",
+  "echo::engine/fasthttp/request.go::SetMethod"
+ ],
+ "echo#issue-555": [
+  "echo::engine/fasthttp/request.go::FormParams"
+ ],
+ "echo#issue-556": [
+  "echo::engine/standard/request.go::Scheme"
+ ],
+ "echo#pr-558": [
+  "echo::engine/fasthttp/request.go::FormParams"
+ ],
+ "echo#pr-565": [
+  "echo::echo.go::add",
+  "echo::group.go::File",
+  "echo::group.go::Group",
+  "echo::group.go::Match",
+  "echo::group.go::add"
+ ],
+ "echo#issue-566": [
+  "echo::context.go::Blob",
+  "echo::context.go::JSON",
+  "echo::context.go::JSONBlob",
+  "echo::context.go::JSONP",
+  "echo::context.go::JSONPBlob",
+  "echo::context.go::Stream",
+  "echo::context.go::XML",
+  "echo::context.go::XMLBlob"
+ ],
+ "echo#pr-573": [
+  "echo::context.go::Blob",
+  "echo::context.go::JSON",
+  "echo::context.go::JSONBlob",
+  "echo::context.go::JSONP",
+  "echo::context.go::JSONPBlob",
+  "echo::context.go::Stream",
+  "echo::context.go::XML",
+  "echo::context.go::XMLBlob"
+ ],
+ "echo#issue-574": [
+  "echo::binder.go::Bind",
+  "echo::binder.go::bindData"
+ ],
+ "echo#pr-576": [
+  "echo::engine/fasthttp/request.go::Cookie",
+  "echo::engine/fasthttp/request.go::Cookies"
+ ],
+ "echo#issue-580": [
+  "echo::echo.go::New",
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::Start",
+  "echo::echo.go::StartAutoTLS",
+  "echo::echo.go::StartTLS",
+  "echo::echo.go::config"
+ ],
+ "echo#issue-584": [
+  "echo::middleware/csrf.go::CSRFWithConfig"
+ ],
+ "echo#issue-587": [
+  "echo::engine/fasthttp/url.go::Path",
+  "echo::engine/standard/url.go::Path"
+ ],
+ "echo#issue-589": [
+  "echo::middleware/jwt.go::JWTWithConfig",
+  "echo::middleware/jwt.go::jwtFromCookie",
+  "echo::middleware/jwt.go::jwtFromHeader",
+  "echo::middleware/jwt.go::jwtFromQuery"
+ ],
+ "echo#pr-591": [
+  "echo::middleware/jwt.go::JWTWithConfig",
+  "echo::middleware/jwt.go::jwtFromCookie",
+  "echo::middleware/jwt.go::jwtFromHeader",
+  "echo::middleware/jwt.go::jwtFromQuery"
+ ],
+ "echo#issue-597": [
+  "echo::middleware/csrf.go::CSRFWithConfig",
+  "echo::middleware/csrf.go::generateCSRFToken",
+  "echo::middleware/csrf.go::validateCSRFToken"
+ ],
+ "echo#issue-599": [
+  "echo::router.go::Find"
+ ],
+ "echo#issue-600": [
+  "echo::middleware/csrf.go::CSRF",
+  "echo::middleware/csrf.go::CSRFWithConfig",
+  "echo::middleware/csrf.go::csrfTokenFromQuery",
+  "echo::middleware/csrf.go::generateCSRFToken",
+  "echo::middleware/csrf.go::validateCSRFToken"
+ ],
+ "echo#pr-601": [
+  "echo::middleware/csrf.go::CSRFWithConfig"
+ ],
+ "echo#pr-605": [
+  "echo::echo.go::Run",
+  "echo::echo.go::SetDebug"
+ ],
+ "echo#issue-606": [
+  "echo::echo.go::Run",
+  "echo::echo.go::SetDebug"
+ ],
+ "echo#issue-608": [
+  "echo::echo.go::DefaultHTTPErrorHandler"
+ ],
+ "echo#issue-610": [
+  "echo::binder.go::Bind"
+ ],
+ "echo#pr-611": [
+  "echo::binder.go::Bind"
+ ],
+ "echo#issue-622": [
+  "echo::group.go::File",
+  "echo::group.go::Group",
+  "echo::group.go::Static",
+  "echo::group.go::add"
+ ],
+ "echo#issue-623": [
+  "echo::group.go::Use",
+  "echo::router.go::Find"
+ ],
+ "echo#issue-631": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#issue-647": [
+  "echo::engine/standard/server.go::Start",
+  "echo::middleware/jwt.go::JWT",
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#pr-653": [
+  "echo::context.go::Blob",
+  "echo::context.go::JSON",
+  "echo::context.go::JSONBlob",
+  "echo::context.go::JSONP",
+  "echo::context.go::JSONPBlob",
+  "echo::context.go::Stream",
+  "echo::context.go::XML",
+  "echo::context.go::XMLBlob"
+ ],
+ "echo#issue-656": [
+  "echo::engine/standard/server.go::Start",
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#issue-675": [
+  "echo::group.go::Use"
+ ],
+ "echo#pr-677": [
+  "echo::context.go::XML",
+  "echo::context.go::XMLBlob",
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-680": [
+  "echo::echo.go::config"
+ ],
+ "echo#issue-681": [
+  "echo::echo.go::ServeHTTP"
+ ],
+ "echo#issue-684": [
+  "echo::group.go::Group",
+  "echo::group.go::Static",
+  "echo::group.go::Use",
+  "echo::middleware/redirect.go::HTTPSRedirectWithConfig",
+  "echo::middleware/static.go::Static",
+  "echo::middleware/static.go::StaticWithConfig"
+ ],
+ "echo#issue-685": [
+  "echo::echo.go::WrapMiddleware"
+ ],
+ "echo#pr-686": [
+  "echo::recipe/middleware/server.go::ServerHeader"
+ ],
+ "echo#pr-688": [
+  "echo::recipe/graceful-shutdown/server.go::main"
+ ],
+ "echo#issue-694": [
+  "echo::context.go::File"
+ ],
+ "echo#issue-701": [
+  "echo::echo.go::Match",
+  "echo::echo.go::Static",
+  "echo::echo.go::static",
+  "echo::group.go::Group",
+  "echo::group.go::Static"
+ ],
+ "echo#pr-708": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-710": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-712": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#issue-719": [
+  "echo::echo.go::StartAutoTLS",
+  "echo::echo.go::StartTLS"
+ ],
+ "echo#issue-729": [
+  "echo::router.go::insert"
+ ],
+ "echo#pr-742": [
+  "echo::echo.go::Routes"
+ ],
+ "echo#issue-743": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#issue-755": [
+  "echo::echo.go::New",
+  "echo::echo.go::StartAutoTLS",
+  "echo::echo.go::StartTLS",
+  "echo::recipe/auto-tls/server.go::main"
+ ],
+ "echo#pr-758": [
+  "echo::echo.go::New",
+  "echo::echo.go::StartAutoTLS",
+  "echo::echo.go::StartTLS",
+  "echo::recipe/auto-tls/server.go::main"
+ ],
+ "echo#pr-764": [
+  "echo::binder.go::setWithProperType"
+ ],
+ "echo#pr-765": [
+  "echo::context.go::HTML",
+  "echo::context.go::HTMLBlob",
+  "echo::context.go::Render",
+  "echo::context.go::String"
+ ],
+ "echo#issue-766": [
+  "echo::echo.go::ServeHTTP"
+ ],
+ "echo#issue-781": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::Write",
+  "echo::middleware/compress.go::WriteHeader"
+ ],
+ "echo#pr-786": [
+  "echo::bind.go::bindData",
+  "echo::bind.go::setWithProperType",
+  "echo::bind.go::unmarshalField",
+  "echo::bind.go::unmarshalFieldNonPtr",
+  "echo::bind.go::unmarshalFieldPtr"
+ ],
+ "echo#issue-794": [
+  "echo::context.go::Logger",
+  "echo::context.go::Reset",
+  "echo::router.go::Find",
+  "echo::router.go::checkMethodNotAllowed"
+ ],
+ "echo#pr-795": [
+  "echo::recipe/auto-tls/server.go::main"
+ ],
+ "echo#issue-798": [
+  "echo::echo.go::New",
+  "echo::echo.go::StartServer"
+ ],
+ "echo#pr-799": [
+  "echo::middleware/basic_auth.go::BasicAuthWithConfig"
+ ],
+ "echo#issue-806": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::WriteHeader"
+ ],
+ "echo#pr-812": [
+  "echo::bind.go::bindData",
+  "echo::bind.go::unmarshalField",
+  "echo::bind.go::unmarshalFieldNonPtr"
+ ],
+ "echo#issue-817": [
+  "echo::echo.go::DefaultHTTPErrorHandler"
+ ],
+ "echo#pr-820": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-821": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#pr-825": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#pr-828": [
+  "echo::echo.go::ReleaseContext",
+  "echo::echo.go::ServeHTTP"
+ ],
+ "echo#issue-831": [
+  "echo::echo.go::New",
+  "echo::echo.go::NewContext",
+  "echo::response.go::Before",
+  "echo::response.go::Header",
+  "echo::response.go::NewResponse",
+  "echo::response.go::WriteHeader"
+ ],
+ "echo#pr-835": [
+  "echo::router.go::checkMethodNotAllowed"
+ ],
+ "echo#issue-838": [
+  "echo::group.go::Use",
+  "echo::middleware/static.go::Static",
+  "echo::middleware/static.go::StaticWithConfig",
+  "echo::middleware/static.go::listDir"
+ ],
+ "echo#issue-839": [
+  "echo::context.go::File",
+  "echo::context.go::Stream"
+ ],
+ "echo#issue-864": [
+  "echo::bind.go::Bind"
+ ],
+ "echo#issue-873": [
+  "echo::middleware/compress.go::Flush",
+  "echo::middleware/compress.go::Write"
+ ],
+ "echo#issue-878": [
+  "echo::echo.go::ServeHTTP"
+ ],
+ "echo#pr-881": [
+  "echo::middleware/request_id.go::RequestIDWithConfig"
+ ],
+ "echo#issue-888": [
+  "echo::bind.go::Bind",
+  "echo::echo.go::Error"
+ ],
+ "echo#pr-896": [
+  "echo::middleware/static.go::StaticWithConfig"
+ ],
+ "echo#pr-915": [
+  "echo::bind.go::setWithProperType"
+ ],
+ "echo#pr-916": [
+  "echo::context.go::JSON",
+  "echo::context.go::JSONPBlob",
+  "echo::context.go::String",
+  "echo::context.go::XML"
+ ],
+ "echo#issue-918": [
+  "echo::context.go::JSON",
+  "echo::context.go::JSONPBlob",
+  "echo::context.go::String",
+  "echo::context.go::XML"
+ ],
+ "echo#pr-921": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-925": [
+  "echo::echo.go::StartServer",
+  "echo::echo.go::startTLS"
+ ],
+ "echo#issue-928": [
+  "echo::echo.go::StartServer",
+  "echo::echo.go::startTLS"
+ ],
+ "echo#issue-938": [
+  "echo::middleware/basic_auth.go::BasicAuthWithConfig",
+  "echo::middleware/key_auth.go::KeyAuthWithConfig"
+ ],
+ "echo#pr-941": [
+  "echo::context.go::Scheme"
+ ],
+ "echo#issue-942": [
+  "echo::middleware/jwt.go::JWTWithConfig",
+  "echo::middleware/proxy.go::Next",
+  "echo::middleware/proxy.go::Proxy",
+  "echo::middleware/proxy.go::proxyHTTP",
+  "echo::router.go::insert"
+ ],
+ "echo#pr-947": [
+  "echo::context.go::Stream",
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::Static",
+  "echo::echo.go::static",
+  "echo::middleware/static.go::StaticWithConfig"
+ ],
+ "echo#issue-948": [
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::Static",
+  "echo::echo.go::static",
+  "echo::middleware/static.go::StaticWithConfig"
+ ],
+ "echo#issue-954": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-955": [
+  "echo::middleware/body_dump.go::BodyDump",
+  "echo::middleware/body_dump.go::BodyDumpWithConfig",
+  "echo::middleware/body_dump.go::Flush",
+  "echo::middleware/body_dump.go::Hijack",
+  "echo::middleware/body_dump.go::Write"
+ ],
+ "echo#pr-957": [
+  "echo::middleware/jwt.go::JWT"
+ ],
+ "echo#pr-959": [
+  "echo::echo.go::Error",
+  "echo::echo.go::NewHTTPError"
+ ],
+ "echo#issue-963": [
+  "echo::middleware/static.go::StaticWithConfig"
+ ],
+ "echo#issue-964": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::WriteHeader"
+ ],
+ "echo#pr-966": [
+  "echo::context.go::File",
+  "echo::context.go::Stream",
+  "echo::group.go::Use"
+ ],
+ "echo#pr-968": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#pr-973": [
+  "echo::bind.go::Bind"
+ ],
+ "echo#pr-980": [
+  "echo::bind.go::Bind"
+ ],
+ "echo#pr-984": [
+  "echo::middleware/key_auth.go::KeyAuthWithConfig",
+  "echo::middleware/key_auth.go::keyFromForm",
+  "echo::middleware/key_auth.go::keyFromQuery"
+ ],
+ "echo#issue-988": [
+  "echo::bind.go::Bind",
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-989": [
+  "echo::bind.go::Bind"
+ ],
+ "echo#pr-992": [
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#issue-995": [
+  "echo::echo.go::New",
+  "echo::echo.go::NewContext",
+  "echo::response.go::NewResponse"
+ ],
+ "echo#pr-996": [
+  "echo::context.go::Inline",
+  "echo::context.go::contentDisposition"
+ ],
+ "echo#pr-999": [
+  "echo::echo.go::DefaultHTTPErrorHandler",
+  "echo::middleware/jwt.go::JWTWithConfig",
+  "echo::middleware/jwt.go::jwtFromCookie",
+  "echo::middleware/jwt.go::jwtFromHeader",
+  "echo::middleware/jwt.go::jwtFromQuery"
+ ],
+ "echo#pr-1006": [
+  "echo::echo.go::DefaultHTTPErrorHandler"
+ ],
+ "echo#issue-1019": [
+  "echo::echo.go::Any",
+  "echo::echo.go::Match",
+  "echo::echo.go::TRACE",
+  "echo::group.go::Any",
+  "echo::group.go::Match",
+  "echo::group.go::TRACE"
+ ],
+ "echo#pr-1033": [
+  "echo::middleware/basic_auth.go::BasicAuthWithConfig"
+ ],
+ "echo#pr-1043": [
+  "echo::echo.go::StartServer"
+ ],
+ "echo#issue-1046": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-1052": [
+  "echo::context.go::Param",
+  "echo::router.go::insert"
+ ],
+ "echo#issue-1054": [
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#pr-1066": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-1086": [
+  "echo::context.go::JSON",
+  "echo::context.go::JSONBlob",
+  "echo::context.go::JSONP",
+  "echo::context.go::JSONPretty",
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::WrapMiddleware"
+ ],
+ "echo#issue-1087": [
+  "echo::context.go::JSON",
+  "echo::context.go::JSONBlob",
+  "echo::context.go::JSONP",
+  "echo::context.go::JSONPretty",
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::WrapMiddleware"
+ ],
+ "echo#pr-1121": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#issue-1143": [
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#pr-1158": [
+  "echo::context.go::Cookies",
+  "echo::context.go::Get",
+  "echo::context.go::Reset",
+  "echo::context.go::Set"
+ ],
+ "echo#pr-1164": [
+  "echo::bind.go::Bind",
+  "echo::echo.go::Error"
+ ],
+ "echo#pr-1165": [
+  "echo::bind.go::Bind"
+ ],
+ "echo#pr-1173": [
+  "echo::echo.go::DefaultHTTPErrorHandler"
+ ],
+ "echo#pr-1176": [
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#pr-1182": [
+  "echo::echo.go::ServeHTTP"
+ ],
+ "echo#pr-1189": [
+  "echo::bind.go::Bind",
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-1193": [
+  "echo::context.go::RealIP",
+  "echo::context.go::Scheme"
+ ],
+ "echo#pr-1196": [
+  "echo::echo.go::New",
+  "echo::echo.go::StartServer",
+  "echo::echo.go::startTLS"
+ ],
+ "echo#pr-1197": [
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/proxy.go::proxyHTTP",
+  "echo::middleware/proxy_1_11.go::proxyHTTP"
+ ],
+ "echo#pr-1201": [
+  "echo::router.go::Add"
+ ],
+ "echo#issue-1202": [
+  "echo::middleware/proxy.go::Next",
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#pr-1203": [
+  "echo::middleware/proxy.go::Next",
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#pr-1208": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1243": [
+  "echo::echo.go::Error"
+ ],
+ "echo#pr-1246": [
+  "echo::echo.go::Close"
+ ],
+ "echo#pr-1247": [
+  "echo::middleware/secure.go::SecureWithConfig"
+ ],
+ "echo#pr-1254": [
+  "echo::bind.go::Bind"
+ ],
+ "echo#issue-1260": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#issue-1268": [
+  "echo::middleware/body_dump.go::Flush",
+  "echo::middleware/compress.go::CloseNotify",
+  "echo::middleware/compress.go::Flush",
+  "echo::response.go::CloseNotify",
+  "echo::response.go::Hijack"
+ ],
+ "echo#pr-1271": [
+  "echo::echo.go::Accept"
+ ],
+ "echo#pr-1274": [
+  "echo::middleware/redirect.go::HTTPSNonWWWRedirect",
+  "echo::middleware/redirect.go::HTTPSNonWWWRedirectWithConfig",
+  "echo::middleware/redirect.go::HTTPSWWWRedirect",
+  "echo::middleware/redirect.go::HTTPSWWWRedirectWithConfig",
+  "echo::middleware/redirect.go::NonWWWRedirect",
+  "echo::middleware/redirect.go::NonWWWRedirectWithConfig",
+  "echo::middleware/redirect.go::WWWRedirect",
+  "echo::middleware/redirect.go::WWWRedirectWithConfig"
+ ],
+ "echo#pr-1275": [
+  "echo::middleware/slash.go::AddTrailingSlashWithConfig",
+  "echo::middleware/slash.go::RemoveTrailingSlashWithConfig"
+ ],
+ "echo#pr-1277": [
+  "echo::echo.go::Start",
+  "echo::echo.go::StartTLS"
+ ],
+ "echo#issue-1283": [
+  "echo::middleware/secure.go::SecureWithConfig"
+ ],
+ "echo#pr-1287": [
+  "echo::middleware/secure.go::SecureWithConfig"
+ ],
+ "echo#pr-1289": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#pr-1296": [
+  "echo::middleware/jwt.go::JWTWithConfig",
+  "echo::middleware/jwt.go::jwtFromParam",
+  "echo::middleware/jwt.go::jwtFromQuery"
+ ],
+ "echo#pr-1297": [
+  "echo::context.go::IsTLS",
+  "echo::context.go::IsWebSocket",
+  "echo::middleware/proxy.go::Proxy",
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#pr-1299": [
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::newListener"
+ ],
+ "echo#pr-1301": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#pr-1305": [
+  "echo::echo.go::StartAutoTLS"
+ ],
+ "echo#pr-1314": [
+  "echo::bind.go::unmarshalFieldNonPtr"
+ ],
+ "echo#pr-1317": [
+  "echo::middleware/compress.go::Flush",
+  "echo::middleware/compress.go::Write"
+ ],
+ "echo#issue-1323": [
+  "echo::middleware/key_auth.go::KeyAuthWithConfig"
+ ],
+ "echo#pr-1328": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#pr-1332": [
+  "echo::router.go::addHandler",
+  "echo::router.go::findHandler"
+ ],
+ "echo#issue-1334": [
+  "echo::context.go::json",
+  "echo::response.go::Write",
+  "echo::response.go::WriteHeader"
+ ],
+ "echo#pr-1336": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#pr-1341": [
+  "echo::context.go::Response",
+  "echo::context.go::SetResponse",
+  "echo::echo.go::WrapMiddleware"
+ ],
+ "echo#issue-1348": [
+  "echo::router.go::Find",
+  "echo::router.go::findChildWithLabel"
+ ],
+ "echo#pr-1353": [
+  "echo::bind.go::Bind",
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-1363": [
+  "echo::middleware/secure.go::SecureWithConfig"
+ ],
+ "echo#issue-1368": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1369": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1377": [
+  "echo::context.go::Logger",
+  "echo::context.go::Reset",
+  "echo::context.go::SetHandler",
+  "echo::context.go::SetLogger"
+ ],
+ "echo#pr-1410": [
+  "echo::bind.go::Bind"
+ ],
+ "echo#pr-1411": [
+  "echo::context.go::FormFile",
+  "echo::context.go::FormParams"
+ ],
+ "echo#issue-1412": [
+  "echo::router.go::Find",
+  "echo::router.go::insert"
+ ],
+ "echo#issue-1426": [
+  "echo::echo.go::DefaultHTTPErrorHandler"
+ ],
+ "echo#pr-1429": [
+  "echo::context.go::Reset"
+ ],
+ "echo#pr-1452": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#pr-1456": [
+  "echo::echo.go::Accept"
+ ],
+ "echo#pr-1463": [
+  "echo::context.go::ParamValues",
+  "echo::context.go::SetParamValues"
+ ],
+ "echo#pr-1467": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1469": [
+  "echo::bind.go::bindData",
+  "echo::bind.go::unmarshalField",
+  "echo::bind.go::unmarshalFieldNonPtr"
+ ],
+ "echo#issue-1477": [
+  "echo::echo.go::DefaultHTTPErrorHandler"
+ ],
+ "echo#pr-1478": [
+  "echo::context.go::RealIP",
+  "echo::context.go::Scheme",
+  "echo::ip.go::ExtractIPDirect",
+  "echo::ip.go::ExtractIPFromRealIPHeader",
+  "echo::ip.go::ExtractIPFromXFFHeader",
+  "echo::ip.go::trust",
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#pr-1480": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1489": [
+  "echo::echo.go::StartH2CServer",
+  "echo::echo.go::StartServer"
+ ],
+ "echo#issue-1492": [
+  "echo::context.go::ParamNames",
+  "echo::context.go::ParamValues",
+  "echo::context.go::SetParamNames",
+  "echo::context.go::SetParamValues"
+ ],
+ "echo#issue-1493": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1501": [
+  "echo::router.go::Find"
+ ],
+ "echo#issue-1509": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1512": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1515": [
+  "echo::context.go::FormFile",
+  "echo::context.go::FormParams"
+ ],
+ "echo#issue-1523": [
+  "echo::middleware/csrf.go::CSRFWithConfig"
+ ],
+ "echo#pr-1524": [
+  "echo::middleware/csrf.go::CSRFWithConfig"
+ ],
+ "echo#pr-1525": [
+  "echo::echo.go::Error",
+  "echo::echo.go::NewHTTPError"
+ ],
+ "echo#issue-1526": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1534": [
+  "echo::group.go::File",
+  "echo::group.go::Static"
+ ],
+ "echo#pr-1535": [
+  "echo::context.go::ParamNames",
+  "echo::context.go::ParamValues",
+  "echo::context.go::SetParamNames",
+  "echo::context.go::SetParamValues"
+ ],
+ "echo#pr-1541": [
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#pr-1548": [
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::WrapMiddleware",
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#pr-1563": [
+  "echo::router.go::Find"
+ ],
+ "echo#issue-1565": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-1572": [
+  "echo::echo.go::static"
+ ],
+ "echo#pr-1588": [
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#pr-1604": [
+  "echo::middleware/recover.go::RecoverWithConfig"
+ ],
+ "echo#pr-1607": [
+  "echo::echo.go::add"
+ ],
+ "echo#pr-1615": [
+  "echo::middleware/compress.go::Flush"
+ ],
+ "echo#pr-1622": [
+  "echo::middleware/proxy_1_11.go::proxyHTTP"
+ ],
+ "echo#pr-1623": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#pr-1627": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#pr-1628": [
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::WrapMiddleware",
+  "echo::middleware/middleware.go::rewritePath",
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#pr-1630": [
+  "echo::middleware/middleware.go::rewritePath",
+  "echo::middleware/middleware.go::rewriteRulesRegex",
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#pr-1640": [
+  "echo::context.go::RealIP"
+ ],
+ "echo#issue-1643": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::gzipPool"
+ ],
+ "echo#pr-1651": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#issue-1657": [
+  "echo::group.go::Use"
+ ],
+ "echo#pr-1659": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1661": [
+  "echo::context.go::ParamNames",
+  "echo::context.go::ParamValues",
+  "echo::context.go::SetParamNames",
+  "echo::context.go::SetParamValues"
+ ],
+ "echo#pr-1666": [
+  "echo::echo.go::DefaultHTTPErrorHandler"
+ ],
+ "echo#pr-1667": [
+  "echo::echo.go::Accept",
+  "echo::echo.go::New",
+  "echo::echo.go::StartH2CServer",
+  "echo::echo.go::StartServer",
+  "echo::echo.go::newListener"
+ ],
+ "echo#pr-1669": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#pr-1671": [
+  "echo::echo.go::static"
+ ],
+ "echo#pr-1672": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::gzipPool"
+ ],
+ "echo#pr-1674": [
+  "echo::group.go::Use"
+ ],
+ "echo#pr-1681": [
+  "echo::bind.go::Bind",
+  "echo::bind.go::BindBody",
+  "echo::bind.go::BindQueryParams"
+ ],
+ "echo#pr-1687": [
+  "echo::middleware/decompress.go::Decompress",
+  "echo::middleware/decompress.go::DecompressWithConfig"
+ ],
+ "echo#pr-1699": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::gzipCompressPool",
+  "echo::middleware/compress.go::gzipPool",
+  "echo::middleware/decompress.go::Decompress",
+  "echo::middleware/decompress.go::DecompressWithConfig",
+  "echo::middleware/decompress.go::gzipDecompressPool"
+ ],
+ "echo#pr-1701": [
+  "echo::middleware/static.go::StaticWithConfig"
+ ],
+ "echo#pr-1704": [
+  "echo::middleware/jwt.go::JWTWithConfig",
+  "echo::middleware/jwt.go::jwtFromCookie",
+  "echo::middleware/jwt.go::jwtFromForm"
+ ],
+ "echo#pr-1706": [
+  "echo::response.go::WriteHeader"
+ ],
+ "echo#pr-1718": [
+  "echo::echo.go::static",
+  "echo::middleware/static.go::StaticWithConfig"
+ ],
+ "echo#pr-1722": [
+  "echo::echo.go::static",
+  "echo::group.go::Use"
+ ],
+ "echo#pr-1724": [
+  "echo::middleware/rate_limiter.go::Allow",
+  "echo::middleware/rate_limiter.go::NewRateLimiterMemoryStore",
+  "echo::middleware/rate_limiter.go::NewRateLimiterMemoryStoreWithConfig",
+  "echo::middleware/rate_limiter.go::RateLimiterWithConfig",
+  "echo::middleware/rate_limiter.go::cleanupStaleVisitors"
+ ],
+ "echo#pr-1727": [
+  "echo::bind.go::Bind",
+  "echo::bind.go::BindBody"
+ ],
+ "echo#issue-1729": [
+  "echo::bind.go::Bind",
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-1734": [
+  "echo::bind.go::Bind",
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-1741": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1743": [
+  "echo::middleware/timeout.go::TimeoutWithConfig"
+ ],
+ "echo#pr-1747": [
+  "echo::echo.go::static"
+ ],
+ "echo#pr-1756": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#issue-1761": [
+  "echo::middleware/timeout.go::ServeHTTP",
+  "echo::middleware/timeout.go::TimeoutWithConfig"
+ ],
+ "echo#pr-1767": [
+  "echo::middleware/middleware.go::rewriteRulesRegex",
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/rewrite.go::Rewrite",
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#issue-1771": [
+  "echo::middleware/slash.go::AddTrailingSlashWithConfig",
+  "echo::middleware/slash.go::RemoveTrailingSlashWithConfig"
+ ],
+ "echo#pr-1775": [
+  "echo::middleware/slash.go::AddTrailingSlashWithConfig",
+  "echo::middleware/slash.go::RemoveTrailingSlashWithConfig"
+ ],
+ "echo#issue-1777": [
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::WrapMiddleware",
+  "echo::middleware/middleware.go::rewritePath",
+  "echo::middleware/middleware.go::rewriteRulesRegex"
+ ],
+ "echo#issue-1785": [
+  "echo::echo.go::Start",
+  "echo::echo.go::StartServer",
+  "echo::echo.go::configureServer"
+ ],
+ "echo#issue-1787": [
+  "echo::middleware/static.go::StaticWithConfig",
+  "echo::middleware/static.go::listDir",
+  "echo::middleware/static.go::serveFile"
+ ],
+ "echo#pr-1789": [
+  "echo::middleware/proxy_1_11.go::proxyHTTP"
+ ],
+ "echo#pr-1790": [
+  "echo::context.go::IsTLS",
+  "echo::context.go::IsWebSocket",
+  "echo::middleware/basic_auth.go::BasicAuthWithConfig"
+ ],
+ "echo#pr-1791": [
+  "echo::router.go::Find"
+ ],
+ "echo#pr-1792": [
+  "echo::binder.go::PathParamsBinder",
+  "echo::binder.go::QueryParamsBinder",
+  "echo::middleware/rate_limiter.go::cleanupStaleVisitors"
+ ],
+ "echo#pr-1793": [
+  "echo::echo.go::Start",
+  "echo::echo.go::StartServer",
+  "echo::echo.go::configureServer"
+ ],
+ "echo#issue-1794": [
+  "echo::middleware/timeout.go::TimeoutWithConfig"
+ ],
+ "echo#pr-1796": [
+  "echo::router.go::Add",
+  "echo::router.go::Find",
+  "echo::router.go::addStaticChild",
+  "echo::router.go::checkMethodNotAllowed",
+  "echo::router.go::findChildWithLabel",
+  "echo::router.go::findStaticChild",
+  "echo::router.go::insert",
+  "echo::router.go::newNode"
+ ],
+ "echo#pr-1797": [
+  "echo::middleware/static.go::StaticWithConfig",
+  "echo::middleware/static.go::listDir",
+  "echo::middleware/static.go::serveFile"
+ ],
+ "echo#issue-1798": [
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::WrapMiddleware",
+  "echo::middleware/middleware.go::rewritePath",
+  "echo::middleware/middleware.go::rewriteRulesRegex",
+  "echo::middleware/middleware.go::rewriteURL",
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#pr-1799": [
+  "echo::echo.go::ServeHTTP",
+  "echo::echo.go::WrapMiddleware",
+  "echo::middleware/middleware.go::rewritePath",
+  "echo::middleware/middleware.go::rewriteRulesRegex"
+ ],
+ "echo#pr-1801": [
+  "echo::middleware/timeout.go::ServeHTTP",
+  "echo::middleware/timeout.go::TimeoutWithConfig"
+ ],
+ "echo#pr-1802": [
+  "echo::middleware/middleware.go::rewritePath",
+  "echo::middleware/middleware.go::rewriteRulesRegex",
+  "echo::middleware/middleware.go::rewriteURL",
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/rewrite.go::RewriteWithConfig"
+ ],
+ "echo#issue-1804": [
+  "echo::middleware/timeout.go::ServeHTTP",
+  "echo::router.go::Add",
+  "echo::router.go::Find",
+  "echo::router.go::addHandler",
+  "echo::router.go::insert",
+  "echo::router.go::isHandler",
+  "echo::router.go::newNode"
+ ],
+ "echo#pr-1805": [
+  "echo::middleware/timeout.go::ServeHTTP"
+ ],
+ "echo#issue-1808": [
+  "echo::router.go::Add",
+  "echo::router.go::Find",
+  "echo::router.go::addHandler",
+  "echo::router.go::insert",
+  "echo::router.go::isHandler",
+  "echo::router.go::newNode"
+ ],
+ "echo#pr-1812": [
+  "echo::router.go::Add",
+  "echo::router.go::Find",
+  "echo::router.go::addHandler",
+  "echo::router.go::insert",
+  "echo::router.go::isHandler",
+  "echo::router.go::newNode"
+ ],
+ "echo#pr-1835": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-1845": [
+  "echo::middleware/jwt.go::JWTWithConfig"
+ ],
+ "echo#pr-1847": [
+  "echo::middleware/key_auth.go::KeyAuthWithConfig"
+ ],
+ "echo#pr-1850": [
+  "echo::middleware/csrf.go::CSRFWithConfig",
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/proxy.go::proxyHTTP"
+ ],
+ "echo#issue-1858": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-1866": [
+  "echo::bind.go::BindBody",
+  "echo::bind.go::BindHeaders",
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-1880": [
+  "echo::bind.go::BindBody",
+  "echo::context.go::String",
+  "echo::context.go::json",
+  "echo::context.go::jsonPBlob",
+  "echo::echo.go::New",
+  "echo::json.go::Deserialize",
+  "echo::json.go::Serialize"
+ ],
+ "echo#issue-1905": [
+  "echo::middleware/timeout.go::ServeHTTP"
+ ],
+ "echo#issue-1909": [
+  "echo::middleware/timeout.go::ServeHTTP"
+ ],
+ "echo#pr-1910": [
+  "echo::middleware/timeout.go::ServeHTTP"
+ ],
+ "echo#pr-1921": [
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::Write"
+ ],
+ "echo#pr-1947": [
+  "echo::middleware/timeout.go::ServeHTTP"
+ ],
+ "echo#pr-1980": [
+  "echo::middleware/request_logger.go::ToMiddleware"
+ ],
+ "echo#issue-1987": [
+  "echo::router.go::Add"
+ ],
+ "echo#pr-1988": [
+  "echo::router.go::Add"
+ ],
+ "echo#pr-1991": [
+  "echo::middleware/request_logger.go::ToMiddleware"
+ ],
+ "echo#pr-2007": [
+  "echo::ip.go::ExtractIPDirect",
+  "echo::ip.go::ExtractIPFromRealIPHeader",
+  "echo::ip.go::ExtractIPFromXFFHeader",
+  "echo::ip.go::extractIP"
+ ],
+ "echo#pr-2018": [
+  "echo::middleware/decompress.go::DecompressWithConfig",
+  "echo::middleware/decompress.go::gzipDecompressPool"
+ ],
+ "echo#pr-2027": [
+  "echo::bind.go::Bind"
+ ],
+ "echo#issue-2046": [
+  "echo::router.go::Add"
+ ],
+ "echo#pr-2072": [
+  "echo::middleware/recover.go::RecoverWithConfig"
+ ],
+ "echo#pr-2123": [
+  "echo::echo_fs_go1.16.go::Open",
+  "echo::echo_fs_go1.16.go::newDefaultFS",
+  "echo::echo_fs_go1.16.go::subFS"
+ ],
+ "echo#issue-2133": [
+  "echo::middleware/recover.go::RecoverWithConfig"
+ ],
+ "echo#pr-2134": [
+  "echo::middleware/recover.go::RecoverWithConfig"
+ ],
+ "echo#issue-2135": [
+  "echo::middleware/extractor.go::valuesFromCookie",
+  "echo::middleware/extractor.go::valuesFromForm"
+ ],
+ "echo#pr-2136": [
+  "echo::middleware/extractor.go::valuesFromCookie",
+  "echo::middleware/extractor.go::valuesFromForm"
+ ],
+ "echo#pr-2162": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#pr-2176": [
+  "echo::router.go::findChildWithLabel",
+  "echo::router.go::findStaticChild"
+ ],
+ "echo#pr-2182": [
+  "echo::context.go::RealIP",
+  "echo::ip.go::ExtractIPFromRealIPHeader",
+  "echo::ip.go::ExtractIPFromXFFHeader"
+ ],
+ "echo#pr-2191": [
+  "echo::middleware/basic_auth.go::BasicAuthWithConfig"
+ ],
+ "echo#pr-2206": [
+  "echo::middleware/logger.go::LoggerWithConfig"
+ ],
+ "echo#pr-2219": [
+  "echo::router.go::insert",
+  "echo::router.go::newNode"
+ ],
+ "echo#pr-2257": [
+  "echo::middleware/csrf.go::CSRFWithConfig"
+ ],
+ "echo#issue-2259": [
+  "echo::context_fs.go::File",
+  "echo::echo_fs.go::Static",
+  "echo::echo_fs.go::createFilesystem",
+  "echo::echo_fs.go::subFS",
+  "echo::group_fs.go::Static"
+ ],
+ "echo#pr-2267": [
+  "echo::middleware/compress.go::Flush",
+  "echo::middleware/compress.go::GzipWithConfig",
+  "echo::middleware/compress.go::Write",
+  "echo::middleware/compress.go::WriteHeader",
+  "echo::middleware/compress.go::bufferPool",
+  "echo::middleware/compress.go::gzipCompressPool"
+ ],
+ "echo#pr-2316": [
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#pr-2341": [
+  "echo::middleware/logger.go::LoggerWithConfig",
+  "echo::middleware/request_logger.go::ToMiddleware"
+ ],
+ "echo#pr-2366": [
+  "echo::middleware/rate_limiter.go::NewRateLimiterMemoryStore",
+  "echo::middleware/rate_limiter.go::NewRateLimiterMemoryStoreWithConfig"
+ ],
+ "echo#pr-2380": [
+  "echo::middleware/context_timeout.go::ContextTimeoutWithConfig",
+  "echo::middleware/context_timeout.go::ToMiddleware"
+ ],
+ "echo#pr-2406": [
+  "echo::middleware/static.go::StaticWithConfig",
+  "echo::middleware/static_other.go::isIgnorableOpenFileError",
+  "echo::middleware/static_windows.go::isIgnorableOpenFileError"
+ ],
+ "echo#pr-2409": [
+  "echo::middleware/proxy.go::AddTarget",
+  "echo::middleware/proxy.go::NewRandomBalancer",
+  "echo::middleware/proxy.go::NewRoundRobinBalancer",
+  "echo::middleware/proxy.go::Next",
+  "echo::middleware/proxy.go::proxyRaw"
+ ],
+ "echo#pr-2410": [
+  "echo::middleware/recover.go::RecoverWithConfig"
+ ],
+ "echo#pr-2414": [
+  "echo::middleware/proxy.go::Next",
+  "echo::middleware/proxy.go::Proxy",
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/proxy.go::proxyRaw"
+ ],
+ "echo#pr-2456": [
+  "echo::echo.go::DefaultHTTPErrorHandler"
+ ],
+ "echo#pr-2477": [
+  "echo::middleware/rate_limiter.go::Allow",
+  "echo::middleware/rate_limiter.go::NewRateLimiterMemoryStoreWithConfig",
+  "echo::middleware/rate_limiter.go::cleanupStaleVisitors",
+  "echo::middleware/request_logger.go::ToMiddleware"
+ ],
+ "echo#pr-2483": [
+  "echo::middleware/body_limit.go::BodyLimitWithConfig",
+  "echo::middleware/body_limit.go::Reset"
+ ],
+ "echo#pr-2492": [
+  "echo::middleware/util.go::randomString"
+ ],
+ "echo#pr-2494": [
+  "echo::middleware/util.go::randomString"
+ ],
+ "echo#pr-2518": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#pr-2537": [
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#pr-2540": [
+  "echo::binder.go::unixTime"
+ ],
+ "echo#pr-2541": [
+  "echo::context.go::Inline",
+  "echo::context.go::contentDisposition"
+ ],
+ "echo#pr-2550": [
+  "echo::ip.go::ExtractIPFromRealIPHeader",
+  "echo::ip.go::extractIP"
+ ],
+ "echo#pr-2554": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#issue-2567": [
+  "echo::context.go::JSONBlob",
+  "echo::context.go::JSONPretty",
+  "echo::context.go::json",
+  "echo::context.go::jsonPBlob"
+ ],
+ "echo#pr-2568": [
+  "echo::context.go::JSONBlob",
+  "echo::context.go::JSONPretty",
+  "echo::context.go::json",
+  "echo::context.go::jsonPBlob"
+ ],
+ "echo#pr-2595": [
+  "echo::middleware/body_dump.go::Flush",
+  "echo::middleware/body_dump.go::Hijack",
+  "echo::middleware/body_dump.go::Write",
+  "echo::middleware/compress.go::Flush",
+  "echo::middleware/compress.go::Hijack",
+  "echo::response.go::Flush",
+  "echo::response.go::Hijack",
+  "echo::response.go::Write"
+ ],
+ "echo#issue-2599": [
+  "echo::middleware/static.go::ToMiddleware"
+ ],
+ "echo#pr-2606": [
+  "echo::middleware/middleware.go::rewriteURL",
+  "echo::middleware/rate_limiter.go::RateLimiterWithConfig"
+ ],
+ "echo#pr-2607": [
+  "echo::bind.go::bindData",
+  "echo::bind.go::setWithProperType",
+  "echo::bind.go::unmarshalField",
+  "echo::bind.go::unmarshalFieldNonPtr",
+  "echo::bind.go::unmarshalFieldPtr",
+  "echo::bind.go::unmarshalInputToField",
+  "echo::bind.go::unmarshalInputsToField"
+ ],
+ "echo#pr-2608": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-2611": [
+  "echo::context.go::ParamValues",
+  "echo::context.go::Reset",
+  "echo::context.go::SetParamNames",
+  "echo::context.go::SetParamValues"
+ ],
+ "echo#pr-2616": [
+  "echo::router.go::Add",
+  "echo::router.go::add",
+  "echo::router.go::insert"
+ ],
+ "echo#pr-2624": [
+  "echo::middleware/proxy.go::ProxyWithConfig"
+ ],
+ "echo#issue-2629": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-2636": [
+  "echo::router.go::insert"
+ ],
+ "echo#pr-2656": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-2717": [
+  "echo::bind.go::BindBody",
+  "echo::bind.go::BindQueryParams"
+ ],
+ "echo#pr-2732": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#pr-2735": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#issue-2757": [
+  "echo::ip.go::ExtractIPDirect",
+  "echo::ip.go::extractIP",
+  "echo::response.go::Flush",
+  "echo::response.go::Write"
+ ],
+ "echo#pr-2762": [
+  "echo::middleware/proxy.go::ProxyWithConfig",
+  "echo::middleware/proxy.go::proxyRaw"
+ ],
+ "echo#pr-2782": [
+  "echo::middleware/cors.go::CORSWithConfig"
+ ],
+ "echo#issue-2789": [
+  "echo::ip.go::ExtractIPDirect",
+  "echo::ip.go::extractIP",
+  "echo::response.go::Flush",
+  "echo::response.go::Write"
+ ],
+ "echo#issue-2794": [
+  "echo::middleware/basic_auth.go::BasicAuthWithConfig"
+ ],
+ "echo#issue-2813": [
+  "echo::bind.go::BindBody",
+  "echo::bind.go::bindData",
+  "echo::bind.go::setWithProperType",
+  "echo::bind.go::unmarshalInputToField",
+  "echo::bind.go::unmarshalInputsToField"
+ ],
+ "echo#pr-2849": [
+  "echo::middleware/logger.go::Logger",
+  "echo::middleware/logger.go::LoggerWithConfig",
+  "echo::middleware/request_logger.go::RequestLogger"
+ ],
+ "echo#issue-2897": [
+  "echo::server.go::start"
+ ],
+ "echo#pr-2900": [
+  "echo::middleware/request_logger.go::ToMiddleware"
+ ],
+ "echo#pr-2931": [
+  "echo::echo.go::New",
+  "echo::echo.go::NewWithConfig",
+  "echo::echo.go::Open",
+  "echo::echo.go::newDefaultFS"
+ ],
+ "echo#pr-2932": [
+  "echo::server.go::start"
+ ],
+ "echo#pr-2933": [
+  "echo::context.go::RealIP",
+  "echo::context.go::Scheme",
+  "echo::ip.go::ExtractIPFromRealIPHeader",
+  "echo::ip.go::ExtractIPFromXFFHeader",
+  "echo::ip.go::extractIP",
+  "echo::ip.go::trust"
+ ],
+ "echo#pr-2941": [
+  "echo::bind.go::bindData",
+  "echo::middleware/basic_auth.go::ToMiddleware",
+  "echo::middleware/static.go::ToMiddleware",
+  "echo::response.go::UnwrapResponse",
+  "echo::router.go::Route"
+ ],
+ "echo#pr-2953": [
+  "echo::context.go::IsWebSocket",
+  "echo::context.go::Scheme"
+ ],
+ "echo#issue-2961": [
+  "echo::middleware/rate_limiter.go::Allow",
+  "echo::middleware/rate_limiter.go::ToMiddleware"
+ ],
+ "echo#pr-2964": [
+  "echo::context.go::json"
+ ],
+ "echo#pr-2966": [
+  "echo::middleware/body_dump.go::Write",
+  "echo::router.go::Route",
+  "echo::router.go::insert"
+ ],
+ "echo#pr-2969": [
+  "echo::middleware/extractor.go::createExtractors"
+ ],
+ "echo#pr-2994": [
+  "echo::middleware/proxy.go::ToMiddleware"
+ ],
+ "echo#pr-3005": [
+  "echo::bind.go::bindData"
+ ],
+ "echo#pr-3006": [
+  "echo::middleware/static.go::ToMiddleware"
+ ],
+ "echo#pr-3007": [
+  "echo::middleware/rate_limiter.go::Allow",
+  "echo::middleware/rate_limiter.go::ToMiddleware"
+ ],
+ "echo#pr-3009": [
+  "echo::echo.go::NewWithConfig",
+  "echo::echo.go::Static",
+  "echo::echo.go::StaticDirectoryHandler",
+  "echo::echo.go::StaticFS",
+  "echo::group.go::StaticFS",
+  "echo::middleware/static.go::ToMiddleware"
+ ],
+ "echo#pr-3016": [
+  "echo::echo.go::NewWithConfig",
+  "echo::echo.go::Static",
+  "echo::echo.go::StaticDirectoryHandler",
+  "echo::echo.go::StaticFS",
+  "echo::group.go::StaticFS",
+  "echo::middleware/static.go::ToMiddleware"
+ ],
+ "echo#pr-3023": [
+  "echo::json.go::Deserialize",
+  "echo::json.go::Serialize"
+ ],
+ "echo#pr-3024": [
+  "echo::router.go::Remove",
+  "echo::router.go::addStaticChild",
+  "echo::router.go::findStaticChild",
+  "echo::router.go::insert",
+  "echo::router.go::newNode"
+ ],
+ "echo#issue-3036": [
+  "echo::bind.go::Bind",
+  "echo::echo.go::PUT",
+  "echo::group.go::PUT",
+  "echo::router.go::find",
+  "echo::router.go::isHandler",
+  "echo::router.go::set",
+  "echo::router.go::updateAllowHeader"
+ ]
+}

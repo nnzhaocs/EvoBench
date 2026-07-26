@@ -1,0 +1,11 @@
+{
+  "repo": "express",
+  "units": 36,
+  "updates": 136,
+  "queries": 49,
+  "gt_queries": 42,
+  "dangling_gt": 0,
+  "selfcheck_pass": true,
+  "synthetic_data": false,
+  "note": "格式转换 only；未新增/编造任何查询或 GT"
+}

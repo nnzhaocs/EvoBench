@@ -1,0 +1,11 @@
+{
+  "repo": "gin",
+  "units": 434,
+  "updates": 1802,
+  "queries": 499,
+  "gt_queries": 474,
+  "dangling_gt": 0,
+  "selfcheck_pass": true,
+  "synthetic_data": false,
+  "note": "格式转换 only；未新增/编造任何查询或 GT"
+}

@@ -1,0 +1,145 @@
+{
+ "examples: improve view count in cookie-sessions": [
+  "express::examples/cookie-sessions/index.js::count"
+ ],
+ "docs: add missing JSDoc param for parseExtendedQueryString": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "lint: remove unused parameters in examples": [
+  "express::examples/error/index.js::error"
+ ],
+ "lint: remove deprecated String.prototype.substr": [
+  "express::lib/router/index.js::getProtohost",
+  "express::lib/view.js::View"
+ ],
+ "docs: fix typo in private api jsdoc": [
+  "express::lib/response.js::sendfile"
+ ],
+ "Fix handling of undefined when \"json escape\" is enabled": [
+  "express::lib/response.js::stringify"
+ ],
+ "lint: remove usages of \"==\"": [
+  "express::examples/auth/index.js::authenticate",
+  "express::examples/route-middleware/index.js::andRestrictToSelf"
+ ],
+ "Add \"escape json\" setting for res.json and res.jsonp": [
+  "express::lib/response.js::stringify"
+ ],
+ "perf: re-use options object when generating ETags": [
+  "express::lib/utils.js::createETagGenerator"
+ ],
+ "Improve error message when autoloading invalid view engine": [
+  "express::lib/view.js::View"
+ ],
+ "lint: remove unused err argument": [
+  "express::lib/router/index.js::restore"
+ ],
+ "Add debug message when loading view engine": [
+  "express::lib/view.js::View"
+ ],
+ "examples: use pbkdf2-password module in auth example": [
+  "express::examples/auth/index.js::authenticate"
+ ],
+ "Improve performance for res.json/res.jsonp in most cases": [
+  "express::lib/response.js::stringify"
+ ],
+ "perf: use strict equality when possible": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "Fix hiding platform issues with decodeURIComponent": [
+  "express::lib/router/layer.js::decode_param"
+ ],
+ "Fix regression where \"Request aborted\" is logged using res.sendFile": [
+  "express::lib/response.js::sendfile"
+ ],
+ "Fix constructing application with non-configurable prototype properties": [
+  "express::lib/express.js::createApplication"
+ ],
+ "Fix res.sendFile not always detecting aborted connection": [
+  "express::lib/response.js::onaborted"
+ ],
+ "Fix incorrect \"Request aborted\" for res.sendFile when HEAD or 304": [
+  "express::lib/response.js::onfile",
+  "express::lib/response.js::onstream"
+ ],
+ "Invoke callback for sendfile when client aborts": [
+  "express::lib/response.js::error",
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onfinish",
+  "express::lib/response.js::onstream",
+  "express::lib/response.js::sendfile",
+  "express::lib/response.js::stream"
+ ],
+ "Add res.sendFile": [
+  "express::lib/response.js::onerror",
+  "express::lib/response.js::onstream"
+ ],
+ "Invoke router.param() only when route matches": [
+  "express::lib/router/route.js::Route"
+ ],
+ "Add mergeParams option to Router": [
+  "express::lib/router/index.js::mergeParams"
+ ],
+ "Restore req.params after invoking Router": [
+  "express::lib/router/index.js::restore",
+  "express::lib/router/index.js::wrap"
+ ],
+ "Fix req.next when inside router instance": [
+  "express::lib/router/index.js::next",
+  "express::lib/router/index.js::wrap"
+ ],
+ "Merge pull request #2065 from WebReflection/patch-1": [
+  "express::lib/router/index.js::trim_prefix"
+ ],
+ "Merge pull request #2008 from agchou/clean-up-code": [
+  "express::examples/auth/app.js::authenticate",
+  "express::examples/content-negotiation/index.js::format"
+ ],
+ "Merge pull request #2004 from agchou/clean-up-code": [
+  "express::lib/router/layer.js::Layer"
+ ],
+ "Merge pull request #1964 from blakeembrey/modular-routing": [
+  "express::lib/router/layer.js::Layer"
+ ],
+ "Merge pull request #1935 from visionmedia/router-params-middleware": [
+  "express::lib/router/index.js::trim_prefix",
+  "express::lib/router/layer.js::Layer",
+  "express::lib/router/route.js::Route",
+  "express::lib/utils.js::acceptParams"
+ ],
+ "Merge pull request #1835 from visionmedia/change-req-params-to-object": [
+  "express::lib/router/route.js::Route"
+ ],
+ "expose connect.middleware using Object.getOwnPropertyDescriptor()": [
+  "express::lib/express.js::createApplication"
+ ],
+ "Merge pull request #1729 from patelatharva/patch-1": [
+  "express::examples/content-negotiation/index.js::format"
+ ],
+ "Merge pull request #1625 from ForbesLindesay/patch-1": [
+  "express::lib/view.js::View"
+ ],
+ "Merge pull request #1578 from Notificare/master": [
+  "express::lib/utils.js::acceptParams"
+ ],
+ "Merge pull request #1466 from ericf/settings-view-engine": [
+  "express::lib/view.js::View"
+ ],
+ "Merge pull request #951 from Raynos/patch-1": [
+  "express::lib/router/index.js::Router"
+ ],
+ "decouple Router options. Closes #941": [
+  "express::lib/router/index.js::Router"
+ ],
+ "Changed template engine signature to engine.__express(path, options, fn). Closes #878": [
+  "express::lib/view.js::View"
+ ],
+ "Added support for multiple callbacks for `app.param()`. Closes #801": [
+  "express::lib/router/index.js::param",
+  "express::lib/router/index.js::paramCallback"
+ ],
+ "Refactored router. Closes #639": [
+  "express::lib/router/index.js::Router",
+  "express::lib/router/route.js::Route"
+ ]
+}

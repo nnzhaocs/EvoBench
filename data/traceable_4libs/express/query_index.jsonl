@@ -1,0 +1,49 @@
+{"line_no": 0, "query_id": "express#issue-5414", "issue_number": 5414, "query": "examples: improve view count in cookie-sessions"}
+{"line_no": 1, "query_id": "express#issue-5130", "issue_number": 5130, "query": "docs: add missing JSDoc param for parseExtendedQueryString"}
+{"line_no": 2, "query_id": "express#issue-5113", "issue_number": 5113, "query": "lint: remove unused parameters in examples"}
+{"line_no": 3, "query_id": "express#issue-4860", "issue_number": 4860, "query": "lint: remove deprecated String.prototype.substr"}
+{"line_no": 4, "query_id": "express#issue-4843", "issue_number": 4843, "query": "docs: fix typo in private api jsdoc"}
+{"line_no": 5, "query_id": "express#issue-4744", "issue_number": 4744, "query": "Fix handling of undefined when \"json escape\" is enabled"}
+{"line_no": 6, "query_id": "express#issue-3540", "issue_number": 3540, "query": "lint: remove usages of \"==\""}
+{"line_no": 7, "query_id": "express#issue-3268", "issue_number": 3268, "query": "Add \"escape json\" setting for res.json and res.jsonp"}
+{"line_no": 8, "query_id": "express#issue-3269", "issue_number": 3269, "query": "Add \"escape json\" setting for res.json and res.jsonp"}
+{"line_no": 9, "query_id": "express#issue-3313", "issue_number": 3313, "query": "perf: re-use options object when generating ETags"}
+{"line_no": 10, "query_id": "express#issue-3314", "issue_number": 3314, "query": "perf: re-use options object when generating ETags"}
+{"line_no": 11, "query_id": "express#issue-3403", "issue_number": 3403, "query": "Improve error message when autoloading invalid view engine"}
+{"line_no": 12, "query_id": "express#issue-3228", "issue_number": 3228, "query": "lint: remove unused err argument"}
+{"line_no": 13, "query_id": "express#issue-3158", "issue_number": 3158, "query": "Add debug message when loading view engine"}
+{"line_no": 14, "query_id": "express#issue-3207", "issue_number": 3207, "query": "examples: use pbkdf2-password module in auth example"}
+{"line_no": 15, "query_id": "express#issue-2900", "issue_number": 2900, "query": "Improve performance for res.json/res.jsonp in most cases"}
+{"line_no": 16, "query_id": "express#issue-2722", "issue_number": 2722, "query": "perf: use strict equality when possible"}
+{"line_no": 17, "query_id": "express#issue-2652", "issue_number": 2652, "query": "Fix hiding platform issues with decodeURIComponent"}
+{"line_no": 18, "query_id": "express#issue-2571", "issue_number": 2571, "query": "Fix regression where \"Request aborted\" is logged using res.sendFile"}
+{"line_no": 19, "query_id": "express#issue-2561", "issue_number": 2561, "query": "Fix constructing application with non-configurable prototype properties"}
+{"line_no": 20, "query_id": "express#issue-2489", "issue_number": 2489, "query": "Fix res.sendFile not always detecting aborted connection"}
+{"line_no": 21, "query_id": "express#issue-2481", "issue_number": 2481, "query": "Fix incorrect \"Request aborted\" for res.sendFile when HEAD or 304"}
+{"line_no": 22, "query_id": "express#issue-2305", "issue_number": 2305, "query": "Invoke callback for sendfile when client aborts"}
+{"line_no": 23, "query_id": "express#issue-2300", "issue_number": 2300, "query": "Invoke callback for sendfile when client aborts"}
+{"line_no": 24, "query_id": "express#issue-2189", "issue_number": 2189, "query": "Invoke callback for sendfile when client aborts"}
+{"line_no": 25, "query_id": "express#issue-2303", "issue_number": 2303, "query": "Invoke callback for sendfile when client aborts"}
+{"line_no": 26, "query_id": "express#issue-2266", "issue_number": 2266, "query": "Add res.sendFile"}
+{"line_no": 27, "query_id": "express#issue-1906", "issue_number": 1906, "query": "Add res.sendFile"}
+{"line_no": 28, "query_id": "express#issue-2206", "issue_number": 2206, "query": "Invoke router.param() only when route matches"}
+{"line_no": 29, "query_id": "express#issue-2153", "issue_number": 2153, "query": "Add mergeParams option to Router"}
+{"line_no": 30, "query_id": "express#issue-2203", "issue_number": 2203, "query": "Add mergeParams option to Router"}
+{"line_no": 31, "query_id": "express#issue-2163", "issue_number": 2163, "query": "Restore req.params after invoking Router"}
+{"line_no": 32, "query_id": "express#issue-2016", "issue_number": 2016, "query": "Fix req.next when inside router instance"}
+{"line_no": 33, "query_id": "express#issue-2065", "issue_number": 2065, "query": "Merge pull request #2065 from WebReflection/patch-1"}
+{"line_no": 34, "query_id": "express#issue-2008", "issue_number": 2008, "query": "Merge pull request #2008 from agchou/clean-up-code"}
+{"line_no": 35, "query_id": "express#issue-2004", "issue_number": 2004, "query": "Merge pull request #2004 from agchou/clean-up-code"}
+{"line_no": 36, "query_id": "express#issue-1964", "issue_number": 1964, "query": "Merge pull request #1964 from blakeembrey/modular-routing"}
+{"line_no": 37, "query_id": "express#issue-1935", "issue_number": 1935, "query": "Merge pull request #1935 from visionmedia/router-params-middleware"}
+{"line_no": 38, "query_id": "express#issue-1835", "issue_number": 1835, "query": "Merge pull request #1835 from visionmedia/change-req-params-to-object"}
+{"line_no": 39, "query_id": "express#issue-1853", "issue_number": 1853, "query": "expose connect.middleware using Object.getOwnPropertyDescriptor()"}
+{"line_no": 40, "query_id": "express#issue-1729", "issue_number": 1729, "query": "Merge pull request #1729 from patelatharva/patch-1"}
+{"line_no": 41, "query_id": "express#issue-1625", "issue_number": 1625, "query": "Merge pull request #1625 from ForbesLindesay/patch-1"}
+{"line_no": 42, "query_id": "express#issue-1578", "issue_number": 1578, "query": "Merge pull request #1578 from Notificare/master"}
+{"line_no": 43, "query_id": "express#issue-1466", "issue_number": 1466, "query": "Merge pull request #1466 from ericf/settings-view-engine"}
+{"line_no": 44, "query_id": "express#issue-951", "issue_number": 951, "query": "Merge pull request #951 from Raynos/patch-1"}
+{"line_no": 45, "query_id": "express#issue-941", "issue_number": 941, "query": "decouple Router options. Closes #941"}
+{"line_no": 46, "query_id": "express#issue-878", "issue_number": 878, "query": "Changed template engine signature to engine.__express(path, options, fn). Closes #878"}
+{"line_no": 47, "query_id": "express#issue-801", "issue_number": 801, "query": "Added support for multiple callbacks for `app.param()`. Closes #801"}
+{"line_no": 48, "query_id": "express#issue-639", "issue_number": 639, "query": "Refactored router. Closes #639"}
