@@ -1,0 +1,112 @@
+﻿
+==================================================================
+模型: minilm  (all-MiniLM-L6-v2)
+==================================================================
+C:\Users\26240\AppData\Local\Programs\Python\Python311\python.exe : WARNING: All log messages before absl::InitializeLo
+g() is called are written to STDERR
+At line:1 char:959
++ ... irror.com'; C:\Users\26240\AppData\Local\Programs\Python\Python311\py ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1784605214.796087   39252 port.cc:153] oneDNN custom operations are on. You may see slightly different nume
+rical results due to floating-point round-off errors from different computation orders. To turn them off, set the envir
+onment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784605235.879182   39252 port.cc:153] oneDNN custom operations are on. You may see slightly different nume
+rical results due to floating-point round-off errors from different computation orders. To turn them off, set the envir
+onment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py
+:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cro
+ss_entropy instead.
+
+  ✅ 真实 minilm（all-MiniLM-L6-v2, 384维, ST原生）
+  【相似对】(应高余弦)
+    py:加类型注解           cos=0.919
+    py:变量重命名           cos=0.764
+    go:参数重命名           cos=0.864
+    js:等价改写            cos=0.535
+  【不相似对】(应低余弦)
+    py:加法vs读文件         cos=0.120
+    py:排序vsHTTP        cos=0.044
+    go:绑定vs日志          cos=0.241
+    js:求和vsDOM         cos=0.171
+
+  相似对均值 0.770 | 不相似对均值 0.144 | 差距 +0.626
+  ✅ 接入健康：相似对余弦明显高于不相似对（能分辨代码语义）。
+     → 若该模型 recall 低，是【任务错配】非【接入bug】，论文§6.2b解释成立。
+
+==================================================================
+模型: codebert  (microsoft/codebert-base)
+==================================================================
+  ✅ 真实 codebert（microsoft/codebert-base, 768维, HF+mean-pool）
+  【相似对】(应高余弦)
+    py:加类型注解           cos=0.995
+    py:变量重命名           cos=1.000
+    go:参数重命名           cos=1.000
+    js:等价改写            cos=0.995
+  【不相似对】(应低余弦)
+    py:加法vs读文件         cos=0.994
+    py:排序vsHTTP        cos=0.967
+    go:绑定vs日志          cos=0.990
+    js:求和vsDOM         cos=0.993
+
+  相似对均值 0.997 | 不相似对均值 0.986 | 差距 +0.011
+  🔴 接入可疑：相似≈不相似（差距+0.011），模型分辨不出代码语义。
+     → 可能 pooling/取层/归一化有误。检查 build_step4_multimodel._encode_hf。
+     → 修好前，该模型的 sweep/recall 数据不可信，不要写进论文。
+  🔴🔴 警告：所有余弦几乎相同(std=0.010)，向量可能塌缩！严重接入bug。
+
+==================================================================
+模型: graphcodebert  (microsoft/graphcodebert-base)
+==================================================================
+Some weights of RobertaModel were not initialized from the model checkpoint at microsoft/graphcodebert-base and are new
+ly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  ✅ 真实 graphcodebert（microsoft/graphcodebert-base, 768维, HF+mean-pool）
+  【相似对】(应高余弦)
+    py:加类型注解           cos=0.957
+    py:变量重命名           cos=0.980
+    go:参数重命名           cos=0.988
+    js:等价改写            cos=0.901
+  【不相似对】(应低余弦)
+    py:加法vs读文件         cos=0.855
+    py:排序vsHTTP        cos=0.864
+    go:绑定vs日志          cos=0.852
+    js:求和vsDOM         cos=0.861
+
+  相似对均值 0.957 | 不相似对均值 0.858 | 差距 +0.099
+  ⚠️ 分辨力偏弱（差距+0.099）：能分但不利落。
+     → 大概率接入没坏、只是模型对这类改写不敏感；但建议人工看上面几对余弦是否合理。
+
+==================================================================
+模型: unixcoder  (microsoft/unixcoder-base)
+==================================================================
+  ✅ 真实 unixcoder（microsoft/unixcoder-base, 768维, HF+mean-pool）
+  【相似对】(应高余弦)
+    py:加类型注解           cos=0.824
+    py:变量重命名           cos=0.643
+    go:参数重命名           cos=0.935
+    js:等价改写            cos=0.551
+  【不相似对】(应低余弦)
+    py:加法vs读文件         cos=0.128
+    py:排序vsHTTP        cos=0.076
+    go:绑定vs日志          cos=0.294
+    js:求和vsDOM         cos=0.048
+
+  相似对均值 0.738 | 不相似对均值 0.136 | 差距 +0.602
+  ✅ 接入健康：相似对余弦明显高于不相似对（能分辨代码语义）。
+     → 若该模型 recall 低，是【任务错配】非【接入bug】，论文§6.2b解释成立。
+
+==================================================================
+汇总
+==================================================================
+模型                 相似均值      不相似均值      差距  判定
+minilm             0.77      0.144  +0.626  ✅ healthy
+codebert          0.997      0.986  +0.011  🔴 broken
+graphcodebert     0.957      0.858  +0.099  ⚠️ weak
+unixcoder         0.738      0.136  +0.602  ✅ healthy
+
+🔴 接入可疑的模型: ['codebert']
+   → 这些模型的 recall(如CodeBERT 0.116)可能是bug不是真信号，修接入后重跑。

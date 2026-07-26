@@ -1,0 +1,263 @@
+﻿python.exe : WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+At line:1 char:1014
++ ... FFLINE='1'; & 'C:\Users\26240\AppData\Local\Programs\Python\Python311 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1784976197.004165   22392 port.cc:153] oneDNN custom operations are on. You may see slightly different nume
+rical results due to floating-point round-off errors from different computation orders. To turn them off, set the envir
+onment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784976203.420831   22392 port.cc:153] oneDNN custom operations are on. You may see slightly different nume
+rical results due to floating-point round-off errors from different computation orders. To turn them off, set the envir
+onment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Some weights of RobertaModel were not initialized from the model checkpoint at microsoft/graphcodebert-base and are new
+ly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  ✅ 真实 graphcodebert（microsoft/graphcodebert-base, 768维, HF+mean-pool）
+
+=== aiohttp (nq=93, |H|_new=5, |H|_narrow=1) ===
+  [I(u) 定义对比] 扩展 |H|=5 vs 旧 |H|=1 (扩展/旧=5.00x)
+  [检索 k=10] Recall=0.161 MRR=0.071 nDCG=0.101 翻转率=0.935
+  [检索 k=5] Recall=0.104 MRR=0.064 nDCG=0.083 翻转率=0.839
+  [检索 k=20] Recall=0.286 MRR=0.082 nDCG=0.144 翻转率=1.000
+  [Δ_edit] 均值=+0.0553 95%CI=[+0.0177,+0.1037] 配对p=NA (n=93, 非零差=7)
+  [δ分布] p10/p50/p90=0.0/0.0/0.0332 max=0.0944 δ<0.02占比=0.8802
+  [GT大小] 均值=1.5806 中位=1 单函数占比=0.7312 2-3占比=0.2043
+  ⚠️⚠️ |H|=5<10: 决策/判别力指标噪声大,别单独进表,仅汇总用
+  [决策] always         F1(Disc)=0.143 P=0.077 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.667 P=0.571 R=0.800 漏判=0.200 省算=89.2%
+  [决策] audit(τ=0.05)  F1(Disc)=0.500 P=0.667 R=0.400 漏判=0.600 省算=95.4%
+  [决策] audit(τ=0.1)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.2)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [W16 δ vs 编辑量] Spearman ρ = -0.074 (n=409)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=2.0 均值=2.0 n=5
+    audit(τ=0.02)  missed I(u) 中位=1.0 均值=1.0 n=1 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=2.0 均值=1.667 n=3 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=2.0 均值=2.0 n=5 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=2.0 均值=2.0 n=5 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== click (nq=84, |H|_new=7, |H|_narrow=5) ===
+  [I(u) 定义对比] 扩展 |H|=7 vs 旧 |H|=5 (扩展/旧=1.40x)
+  [检索 k=10] Recall=0.410 MRR=0.132 nDCG=0.212 翻转率=1.000
+  [检索 k=5] Recall=0.173 MRR=0.099 nDCG=0.129 翻转率=0.690
+  [检索 k=20] Recall=0.935 MRR=0.164 nDCG=0.328 翻转率=0.833
+  [Δ_edit] 均值=+0.1818 95%CI=[+0.0682,+0.2938] 配对p=0.0034 (n=84, 非零差=33)
+  [δ分布] p10/p50/p90=0.0/0.0078/0.054 max=0.1557 δ<0.02占比=0.7907
+  [GT大小] 均值=1.4524 中位=1 单函数占比=0.75 2-3占比=0.1905
+  ⚠️⚠️ |H|=7<10: 决策/判别力指标噪声大,别单独进表,仅汇总用
+  [决策] always         F1(Disc)=0.467 P=0.304 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.727 P=1.000 R=0.571 漏判=0.429 省算=82.6%
+  [决策] audit(τ=0.05)  F1(Disc)=0.600 P=1.000 R=0.429 漏判=0.571 省算=87.0%
+  [决策] audit(τ=0.1)   F1(Disc)=0.250 P=1.000 R=0.143 漏判=0.857 省算=95.7%
+  [决策] audit(τ=0.2)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [W16 δ vs 编辑量] Spearman ρ = -0.554 (n=86)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=3.0 均值=6.714 n=7
+    audit(τ=0.02)  missed I(u) 中位=1.0 均值=3.0 n=3 → 推测成立: missed 中位 I(u) 明显低于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=1.5 均值=2.75 n=4 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=2.5 均值=4.0 n=6 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=3.0 均值=6.714 n=7 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== cobra (nq=335, |H|_new=37, |H|_narrow=27) ===
+  [I(u) 定义对比] 扩展 |H|=37 vs 旧 |H|=27 (扩展/旧=1.37x)
+  [检索 k=10] Recall=0.176 MRR=0.099 nDCG=0.134 翻转率=1.000
+  [检索 k=5] Recall=0.114 MRR=0.088 nDCG=0.108 翻转率=0.991
+  [检索 k=20] Recall=0.293 MRR=0.109 nDCG=0.169 翻转率=1.000
+  [Δ_edit] 均值=+0.0116 95%CI=[-0.0151,+0.0401] 配对p=0.2578 (n=335, 非零差=40)
+  [δ分布] p10/p50/p90=0.002/0.0185/0.0952 max=0.2217 δ<0.02占比=0.5144
+  [GT大小] 均值=2.3821 中位=2 单函数占比=0.4806 2-3占比=0.2985
+  [决策] always         F1(Disc)=0.250 P=0.143 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.273 P=0.190 R=0.486 漏判=0.513 省算=63.3%
+  [决策] audit(τ=0.05)  F1(Disc)=0.278 P=0.286 R=0.270 漏判=0.730 省算=86.5%
+  [决策] audit(τ=0.1)   F1(Disc)=0.085 P=0.200 R=0.054 漏判=0.946 省算=96.1%
+  [决策] audit(τ=0.2)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=99.2%
+  [W16 δ vs 编辑量] Spearman ρ = -0.168 (n=1079)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=2.0 均值=2.73 n=37
+    audit(τ=0.02)  missed I(u) 中位=1.0 均值=2.579 n=19 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=2.0 均值=2.593 n=27 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=2.0 均值=2.8 n=35 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=2.0 均值=2.73 n=37 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== echo (nq=474, |H|_new=65, |H|_narrow=51) ===
+  [I(u) 定义对比] 扩展 |H|=65 vs 旧 |H|=51 (扩展/旧=1.27x)
+  [检索 k=10] Recall=0.074 MRR=0.049 nDCG=0.071 翻转率=1.000
+  [检索 k=5] Recall=0.046 MRR=0.041 nDCG=0.052 翻转率=1.000
+  [检索 k=20] Recall=0.144 MRR=0.057 nDCG=0.099 翻转率=1.000
+  [Δ_edit] 均值=+0.0375 95%CI=[+0.0167,+0.0596] 配对p=0.0041 (n=474, 非零差=72)
+  [δ分布] p10/p50/p90=0.0032/0.0378/0.1429 max=0.2723 δ<0.02占比=0.3071
+  [GT大小] 均值=2.5549 中位=2 单函数占比=0.4262 2-3占比=0.3207
+  [决策] always         F1(Disc)=0.175 P=0.096 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.297 P=0.181 R=0.831 漏判=0.169 省算=56.0%
+  [决策] audit(τ=0.05)  F1(Disc)=0.349 P=0.248 R=0.585 漏判=0.415 省算=77.4%
+  [决策] audit(τ=0.1)   F1(Disc)=0.242 P=0.214 R=0.277 漏判=0.723 省算=87.6%
+  [决策] audit(τ=0.2)   F1(Disc)=0.076 P=0.214 R=0.046 漏判=0.954 省算=97.9%
+  [W16 δ vs 编辑量] Spearman ρ = 0.198 (n=3351)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=1.0 均值=3.508 n=65
+    audit(τ=0.02)  missed I(u) 中位=1.0 均值=1.909 n=11 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=2.0 均值=2.667 n=27 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=2.0 均值=3.234 n=47 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=1.0 均值=3.0 n=62 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== express (nq=74, |H|_new=6, |H|_narrow=6) ===
+  [I(u) 定义对比] 扩展 |H|=6 vs 旧 |H|=6 (扩展/旧=1.00x)
+  [检索 k=10] Recall=0.325 MRR=0.107 nDCG=0.169 翻转率=1.000
+  [检索 k=5] Recall=0.166 MRR=0.085 nDCG=0.116 翻转率=1.000
+  [检索 k=20] Recall=0.608 MRR=0.132 nDCG=0.257 翻转率=1.000
+  [Δ_edit] 均值=+0.0146 95%CI=[-0.0608,+0.1014] 配对p=0.97 (n=74, 非零差=14)
+  [δ分布] p10/p50/p90=0.0005/0.0209/0.0424 max=0.0877 δ<0.02占比=0.4632
+  [GT大小] 均值=1.8243 中位=1 单函数占比=0.5676 2-3占比=0.3108
+  ⚠️⚠️ |H|=6<10: 决策/判别力指标噪声大,别单独进表,仅汇总用
+  [决策] always         F1(Disc)=0.286 P=0.167 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.455 P=0.312 R=0.833 漏判=0.167 省算=55.6%
+  [决策] audit(τ=0.05)  F1(Disc)=0.400 P=0.500 R=0.333 漏判=0.667 省算=88.9%
+  [决策] audit(τ=0.1)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.2)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [W16 δ vs 编辑量] Spearman ρ = 0.086 (n=136)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=3.0 均值=3.0 n=6
+    audit(τ=0.02)  missed I(u) 中位=2.0 均值=2.0 n=1 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=3.0 均值=3.0 n=4 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=3.0 均值=3.0 n=6 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=3.0 均值=3.0 n=6 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== flask (nq=128, |H|_new=13, |H|_narrow=9) ===
+  [I(u) 定义对比] 扩展 |H|=13 vs 旧 |H|=9 (扩展/旧=1.44x)
+  [检索 k=10] Recall=0.213 MRR=0.080 nDCG=0.126 翻转率=1.000
+  [检索 k=5] Recall=0.158 MRR=0.071 nDCG=0.103 翻转率=0.945
+  [检索 k=20] Recall=0.293 MRR=0.086 nDCG=0.150 翻转率=1.000
+  [Δ_edit] 均值=+0.0012 95%CI=[-0.0301,+0.0354] 配对p=0.878 (n=128, 非零差=13)
+  [δ分布] p10/p50/p90=0.0011/0.0158/0.1194 max=0.1473 δ<0.02占比=0.6198
+  [GT大小] 均值=1.6172 中位=1 单函数占比=0.6797 2-3占比=0.25
+  [决策] always         F1(Disc)=0.181 P=0.099 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.140 P=0.091 R=0.308 漏判=0.692 省算=66.4%
+  [决策] audit(τ=0.05)  F1(Disc)=0.171 P=0.136 R=0.231 漏判=0.769 省算=83.2%
+  [决策] audit(τ=0.1)   F1(Disc)=0.148 P=0.143 R=0.154 漏判=0.846 省算=89.3%
+  [决策] audit(τ=0.2)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [W16 δ vs 编辑量] Spearman ρ = -0.139 (n=334)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=2.0 均值=2.385 n=13
+    audit(τ=0.02)  missed I(u) 中位=1.0 均值=2.0 n=9 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=1.0 均值=1.9 n=10 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=1.0 均值=2.182 n=11 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=2.0 均值=2.385 n=13 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== gin (nq=552, |H|_new=91, |H|_narrow=67) ===
+  [I(u) 定义对比] 扩展 |H|=91 vs 旧 |H|=67 (扩展/旧=1.36x)
+  [检索 k=10] Recall=0.124 MRR=0.078 nDCG=0.106 翻转率=1.000
+  [检索 k=5] Recall=0.084 MRR=0.072 nDCG=0.090 翻转率=0.996
+  [检索 k=20] Recall=0.185 MRR=0.085 nDCG=0.129 翻转率=1.000
+  [Δ_edit] 均值=+0.0136 95%CI=[-0.0132,+0.0398] 配对p=0.3615 (n=552, 非零差=111)
+  [δ分布] p10/p50/p90=0.0064/0.0334/0.1469 max=0.2435 δ<0.02占比=0.3779
+  [GT大小] 均值=2.1359 中位=2 单函数占比=0.4764 2-3占比=0.3714
+  [决策] always         F1(Disc)=0.347 P=0.210 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.370 P=0.259 R=0.648 漏判=0.352 省算=47.5%
+  [决策] audit(τ=0.05)  F1(Disc)=0.320 P=0.248 R=0.451 漏判=0.549 省算=62.0%
+  [决策] audit(τ=0.1)   F1(Disc)=0.274 P=0.286 R=0.264 漏判=0.736 省算=80.6%
+  [决策] audit(τ=0.2)   F1(Disc)=0.058 P=0.231 R=0.033 漏判=0.967 省算=97.0%
+  [W16 δ vs 编辑量] Spearman ρ = 0.046 (n=1802)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=1.0 均值=2.253 n=91
+    audit(τ=0.02)  missed I(u) 中位=1.0 均值=1.469 n=32 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=1.0 均值=2.04 n=50 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=1.0 均值=2.493 n=67 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=1.0 均值=2.205 n=88 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== lodash (nq=264, |H|_new=26, |H|_narrow=4) ===
+  [I(u) 定义对比] 扩展 |H|=26 vs 旧 |H|=4 (扩展/旧=6.50x)
+  [检索 k=10] Recall=0.062 MRR=0.016 nDCG=0.031 翻转率=0.992
+  [检索 k=5] Recall=0.018 MRR=0.009 nDCG=0.012 翻转率=0.989
+  [检索 k=20] Recall=0.213 MRR=0.031 nDCG=0.086 翻转率=1.000
+  [Δ_edit] 均值=-0.1385 95%CI=[-0.1769,-0.0972] 配对p=0.0 (n=264, 非零差=55)
+  [δ分布] p10/p50/p90=0.0006/0.0039/0.0432 max=0.1631 δ<0.02占比=0.7779
+  [GT大小] 均值=1.9318 中位=2 单函数占比=0.4205 2-3占比=0.4735
+  [决策] always         F1(Disc)=0.093 P=0.049 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.096 P=0.061 R=0.231 漏判=0.769 省算=81.5%
+  [决策] audit(τ=0.05)  F1(Disc)=0.069 P=0.062 R=0.077 漏判=0.923 省算=94.0%
+  [决策] audit(τ=0.1)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=98.9%
+  [决策] audit(τ=0.2)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [W16 δ vs 编辑量] Spearman ρ = 0.0 (n=950)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=2.0 均值=6.0 n=26
+    audit(τ=0.02)  missed I(u) 中位=1.5 均值=6.1 n=20 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=1.5 均值=5.917 n=24 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=2.0 均值=6.0 n=26 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=2.0 均值=6.0 n=26 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== pylint (nq=223, |H|_new=13, |H|_narrow=7) ===
+  [I(u) 定义对比] 扩展 |H|=13 vs 旧 |H|=7 (扩展/旧=1.86x)
+  [检索 k=10] Recall=0.052 MRR=0.017 nDCG=0.028 翻转率=1.000
+  [检索 k=5] Recall=0.020 MRR=0.012 nDCG=0.016 翻转率=0.978
+  [检索 k=20] Recall=0.112 MRR=0.022 nDCG=0.050 翻转率=1.000
+  [Δ_edit] 均值=-0.0101 95%CI=[-0.0310,+0.0101] 配对p=0.5271 (n=223, 非零差=11)
+  [δ分布] p10/p50/p90=0.0/0.006/0.0247 max=0.1646 δ<0.02占比=0.8944
+  [GT大小] 均值=1.435 中位=1 单函数占比=0.722 2-3占比=0.2466
+  [决策] always         F1(Disc)=0.149 P=0.080 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.191 P=0.138 R=0.308 漏判=0.692 省算=82.1%
+  [决策] audit(τ=0.05)  F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=93.2%
+  [决策] audit(τ=0.1)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=97.5%
+  [决策] audit(τ=0.2)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [W16 δ vs 编辑量] Spearman ρ = -0.311 (n=720)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=1.0 均值=1.769 n=13
+    audit(τ=0.02)  missed I(u) 中位=1.0 均值=1.667 n=9 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=1.0 均值=1.769 n=13 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=1.0 均值=1.769 n=13 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=1.0 均值=1.769 n=13 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+=== requests (nq=151, |H|_new=7, |H|_narrow=6) ===
+  [I(u) 定义对比] 扩展 |H|=7 vs 旧 |H|=6 (扩展/旧=1.17x)
+  [检索 k=10] Recall=0.075 MRR=0.018 nDCG=0.033 翻转率=1.000
+  [检索 k=5] Recall=0.009 MRR=0.010 nDCG=0.011 翻转率=0.689
+  [检索 k=20] Recall=0.292 MRR=0.033 nDCG=0.088 翻转率=0.993
+  [Δ_edit] 均值=+0.0243 95%CI=[-0.0044,+0.0541] 配对p=NA (n=151, 非零差=8)
+  [δ分布] p10/p50/p90=0.0005/0.0044/0.0433 max=0.1685 δ<0.02占比=0.8406
+  [GT大小] 均值=1.106 中位=1 单函数占比=0.9272 2-3占比=0.0662
+  ⚠️⚠️ |H|=7<10: 决策/判别力指标噪声大,别单独进表,仅汇总用
+  [决策] always         F1(Disc)=0.280 P=0.163 R=1.000 漏判=0.000 省算=0.0%
+  [决策] never          F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [决策] audit(τ=0.02)  F1(Disc)=0.571 P=0.571 R=0.571 漏判=0.429 省算=83.7%
+  [决策] audit(τ=0.05)  F1(Disc)=0.545 P=0.750 R=0.429 漏判=0.571 省算=90.7%
+  [决策] audit(τ=0.1)   F1(Disc)=0.222 P=0.500 R=0.143 漏判=0.857 省算=95.3%
+  [决策] audit(τ=0.2)   F1(Disc)=0.000 P=0.000 R=0.000 漏判=1.000 省算=100.0%
+  [W16 δ vs 编辑量] Spearman ρ = -0.319 (n=69)
+  [W15 audit 漏掉的 H uid 的 I(u)]
+    全 H I(u) 中位=1.0 均值=1.286 n=7
+    audit(τ=0.02)  missed I(u) 中位=1.0 均值=1.0 n=3 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.05)  missed I(u) 中位=1.0 均值=1.0 n=4 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.1)   missed I(u) 中位=1.0 均值=1.333 n=6 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+    audit(τ=0.2)   missed I(u) 中位=1.0 均值=1.286 n=7 → 推测不成立: missed 中位 I(u) 接近或高于全 H 中位
+
+✅ 全部指标写入 c:\Users\26240\Desktop\SemView\Evobench\results\allmetrics/allmetrics_graphcodebert.json
+
+=== 可靠性分区(|H|≥10) ===
+  ✅ 可进表(6): cobra, echo, flask, gin, lodash, pylint
+  ⚠️ |H|过小(4): aiohttp, click, express, requests
+
+=== W35: 结构性因素 vs audit FN 率 (可靠库 Pearson r) ===
+  corr(|H|, FN率)                : r=-0.929 p=0.007 n=6 *
+  corr(H相对稀有度, FN率)             : r=-0.791 p=0.061 n=6  
+  corr(GT单函数占比, FN率)            : r=+0.404 p=0.427 n=6  
+  corr(δ中位数, FN率)               : r=-0.877 p=0.022 n=6 *
+  corr(nq, audit_F1)            : r=+0.856 p=0.030 n=6 *
+
+=== 跨模型 δ 排序一致性 (Spearman, 共 4 模型) ===
+          codebert  graphcod    minilm     mpnet
+codebert       1.0     0.934     0.814     0.797
+graphcod     0.934       1.0     0.843      0.84
+  minilm     0.814     0.843       1.0     0.946
+   mpnet     0.797      0.84     0.946       1.0
+  → 一致性矩阵写入 c:\Users\26240\Desktop\SemView\Evobench\results\allmetrics/cross_model_delta_consistency.json

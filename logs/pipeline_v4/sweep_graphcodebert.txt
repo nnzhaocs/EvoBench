@@ -1,0 +1,79 @@
+【自检】模型=graphcodebert（真实嵌入）
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784529457.379971   15056 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784529463.542359   15056 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Some weights of RobertaModel were not initialized from the model checkpoint at microsoft/graphcodebert-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  ✅ 真实 graphcodebert（microsoft/graphcodebert-base, 768维, HF+mean-pool）
+  [版本对齐] 36/36 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== express（136 更新, 36 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.5556        136     0.0%
+  never-rebuild        0.5139          0   100.0%
+  audit(τ=0.02)        0.5357         73    46.3%
+  audit(τ=0.05)        0.4821         10    92.6%
+  audit(τ=0.1)         0.5139          0   100.0%
+  audit(τ=0.2)         0.5139          0   100.0%
+  [版本对齐] 131/131 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== flask（334 更新, 131 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.2098        334     0.0%
+  never-rebuild        0.3028          0   100.0%
+  audit(τ=0.02)        0.2449        127    62.0%
+  audit(τ=0.05)        0.2449         67    79.9%
+  audit(τ=0.1)         0.2449         44    86.8%
+  audit(τ=0.2)         0.3028          0   100.0%
+  [版本对齐] 434/434 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== gin（1802 更新, 434 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.0998       1802     0.0%
+  never-rebuild        0.1063          0   100.0%
+  audit(τ=0.02)        0.1053       1121    37.8%
+  audit(τ=0.05)        0.1128        750    58.4%
+  audit(τ=0.1)         0.0826        305    83.1%
+  audit(τ=0.2)         0.1041         39    97.8%
+  [版本对齐] 11/11 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== koa（53 更新, 11 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       1.0000         53     0.0%
+  never-rebuild        1.0000          0   100.0%
+  audit(τ=0.02)        1.0000         41    22.6%
+  audit(τ=0.05)        1.0000          0   100.0%
+  audit(τ=0.1)         1.0000          0   100.0%
+  audit(τ=0.2)         1.0000          0   100.0%
+  [版本对齐] 162/162 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== pylint（720 更新, 162 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.0000        720     0.0%
+  never-rebuild        0.0000          0   100.0%
+  audit(τ=0.02)        0.0000         76    89.4%
+  audit(τ=0.05)        0.0000         48    93.3%
+  audit(τ=0.1)         0.0000         32    95.6%
+  audit(τ=0.2)         0.0000          0   100.0%
+  [版本对齐] 43/43 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== requests（69 更新, 43 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.2353         69     0.0%
+  never-rebuild        0.2059          0   100.0%
+  audit(τ=0.02)        0.2647         11    84.1%
+  audit(τ=0.05)        0.2647          7    89.9%
+  audit(τ=0.1)         0.2059          2    97.1%
+  audit(τ=0.2)         0.2059          0   100.0%
+
+✅ 真实 sweep 存到 baseline_sweep_graphcodebert.json
+这张表 = benchmark 论文的 Table 1（判别力证据）。
+解读：always recall 最高 cost 最高、never cost=0 recall 最低、
+      audit 随 τ 增大省算增多但 recall 缓降——若 audit 能在小 recall 损失下大幅省算，
+      则证明 benchmark 有判别力 + 你的方法有价值。
+
+[超时]
+
+[耗时] 3600.2s
+[退出码] -1

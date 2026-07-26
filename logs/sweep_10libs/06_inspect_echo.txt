@@ -1,0 +1,635 @@
+============================================================
+echo: delta最低的 20 对更新 (原文对照)
+============================================================
+
+--- #1 delta=-0.0000 unit=echo::recipe/subdomains/server.go::main ---
+OLD:
+  func main() {
+  	// Hosts
+  	hosts := make(map[string]*Host)
+  
+  	//-----
+  	// API
+  	//-----
+  
+  	api := echo.New()
+  	api.Use(middleware.Logger())
+  	api.Use(middleware.Recover())
+  
+  	hosts["api.localhost:1323"] = &Host{api}
+  
+  	api.GET("/", func(c echo.Context) error {
+  ... (65 lines total)
+NEW:
+  func main() {
+  	// Hosts
+  	hosts := make(map[string]*Host)
+  
+  	//-----
+  	// API
+  	//-----
+  
+  	api := echo.New()
+  	api.Use(middleware.Logger())
+  	api.Use(middleware.Recover())
+  
+  	hosts["api.localhost:1323"] = &Host{api}
+  
+  	api.GET("/", func(c echo.Context) error {
+  ... (65 lines total)
+DIFF (2 changed lines):
+  -		panic(err)
+  +		e.Logger.Fatal(err)
+
+--- #2 delta=-0.0000 unit=echo::router.go::Find ---
+OLD:
+  func (r *Router) Find(method, path string, ctx *Context) (h HandlerFunc, e *Echo) {
+  	h = notFoundHandler
+  	e = r.echo
+  	cn := r.tree // Current node as root
+  
+  	var (
+  		search = path
+  		c      *node  // Child node
+  		n      int    // Param counter
+  		nk     kind   // Next kind
+  		nn     *node  // Next node
+  		ns     string // Next search
+  	)
+  
+  	// Search order static > param > match-any
+  ... (121 lines total)
+NEW:
+  func (r *Router) Find(method, path string, ctx *Context) (h HandlerFunc, e *Echo) {
+  	h = notFoundHandler
+  	e = r.echo
+  	cn := r.tree // Current node as root
+  
+  	var (
+  		search = path
+  		c      *node  // Child node
+  		n      int    // Param counter
+  		nk     kind   // Next kind
+  		nn     *node  // Next node
+  		ns     string // Next search
+  	)
+  
+  	// Search order static > param > match-any
+  ... (124 lines total)
+DIFF (7 changed lines):
+  +
+  +	// NOTE: Slow zone...
+  -		h = methodNotAllowedHandler
+  +		h = cn.check405()
+  +
+  -			h = methodNotAllowedHandler
+  +			h = cn.check405()
+
+--- #3 delta=-0.0000 unit=echo::context.go::xml ---
+OLD:
+  func (c *context) xml(code int, i any, indent string) (err error) {
+  	c.writeContentType(MIMEApplicationXMLCharsetUTF8)
+  	c.response.WriteHeader(code)
+  	enc := xml.NewEncoder(c.response)
+  	if indent != "" {
+  		enc.Indent("", indent)
+  	}
+  	if _, err = c.response.Write([]byte(xml.Header)); err != nil {
+  		return
+  	}
+  	return enc.Encode(i)
+  }
+NEW:
+  func (c *Context) xml(code int, i any, indent string) (err error) {
+  	c.writeContentType(MIMEApplicationXMLCharsetUTF8)
+  	c.response.WriteHeader(code)
+  	enc := xml.NewEncoder(c.response)
+  	if indent != "" {
+  		enc.Indent("", indent)
+  	}
+  	if _, err = c.response.Write([]byte(xml.Header)); err != nil {
+  		return
+  	}
+  	return enc.Encode(i)
+  }
+DIFF (2 changed lines):
+  -func (c *context) xml(code int, i any, indent string) (err error) {
+  +func (c *Context) xml(code int, i any, indent string) (err error) {
+
+--- #4 delta=-0.0000 unit=echo::middleware/rate_limiter.go::ToMiddleware ---
+OLD:
+  func (config RateLimiterConfig) ToMiddleware() (echo.MiddlewareFunc, error) {
+  	if config.Skipper == nil {
+  		config.Skipper = DefaultRateLimiterConfig.Skipper
+  	}
+  	if config.IdentifierExtractor == nil {
+  		config.IdentifierExtractor = DefaultRateLimiterConfig.IdentifierExtractor
+  	}
+  	if config.ErrorHandler == nil {
+  		config.ErrorHandler = DefaultRateLimiterConfig.ErrorHandler
+  	}
+  	if config.DenyHandler == nil {
+  		config.DenyHandler = DefaultRateLimiterConfig.DenyHandler
+  	}
+  	if config.Store == nil {
+  		return nil, errors.New("echo rate limiter store configuration must be provided")
+  ... (37 lines total)
+NEW:
+  func (config RateLimiterConfig) ToMiddleware() (echo.MiddlewareFunc, error) {
+  	if config.Skipper == nil {
+  		config.Skipper = DefaultRateLimiterConfig.Skipper
+  	}
+  	if config.IdentifierExtractor == nil {
+  		config.IdentifierExtractor = DefaultRateLimiterConfig.IdentifierExtractor
+  	}
+  	if config.ErrorHandler == nil {
+  		config.ErrorHandler = DefaultRateLimiterConfig.ErrorHandler
+  	}
+  	if config.DenyHandler == nil {
+  		config.DenyHandler = DefaultRateLimiterConfig.DenyHandler
+  	}
+  	if config.Store == nil {
+  		return nil, errors.New("echo rate limiter store configuration must be provided")
+  ... (44 lines total)
+DIFF (9 changed lines):
+  -			if allow, allowErr := config.Store.Allow(identifier); !allow {
+  +			var allow bool
+  +			var allowErr error
+  +			if sc, ok := config.Store.(RateLimiterStoreContext); ok {
+  +				allow, allowErr = sc.AllowContext(c, identifier)
+  +			} else {
+  +				allow, allowErr = config.Store.Allow(identifier)
+  +			}
+  +			if !allow {
+
+--- #5 delta=-0.0000 unit=echo::middleware/logger.go::LoggerWithConfig ---
+OLD:
+  func LoggerWithConfig(config LoggerConfig) echo.MiddlewareFunc {
+  	// Defaults
+  	if config.Skipper == nil {
+  		config.Skipper = DefaultLoggerConfig.Skipper
+  	}
+  	if config.Format == "" {
+  		config.Format = DefaultLoggerConfig.Format
+  	}
+  	if config.Output == nil {
+  		config.Output = DefaultLoggerConfig.Output
+  	}
+  
+  	config.template = fasttemplate.New(config.Format, "${", "}")
+  	config.colorer = color.New()
+  	config.colorer.SetOutput(config.Output)
+  ... (117 lines total)
+NEW:
+  func LoggerWithConfig(config LoggerConfig) echo.MiddlewareFunc {
+  	// Defaults
+  	if config.Skipper == nil {
+  		config.Skipper = DefaultLoggerConfig.Skipper
+  	}
+  	if config.Format == "" {
+  		config.Format = DefaultLoggerConfig.Format
+  	}
+  	if config.Output == nil {
+  		config.Output = DefaultLoggerConfig.Output
+  	}
+  
+  	config.template = fasttemplate.New(config.Format, "${", "}")
+  	config.colorer = color.New()
+  	config.colorer.SetOutput(config.Output)
+  ... (117 lines total)
+DIFF (12 changed lines):
+  -				case "id":
+  -					id := req.Header.Get(echo.HeaderXRequestID)
+  -					if id == "" {
+  -						id = res.Header().Get(echo.HeaderXRequestID)
+  -					}
+  -					return buf.WriteString(id)
+  +				case "request_id":
+  +					ri := req.Header.Get("X-Request-ID")
+  +					if ri == "" {
+  +						ri = res.Header().Get("X-Request-ID")
+  ... (12 total)
+
+--- #6 delta=-0.0000 unit=echo::context.go::NoContent ---
+OLD:
+  func (c *Context) NoContent(code int) error {
+  	c.Response.WriteHeader(code)
+  	return nil
+  }
+NEW:
+  func (c *Context) NoContent(code int) error {
+  	c.response.WriteHeader(code)
+  	return nil
+  }
+DIFF (2 changed lines):
+  -	c.Response.WriteHeader(code)
+  +	c.response.WriteHeader(code)
+
+--- #7 delta=-0.0000 unit=echo::echo.go::TRACE ---
+OLD:
+  func (e *Echo) TRACE(path string, h HandlerFunc, m ...MiddlewareFunc) *Route {
+  	return e.add(TRACE, path, h, m...)
+  }
+NEW:
+  func (e *Echo) TRACE(path string, h HandlerFunc, m ...MiddlewareFunc) *Route {
+  	return e.Add(TRACE, path, h, m...)
+  }
+DIFF (2 changed lines):
+  -	return e.add(TRACE, path, h, m...)
+  +	return e.Add(TRACE, path, h, m...)
+
+--- #8 delta=-0.0000 unit=echo::recipe/subdomains/server.go::main ---
+OLD:
+  func main() {
+  	// Hosts
+  	hosts := make(map[string]*Host)
+  
+  	//-----
+  	// API
+  	//-----
+  
+  	api := echo.New()
+  	api.Use(middleware.Logger())
+  	api.Use(middleware.Recover())
+  
+  	hosts["api.localhost:1323"] = &Host{api}
+  
+  	api.GET("/", func(c echo.Context) error {
+  ... (63 lines total)
+NEW:
+  func main() {
+  	// Hosts
+  	hosts := make(map[string]*Host)
+  
+  	//-----
+  	// API
+  	//-----
+  
+  	api := echo.New()
+  	api.Use(middleware.Logger())
+  	api.Use(middleware.Recover())
+  
+  	hosts["api.localhost:1323"] = &Host{api}
+  
+  	api.GET("/", func(c echo.Context) error {
+  ... (63 lines total)
+DIFF (6 changed lines):
+  -		host := hosts[req.Host()]
+  +		host := hosts[req.Host]
+  -			host.Echo.ServeHTTP(req, res)
+  +			host.Echo.ServeHTTP(res, req)
+  -	panic(e.Start(":1323"))
+  +	e.Logger.Fatal(e.Start(":1323"))
+
+--- #9 delta=-0.0000 unit=echo::engine/fasthttp/server.go::WithConfig ---
+OLD:
+  func WithConfig(c engine.Config) (s *Server) {
+  	s = &Server{
+  		Server: new(fasthttp.Server),
+  		config: c,
+  		pool: &pool{
+  			request: sync.Pool{
+  				New: func() interface{} {
+  					return &Request{logger: s.logger}
+  				},
+  			},
+  			response: sync.Pool{
+  				New: func() interface{} {
+  					return &Response{logger: s.logger}
+  				},
+  			},
+  ... (39 lines total)
+NEW:
+  func WithConfig(c engine.Config) (s *Server) {
+  	s = &Server{
+  		Server: new(fasthttp.Server),
+  		config: c,
+  		pool: &pool{
+  			request: sync.Pool{
+  				New: func() interface{} {
+  					return &Request{logger: s.logger}
+  				},
+  			},
+  			response: sync.Pool{
+  				New: func() interface{} {
+  					return &Response{logger: s.logger}
+  				},
+  			},
+  ... (41 lines total)
+DIFF (2 changed lines):
+  +	s.ReadTimeout = c.ReadTimeout
+  +	s.WriteTimeout = c.WriteTimeout
+
+--- #10 delta=-0.0000 unit=echo::router.go::NewRouter ---
+OLD:
+  func NewRouter(e *Echo) (r *router) {
+  	r = &router{
+  		trees: make(map[string]*node),
+  		echo:  e,
+  	}
+  	for _, m := range methods {
+  		r.trees[m] = &node{
+  			prefix:   "",
+  			children: children{},
+  		}
+  	}
+  	return
+  }
+NEW:
+  func NewRouter(e *Echo) (r *Router) {
+  	r = &Router{
+  		trees: make(map[string]*node),
+  		echo:  e,
+  	}
+  	for _, m := range methods {
+  		r.trees[m] = &node{
+  			prefix:   "",
+  			children: children{},
+  		}
+  	}
+  	return
+  }
+DIFF (4 changed lines):
+  -func NewRouter(e *Echo) (r *router) {
+  -	r = &router{
+  +func NewRouter(e *Echo) (r *Router) {
+  +	r = &Router{
+
+--- #11 delta=-0.0000 unit=echo::middleware/key_auth.go::keyFromQuery ---
+OLD:
+  func keyFromQuery(param string) keyExtractor {
+  	return func(c echo.Context) (string, error) {
+  		key := c.QueryParam(param)
+  		if key == "" {
+  			return "", errors.New("Missing key in the query string")
+  		}
+  		return key, nil
+  	}
+  }
+NEW:
+  func keyFromQuery(param string) keyExtractor {
+  	return func(c echo.Context) (string, error) {
+  		key := c.QueryParam(param)
+  		if key == "" {
+  			return "", errors.New("missing key in the query string")
+  		}
+  		return key, nil
+  	}
+  }
+DIFF (2 changed lines):
+  -			return "", errors.New("Missing key in the query string")
+  +			return "", errors.New("missing key in the query string")
+
+--- #12 delta=-0.0000 unit=echo::context.go::SetPath ---
+OLD:
+  func (c *context) SetPath(p string) {
+  	c.path = p
+  }
+NEW:
+  func (c *Context) SetPath(p string) {
+  	c.path = p
+  }
+DIFF (2 changed lines):
+  -func (c *context) SetPath(p string) {
+  +func (c *Context) SetPath(p string) {
+
+--- #13 delta=0.0000 unit=echo::group_fs_go1.16.go::StaticFS ---
+OLD:
+  func (g *Group) StaticFS(pathPrefix string, fileSystem fs.FS) {
+  	g.Add(
+  		http.MethodGet,
+  		pathPrefix+"*",
+  		StaticDirectoryHandler(fileSystem, false),
+  	)
+  }
+NEW:
+  func (g *Group) StaticFS(pathPrefix string, filesystem fs.FS) {
+  	g.Add(
+  		http.MethodGet,
+  		pathPrefix+"*",
+  		StaticDirectoryHandler(filesystem, false),
+  	)
+  }
+DIFF (4 changed lines):
+  -func (g *Group) StaticFS(pathPrefix string, fileSystem fs.FS) {
+  +func (g *Group) StaticFS(pathPrefix string, filesystem fs.FS) {
+  -		StaticDirectoryHandler(fileSystem, false),
+  +		StaticDirectoryHandler(filesystem, false),
+
+--- #14 delta=0.0000 unit=echo::echo.go::New ---
+OLD:
+  func New() (e *Echo) {
+  	e = &Echo{
+  		uris: make(map[Handler]string),
+  	}
+  	e.Router = NewRouter(e)
+  	e.pool.New = func() interface{} {
+  		return NewContext(nil, new(Response), e)
+  	}
+  
+  	//----------
+  	// Defaults
+  	//----------
+  
+  	e.MaxParam(5)
+  	e.NotFoundHandler(func(c *Context) {
+  ... (45 lines total)
+NEW:
+  func New() (e *Echo) {
+  	e = &Echo{
+  		uris: make(map[Handler]string),
+  	}
+  	e.Router = NewRouter(e)
+  	e.pool.New = func() interface{} {
+  		return NewContext(nil, new(Response), e)
+  	}
+  
+  	//----------
+  	// Defaults
+  	//----------
+  
+  	e.MaxParam(5)
+  	e.NotFoundHandler(func(c *Context) {
+  ... (45 lines total)
+DIFF (6 changed lines):
+  -		ct := r.Header.Get(HeaderContentType)
+  +		ct := r.Header.Get(ContentType)
+  -		if strings.HasPrefix(ct, MIMEJSON) {
+  +		if strings.HasPrefix(ct, ApplicationJSON) {
+  -		} else if strings.HasPrefix(ct, MIMEForm) {
+  +		} else if strings.HasPrefix(ct, ApplicationForm) {
+
+--- #15 delta=0.0000 unit=echo::context.go::JSONBlob ---
+OLD:
+  func (c *context) JSONBlob(code int, b []byte) (err error) {
+  	return c.Blob(code, MIMEApplicationJSON, b)
+  }
+NEW:
+  func (c *Context) JSONBlob(code int, b []byte) (err error) {
+  	return c.Blob(code, MIMEApplicationJSON, b)
+  }
+DIFF (2 changed lines):
+  -func (c *context) JSONBlob(code int, b []byte) (err error) {
+  +func (c *Context) JSONBlob(code int, b []byte) (err error) {
+
+--- #16 delta=0.0000 unit=echo::middleware/key_auth.go::KeyAuthWithConfig ---
+OLD:
+  func KeyAuthWithConfig(config KeyAuthConfig) echo.MiddlewareFunc {
+  	// Defaults
+  	if config.Skipper == nil {
+  		config.Skipper = DefaultKeyAuthConfig.Skipper
+  	}
+  	// Defaults
+  	if config.AuthScheme == "" {
+  		config.AuthScheme = DefaultKeyAuthConfig.AuthScheme
+  	}
+  	if config.KeyLookup == "" {
+  		config.KeyLookup = DefaultKeyAuthConfig.KeyLookup
+  	}
+  	if config.Validator == nil {
+  		panic("key-auth middleware requires a validator function")
+  	}
+  ... (43 lines total)
+NEW:
+  func KeyAuthWithConfig(config KeyAuthConfig) echo.MiddlewareFunc {
+  	// Defaults
+  	if config.Skipper == nil {
+  		config.Skipper = DefaultKeyAuthConfig.Skipper
+  	}
+  	// Defaults
+  	if config.AuthScheme == "" {
+  		config.AuthScheme = DefaultKeyAuthConfig.AuthScheme
+  	}
+  	if config.KeyLookup == "" {
+  		config.KeyLookup = DefaultKeyAuthConfig.KeyLookup
+  	}
+  	if config.Validator == nil {
+  		panic("key-auth middleware requires a validator function")
+  	}
+  ... (46 lines total)
+DIFF (5 changed lines):
+  -			if config.Validator(key, c) {
+  +			err, valid := config.Validator(key, c)
+  +			if err != nil {
+  +				return err
+  +			} else if valid {
+
+--- #17 delta=0.0000 unit=echo::echo.go::ServeHTTP ---
+OLD:
+  func (e *Echo) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+  	if e.hook != nil {
+  		e.hook(w, r)
+  	}
+  
+  	c := e.pool.Get().(*Context)
+  	h, e := e.router.Find(r.Method, r.URL.Path, c)
+  	c.reset(r, w, e)
+  
+  	// Chain middleware with handler in the end
+  	for i := len(e.middleware) - 1; i >= 0; i-- {
+  		h = e.middleware[i](h)
+  	}
+  
+  	// Execute chain
+  ... (21 lines total)
+NEW:
+  func (e *Echo) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+  	if e.hook != nil {
+  		e.hook(w, r)
+  	}
+  
+  	c := e.pool.Get().(*context)
+  	h, e := e.router.Find(r.Method, r.URL.Path, c)
+  	c.reset(r, w, e)
+  
+  	// Chain middleware with handler in the end
+  	for i := len(e.middleware) - 1; i >= 0; i-- {
+  		h = e.middleware[i](h)
+  	}
+  
+  	// Execute chain
+  ... (21 lines total)
+DIFF (2 changed lines):
+  -	c := e.pool.Get().(*Context)
+  +	c := e.pool.Get().(*context)
+
+--- #18 delta=0.0000 unit=echo::echo.go::StartServer ---
+OLD:
+  func (e *Echo) StartServer(s *http.Server) (err error) {
+  	// Setup
+  	e.colorer.SetOutput(e.Logger.Output())
+  	s.ErrorLog = e.stdLogger
+  	s.Handler = e
+  	if e.Debug {
+  		e.Logger.SetLevel(log.DEBUG)
+  	}
+  
+  	if !e.HideBanner {
+  		e.colorer.Printf(banner, e.colorer.Red("v"+version), e.colorer.Blue(website))
+  	}
+  
+  	if s.TLSConfig == nil {
+  		if e.Listener == nil {
+  ... (37 lines total)
+NEW:
+  func (e *Echo) StartServer(s *http.Server) (err error) {
+  	// Setup
+  	e.colorer.SetOutput(e.Logger.Output())
+  	s.ErrorLog = e.stdLogger
+  	s.Handler = e
+  	if e.Debug {
+  		e.Logger.SetLevel(log.DEBUG)
+  	}
+  
+  	if !e.HideBanner {
+  		e.colorer.Printf(banner, e.colorer.Red("v"+Version), e.colorer.Blue(website))
+  	}
+  
+  	if s.TLSConfig == nil {
+  		if e.Listener == nil {
+  ... (37 lines total)
+DIFF (2 changed lines):
+  -		e.colorer.Printf(banner, e.colorer.Red("v"+version), e.colorer.Blue(website))
+  +		e.colorer.Printf(banner, e.colorer.Red("v"+Version), e.colorer.Blue(website))
+
+--- #19 delta=0.0000 unit=echo::recipe/file-upload/multiple/server.go::main ---
+OLD:
+  func main() {
+  	e := echo.New()
+  
+  	e.Use(middleware.Logger())
+  	e.Use(middleware.Recover())
+  	e.Use(middleware.Static("public"))
+  
+  	e.POST("/upload", upload)
+  
+  	if err := e.Start(":1323"); err != nil {
+  		panic(err)
+  	}
+  }
+NEW:
+  func main() {
+  	e := echo.New()
+  
+  	e.Use(middleware.Logger())
+  	e.Use(middleware.Recover())
+  	e.Use(middleware.Static(  "public"))
+  
+  	e.POST("/upload", upload)
+  
+  	if err := e.Start(":1323"); err != nil {
+  		panic(err)
+  	}
+  }
+DIFF (2 changed lines):
+  -	e.Use(middleware.Static("public"))
+  +	e.Use(middleware.Static(  "public"))
+
+--- #20 delta=0.0000 unit=echo::context.go::Render ---
+OLD:
+  func (c *Context) Render(n int, f format, i interface{}
+NEW:
+  func (c *Context) Render(n int, f Format, i interface{}
+DIFF (2 changed lines):
+  -func (c *Context) Render(n int, f format, i interface{}
+  +func (c *Context) Render(n int, f Format, i interface{}

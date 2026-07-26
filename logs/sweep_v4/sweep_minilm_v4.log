@@ -1,0 +1,76 @@
+【自检】模型=minilm（真实嵌入）
+  ✅ 真实 minilm（all-MiniLM-L6-v2, 384维, ST原生）
+  [版本对齐] 259/259 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== cobra（1079 更新, 259 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.4218       1079     0.0%
+  never-rebuild        0.3700          0   100.0%
+  audit(τ=0.02)        0.4283        945    12.4%
+  audit(τ=0.05)        0.4300        839    22.2%
+  audit(τ=0.1)         0.4195        620    42.5%
+  audit(τ=0.2)         0.4059        379    64.9%
+  [版本对齐] 678/678 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== echo（3351 更新, 678 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.3372       3351     0.0%
+  never-rebuild        0.3592          0   100.0%
+  audit(τ=0.02)        0.3356       3029     9.6%
+  audit(τ=0.05)        0.3393       2840    15.2%
+  audit(τ=0.1)         0.3354       2515    24.9%
+  audit(τ=0.2)         0.3382       1897    43.4%
+  [版本对齐] 131/131 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== flask（334 更新, 131 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.5357        334     0.0%
+  never-rebuild        0.4643          0   100.0%
+  audit(τ=0.02)        0.5357        253    24.3%
+  audit(τ=0.05)        0.5357        186    44.3%
+  audit(τ=0.1)         0.5714        137    59.0%
+  audit(τ=0.2)         0.5714         72    78.4%
+  [版本对齐] 434/434 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== gin（1802 更新, 434 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.4177       1802     0.0%
+  never-rebuild        0.3733          0   100.0%
+  audit(τ=0.02)        0.4138       1664     7.7%
+  audit(τ=0.05)        0.4155       1541    14.5%
+  audit(τ=0.1)         0.4161       1222    32.2%
+  audit(τ=0.2)         0.3912        662    63.3%
+  [版本对齐] 162/162 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== pylint（720 更新, 162 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.4494        720     0.0%
+  never-rebuild        0.5343          0   100.0%
+  audit(τ=0.02)        0.4588        325    54.9%
+  audit(τ=0.05)        0.4588        257    64.3%
+  audit(τ=0.1)         0.4588        150    79.2%
+  audit(τ=0.2)         0.5154         82    88.6%
+  [版本对齐] 43/43 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== requests（69 更新, 43 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.8119         69     0.0%
+  never-rebuild        0.8090          0   100.0%
+  audit(τ=0.02)        0.7970         25    63.8%
+  audit(τ=0.05)        0.7940         17    75.4%
+  audit(τ=0.1)         0.7940          9    87.0%
+  audit(τ=0.2)         0.7940          2    97.1%
+
+✅ 真实 sweep 存到 baseline_sweep_minilm.json
+这张表 = benchmark 论文的 Table 1（判别力证据）。
+解读：always recall 最高 cost 最高、never cost=0 recall 最低、
+      audit 随 τ 增大省算增多但 recall 缓降——若 audit 能在小 recall 损失下大幅省算，
+      则证明 benchmark 有判别力 + 你的方法有价值。
+
+STDERR:
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784562040.469633   43852 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784562046.748783   43852 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+

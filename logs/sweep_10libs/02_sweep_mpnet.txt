@@ -1,0 +1,114 @@
+【自检】模型=mpnet（真实嵌入）
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784633003.757053   38848 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784633010.719086   38848 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+  ✅ 真实 mpnet（all-mpnet-base-v2, 768维, ST原生）
+  [版本对齐] 65/65 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== aiohttp（409 更新, 65 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.5299        409     0.0%
+  never-rebuild        0.5097          0   100.0%
+  audit(τ=0.02)        0.5314         56    86.3%
+  audit(τ=0.05)        0.5314         48    88.3%
+  audit(τ=0.1)         0.5180         41    90.0%
+  audit(τ=0.2)         0.5180         12    97.1%
+  [版本对齐] 23/23 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== click（86 更新, 23 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.6681         86     0.0%
+  never-rebuild        0.6942          0   100.0%
+  audit(τ=0.02)        0.6829         49    43.0%
+  audit(τ=0.05)        0.6651         23    73.3%
+  audit(τ=0.1)         0.6800          8    90.7%
+  audit(τ=0.2)         0.6942          0   100.0%
+  [版本对齐] 259/259 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== cobra（1079 更新, 259 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.4744       1079     0.0%
+  never-rebuild        0.4568          0   100.0%
+  audit(τ=0.02)        0.4739        890    17.5%
+  audit(τ=0.05)        0.4752        711    34.1%
+  audit(τ=0.1)         0.4635        409    62.1%
+  audit(τ=0.2)         0.4705        251    76.7%
+  [版本对齐] 678/678 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== echo（3351 更新, 678 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.4372       3351     0.0%
+  never-rebuild        0.4199          0   100.0%
+  audit(τ=0.02)        0.4365       2930    12.6%
+  audit(τ=0.05)        0.4340       2640    21.2%
+  audit(τ=0.1)         0.4319       2185    34.8%
+  audit(τ=0.2)         0.4336       1106    67.0%
+  [版本对齐] 36/36 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== express（136 更新, 36 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.7604        136     0.0%
+  never-rebuild        0.7525          0   100.0%
+  audit(τ=0.02)        0.7649        102    25.0%
+  audit(τ=0.05)        0.7649         87    36.0%
+  audit(τ=0.1)         0.7633         53    61.0%
+  audit(τ=0.2)         0.7741         15    89.0%
+  [版本对齐] 131/131 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== flask（334 更新, 131 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.5118        334     0.0%
+  never-rebuild        0.5100          0   100.0%
+  audit(τ=0.02)        0.5128        253    24.3%
+  audit(τ=0.05)        0.5078        180    46.1%
+  audit(τ=0.1)         0.5152        134    59.9%
+  audit(τ=0.2)         0.5366         35    89.5%
+  [版本对齐] 434/434 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== gin（1802 更新, 434 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.4381       1802     0.0%
+  never-rebuild        0.3961          0   100.0%
+  audit(τ=0.02)        0.4421       1559    13.5%
+  audit(τ=0.05)        0.4418       1395    22.6%
+  audit(τ=0.1)         0.4293        844    53.2%
+  audit(τ=0.2)         0.4349        412    77.1%
+  [版本对齐] 535/535 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== lodash（950 更新, 535 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.2687        950     0.0%
+  never-rebuild        0.2672          0   100.0%
+  audit(τ=0.02)        0.2719        559    41.2%
+  audit(τ=0.05)        0.2630        387    59.3%
+  audit(τ=0.1)         0.2523        225    76.3%
+  audit(τ=0.2)         0.2615         79    91.7%
+  [版本对齐] 162/162 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== pylint（720 更新, 162 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.4689        720     0.0%
+  never-rebuild        0.4614          0   100.0%
+  audit(τ=0.02)        0.4622        276    61.7%
+  audit(τ=0.05)        0.4577        196    72.8%
+  audit(τ=0.1)         0.4607         92    87.2%
+  audit(τ=0.2)         0.4667         81    88.8%
+  [版本对齐] 43/43 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== requests（69 更新, 43 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.8492         69     0.0%
+  never-rebuild        0.8492          0   100.0%
+  audit(τ=0.02)        0.8492         24    65.2%
+  audit(τ=0.05)        0.8492         11    84.1%
+  audit(τ=0.1)         0.8545          6    91.3%
+  audit(τ=0.2)         0.8558          2    97.1%
+
+✅ 真实 sweep 存到 baseline_sweep_mpnet.json
+这张表 = benchmark 论文的 Table 1（判别力证据）。
+解读：always recall 最高 cost 最高、never cost=0 recall 最低、
+      audit 随 τ 增大省算增多但 recall 缓降——若 audit 能在小 recall 损失下大幅省算，
+      则证明 benchmark 有判别力 + 你的方法有价值。

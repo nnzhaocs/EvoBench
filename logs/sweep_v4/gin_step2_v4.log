@@ -1,0 +1,33 @@
+=== gin step2 v4 (with token) ===
+repo-dir: c:\Users\26240\Desktop\SemView\benchmark\bench_raw\gin
+clone-dir: c:\Users\26240\.trae-cn\work\6a3fed402a509e65ad8f7d98\v4_rerun\bench_raw\gin_clone\gin
+url: https://github.com/gin-gonic/gin.git
+
+
+============================================================
+仓库: gin  [step2 v4 (行号范围法+花括号定界+GT上限; commit-first号对齐+冻结+issue/PR标记)]  GT上限=8
+============================================================
+[units] 第一步单元 434
+[clone] 需要第一步的克隆目录；重新克隆 https://github.com/gin-gonic/gin.git ...
+[freeze] 本次 clone HEAD = 34dac209ffb6（复现需 checkout 此 SHA）
+[link] 先扫 commit，建 号→修复commit→改动函数 的真实链路...
+  commit 引用了 1315 个号（强链接 49 / 弱链接 1266）
+[issues] 按引用号拉 issue/PR 详情（对齐拉取，冻结缓存）...
+  [fetch] 按 commit 引用的 500 个号逐个拉详情（对齐拉取，非倒序最新）...
+    进度 100/500，已配到 90 条有效
+    进度 200/500，已配到 181 条有效
+    进度 300/500，已配到 277 条有效
+    进度 400/500，已配到 377 条有效
+  [cache] 冻结 470 条详情 -> c:\Users\26240\Desktop\SemView\benchmark\bench_raw\gin\step2\issue_cache.json
+  拿到 470 条有效（真实 issue 52 / PR 418）
+[out] 带非空GT查询 223  |  strong=17 weak=206  |  issue=27 pr=196  |  最严(strong+issue)=14
+[gt-cap] GT上限=8，被丢弃的大commit数=17（丢弃多→该仓库批量重构多、可定位修复少；可调 --gt-max 观察）
+  写出 queries.jsonl + ground_truth.json -> c:\Users\26240\Desktop\SemView\benchmark\bench_raw\gin\step2
+
+============================================================
+汇总
+============================================================
+  gin          真实查询(带GT)  223  ✅
+
+合格仓库 1/1。
+下一步：build_step3 用真 MiniLM 跑体检/统计，把 units+updates+queries+GT 打包发布。

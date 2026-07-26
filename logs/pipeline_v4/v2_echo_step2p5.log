@@ -1,0 +1,10 @@
+
+========================================================
+衔接: echo
+========================================================
+  units 678 | updates 3351 | queries 314 | GT 314
+  自检 ✅ 通过 -> /root/EvoBench_v4/bench_final/echo
+  下游可直接：python 负载体检.py --units /root/EvoBench_v4/bench_final/echo/units.jsonl --updates /root/EvoBench_v4/bench_final/echo/updates.jsonl --queries /root/EvoBench_v4/bench_final/echo/queries.txt --repo-name echo --purpose measurement
+
+汇总：1/1 仓库转换自检通过。
+现在四件套对齐下游，可跑 负载体检.py 和未来的成本/Recall 测量。

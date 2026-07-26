@@ -1,0 +1,84 @@
+【自检】模型=unixcoder（真实嵌入）
+  ✅ 真实 unixcoder（microsoft/unixcoder-base, 768维, HF+mean-pool）
+  [版本对齐] 259/259 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== cobra（1079 更新, 259 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.3079       1079     0.0%
+  never-rebuild        0.2861          0   100.0%
+  audit(τ=0.02)        0.2996        909    15.8%
+  audit(τ=0.05)        0.2939        801    25.8%
+  audit(τ=0.1)         0.2941        569    47.3%
+  audit(τ=0.2)         0.2959        339    68.6%
+  [版本对齐] 678/678 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== echo（3351 更新, 678 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.3193       3351     0.0%
+  never-rebuild        0.2634          0   100.0%
+  audit(τ=0.02)        0.3209       3039     9.3%
+  audit(τ=0.05)        0.3265       2824    15.7%
+  audit(τ=0.1)         0.3269       2514    25.0%
+  audit(τ=0.2)         0.3207       1859    44.5%
+  [版本对齐] 36/36 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== express（136 更新, 36 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.6610        136     0.0%
+  never-rebuild        0.6470          0   100.0%
+  audit(τ=0.02)        0.6610        105    22.8%
+  audit(τ=0.05)        0.6610        103    24.3%
+  audit(τ=0.1)         0.6989         85    37.5%
+  audit(τ=0.2)         0.6761         55    59.6%
+  [版本对齐] 131/131 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== flask（334 更新, 131 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.2857        334     0.0%
+  never-rebuild        0.4643          0   100.0%
+  audit(τ=0.02)        0.2857        275    17.7%
+  audit(τ=0.05)        0.4286        211    36.8%
+  audit(τ=0.1)         0.5000        137    59.0%
+  audit(τ=0.2)         0.5000         96    71.3%
+  [版本对齐] 434/434 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== gin（1802 更新, 434 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.3586       1802     0.0%
+  never-rebuild        0.3230          0   100.0%
+  audit(τ=0.02)        0.3541       1688     6.3%
+  audit(τ=0.05)        0.3556       1548    14.1%
+  audit(τ=0.1)         0.3532       1317    26.9%
+  audit(τ=0.2)         0.3497        950    47.3%
+  [版本对齐] 162/162 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== pylint（720 更新, 162 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.5060        720     0.0%
+  never-rebuild        0.4541          0   100.0%
+  audit(τ=0.02)        0.5060        374    48.1%
+  audit(τ=0.05)        0.5248        216    70.0%
+  audit(τ=0.1)         0.4645        125    82.6%
+  audit(τ=0.2)         0.4881         64    91.1%
+  [版本对齐] 43/43 个单元用 old_text 作更新前基准（其余用 units.text）
+
+=== requests（69 更新, 43 单元）===
+  policy           recall@10  重算次数       省算%     
+  always-rebuild       0.6896         69     0.0%
+  never-rebuild        0.6896          0   100.0%
+  audit(τ=0.02)        0.6746         30    56.5%
+  audit(τ=0.05)        0.6896         19    72.5%
+  audit(τ=0.1)         0.6896         14    79.7%
+  audit(τ=0.2)         0.7194          8    88.4%
+
+✅ 真实 sweep 存到 baseline_sweep_unixcoder.json
+这张表 = benchmark 论文的 Table 1（判别力证据）。
+解读：always recall 最高 cost 最高、never cost=0 recall 最低、
+      audit 随 τ 增大省算增多但 recall 缓降——若 audit 能在小 recall 损失下大幅省算，
+      则证明 benchmark 有判别力 + 你的方法有价值。
+
+STDERR:
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784563300.280889    1264 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784563306.022956    1264 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
