@@ -182,13 +182,3 @@ python exp_lowrecall_control.py --bench-final ../../data/bench_all_clean --out .
 units/updates ← 真实 git 提交历史（同一函数多个真实版本）
 queries/GT    ← 真实 issue #N ──"Fixes #N"──▶ 真实修复 commit ──▶ 改动的函数
 ```
-
-## 关键修复记录
-
-| 脚本 | 修复内容 |
-|------|---------|
-| build_step4_baseline_sweep_fixed | U0 基线用 old_text（非 units.text），修版本错位 |
-| build_step4_multimodel | CodeBERT 用 mean-pooling，BGE 加查询前缀 |
-| lowdelta_classify_v2 | 加函数替换检测 + 数字字面量计入结构 token |
-| exp_lowrecall_control | 三口径（全集/并集/GTleqk），修 selection bias |
-| build_step_allmetrics_v3 | 扩展 I(u) 定义，覆盖非 GT 单元挤出 GT 的情况 |
