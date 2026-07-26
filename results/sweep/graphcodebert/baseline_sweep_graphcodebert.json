@@ -1,0 +1,289 @@
+{
+  "model": "graphcodebert",
+  "k": 10,
+  "taus": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "fake_embed": false,
+  "per_repo": [
+    {
+      "repo": "express",
+      "n_updates": 136,
+      "n_units": 36,
+      "always_recall": 0.5555555555555556,
+      "always_cost": 136,
+      "never_recall": 0.513888888888889,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.5555555555555556,
+          "recompute": 136,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.513888888888889,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.5357142857142857,
+          "recompute": 73,
+          "save_pct": 46.3
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.48214285714285715,
+          "recompute": 10,
+          "save_pct": 92.6
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.513888888888889,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.513888888888889,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "flask",
+      "n_updates": 334,
+      "n_units": 131,
+      "always_recall": 0.20980228348649402,
+      "always_cost": 334,
+      "never_recall": 0.3027847396268449,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.20980228348649402,
+          "recompute": 334,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.3027847396268449,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.24489000278473963,
+          "recompute": 127,
+          "save_pct": 62.0
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.24489000278473963,
+          "recompute": 67,
+          "save_pct": 79.9
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.24489000278473963,
+          "recompute": 44,
+          "save_pct": 86.8
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.3027847396268449,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "gin",
+      "n_updates": 1802,
+      "n_units": 434,
+      "always_recall": 0.09978519668737061,
+      "always_cost": 1802,
+      "never_recall": 0.10630952380952381,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.09978519668737061,
+          "recompute": 1802,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.10630952380952381,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.10527432712215319,
+          "recompute": 1121,
+          "save_pct": 37.8
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.1127743271221532,
+          "recompute": 750,
+          "save_pct": 58.4
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.0825655624568668,
+          "recompute": 305,
+          "save_pct": 83.1
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.10406314699792961,
+          "recompute": 39,
+          "save_pct": 97.8
+        }
+      ]
+    },
+    {
+      "repo": "koa",
+      "n_updates": 53,
+      "n_units": 11,
+      "always_recall": 1.0,
+      "always_cost": 53,
+      "never_recall": 1.0,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 1.0,
+          "recompute": 53,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 1.0,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 1.0,
+          "recompute": 41,
+          "save_pct": 22.6
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 1.0,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 1.0,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 1.0,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "pylint",
+      "n_updates": 720,
+      "n_units": 162,
+      "always_recall": 0.0,
+      "always_cost": 720,
+      "never_recall": 0.0,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.0,
+          "recompute": 720,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.0,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.0,
+          "recompute": 76,
+          "save_pct": 89.4
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.0,
+          "recompute": 48,
+          "save_pct": 93.3
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.0,
+          "recompute": 32,
+          "save_pct": 95.6
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.0,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    },
+    {
+      "repo": "requests",
+      "n_updates": 69,
+      "n_units": 43,
+      "always_recall": 0.23529411764705882,
+      "always_cost": 69,
+      "never_recall": 0.20588235294117646,
+      "sweep": [
+        {
+          "policy": "always-rebuild",
+          "recall": 0.23529411764705882,
+          "recompute": 69,
+          "save_pct": 0.0
+        },
+        {
+          "policy": "never-rebuild",
+          "recall": 0.20588235294117646,
+          "recompute": 0,
+          "save_pct": 100.0
+        },
+        {
+          "policy": "audit(τ=0.02)",
+          "recall": 0.2647058823529412,
+          "recompute": 11,
+          "save_pct": 84.1
+        },
+        {
+          "policy": "audit(τ=0.05)",
+          "recall": 0.2647058823529412,
+          "recompute": 7,
+          "save_pct": 89.9
+        },
+        {
+          "policy": "audit(τ=0.1)",
+          "recall": 0.20588235294117646,
+          "recompute": 2,
+          "save_pct": 97.1
+        },
+        {
+          "policy": "audit(τ=0.2)",
+          "recall": 0.20588235294117646,
+          "recompute": 0,
+          "save_pct": 100.0
+        }
+      ]
+    }
+  ]
+}

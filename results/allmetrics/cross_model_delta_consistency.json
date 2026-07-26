@@ -1,0 +1,34 @@
+{
+  "models": [
+    "codebert",
+    "graphcodebert",
+    "minilm",
+    "mpnet"
+  ],
+  "spearman": {
+    "codebert": {
+      "codebert": 1.0,
+      "graphcodebert": 0.934,
+      "minilm": 0.814,
+      "mpnet": 0.797
+    },
+    "graphcodebert": {
+      "codebert": 0.934,
+      "graphcodebert": 1.0,
+      "minilm": 0.843,
+      "mpnet": 0.84
+    },
+    "minilm": {
+      "codebert": 0.814,
+      "graphcodebert": 0.843,
+      "minilm": 1.0,
+      "mpnet": 0.946
+    },
+    "mpnet": {
+      "codebert": 0.797,
+      "graphcodebert": 0.84,
+      "minilm": 0.946,
+      "mpnet": 1.0
+    }
+  }
+}

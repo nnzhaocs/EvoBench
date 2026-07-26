@@ -1,0 +1,2088 @@
+{
+  "models": [
+    "minilm",
+    "mpnet",
+    "bge",
+    "codebert",
+    "graphcodebert",
+    "unixcoder"
+  ],
+  "min_n_per_cell": 10,
+  "reliable_n_threshold": 30,
+  "per_repo_matrix": {
+    "aiohttp": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 65
+        },
+        "mpnet": {
+          "rho": 0.88,
+          "n": 65
+        },
+        "bge": {
+          "rho": 0.907,
+          "n": 65
+        },
+        "codebert": {
+          "rho": 0.83,
+          "n": 65
+        },
+        "graphcodebert": {
+          "rho": 0.867,
+          "n": 65
+        },
+        "unixcoder": {
+          "rho": 0.841,
+          "n": 65
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.88,
+          "n": 65
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 65
+        },
+        "bge": {
+          "rho": 0.875,
+          "n": 65
+        },
+        "codebert": {
+          "rho": 0.872,
+          "n": 65
+        },
+        "graphcodebert": {
+          "rho": 0.876,
+          "n": 65
+        },
+        "unixcoder": {
+          "rho": 0.866,
+          "n": 65
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.907,
+          "n": 65
+        },
+        "mpnet": {
+          "rho": 0.875,
+          "n": 65
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 65
+        },
+        "codebert": {
+          "rho": 0.84,
+          "n": 65
+        },
+        "graphcodebert": {
+          "rho": 0.866,
+          "n": 65
+        },
+        "unixcoder": {
+          "rho": 0.849,
+          "n": 65
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.83,
+          "n": 65
+        },
+        "mpnet": {
+          "rho": 0.872,
+          "n": 65
+        },
+        "bge": {
+          "rho": 0.84,
+          "n": 65
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 65
+        },
+        "graphcodebert": {
+          "rho": 0.887,
+          "n": 65
+        },
+        "unixcoder": {
+          "rho": 0.89,
+          "n": 65
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.867,
+          "n": 65
+        },
+        "mpnet": {
+          "rho": 0.876,
+          "n": 65
+        },
+        "bge": {
+          "rho": 0.866,
+          "n": 65
+        },
+        "codebert": {
+          "rho": 0.887,
+          "n": 65
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 65
+        },
+        "unixcoder": {
+          "rho": 0.866,
+          "n": 65
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.841,
+          "n": 65
+        },
+        "mpnet": {
+          "rho": 0.866,
+          "n": 65
+        },
+        "bge": {
+          "rho": 0.849,
+          "n": 65
+        },
+        "codebert": {
+          "rho": 0.89,
+          "n": 65
+        },
+        "graphcodebert": {
+          "rho": 0.866,
+          "n": 65
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 65
+        }
+      }
+    },
+    "click": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 23
+        },
+        "mpnet": {
+          "rho": 0.97,
+          "n": 23
+        },
+        "bge": {
+          "rho": 0.896,
+          "n": 23
+        },
+        "codebert": {
+          "rho": 0.628,
+          "n": 23
+        },
+        "graphcodebert": {
+          "rho": 0.627,
+          "n": 23
+        },
+        "unixcoder": {
+          "rho": 0.617,
+          "n": 23
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.97,
+          "n": 23
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 23
+        },
+        "bge": {
+          "rho": 0.887,
+          "n": 23
+        },
+        "codebert": {
+          "rho": 0.65,
+          "n": 23
+        },
+        "graphcodebert": {
+          "rho": 0.653,
+          "n": 23
+        },
+        "unixcoder": {
+          "rho": 0.62,
+          "n": 23
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.896,
+          "n": 23
+        },
+        "mpnet": {
+          "rho": 0.887,
+          "n": 23
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 23
+        },
+        "codebert": {
+          "rho": 0.821,
+          "n": 23
+        },
+        "graphcodebert": {
+          "rho": 0.827,
+          "n": 23
+        },
+        "unixcoder": {
+          "rho": 0.782,
+          "n": 23
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.628,
+          "n": 23
+        },
+        "mpnet": {
+          "rho": 0.65,
+          "n": 23
+        },
+        "bge": {
+          "rho": 0.821,
+          "n": 23
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 23
+        },
+        "graphcodebert": {
+          "rho": 0.933,
+          "n": 23
+        },
+        "unixcoder": {
+          "rho": 0.872,
+          "n": 23
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.627,
+          "n": 23
+        },
+        "mpnet": {
+          "rho": 0.653,
+          "n": 23
+        },
+        "bge": {
+          "rho": 0.827,
+          "n": 23
+        },
+        "codebert": {
+          "rho": 0.933,
+          "n": 23
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 23
+        },
+        "unixcoder": {
+          "rho": 0.833,
+          "n": 23
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.617,
+          "n": 23
+        },
+        "mpnet": {
+          "rho": 0.62,
+          "n": 23
+        },
+        "bge": {
+          "rho": 0.782,
+          "n": 23
+        },
+        "codebert": {
+          "rho": 0.872,
+          "n": 23
+        },
+        "graphcodebert": {
+          "rho": 0.833,
+          "n": 23
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 23
+        }
+      }
+    },
+    "cobra": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 259
+        },
+        "mpnet": {
+          "rho": 0.904,
+          "n": 259
+        },
+        "bge": {
+          "rho": 0.879,
+          "n": 259
+        },
+        "codebert": {
+          "rho": 0.783,
+          "n": 259
+        },
+        "graphcodebert": {
+          "rho": 0.788,
+          "n": 259
+        },
+        "unixcoder": {
+          "rho": 0.821,
+          "n": 259
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.904,
+          "n": 259
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 259
+        },
+        "bge": {
+          "rho": 0.89,
+          "n": 259
+        },
+        "codebert": {
+          "rho": 0.764,
+          "n": 259
+        },
+        "graphcodebert": {
+          "rho": 0.808,
+          "n": 259
+        },
+        "unixcoder": {
+          "rho": 0.849,
+          "n": 259
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.879,
+          "n": 259
+        },
+        "mpnet": {
+          "rho": 0.89,
+          "n": 259
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 259
+        },
+        "codebert": {
+          "rho": 0.747,
+          "n": 259
+        },
+        "graphcodebert": {
+          "rho": 0.779,
+          "n": 259
+        },
+        "unixcoder": {
+          "rho": 0.86,
+          "n": 259
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.783,
+          "n": 259
+        },
+        "mpnet": {
+          "rho": 0.764,
+          "n": 259
+        },
+        "bge": {
+          "rho": 0.747,
+          "n": 259
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 259
+        },
+        "graphcodebert": {
+          "rho": 0.915,
+          "n": 259
+        },
+        "unixcoder": {
+          "rho": 0.852,
+          "n": 259
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.788,
+          "n": 259
+        },
+        "mpnet": {
+          "rho": 0.808,
+          "n": 259
+        },
+        "bge": {
+          "rho": 0.779,
+          "n": 259
+        },
+        "codebert": {
+          "rho": 0.915,
+          "n": 259
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 259
+        },
+        "unixcoder": {
+          "rho": 0.875,
+          "n": 259
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.821,
+          "n": 259
+        },
+        "mpnet": {
+          "rho": 0.849,
+          "n": 259
+        },
+        "bge": {
+          "rho": 0.86,
+          "n": 259
+        },
+        "codebert": {
+          "rho": 0.852,
+          "n": 259
+        },
+        "graphcodebert": {
+          "rho": 0.875,
+          "n": 259
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 259
+        }
+      }
+    },
+    "echo": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 678
+        },
+        "mpnet": {
+          "rho": 0.947,
+          "n": 678
+        },
+        "bge": {
+          "rho": 0.923,
+          "n": 678
+        },
+        "codebert": {
+          "rho": 0.869,
+          "n": 678
+        },
+        "graphcodebert": {
+          "rho": 0.875,
+          "n": 678
+        },
+        "unixcoder": {
+          "rho": 0.895,
+          "n": 678
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.947,
+          "n": 678
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 678
+        },
+        "bge": {
+          "rho": 0.917,
+          "n": 678
+        },
+        "codebert": {
+          "rho": 0.832,
+          "n": 678
+        },
+        "graphcodebert": {
+          "rho": 0.858,
+          "n": 678
+        },
+        "unixcoder": {
+          "rho": 0.873,
+          "n": 678
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.923,
+          "n": 678
+        },
+        "mpnet": {
+          "rho": 0.917,
+          "n": 678
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 678
+        },
+        "codebert": {
+          "rho": 0.812,
+          "n": 678
+        },
+        "graphcodebert": {
+          "rho": 0.818,
+          "n": 678
+        },
+        "unixcoder": {
+          "rho": 0.869,
+          "n": 678
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.869,
+          "n": 678
+        },
+        "mpnet": {
+          "rho": 0.832,
+          "n": 678
+        },
+        "bge": {
+          "rho": 0.812,
+          "n": 678
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 678
+        },
+        "graphcodebert": {
+          "rho": 0.94,
+          "n": 678
+        },
+        "unixcoder": {
+          "rho": 0.899,
+          "n": 678
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.875,
+          "n": 678
+        },
+        "mpnet": {
+          "rho": 0.858,
+          "n": 678
+        },
+        "bge": {
+          "rho": 0.818,
+          "n": 678
+        },
+        "codebert": {
+          "rho": 0.94,
+          "n": 678
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 678
+        },
+        "unixcoder": {
+          "rho": 0.918,
+          "n": 678
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.895,
+          "n": 678
+        },
+        "mpnet": {
+          "rho": 0.873,
+          "n": 678
+        },
+        "bge": {
+          "rho": 0.869,
+          "n": 678
+        },
+        "codebert": {
+          "rho": 0.899,
+          "n": 678
+        },
+        "graphcodebert": {
+          "rho": 0.918,
+          "n": 678
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 678
+        }
+      }
+    },
+    "express": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 36
+        },
+        "mpnet": {
+          "rho": 0.937,
+          "n": 36
+        },
+        "bge": {
+          "rho": 0.947,
+          "n": 36
+        },
+        "codebert": {
+          "rho": 0.724,
+          "n": 36
+        },
+        "graphcodebert": {
+          "rho": 0.854,
+          "n": 36
+        },
+        "unixcoder": {
+          "rho": 0.914,
+          "n": 36
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.937,
+          "n": 36
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 36
+        },
+        "bge": {
+          "rho": 0.912,
+          "n": 36
+        },
+        "codebert": {
+          "rho": 0.703,
+          "n": 36
+        },
+        "graphcodebert": {
+          "rho": 0.819,
+          "n": 36
+        },
+        "unixcoder": {
+          "rho": 0.869,
+          "n": 36
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.947,
+          "n": 36
+        },
+        "mpnet": {
+          "rho": 0.912,
+          "n": 36
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 36
+        },
+        "codebert": {
+          "rho": 0.684,
+          "n": 36
+        },
+        "graphcodebert": {
+          "rho": 0.773,
+          "n": 36
+        },
+        "unixcoder": {
+          "rho": 0.899,
+          "n": 36
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.724,
+          "n": 36
+        },
+        "mpnet": {
+          "rho": 0.703,
+          "n": 36
+        },
+        "bge": {
+          "rho": 0.684,
+          "n": 36
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 36
+        },
+        "graphcodebert": {
+          "rho": 0.856,
+          "n": 36
+        },
+        "unixcoder": {
+          "rho": 0.724,
+          "n": 36
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.854,
+          "n": 36
+        },
+        "mpnet": {
+          "rho": 0.819,
+          "n": 36
+        },
+        "bge": {
+          "rho": 0.773,
+          "n": 36
+        },
+        "codebert": {
+          "rho": 0.856,
+          "n": 36
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 36
+        },
+        "unixcoder": {
+          "rho": 0.839,
+          "n": 36
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.914,
+          "n": 36
+        },
+        "mpnet": {
+          "rho": 0.869,
+          "n": 36
+        },
+        "bge": {
+          "rho": 0.899,
+          "n": 36
+        },
+        "codebert": {
+          "rho": 0.724,
+          "n": 36
+        },
+        "graphcodebert": {
+          "rho": 0.839,
+          "n": 36
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 36
+        }
+      }
+    },
+    "flask": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 131
+        },
+        "mpnet": {
+          "rho": 0.961,
+          "n": 131
+        },
+        "bge": {
+          "rho": 0.939,
+          "n": 131
+        },
+        "codebert": {
+          "rho": 0.857,
+          "n": 131
+        },
+        "graphcodebert": {
+          "rho": 0.877,
+          "n": 131
+        },
+        "unixcoder": {
+          "rho": 0.919,
+          "n": 131
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.961,
+          "n": 131
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 131
+        },
+        "bge": {
+          "rho": 0.931,
+          "n": 131
+        },
+        "codebert": {
+          "rho": 0.872,
+          "n": 131
+        },
+        "graphcodebert": {
+          "rho": 0.884,
+          "n": 131
+        },
+        "unixcoder": {
+          "rho": 0.932,
+          "n": 131
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.939,
+          "n": 131
+        },
+        "mpnet": {
+          "rho": 0.931,
+          "n": 131
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 131
+        },
+        "codebert": {
+          "rho": 0.839,
+          "n": 131
+        },
+        "graphcodebert": {
+          "rho": 0.867,
+          "n": 131
+        },
+        "unixcoder": {
+          "rho": 0.895,
+          "n": 131
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.857,
+          "n": 131
+        },
+        "mpnet": {
+          "rho": 0.872,
+          "n": 131
+        },
+        "bge": {
+          "rho": 0.839,
+          "n": 131
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 131
+        },
+        "graphcodebert": {
+          "rho": 0.945,
+          "n": 131
+        },
+        "unixcoder": {
+          "rho": 0.908,
+          "n": 131
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.877,
+          "n": 131
+        },
+        "mpnet": {
+          "rho": 0.884,
+          "n": 131
+        },
+        "bge": {
+          "rho": 0.867,
+          "n": 131
+        },
+        "codebert": {
+          "rho": 0.945,
+          "n": 131
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 131
+        },
+        "unixcoder": {
+          "rho": 0.937,
+          "n": 131
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.919,
+          "n": 131
+        },
+        "mpnet": {
+          "rho": 0.932,
+          "n": 131
+        },
+        "bge": {
+          "rho": 0.895,
+          "n": 131
+        },
+        "codebert": {
+          "rho": 0.908,
+          "n": 131
+        },
+        "graphcodebert": {
+          "rho": 0.937,
+          "n": 131
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 131
+        }
+      }
+    },
+    "gin": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 434
+        },
+        "mpnet": {
+          "rho": 0.934,
+          "n": 434
+        },
+        "bge": {
+          "rho": 0.881,
+          "n": 434
+        },
+        "codebert": {
+          "rho": 0.793,
+          "n": 434
+        },
+        "graphcodebert": {
+          "rho": 0.825,
+          "n": 434
+        },
+        "unixcoder": {
+          "rho": 0.886,
+          "n": 434
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.934,
+          "n": 434
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 434
+        },
+        "bge": {
+          "rho": 0.838,
+          "n": 434
+        },
+        "codebert": {
+          "rho": 0.765,
+          "n": 434
+        },
+        "graphcodebert": {
+          "rho": 0.82,
+          "n": 434
+        },
+        "unixcoder": {
+          "rho": 0.829,
+          "n": 434
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.881,
+          "n": 434
+        },
+        "mpnet": {
+          "rho": 0.838,
+          "n": 434
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 434
+        },
+        "codebert": {
+          "rho": 0.714,
+          "n": 434
+        },
+        "graphcodebert": {
+          "rho": 0.741,
+          "n": 434
+        },
+        "unixcoder": {
+          "rho": 0.841,
+          "n": 434
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.793,
+          "n": 434
+        },
+        "mpnet": {
+          "rho": 0.765,
+          "n": 434
+        },
+        "bge": {
+          "rho": 0.714,
+          "n": 434
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 434
+        },
+        "graphcodebert": {
+          "rho": 0.94,
+          "n": 434
+        },
+        "unixcoder": {
+          "rho": 0.854,
+          "n": 434
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.825,
+          "n": 434
+        },
+        "mpnet": {
+          "rho": 0.82,
+          "n": 434
+        },
+        "bge": {
+          "rho": 0.741,
+          "n": 434
+        },
+        "codebert": {
+          "rho": 0.94,
+          "n": 434
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 434
+        },
+        "unixcoder": {
+          "rho": 0.876,
+          "n": 434
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.886,
+          "n": 434
+        },
+        "mpnet": {
+          "rho": 0.829,
+          "n": 434
+        },
+        "bge": {
+          "rho": 0.841,
+          "n": 434
+        },
+        "codebert": {
+          "rho": 0.854,
+          "n": 434
+        },
+        "graphcodebert": {
+          "rho": 0.876,
+          "n": 434
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 434
+        }
+      }
+    },
+    "lodash": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 535
+        },
+        "mpnet": {
+          "rho": 0.913,
+          "n": 535
+        },
+        "bge": {
+          "rho": 0.893,
+          "n": 535
+        },
+        "codebert": {
+          "rho": 0.767,
+          "n": 535
+        },
+        "graphcodebert": {
+          "rho": 0.801,
+          "n": 535
+        },
+        "unixcoder": {
+          "rho": 0.852,
+          "n": 535
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.913,
+          "n": 535
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 535
+        },
+        "bge": {
+          "rho": 0.898,
+          "n": 535
+        },
+        "codebert": {
+          "rho": 0.741,
+          "n": 535
+        },
+        "graphcodebert": {
+          "rho": 0.795,
+          "n": 535
+        },
+        "unixcoder": {
+          "rho": 0.823,
+          "n": 535
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.893,
+          "n": 535
+        },
+        "mpnet": {
+          "rho": 0.898,
+          "n": 535
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 535
+        },
+        "codebert": {
+          "rho": 0.734,
+          "n": 535
+        },
+        "graphcodebert": {
+          "rho": 0.784,
+          "n": 535
+        },
+        "unixcoder": {
+          "rho": 0.818,
+          "n": 535
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.767,
+          "n": 535
+        },
+        "mpnet": {
+          "rho": 0.741,
+          "n": 535
+        },
+        "bge": {
+          "rho": 0.734,
+          "n": 535
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 535
+        },
+        "graphcodebert": {
+          "rho": 0.928,
+          "n": 535
+        },
+        "unixcoder": {
+          "rho": 0.795,
+          "n": 535
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.801,
+          "n": 535
+        },
+        "mpnet": {
+          "rho": 0.795,
+          "n": 535
+        },
+        "bge": {
+          "rho": 0.784,
+          "n": 535
+        },
+        "codebert": {
+          "rho": 0.928,
+          "n": 535
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 535
+        },
+        "unixcoder": {
+          "rho": 0.837,
+          "n": 535
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.852,
+          "n": 535
+        },
+        "mpnet": {
+          "rho": 0.823,
+          "n": 535
+        },
+        "bge": {
+          "rho": 0.818,
+          "n": 535
+        },
+        "codebert": {
+          "rho": 0.795,
+          "n": 535
+        },
+        "graphcodebert": {
+          "rho": 0.837,
+          "n": 535
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 535
+        }
+      }
+    },
+    "pylint": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 162
+        },
+        "mpnet": {
+          "rho": 0.925,
+          "n": 162
+        },
+        "bge": {
+          "rho": 0.921,
+          "n": 162
+        },
+        "codebert": {
+          "rho": 0.635,
+          "n": 162
+        },
+        "graphcodebert": {
+          "rho": 0.611,
+          "n": 162
+        },
+        "unixcoder": {
+          "rho": 0.766,
+          "n": 162
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.925,
+          "n": 162
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 162
+        },
+        "bge": {
+          "rho": 0.931,
+          "n": 162
+        },
+        "codebert": {
+          "rho": 0.66,
+          "n": 162
+        },
+        "graphcodebert": {
+          "rho": 0.646,
+          "n": 162
+        },
+        "unixcoder": {
+          "rho": 0.812,
+          "n": 162
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.921,
+          "n": 162
+        },
+        "mpnet": {
+          "rho": 0.931,
+          "n": 162
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 162
+        },
+        "codebert": {
+          "rho": 0.627,
+          "n": 162
+        },
+        "graphcodebert": {
+          "rho": 0.609,
+          "n": 162
+        },
+        "unixcoder": {
+          "rho": 0.778,
+          "n": 162
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.635,
+          "n": 162
+        },
+        "mpnet": {
+          "rho": 0.66,
+          "n": 162
+        },
+        "bge": {
+          "rho": 0.627,
+          "n": 162
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 162
+        },
+        "graphcodebert": {
+          "rho": 0.954,
+          "n": 162
+        },
+        "unixcoder": {
+          "rho": 0.793,
+          "n": 162
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.611,
+          "n": 162
+        },
+        "mpnet": {
+          "rho": 0.646,
+          "n": 162
+        },
+        "bge": {
+          "rho": 0.609,
+          "n": 162
+        },
+        "codebert": {
+          "rho": 0.954,
+          "n": 162
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 162
+        },
+        "unixcoder": {
+          "rho": 0.783,
+          "n": 162
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.766,
+          "n": 162
+        },
+        "mpnet": {
+          "rho": 0.812,
+          "n": 162
+        },
+        "bge": {
+          "rho": 0.778,
+          "n": 162
+        },
+        "codebert": {
+          "rho": 0.793,
+          "n": 162
+        },
+        "graphcodebert": {
+          "rho": 0.783,
+          "n": 162
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 162
+        }
+      }
+    },
+    "requests": {
+      "minilm": {
+        "minilm": {
+          "rho": 1.0,
+          "n": 43
+        },
+        "mpnet": {
+          "rho": 0.92,
+          "n": 43
+        },
+        "bge": {
+          "rho": 0.911,
+          "n": 43
+        },
+        "codebert": {
+          "rho": 0.736,
+          "n": 43
+        },
+        "graphcodebert": {
+          "rho": 0.731,
+          "n": 43
+        },
+        "unixcoder": {
+          "rho": 0.763,
+          "n": 43
+        }
+      },
+      "mpnet": {
+        "minilm": {
+          "rho": 0.92,
+          "n": 43
+        },
+        "mpnet": {
+          "rho": 1.0,
+          "n": 43
+        },
+        "bge": {
+          "rho": 0.945,
+          "n": 43
+        },
+        "codebert": {
+          "rho": 0.823,
+          "n": 43
+        },
+        "graphcodebert": {
+          "rho": 0.825,
+          "n": 43
+        },
+        "unixcoder": {
+          "rho": 0.818,
+          "n": 43
+        }
+      },
+      "bge": {
+        "minilm": {
+          "rho": 0.911,
+          "n": 43
+        },
+        "mpnet": {
+          "rho": 0.945,
+          "n": 43
+        },
+        "bge": {
+          "rho": 1.0,
+          "n": 43
+        },
+        "codebert": {
+          "rho": 0.792,
+          "n": 43
+        },
+        "graphcodebert": {
+          "rho": 0.807,
+          "n": 43
+        },
+        "unixcoder": {
+          "rho": 0.817,
+          "n": 43
+        }
+      },
+      "codebert": {
+        "minilm": {
+          "rho": 0.736,
+          "n": 43
+        },
+        "mpnet": {
+          "rho": 0.823,
+          "n": 43
+        },
+        "bge": {
+          "rho": 0.792,
+          "n": 43
+        },
+        "codebert": {
+          "rho": 1.0,
+          "n": 43
+        },
+        "graphcodebert": {
+          "rho": 0.952,
+          "n": 43
+        },
+        "unixcoder": {
+          "rho": 0.767,
+          "n": 43
+        }
+      },
+      "graphcodebert": {
+        "minilm": {
+          "rho": 0.731,
+          "n": 43
+        },
+        "mpnet": {
+          "rho": 0.825,
+          "n": 43
+        },
+        "bge": {
+          "rho": 0.807,
+          "n": 43
+        },
+        "codebert": {
+          "rho": 0.952,
+          "n": 43
+        },
+        "graphcodebert": {
+          "rho": 1.0,
+          "n": 43
+        },
+        "unixcoder": {
+          "rho": 0.838,
+          "n": 43
+        }
+      },
+      "unixcoder": {
+        "minilm": {
+          "rho": 0.763,
+          "n": 43
+        },
+        "mpnet": {
+          "rho": 0.818,
+          "n": 43
+        },
+        "bge": {
+          "rho": 0.817,
+          "n": 43
+        },
+        "codebert": {
+          "rho": 0.767,
+          "n": 43
+        },
+        "graphcodebert": {
+          "rho": 0.838,
+          "n": 43
+        },
+        "unixcoder": {
+          "rho": 1.0,
+          "n": 43
+        }
+      }
+    }
+  },
+  "mean_matrix": {
+    "minilm": {
+      "minilm": {
+        "rho": 1.0,
+        "n_repos": 10,
+        "note": "diagonal"
+      },
+      "mpnet": {
+        "rho": 0.929,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "bge": {
+        "rho": 0.904,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "codebert": {
+        "rho": 0.8,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "graphcodebert": {
+        "rho": 0.818,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "unixcoder": {
+        "rho": 0.864,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      }
+    },
+    "mpnet": {
+      "minilm": {
+        "rho": 0.929,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "mpnet": {
+        "rho": 1.0,
+        "n_repos": 10,
+        "note": "diagonal"
+      },
+      "bge": {
+        "rho": 0.896,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "codebert": {
+        "rho": 0.781,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "graphcodebert": {
+        "rho": 0.817,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "unixcoder": {
+        "rho": 0.849,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      }
+    },
+    "bge": {
+      "minilm": {
+        "rho": 0.904,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "mpnet": {
+        "rho": 0.896,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "bge": {
+        "rho": 1.0,
+        "n_repos": 10,
+        "note": "diagonal"
+      },
+      "codebert": {
+        "rho": 0.756,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "graphcodebert": {
+        "rho": 0.78,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "unixcoder": {
+        "rho": 0.845,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      }
+    },
+    "codebert": {
+      "minilm": {
+        "rho": 0.8,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "mpnet": {
+        "rho": 0.781,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "bge": {
+        "rho": 0.756,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "codebert": {
+        "rho": 1.0,
+        "n_repos": 10,
+        "note": "diagonal"
+      },
+      "graphcodebert": {
+        "rho": 0.933,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "unixcoder": {
+        "rho": 0.85,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      }
+    },
+    "graphcodebert": {
+      "minilm": {
+        "rho": 0.818,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "mpnet": {
+        "rho": 0.817,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "bge": {
+        "rho": 0.78,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "codebert": {
+        "rho": 0.933,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "graphcodebert": {
+        "rho": 1.0,
+        "n_repos": 10,
+        "note": "diagonal"
+      },
+      "unixcoder": {
+        "rho": 0.875,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      }
+    },
+    "unixcoder": {
+      "minilm": {
+        "rho": 0.864,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "mpnet": {
+        "rho": 0.849,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "bge": {
+        "rho": 0.845,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "codebert": {
+        "rho": 0.85,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "graphcodebert": {
+        "rho": 0.875,
+        "n_repos": 9,
+        "repos": [
+          "aiohttp",
+          "cobra",
+          "echo",
+          "express",
+          "flask",
+          "gin",
+          "lodash",
+          "pylint",
+          "requests"
+        ]
+      },
+      "unixcoder": {
+        "rho": 1.0,
+        "n_repos": 10,
+        "note": "diagonal"
+      }
+    }
+  }
+}
